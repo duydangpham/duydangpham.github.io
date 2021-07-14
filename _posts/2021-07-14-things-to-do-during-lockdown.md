@@ -1,14 +1,14 @@
 ---
 layout: post
-title: "Call for Chapters - Springer book on information systems research in Vietnam"
+title: "5 things to do during lockdown"
 author:
 - Duy Dang-Pham
-meta: "call for chapters information systems research in vietnam springer book"
+meta: "5 things to do during lockdown"
 image: /assets/img/blog_9May_1.jpg
 comments: true
 excerpt_separator: <!-- excerpt -->
 ---
-As the number of new Covid-19 cases keeps increasing in Ho Chi Minh City (we are having on average 1,000+ new cases every day), my neighborhood entered quarantined mode a few days ago and we are not allowed to leave the house for at least 2 weeks. Here is the list of 5 things one would want to do during a lockdown, to keep life go on as normal as possible, that I want to share with you.
+As the number of new Covid-19 cases keeps increasing in Ho Chi Minh City (we are having on average 1,000+ new cases every day), my neighborhood entered quarantined mode a few days ago and we are not allowed to leave the house for at least 2 weeks. Here is the list of 5 things one would want to do during a lockdown, to keep life go on as normal as possible, that I want to share with you.<!-- excerpt -->
 
 1. Keep your living space clean and airy
 Since you are going to spend 2 weeks (or more) in the same living space, it makes a lot of sense to clean your space regularly. Open windows as much as possible to let in sunlight and fresh air. This will help you feel more comfortable when living in the space, and official health advice sources also recommend ensuring good ventilation in buildings to prevent Covid-19 (see for example https://www.epa.gov/coronavirus/ventilation-and-coronavirus-covid-19).
