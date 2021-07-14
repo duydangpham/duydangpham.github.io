@@ -1,0 +1,70 @@
+title: Dr. Duy Dang-Pham (Đặng Phạm Thiên Duy)
+author:
+  name: Duy Dang-Pham
+  email: 
+description: > # this means to ignore newlines until "show_excerpts:"
+  Dr. Duy Dang-Pham (Đặng Phạm Thiên Duy) is an academic at RMIT University (Saigon South Campus, Vietnam). He teaches and conducts research in the areas of cybersecurity management and behaviors, digital business and digital transformation, business and learning analytics, and human-centered artificial intelligence.
+
+google_analytics: UA-80767582-2
+
+show_excerpts: true # set to true to show excerpts on the homepage
+
+# Minima date format
+# refer to https://shopify.github.io/liquid/filters/date/ if you want to customize this
+minima:
+  date_format: "%b %-d, %Y"
+
+disqus:
+  shortname: duydangpham
+
+  # generate social links in footer
+  social_links:
+    twitter: dtdangpham
+    github: duydangpham
+    # devto: jekyll
+    # dribbble: jekyll
+    # facebook: jekyll
+    # flickr:   jekyll
+    # instagram: jekyll
+    # linkedin: jekyll
+    # pinterest: jekyll
+    # youtube: jekyll
+    # youtube_channel: UC8CXR0-3I70i1tfPg1PAE1g
+    # youtube_channel_name: CloudCannon
+    # telegram: jekyll
+    # googleplus: +jekyll
+    # microdotblog: jekyll
+    # keybase: jekyll
+
+    # Mastodon instances
+    # mastodon:
+    # - username: jekyll
+    #   instance: example.com
+    # - username: jekyll2
+    #   instance: example.com
+
+    # GitLab instances
+    # gitlab:
+    # - username: jekyll
+    #   instance: example.com
+    # - username: jekyll2
+    #   instance: example.com
+
+# If you want to link only specific pages in your header, uncomment
+# this and add the path to the pages in order as they should show up
+header_pages:
+ - blog.md
+ - publications.md
+ - awards.md
+ - media.md
+ - teaching.md
+ - students.md
+ - career-highlights.md
+
+# Build settings
+theme: minima
+
+plugins:
+ - jekyll-feed
+ - jekyll-seo-tag
+ - jemoji
