@@ -7,7 +7,7 @@
 #
 layout: page
 title: Personal academic website
-image: /assets/img/duydangpham_ava_midsize.jpg
+image: /assets/img/duydangpham_2021_2.jpg
 ---
 
 <img src="assets/img/duydangpham_2021_2.jpg" alt="Duy Dang-Pham portrait" width="30%" style="border-radius: 50%; float: right; margin-left:40px; margin-bottom:30px">
@@ -18,10 +18,10 @@ Prior to joining the School of Business & Management, I have been Lecturer of In
 
 During this time, I was also Senior Program Manager for two undergraduate programs, <a href="https://www.rmit.edu.vn/study-at-rmit/undergraduate-programs/bachelor-engineering-software-engineering-honours" target="\_blank">Bachelor of Engineering (Software Engineering) (Honours)</a> and <a href="https://www.rmit.edu.vn/study-at-rmit/undergraduate-programs/bachelor-information-technology" target="\_blank">Bachelor of Information Technology</a>. My responsibilities included growing the programs and academic teams, leading initiatives that enhanced research, learning & teaching, and developing strategic relationships with key industry partners in the technology and engineering areas such as Microsoft, IBM, Intel, VNG, ABB, Bosch, and Ericsson. 
 
-In 2016, I was awarded the <a href="https://www.rmit.edu.au/research/research-expertise/our-reputation/research-awards/past-recipients" target="\_blank">RMIT Prize for Research Impact (Enterprise category)</a>, which recognized my active engagement with the industry through conducting research. Since 2018, I have received various <a href="https://duydangpham.github.io/awards" target="\_blank">research and teaching awards</a> at RMIT University, including the "Living RMIT's Values" award in 2021 which recognized my contributions to growing the programs while maintaining excellence in research and teaching.
+In 2016, I was awarded the <a href="https://www.rmit.edu.au/research/research-expertise/our-reputation/research-awards/past-recipients" target="\_blank">RMIT Prize for Research Impact (Enterprise category)</a>, which recognized my active engagement with the industry through conducting research. Since 2018, I have received various [research and teaching awards](/awards) at RMIT University, including the "Living RMIT's Values" award in 2021 which recognized my contributions to growing the programs while maintaining excellence in research and teaching.
 
 ## Expertise
-I completed my Ph.D. (Business Information Systems) degree at RMIT University (Australia) in May 2018, under the co-supervision of Dr. Siddhi Pittayachawan, Dr. Vince Bruno, and Professor Karlheinz Kautz. For my Ph.D. research, I proposed the use of social network analysis as an analytical and novel method to improve organizational information security, by identifying and leveraging organizational networks and key influencers within the workplace to increase information security awareness. I published 14 research articles on this topic in journals such as Information & Management, Computers in Human Behavior, Computers & Security, and conference proceedings such as ACIS and PACIS, as well as various news articles.
+I completed my Ph.D. (Business Information Systems) degree at RMIT University (Australia) in May 2018, under the co-supervision of Dr. Siddhi Pittayachawan, Dr. Vince Bruno, and Professor Karlheinz Kautz. For my Ph.D. research, I proposed the use of social network analysis as an analytical and novel method to improve organizational information security, by identifying and leveraging organizational networks and key influencers within the workplace to increase information security awareness. I published [14 research articles](/publications) on this topic in journals such as Information & Management, Computers in Human Behavior, Computers & Security, and conference proceedings such as ACIS and PACIS, as well as various [news articles](/media).
 
 My teaching and research interests focus on the following areas:
 <ul>
