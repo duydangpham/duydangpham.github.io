@@ -12,9 +12,9 @@ image: /assets/img/duydangpham_2021_2.jpg
 
 <img src="assets/img/duydangpham_2021_2.jpg" alt="Duy Dang-Pham portrait" width="30%" style="border-radius: 50%; float: right; margin-left:40px; margin-bottom:30px">
 
-I am Senior Lecturer of Digital Marketing in the <a href="https://www.rmit.edu.vn/about-us/schools-and-centres/school-of-business-and-management" target="\_blank">School of Business &amp; Management</a>, RMIT University (Saigon South Campus, Vietnam).
+I am Senior Lecturer in the <a href="https://www.rmit.edu.vn/about-us/schools-and-centres/school-of-business-and-management" target="\_blank">School of Business &amp; Management</a>, RMIT University (Saigon South Campus, Vietnam).
 
-Prior to joining the School of Business & Management, I have been Lecturer of Information Technology in the <a href="https://www.rmit.edu.vn/our-schools-centres/school-science-technology" target="\_blank">School of Science &amp; Technology</a> for three years, where I [taught courses](/teaching) in computer science areas such as data science & machine learning, data structures & algorithms, user-centered design, and technology leadership.
+Prior to joining the School of Business & Management, I have been Lecturer in the <a href="https://www.rmit.edu.vn/our-schools-centres/school-science-technology" target="\_blank">School of Science &amp; Technology</a> for three years, where I [taught courses](/teaching) in computer science areas such as data science & machine learning, data structures & algorithms, user-centered design, and technology leadership.
 
 During this time, I was also Senior Program Manager for two undergraduate programs, <a href="https://www.rmit.edu.vn/study-at-rmit/undergraduate-programs/bachelor-engineering-software-engineering-honours" target="\_blank">Bachelor of Engineering (Software Engineering) (Honours)</a> and <a href="https://www.rmit.edu.vn/study-at-rmit/undergraduate-programs/bachelor-information-technology" target="\_blank">Bachelor of Information Technology</a>. My responsibilities included growing the programs and academic teams, leading initiatives that enhanced research, learning & teaching, and developing strategic relationships with key industry partners in the technology and engineering areas such as Microsoft, IBM, Intel, VNG, ABB, Bosch, and Ericsson. 
 
@@ -45,7 +45,7 @@ I am the Co-founding Member and Secrectary of the <a href="https://communities.a
   <li><a href="https://communities.aisnet.org/sigsec/home" target="\_blank">Special Interest Group in Information Security and Privacy (SIG SEG)</a></li>
 </ul>
 
-## Research groups:
+## Research groups
 
 <ul>
   <li><a href="https://cpow.org.au/people/people/" target="\_blank">Centre for People, Organisation, and Work (CPOW)</a></li>
