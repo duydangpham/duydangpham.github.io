@@ -6,7 +6,7 @@
 # See: https://jekyllrb.com/docs/themes/#overriding-theme-defaults
 #
 layout: page
-title: Personal academic website
+title: Information Security Management & Digital Business Academic
 image: /assets/img/duydangpham_2021_2.jpg
 ---
 
