@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.7.1 -->
+<title>Analyzing Apple Health data | Dr. Duy Dang-Pham (Đặng Phạm Thiên Duy)</title>
+<meta name="generator" content="Jekyll v4.2.0" />
+<meta property="og:title" content="Analyzing Apple Health data" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="As I thought that I should care more about my health, I bought a treadmill and after two months of regular running and walking on the treadmill, I lost 7 kgs. I used Apple Watch (Series 3 - not very accurate in fitness tracking based on what I have read) to keep track of my workouts and the Xiaomi Smart Scale 2 for measuring weights and other physical metrics, and all these data are synced and stored in the Apple’s Health app on iPhone. Although the Health app provides useful analyses and visualizations of these data, we can export and analyze the data by using Python as well." />
+<meta property="og:description" content="As I thought that I should care more about my health, I bought a treadmill and after two months of regular running and walking on the treadmill, I lost 7 kgs. I used Apple Watch (Series 3 - not very accurate in fitness tracking based on what I have read) to keep track of my workouts and the Xiaomi Smart Scale 2 for measuring weights and other physical metrics, and all these data are synced and stored in the Apple’s Health app on iPhone. Although the Health app provides useful analyses and visualizations of these data, we can export and analyze the data by using Python as well." />
+<meta property="og:site_name" content="Dr. Duy Dang-Pham (Đặng Phạm Thiên Duy)" />
+<meta property="og:image" content="/assets/img/blog_9May_1.jpg" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2020-12-27T00:00:00+07:00" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta property="twitter:image" content="/assets/img/blog_9May_1.jpg" />
+<meta property="twitter:title" content="Analyzing Apple Health data" />
+<script type="application/ld+json">
+{"url":"/2020/12/27/analyze-apple-health-data.html","image":"/assets/img/blog_9May_1.jpg","headline":"Analyzing Apple Health data","dateModified":"2020-12-27T00:00:00+07:00","datePublished":"2020-12-27T00:00:00+07:00","mainEntityOfPage":{"@type":"WebPage","@id":"/2020/12/27/analyze-apple-health-data.html"},"description":"As I thought that I should care more about my health, I bought a treadmill and after two months of regular running and walking on the treadmill, I lost 7 kgs. I used Apple Watch (Series 3 - not very accurate in fitness tracking based on what I have read) to keep track of my workouts and the Xiaomi Smart Scale 2 for measuring weights and other physical metrics, and all these data are synced and stored in the Apple’s Health app on iPhone. Although the Health app provides useful analyses and visualizations of these data, we can export and analyze the data by using Python as well.","@type":"BlogPosting","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/assets/css/style.css"><link type="application/atom+xml" rel="alternate" href="/feed.xml" title="Dr. Duy Dang-Pham (Đặng Phạm Thiên Duy)" />
+
+<link rel="apple-touch-icon" sizes="180x180" href="/assets/favicon/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon/favicon-16x16.png">
+<link rel="manifest" href="/assets/favicon/site.webmanifest">
+<meta name="msapplication-TileColor" content="#da532c">
+<meta name="theme-color" content="#ffffff"></head>
+<body><header class="site-header">
+
+  <div class="wrapper"><a class="site-title" rel="author" href="/">Dr. Duy Dang-Pham (Đặng Phạm Thiên Duy)</a><nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger"><a class="page-link" href="/blog/">Blog</a><a class="page-link" href="/publications/">Publications</a><a class="page-link" href="/awards/">Awards</a><a class="page-link" href="/media/">Media</a><a class="page-link" href="/teaching/">Teaching</a><a class="page-link" href="/students/">Students</a><a class="page-link" href="/career-highlights/">Career Highlights</a></div>
+      </nav></div>
+</header>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">Analyzing Apple Health data</h1>
+    <p class="post-meta"><time class="dt-published" datetime="2020-12-27T00:00:00+07:00" itemprop="datePublished">
+        Dec 27, 2020
+      </time>• 
+          <span itemprop="author" itemscope itemtype="http://schema.org/Person">
+            <span class="p-author h-card" itemprop="name">Duy Dang-Pham</span></span></p>
+  </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <p>As I thought that I should care more about my health, I bought a treadmill and after two months of regular running and walking on the treadmill, I lost 7 kgs. I used Apple Watch (Series 3 - not very accurate in fitness tracking based on what I have read) to keep track of my workouts and the Xiaomi Smart Scale 2 for measuring weights and other physical metrics, and all these data are synced and stored in the Apple’s Health app on iPhone. Although the Health app provides useful analyses and visualizations of these data, we can export and analyze the data by using Python as well.<!-- excerpt --></p>
+
+<p>To export the data, simply go to your personal profile in the Health app and select “Export all data”. There are different ways to export the data, but I found sending the data to my email address to be the easiest way. Then, we can download the sent file and unzip it, and inside the unzipped folder, we will analyze the ‘export.xml’ file.</p>
+
+<p>At first glance, we would notice that each data point is recorded as an element that has the <code class="language-plaintext highlighter-rouge">&lt;Record&gt;</code> tag. Within this tag, there are multiple attributes such as <code class="language-plaintext highlighter-rouge">type</code>, <code class="language-plaintext highlighter-rouge">sourceName</code>, <code class="language-plaintext highlighter-rouge">startDate</code>, <code class="language-plaintext highlighter-rouge">endDate</code>, <code class="language-plaintext highlighter-rouge">value</code>, and so on.</p>
+
+<p><img src="/assets/img/blog_27Dec_1.JPG" alt="XML file structure" /></p>
+
+<p>To import and load the XML data:</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="nn">lxml.etree</span> <span class="k">as</span> <span class="n">ET</span>
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="n">pd</span>
+
+<span class="n">tree</span> <span class="o">=</span> <span class="n">ET</span><span class="p">.</span><span class="n">parse</span><span class="p">(</span><span class="s">"export.xml"</span><span class="p">)</span>
+<span class="n">root</span> <span class="o">=</span> <span class="n">tree</span><span class="p">.</span><span class="n">getroot</span><span class="p">()</span>
+
+<span class="n">attribute</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="n">endDate</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="n">value</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="n">sourceName</span> <span class="o">=</span> <span class="p">[]</span>
+
+<span class="k">for</span> <span class="n">element</span> <span class="ow">in</span> <span class="n">root</span><span class="p">.</span><span class="n">xpath</span><span class="p">(</span><span class="s">"//Record[(@type='HKQuantityTypeIdentifierActiveEnergyBurned' or </span><span class="se">\
+</span><span class="s">@type='HKQuantityTypeIdentifierStepCount') and </span><span class="se">\
+</span><span class="s">contains(@sourceName, 'Watch')]"</span><span class="p">):</span>
+    <span class="n">attribute</span><span class="p">.</span><span class="n">append</span><span class="p">(</span><span class="n">element</span><span class="p">.</span><span class="n">get</span><span class="p">(</span><span class="s">'type'</span><span class="p">))</span>
+    <span class="n">endDate</span><span class="p">.</span><span class="n">append</span><span class="p">(</span><span class="n">element</span><span class="p">.</span><span class="n">get</span><span class="p">(</span><span class="s">'endDate'</span><span class="p">))</span>
+    <span class="n">value</span><span class="p">.</span><span class="n">append</span><span class="p">(</span><span class="n">element</span><span class="p">.</span><span class="n">get</span><span class="p">(</span><span class="s">'value'</span><span class="p">))</span>
+    
+<span class="n">exercise</span> <span class="o">=</span> <span class="n">pd</span><span class="p">.</span><span class="n">DataFrame</span><span class="p">({</span><span class="s">'attribute'</span><span class="p">:</span> <span class="n">attribute</span><span class="p">,</span> <span class="s">'endDate'</span><span class="p">:</span> <span class="n">endDate</span><span class="p">,</span> <span class="s">'value'</span><span class="p">:</span><span class="n">value</span><span class="p">})</span>
+
+<span class="n">exercise</span><span class="p">.</span><span class="n">value</span> <span class="o">=</span> <span class="n">pd</span><span class="p">.</span><span class="n">to_numeric</span><span class="p">(</span><span class="n">exercise</span><span class="p">.</span><span class="n">value</span><span class="p">)</span>
+<span class="n">exercise</span><span class="p">.</span><span class="n">endDate</span> <span class="o">=</span> <span class="n">pd</span><span class="p">.</span><span class="n">to_datetime</span><span class="p">(</span><span class="n">exercise</span><span class="p">.</span><span class="n">endDate</span><span class="p">)</span>
+<span class="n">exercise</span><span class="p">.</span><span class="n">endDate</span> <span class="o">=</span> <span class="n">exercise</span><span class="p">.</span><span class="n">endDate</span><span class="p">.</span><span class="n">dt</span><span class="p">.</span><span class="n">date</span>
+
+<span class="n">exercise</span>
+</code></pre></div></div>
+
+<p>Here I used xpath to get all elements with the attributes that contained data about “Active Energy Burned” and “Step Count”, and especially that the data were recorded by my Apple Watch. Each element’s values were appended to the lists which were used to construct a DataFrame called “exercise”.</p>
+
+<p>Next, I created a pivot table to summarize these data. Specifically, I summed the data to calculate the total amounts of active energy burned and step count for each day. This reduced 190,872 rows of data to only 268 rows (i.e., 268 days). Because we sum the data, earlier the “value” column was converted to numeric.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">exercise_pivot</span> <span class="o">=</span> <span class="n">exercise</span><span class="p">.</span><span class="n">pivot_table</span><span class="p">(</span><span class="n">values</span><span class="o">=</span><span class="s">'value'</span><span class="p">,</span> <span class="n">columns</span><span class="o">=</span><span class="s">'attribute'</span><span class="p">,</span> <span class="n">index</span><span class="o">=</span><span class="s">'endDate'</span><span class="p">,</span> <span class="n">aggfunc</span><span class="o">=</span><span class="s">'sum'</span><span class="p">).</span><span class="n">to_records</span><span class="p">()</span>
+<span class="n">exercise_pivot</span> <span class="o">=</span> <span class="n">pd</span><span class="p">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">exercise_pivot</span><span class="p">)</span>
+<span class="n">exercise_pivot</span><span class="p">.</span><span class="n">columns</span> <span class="o">=</span> <span class="p">[</span><span class="s">'endDate'</span><span class="p">,</span> <span class="s">'ActiveEnergyBurned'</span><span class="p">,</span> <span class="s">'StepCount'</span><span class="p">]</span>
+<span class="n">exercise_pivot</span><span class="p">.</span><span class="n">endDate</span> <span class="o">=</span> <span class="n">pd</span><span class="p">.</span><span class="n">to_datetime</span><span class="p">(</span><span class="n">exercise_pivot</span><span class="p">.</span><span class="n">endDate</span><span class="p">)</span>
+<span class="n">exercise_pivot</span>
+</code></pre></div></div>
+
+<p>Let’s use the same code to extract data about body mass. In the snippet below, I wanted to get the elements which contained data that were recorded by Mi Fit (the source name of the Xiaomi smart scale) and their unit was measured in “kg”.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">attribute</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="n">endDate</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="n">value</span> <span class="o">=</span> <span class="p">[]</span>
+
+<span class="k">for</span> <span class="n">element</span> <span class="ow">in</span> <span class="n">root</span><span class="p">.</span><span class="n">xpath</span><span class="p">(</span><span class="s">"//Record[@sourceName='Mi Fit' and @unit='kg']"</span><span class="p">):</span>
+    <span class="n">attribute</span><span class="p">.</span><span class="n">append</span><span class="p">(</span><span class="n">element</span><span class="p">.</span><span class="n">get</span><span class="p">(</span><span class="s">'type'</span><span class="p">))</span>
+    <span class="n">endDate</span><span class="p">.</span><span class="n">append</span><span class="p">(</span><span class="n">element</span><span class="p">.</span><span class="n">get</span><span class="p">(</span><span class="s">'endDate'</span><span class="p">))</span>
+    <span class="n">value</span><span class="p">.</span><span class="n">append</span><span class="p">(</span><span class="n">element</span><span class="p">.</span><span class="n">get</span><span class="p">(</span><span class="s">'value'</span><span class="p">))</span>
+    
+<span class="n">bodyMass</span> <span class="o">=</span> <span class="n">pd</span><span class="p">.</span><span class="n">DataFrame</span><span class="p">({</span><span class="s">'attribute'</span><span class="p">:</span> <span class="n">attribute</span><span class="p">,</span> <span class="s">'endDate'</span><span class="p">:</span> <span class="n">endDate</span><span class="p">,</span> <span class="s">'value'</span><span class="p">:</span><span class="n">value</span><span class="p">})</span>
+
+<span class="n">bodyMass</span><span class="p">.</span><span class="n">value</span> <span class="o">=</span> <span class="n">pd</span><span class="p">.</span><span class="n">to_numeric</span><span class="p">(</span><span class="n">bodyMass</span><span class="p">.</span><span class="n">value</span><span class="p">)</span>
+<span class="n">bodyMass</span><span class="p">.</span><span class="n">endDate</span> <span class="o">=</span> <span class="n">pd</span><span class="p">.</span><span class="n">to_datetime</span><span class="p">(</span><span class="n">bodyMass</span><span class="p">.</span><span class="n">endDate</span><span class="p">)</span>
+<span class="n">bodyMass</span><span class="p">.</span><span class="n">endDate</span> <span class="o">=</span> <span class="n">bodyMass</span><span class="p">.</span><span class="n">endDate</span><span class="p">.</span><span class="n">dt</span><span class="p">.</span><span class="n">date</span>
+
+<span class="n">bodyMass</span>
+</code></pre></div></div>
+
+<p>There were some duplicates in this bodyMass DataFrame, since I removed the time from the endDate column to keep only the date, and apparently on some days I measured my weight multiple times and received the same results. So, I removed the duplicates:</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">bodyMass</span><span class="p">.</span><span class="n">drop_duplicates</span><span class="p">(</span><span class="n">keep</span><span class="o">=</span><span class="s">'last'</span><span class="p">,</span> <span class="n">inplace</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
+<span class="n">bodyMass</span>
+</code></pre></div></div>
+
+<p>And then proceeded to creating the pivot table, but this time I calculated the average body mass per day instead of doing the summation as above:</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">bodyMass_pivot</span> <span class="o">=</span> <span class="n">bodyMass</span><span class="p">.</span><span class="n">pivot_table</span><span class="p">(</span><span class="n">values</span><span class="o">=</span><span class="s">'value'</span><span class="p">,</span> <span class="n">columns</span><span class="o">=</span><span class="s">'attribute'</span><span class="p">,</span> <span class="n">index</span><span class="o">=</span><span class="s">'endDate'</span><span class="p">,</span> <span class="n">aggfunc</span><span class="o">=</span><span class="s">'mean'</span><span class="p">).</span><span class="n">to_records</span><span class="p">()</span>
+<span class="n">bodyMass_pivot</span> <span class="o">=</span> <span class="n">pd</span><span class="p">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">bodyMass_pivot</span><span class="p">)</span>
+<span class="n">bodyMass_pivot</span><span class="p">.</span><span class="n">columns</span> <span class="o">=</span> <span class="p">[</span><span class="s">'endDate'</span><span class="p">,</span> <span class="s">'BodyMass'</span><span class="p">,</span> <span class="s">'LeanBodyMass'</span><span class="p">]</span>
+<span class="n">bodyMass_pivot</span><span class="p">.</span><span class="n">endDate</span> <span class="o">=</span> <span class="n">pd</span><span class="p">.</span><span class="n">to_datetime</span><span class="p">(</span><span class="n">bodyMass_pivot</span><span class="p">.</span><span class="n">endDate</span><span class="p">)</span>
+<span class="n">bodyMass_pivot</span>
+</code></pre></div></div>
+
+<p>Now we merge the two DataFrames, “exercise” and “bodyMass”:</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">combined_df</span> <span class="o">=</span> <span class="n">pd</span><span class="p">.</span><span class="n">merge</span><span class="p">(</span><span class="n">exercise_pivot</span><span class="p">,</span> <span class="n">bodyMass_pivot</span><span class="p">,</span> <span class="n">how</span><span class="o">=</span><span class="s">'left'</span><span class="p">,</span> <span class="n">on</span><span class="o">=</span><span class="s">'endDate'</span><span class="p">)</span>
+
+<span class="n">combined_df</span>
+</code></pre></div></div>
+
+<p><img src="/assets/img/blog_27Dec_2.JPG" alt="Combined DataFrame" /></p>
+
+<p>Although I have been wearing the Apple Watch since 2019, I just recently started exercising and measuring my weights with the Xiaomi smart scale since October 2020, so there were missing data (NaN) in my merged DataFrame. We can drop these missing data:</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">combined_df</span><span class="p">.</span><span class="n">dropna</span><span class="p">(</span><span class="n">inplace</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
+</code></pre></div></div>
+
+<p>Now we have a consolidated data set of only 33 data points which represent the 33 days that I used the smart scale to measure my weights.</p>
+
+<p>We can use the package <code class="language-plaintext highlighter-rouge">seaborn</code> to visualize the data, for example, about active energy burned:</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="nn">seaborn</span> <span class="k">as</span> <span class="n">sns</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="n">plt</span>
+
+<span class="n">f</span> <span class="o">=</span> <span class="n">plt</span><span class="p">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">12</span><span class="p">,</span> <span class="mi">6</span><span class="p">))</span>
+<span class="n">sns</span><span class="p">.</span><span class="n">set_style</span><span class="p">(</span><span class="s">'whitegrid'</span><span class="p">)</span>
+<span class="n">sns</span><span class="p">.</span><span class="n">set_context</span><span class="p">(</span><span class="s">'paper'</span><span class="p">,</span> <span class="n">font_scale</span><span class="o">=</span><span class="mf">1.5</span><span class="p">)</span>
+
+<span class="n">sns</span><span class="p">.</span><span class="n">lineplot</span><span class="p">(</span>
+    <span class="n">data</span><span class="o">=</span><span class="n">combined_df</span><span class="p">[</span><span class="s">'ActiveEnergyBurned'</span><span class="p">]</span>
+<span class="p">);</span>
+</code></pre></div></div>
+
+<p><img src="/assets/img/blog_27Dec_3.JPG" alt="Line plot for active energy burned" /></p>
+
+<p>Or if we want to draw multiple lines within the same line chart:</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">combined_df_melted</span> <span class="o">=</span> <span class="n">pd</span><span class="p">.</span><span class="n">melt</span><span class="p">(</span><span class="n">combined_df</span><span class="p">,</span> <span class="n">id_vars</span><span class="o">=</span><span class="s">'endDate'</span><span class="p">)</span>
+
+<span class="n">f</span> <span class="o">=</span> <span class="n">plt</span><span class="p">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">12</span><span class="p">,</span> <span class="mi">6</span><span class="p">))</span>
+<span class="n">sns</span><span class="p">.</span><span class="n">set_style</span><span class="p">(</span><span class="s">'whitegrid'</span><span class="p">)</span>
+<span class="n">sns</span><span class="p">.</span><span class="n">set_context</span><span class="p">(</span><span class="s">'paper'</span><span class="p">,</span> <span class="n">font_scale</span><span class="o">=</span><span class="mf">1.5</span><span class="p">)</span>
+
+<span class="n">sns</span><span class="p">.</span><span class="n">lineplot</span><span class="p">(</span>
+    <span class="n">data</span><span class="o">=</span><span class="n">combined_df_melted</span><span class="p">.</span><span class="n">query</span><span class="p">(</span><span class="s">"variable == ['ActiveEnergyBurned','StepCount']"</span><span class="p">),</span>
+    <span class="n">x</span><span class="o">=</span><span class="s">'endDate'</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="s">'value'</span><span class="p">,</span> <span class="n">hue</span><span class="o">=</span><span class="s">'variable'</span>
+<span class="p">);</span>
+</code></pre></div></div>
+
+<p><img src="/assets/img/blog_27Dec_4.JPG" alt="Line plot for active energy burned and step count" /></p>
+
+<p>So in this short and simple post, we have performed the following tasks in Python:</p>
+<ul>
+  <li>Import XML file and extract data by using xpath</li>
+  <li>Perform some data cleaning and processing</li>
+  <li>Visualize the data with the seaborn package</li>
+</ul>
+
+<p>There are many more interesting things that we can find from this data set, and I hope you will enjoy analyzing your own Apple’s Health data as well!</p>
+
+  </div><a class="u-url" href="/2020/12/27/analyze-apple-health-data.html" hidden></a>
+</article>
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/"></data>
+
+  <div class="wrapper">
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col">
+        <p class="feed-subscribe">
+          <a href="/feed.xml">
+            <svg class="svg-icon orange">
+              <use xlink:href="/assets/minima-social-icons.svg#rss"></use>
+            </svg><span>Subscribe</span>
+          </a>
+        </p>
+        <ul class="contact-list">
+          <li class="p-name">Duy Dang-Pham</li>
+          
+        </ul>
+      </div>
+      <div class="footer-col">
+        <p>Dr. Duy Dang-Pham (Đặng Phạm Thiên Duy) is an academic at RMIT University (Saigon South Campus, Vietnam). He teaches and conducts research in the areas of cybersecurity management and behaviors, digital business and digital transformation, business and learning analytics, and human-centered artificial intelligence.
+</p>
+      </div>
+    </div>
+
+    <div class="social-links"><ul class="social-media-list"></ul>
+</div>
+
+  </div>
+
+</footer>
+</body>
+
+</html>

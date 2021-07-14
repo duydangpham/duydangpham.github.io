@@ -1,0 +1,2 @@
+User-agent: *
+Sitemap: https://duydangpham.github.io/sitemap.xml

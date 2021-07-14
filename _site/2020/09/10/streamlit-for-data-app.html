@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.7.1 -->
+<title>Streamlit for data app | Dr. Duy Dang-Pham (Đặng Phạm Thiên Duy)</title>
+<meta name="generator" content="Jekyll v4.2.0" />
+<meta property="og:title" content="Streamlit for data app" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="For data scientists and machine learning engineers who use Python, streamlit provides an easy-to-use and intuitive framework for creating data apps" />
+<meta property="og:description" content="For data scientists and machine learning engineers who use Python, streamlit provides an easy-to-use and intuitive framework for creating data apps" />
+<meta property="og:site_name" content="Dr. Duy Dang-Pham (Đặng Phạm Thiên Duy)" />
+<meta property="og:image" content="/assets/img/blog_9May_1.jpg" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2020-09-10T00:00:00+07:00" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta property="twitter:image" content="/assets/img/blog_9May_1.jpg" />
+<meta property="twitter:title" content="Streamlit for data app" />
+<script type="application/ld+json">
+{"url":"/2020/09/10/streamlit-for-data-app.html","image":"/assets/img/blog_9May_1.jpg","headline":"Streamlit for data app","dateModified":"2020-09-10T00:00:00+07:00","datePublished":"2020-09-10T00:00:00+07:00","mainEntityOfPage":{"@type":"WebPage","@id":"/2020/09/10/streamlit-for-data-app.html"},"description":"For data scientists and machine learning engineers who use Python, streamlit provides an easy-to-use and intuitive framework for creating data apps","@type":"BlogPosting","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/assets/css/style.css"><link type="application/atom+xml" rel="alternate" href="/feed.xml" title="Dr. Duy Dang-Pham (Đặng Phạm Thiên Duy)" />
+
+<link rel="apple-touch-icon" sizes="180x180" href="/assets/favicon/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon/favicon-16x16.png">
+<link rel="manifest" href="/assets/favicon/site.webmanifest">
+<meta name="msapplication-TileColor" content="#da532c">
+<meta name="theme-color" content="#ffffff"></head>
+<body><header class="site-header">
+
+  <div class="wrapper"><a class="site-title" rel="author" href="/">Dr. Duy Dang-Pham (Đặng Phạm Thiên Duy)</a><nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger"><a class="page-link" href="/blog/">Blog</a><a class="page-link" href="/publications/">Publications</a><a class="page-link" href="/awards/">Awards</a><a class="page-link" href="/media/">Media</a><a class="page-link" href="/teaching/">Teaching</a><a class="page-link" href="/students/">Students</a><a class="page-link" href="/career-highlights/">Career Highlights</a></div>
+      </nav></div>
+</header>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">Streamlit for data app</h1>
+    <p class="post-meta"><time class="dt-published" datetime="2020-09-10T00:00:00+07:00" itemprop="datePublished">
+        Sep 10, 2020
+      </time>• 
+          <span itemprop="author" itemscope itemtype="http://schema.org/Person">
+            <span class="p-author h-card" itemprop="name">Duy Dang-Pham</span></span></p>
+  </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <p>For data scientists and machine learning engineers who use Python, <a href="https://www.streamlit.io/">streamlit</a> provides an easy-to-use and intuitive framework for creating data apps<!-- excerpt -->. To start creating data apps with streamlit, first install it:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>pip install streamlit
+</code></pre></div></div>
+<p>For demonstration, let’s create an app to display the <a href="https://abdc.edu.au/">ABDC journal quality list</a>. First, we import the necessary packages:</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="n">pd</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="n">np</span>
+<span class="kn">import</span> <span class="nn">requests</span>
+<span class="kn">import</span> <span class="nn">streamlit</span> <span class="k">as</span> <span class="n">st</span>
+</code></pre></div></div>
+
+<p>With streamlit imported, we can start writing the title of our data app:</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">st</span><span class="p">.</span><span class="n">title</span><span class="p">(</span><span class="s">"Journal Ranking"</span><span class="p">)</span>
+</code></pre></div></div>
+
+<p>In the terminal, we run the Python script by typing:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>streamlit run [filename]
+</code></pre></div></div>
+
+<p>A browser will be opened and it shows our data app with the title “Journal Ranking” as we specified above.</p>
+
+<p>The ABDC journal quality list is an Excel spreadsheet file that contains the ranks of multidisciplinary academic journals. Since it is a spreadsheet, we can download and store the data as a pandas dataframe:</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">ABDC</span> <span class="o">=</span> <span class="s">"https://abdc.edu.au/wp-content/uploads/2020/04/abdc_jql_2019_0612-1.1.xlsx"</span>
+<span class="n">raw_abdc</span> <span class="o">=</span> <span class="n">download_data</span><span class="p">(</span><span class="n">ABDC</span><span class="p">)</span>
+</code></pre></div></div>
+
+<p>To display this dataframe on our data app, there are multiple ways for doing this. Conveniently, streamlit provides the “magic commands” that allow us to write information to our app with a few keypresses. In this case, we can write the dataframe to our data app by:</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">st</span><span class="p">.</span><span class="n">dataframe</span><span class="p">(</span><span class="n">raw_abdc</span><span class="p">)</span>
+
+<span class="c1"># Or by using magic command
+</span><span class="n">raw_abdc</span>
+</code></pre></div></div>
+
+<p>Another convenient feature that streamlit offers is caching, which allows performing expensive operations quickly. We can use caching to support loading the ABDC data set from the URL specified above. First, we create a function to load the data. Second, we add the <code class="language-plaintext highlighter-rouge">@st.cache</code> decorator before the load function:</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># Download ABDC list
+</span><span class="o">@</span><span class="n">st</span><span class="p">.</span><span class="n">cache</span>
+<span class="k">def</span> <span class="nf">download_data</span><span class="p">(</span><span class="n">data_url</span><span class="p">):</span>
+    <span class="k">return</span><span class="p">(</span><span class="n">pd</span><span class="p">.</span><span class="n">read_excel</span><span class="p">(</span><span class="n">data_url</span><span class="p">,</span> <span class="n">header</span><span class="o">=</span><span class="mi">8</span><span class="p">))</span>
+
+<span class="c1"># ABDC data
+</span><span class="n">st</span><span class="p">.</span><span class="n">header</span><span class="p">(</span><span class="s">"ABDC List"</span><span class="p">)</span>
+<span class="n">raw_abdc</span> <span class="o">=</span> <span class="n">download_data</span><span class="p">(</span><span class="n">ABDC</span><span class="p">)</span>
+<span class="n">raw_abdc</span>
+</code></pre></div></div>
+
+<p>By using the <code class="language-plaintext highlighter-rouge">@st.cache</code> decorator, you should notice that the data set is loaded much faster than before.</p>
+
+<p>The current limitation of streamlit’s dataframe is that it does not have the filtering feature. So, let’s create a function to filter the ABDC journal ranking list based on two important criteria: 1) journals’ ranks, and 2) publishers.</p>
+
+<p>ABDC journal ranking list consists of five categories: A** (i.e., elite journals), A*, A, B, and C. On the other hand, the list of publishers can be quite extensive.</p>
+
+<p>With streamlit, we can add two dropdown lists that allow the users to select the ranks and the publishers to show only the journals that match these criteria. Since there are two filters (i.e., journal ranks and publishers) and multiple criteria for each filter, we can use a dictionary to store these values as pairs of filter and criteria:</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">st</span><span class="p">.</span><span class="n">subheader</span><span class="p">(</span><span class="s">"Filter:"</span><span class="p">)</span>
+
+<span class="c1"># Get the list of unique publishers
+</span><span class="n">publishers_list</span> <span class="o">=</span> <span class="n">raw_abdc</span><span class="p">[</span><span class="s">"Publisher"</span><span class="p">].</span><span class="n">unique</span><span class="p">()</span>
+
+<span class="n">filter_values</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s">"2019 Rating"</span><span class="p">:</span> <span class="n">st</span><span class="p">.</span><span class="n">multiselect</span><span class="p">(</span><span class="s">"Select journal ranks:"</span><span class="p">,</span> <span class="p">(</span><span class="s">"A**"</span><span class="p">,</span><span class="s">"A*"</span><span class="p">,</span> <span class="s">"A"</span><span class="p">,</span> <span class="s">"B"</span><span class="p">,</span> <span class="s">"C"</span><span class="p">)),</span>
+    <span class="s">"Publisher"</span><span class="p">:</span> <span class="n">st</span><span class="p">.</span><span class="n">multiselect</span><span class="p">(</span><span class="s">"Select publishers:"</span><span class="p">,</span> <span class="n">publishers_list</span><span class="p">)</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<p>Here, we use <code class="language-plaintext highlighter-rouge">st.multiselect</code> to create the dropdown lists that contain the values that can be selected by the users to filter the journals. Now, we can use the dictionary <code class="language-plaintext highlighter-rouge">filter_values</code> to dynamically create queries for subsetting pandas dataframes:</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">final_query</span> <span class="o">=</span> <span class="s">""</span>
+<span class="k">for</span> <span class="n">feature_name</span><span class="p">,</span> <span class="n">criteria</span> <span class="ow">in</span> <span class="n">filter_values</span><span class="p">.</span><span class="n">items</span><span class="p">():</span>
+    <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">criteria</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="n">query</span> <span class="o">=</span> <span class="s">"`{}` in {}"</span><span class="p">.</span><span class="nb">format</span><span class="p">(</span><span class="n">feature_name</span><span class="p">,</span> <span class="n">criteria</span><span class="p">)</span>
+        <span class="n">final_query</span> <span class="o">=</span> <span class="n">final_query</span> <span class="o">+</span> <span class="s">" &amp; "</span> <span class="o">+</span> <span class="n">query</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">pass</span>
+</code></pre></div></div>
+
+<p>Let’s output the query to check it:</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">st</span><span class="p">.</span><span class="n">write</span><span class="p">(</span><span class="s">"Query string:"</span><span class="p">,</span> <span class="n">final_query</span><span class="p">[</span><span class="mi">2</span><span class="p">:])</span>
+</code></pre></div></div>
+
+<p>Finally, we can use this query to subset the ABDC journal ranking list dynamically on our streamlit app:</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">if</span> <span class="n">final_query</span><span class="p">[</span><span class="mi">2</span><span class="p">:]</span> <span class="o">!=</span> <span class="s">""</span><span class="p">:</span>
+    <span class="n">filtered_data</span> <span class="o">=</span> <span class="n">raw_abdc</span><span class="p">.</span><span class="n">query</span><span class="p">(</span><span class="n">final_query</span><span class="p">[</span><span class="mi">2</span><span class="p">:])</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="n">st</span><span class="p">.</span><span class="n">stop</span><span class="p">()</span>
+    <span class="n">st</span><span class="p">.</span><span class="n">warning</span><span class="p">(</span><span class="s">"Please select some filter criteria first."</span><span class="p">)</span>
+    
+<span class="n">filtered_data</span>
+</code></pre></div></div>
+
+<p>Note here that we use <code class="language-plaintext highlighter-rouge">st.stop()</code> and <code class="language-plaintext highlighter-rouge">st.warning()</code> to control the flow of our data app. If the query is empty, i.e., the user do not specify any filters, then the app is stopped and a warning message is shown until the users choose at least one filter.</p>
+
+<p>While creating this simple app, I also note a common issue when using <code class="language-plaintext highlighter-rouge">df.query</code> to subset pandas dataframes that contain column names with spaces e.g., the “2019 Ranking” column in the ABDC data set.</p>
+
+<p>The solution here is to use the backtick <code class="language-plaintext highlighter-rouge">` `</code> to wrap the column name. Another solution is to replace the spaces in the column names by <code class="language-plaintext highlighter-rouge">_</code>, however this solution is not ideal since it alters the original column names.</p>
+
+<p>Here is a screenshot of the app:</p>
+
+<p><img src="/assets/img/journal_ranking_app.JPG" alt="Screenshot of ABDC journal ranking app" /></p>
+
+<p>The full code for this simple streamlit app is as follows:</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="n">pd</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="n">np</span>
+<span class="kn">import</span> <span class="nn">requests</span>
+<span class="kn">import</span> <span class="nn">streamlit</span> <span class="k">as</span> <span class="n">st</span>
+
+<span class="n">ABDC</span> <span class="o">=</span> <span class="s">"https://abdc.edu.au/wp-content/uploads/2020/04/abdc_jql_2019_0612-1.1.xlsx"</span>
+
+<span class="c1"># Header
+</span><span class="n">st</span><span class="p">.</span><span class="n">title</span><span class="p">(</span><span class="s">"Journal Ranking"</span><span class="p">)</span>
+
+<span class="c1"># Download ABDC list
+</span><span class="o">@</span><span class="n">st</span><span class="p">.</span><span class="n">cache</span>
+<span class="k">def</span> <span class="nf">download_data</span><span class="p">(</span><span class="n">data_url</span><span class="p">):</span>
+    <span class="k">return</span><span class="p">(</span><span class="n">pd</span><span class="p">.</span><span class="n">read_excel</span><span class="p">(</span><span class="n">data_url</span><span class="p">,</span> <span class="n">header</span><span class="o">=</span><span class="mi">8</span><span class="p">))</span>
+
+<span class="c1"># ABDC
+</span><span class="n">st</span><span class="p">.</span><span class="n">header</span><span class="p">(</span><span class="s">"ABDC List"</span><span class="p">)</span>
+<span class="n">raw_abdc</span> <span class="o">=</span> <span class="n">download_data</span><span class="p">(</span><span class="n">ABDC</span><span class="p">)</span>
+<span class="n">raw_abdc</span>
+
+<span class="n">st</span><span class="p">.</span><span class="n">subheader</span><span class="p">(</span><span class="s">"Filter:"</span><span class="p">)</span>
+
+<span class="n">publishers_list</span> <span class="o">=</span> <span class="n">raw_abdc</span><span class="p">[</span><span class="s">"Publisher"</span><span class="p">].</span><span class="n">unique</span><span class="p">()</span>
+
+<span class="n">filter_values</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s">"2019 Rating"</span><span class="p">:</span> <span class="n">st</span><span class="p">.</span><span class="n">multiselect</span><span class="p">(</span><span class="s">"Select journal ranks:"</span><span class="p">,</span> <span class="p">(</span><span class="s">"A**"</span><span class="p">,</span><span class="s">"A*"</span><span class="p">,</span> <span class="s">"A"</span><span class="p">,</span> <span class="s">"B"</span><span class="p">,</span> <span class="s">"C"</span><span class="p">)),</span>
+    <span class="s">"Publisher"</span><span class="p">:</span> <span class="n">st</span><span class="p">.</span><span class="n">multiselect</span><span class="p">(</span><span class="s">"Select publishers:"</span><span class="p">,</span> <span class="n">publishers_list</span><span class="p">)</span>
+<span class="p">}</span>
+
+<span class="n">final_query</span> <span class="o">=</span> <span class="s">""</span>
+<span class="k">for</span> <span class="n">feature_name</span><span class="p">,</span> <span class="n">criteria</span> <span class="ow">in</span> <span class="n">filter_values</span><span class="p">.</span><span class="n">items</span><span class="p">():</span>
+    <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">criteria</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="c1"># query = " ".join(feature_name, criteria)
+</span>        <span class="n">query</span> <span class="o">=</span> <span class="s">'`{}` in {}'</span><span class="p">.</span><span class="nb">format</span><span class="p">(</span><span class="n">feature_name</span><span class="p">,</span> <span class="n">criteria</span><span class="p">)</span>
+        <span class="n">final_query</span> <span class="o">=</span> <span class="n">final_query</span> <span class="o">+</span> <span class="s">" &amp; "</span> <span class="o">+</span> <span class="n">query</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">pass</span>
+
+<span class="n">st</span><span class="p">.</span><span class="n">write</span><span class="p">(</span><span class="s">"Query string:"</span><span class="p">,</span> <span class="n">final_query</span><span class="p">[</span><span class="mi">2</span><span class="p">:])</span>
+
+<span class="k">if</span> <span class="n">final_query</span><span class="p">[</span><span class="mi">2</span><span class="p">:]</span> <span class="o">!=</span> <span class="s">""</span><span class="p">:</span>
+    <span class="n">filtered_data</span> <span class="o">=</span> <span class="n">raw_abdc</span><span class="p">.</span><span class="n">query</span><span class="p">(</span><span class="n">final_query</span><span class="p">[</span><span class="mi">2</span><span class="p">:])</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="n">st</span><span class="p">.</span><span class="n">stop</span><span class="p">()</span>
+    <span class="n">st</span><span class="p">.</span><span class="n">warning</span><span class="p">(</span><span class="s">"Please select some filter criteria first."</span><span class="p">)</span>
+    
+<span class="n">filtered_data</span>
+</code></pre></div></div>
+
+  </div><a class="u-url" href="/2020/09/10/streamlit-for-data-app.html" hidden></a>
+</article>
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/"></data>
+
+  <div class="wrapper">
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col">
+        <p class="feed-subscribe">
+          <a href="/feed.xml">
+            <svg class="svg-icon orange">
+              <use xlink:href="/assets/minima-social-icons.svg#rss"></use>
+            </svg><span>Subscribe</span>
+          </a>
+        </p>
+        <ul class="contact-list">
+          <li class="p-name">Duy Dang-Pham</li>
+          
+        </ul>
+      </div>
+      <div class="footer-col">
+        <p>Dr. Duy Dang-Pham (Đặng Phạm Thiên Duy) is an academic at RMIT University (Saigon South Campus, Vietnam). He teaches and conducts research in the areas of cybersecurity management and behaviors, digital business and digital transformation, business and learning analytics, and human-centered artificial intelligence.
+</p>
+      </div>
+    </div>
+
+    <div class="social-links"><ul class="social-media-list"></ul>
+</div>
+
+  </div>
+
+</footer>
+</body>
+
+</html>
