@@ -7,7 +7,7 @@
 #
 layout: page
 title: Information Security Management & Digital Business Academic
-image: /assets/img/duydangpham_2021_2.jpg
+image: /assets/img/duydangpham_2021_facebook_OG.jpg
 ---
 
 <img src="assets/img/duydangpham_2021_2.jpg" alt="Duy Dang-Pham portrait" width="30%" style="border-radius: 50%; float: right; margin-left:40px; margin-bottom:30px">
