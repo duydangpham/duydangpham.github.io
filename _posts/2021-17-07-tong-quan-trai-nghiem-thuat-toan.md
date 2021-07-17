@@ -3,7 +3,7 @@ layout: post
 title: "Tổng quan về trải nghiệm thuật toán (AX)"
 author:
 - Duy Dang-Pham
-meta: "Algorithmic Experience (AX)"
+meta: "Tổng quan về trải nghiệm thuật toán (AX)"
 image: /assets/img/blog_9May_1.jpg
 comments: true
 excerpt_separator: <!-- excerpt -->
