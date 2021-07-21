@@ -6,6 +6,7 @@ permalink: /awards/
 
 | Year | Award |
 | ---- | ----- |
+| 2021 | 2021 Living RMIT Values Award |
 | 2020 | ACS Best Paper Award (1st Runner Up) in the 31st Australasian Conference on Information Systems |
 | 2020 | 2019 College of SEH Recognition of Outstanding Student Experience (ROSE) Award (COSC2130 Professional Computing Practice) |
 | 2020 | 2019 College of SEH Recognition of Outstanding Student Experience (ROSE) Award (OENG1130 Technology Leadership) |
