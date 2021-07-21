@@ -6,6 +6,7 @@ permalink: /media/
 
 | Date | Media | Source |
 | ---- | ----- | ------ |
+| Jan 20, 2021 | <a href="https://www.rmit.edu.vn/news/all-news/2021/july/new-collaboration-to-boost-research-in-information-systems" target="_/blank">New collaboration to boost research in information systems</a> | RMIT Vietnam News |
 | Jan 13, 2021 | <a href="https://www.rmit.edu.vn/news/all-news/2021/jan/rmits-digital-transformation-research-recognised-with-international-award" target="_/blank">RMIT’s digital transformation research recognised with international award</a> | RMIT Vietnam News |
 | Mar 18, 2020 | <a href="https://www.rmit.edu.vn/news/all-news/2020/mar/ai-powered-robot-can-read-novels-and-write-poetry" target="_/blank">AI-powered robot can read novels and write poetry</a> | RMIT Vietnam News |
 | Mar 4, 2020 | <a href="https://www.rmit.edu.vn/news/all-news/2020/feb/vietnam-getting-ready-to-ride-artificial-intelligence-wave" target="_/blank">Vietnam getting ready to ride Artificial Intelligence wave</a> | RMIT Vietnam News |
