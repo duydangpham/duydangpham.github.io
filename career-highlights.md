@@ -10,7 +10,7 @@ permalink: /career-highlights/
 | ---- | ----- |
 | 1 July | Co-founded the <a href="https://communities.aisnet.org/vietnamais/home" target="\_blank">Vietnam Chapter of the Association for Information Systems (VAIS)</a> |
 | 8 Jun | Received the 2021 Living RMIT Values award |
-| 1 Jun | Appointed **Senior Lecturer of Digital Marketing** in the School of Business & Management |
+| 1 Jun | Appointed **Senior Lecturer of Business Innovation** in the School of Business & Management |
 | 4 Feb | Section Editor for Australasian Journal of Information Systems (ABDC A-ranked, Q2) |
 | 4 Feb | Associate Editor for the "Social Media and Digital Collaboration" track of the 2021 International Conference on Information Systems (ICIS 2021) in Austin, Texas  |
 | 20 Jan | Appointed Capstone Project Coordinator and organized Capstone Project Showcase for final year students in the School of Science & Technology |
