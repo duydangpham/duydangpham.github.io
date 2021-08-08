@@ -10,6 +10,21 @@ permalink: /publications/
 <h3 class="year">2021</h3>
 <ol>
   <li>
+    <div id="Dang-Pham2021digitalkaizen_bookchapter">
+        <span class="title"><a href="#" target="\_blank">Digital Kaizen at FPT Software: Principles and Practices for Digital Transformations</a></span>
+        <br><span class="author">
+            <strong>Duy Dang-Pham</strong>,
+            Ai-Phuong Hoang,
+            Diem-Trang Vo,
+            and Quang Tran Duc Tri
+        </span>
+        <span class="periodical"><br>
+          <em>Digitalization Cases Vol. 2 (forthcoming)</em>
+        </span>
+      <!-- Hidden abstract block -->
+    </div>
+  </li>
+  <li>
     <div id="Dang-Pham2021trustworthiness">
         <span class="title"><a href="/assets/papers/Duy_Categorizing Young Facebook Users.pdf" target="\_blank">Categorizing young Facebook users based on their differential preference of social media heuristics: A Q-Methodology approach</a></span>
         <br><span class="author">
