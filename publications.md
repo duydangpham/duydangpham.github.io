@@ -7,7 +7,8 @@ permalink: /publications/
 - <a href="https://scholar.google.com.vn/citations?user=lkYFFvAAAAAJ" target="\_blank">Google Scholar profile</a>
 - <a href="https://orcid.org/0000-0002-7798-6635" target="\_blank">ORCID profile</a>
 
-<h2 class="year">Refereed journal articles</h2>
+<h2 class="category">Refereed journal articles</h2>
+<h3 class="year">2021</h3>
 <ol>
   <li>
     <div id="Dang-Pham2021trustworthiness">
@@ -26,6 +27,9 @@ permalink: /publications/
       <!-- Hidden abstract block -->
     </div>
   </li>
+</ol>
+<h3 class="year">2020</h3>
+<ol>
   <li>
     <div id="Schinckus2020">
         <span class="title"><a href="https://journals.sagepub.com/doi/abs/10.1177/0260107920938559" target="\_blank">Interdependences between Cryptocurrencies: A Network Analysis from 2013 to 2018</a></span>
@@ -70,6 +74,9 @@ permalink: /publications/
       <!-- Hidden abstract block -->
     </div>
   </li>
+</ol>
+<h3 class="year">2019</h3>
+<ol>
     <li>
       <div id="Nkhoma2019">
           <span class="title"><a href="https://www.tandfonline.com/doi/abs/10.1080/0144929X.2019.1617349" target="\_blank">Learning analytics techniques and visualisation with textual data for determining causes of academic failure</a></span>
@@ -102,7 +109,10 @@ permalink: /publications/
         <!-- Hidden abstract block -->
       </div>
     </li>
-    <li>
+</ol>
+<h3 class="year">2018</h3>
+<ol>
+  <li>
       <div id="Teo2018">
           <span class="title"><a href="https://www.journal.oscm-forum.org/journal/journal/download/20180318122200_Paper_3_Vol._11_No_2,_2018_.pdf" target="\_blank">Understanding intra-organisational information dependency: An empirical network analysis of Vietnamese freight forwarding industry</a></span>
           <br><span class="author">
@@ -117,7 +127,10 @@ permalink: /publications/
         <!-- Hidden abstract block -->
       </div>
     </li>
-    <li>
+</ol>
+<h3 class="year">2017</h3>
+<ol>
+  <li>
       <div id="Dang-Pham2017a">
           <span class="title"><a href="https://link.springer.com/article/10.1007/s10796-017-9796-5" target="\_blank">Investigating the diffusion of IT consumerization in the workplace: A case study using social network analysis</a></span>
           <br><span class="author">
@@ -175,7 +188,7 @@ permalink: /publications/
         <!-- Hidden abstract block -->
       </div>
     </li>
-    <li>
+  <li>
       <div id="DangPham2016">
           <span class="title"><a href="https://www.sciencedirect.com/science/article/abs/pii/S0747563216307269" target="\_blank">Why employees share information security advice? Exploring the contributing factors and structural patterns of security advice sharing in the workplace</a></span>
           <br><span class="author">
@@ -245,6 +258,9 @@ permalink: /publications/
         <!-- Hidden abstract block -->
       </div>
     </li>
+</ol>
+<h3 class="year">2016</h3>
+<ol>
   <li>
     <div id="Dang-Pham2016">
         <span class="title">Impacts of security climate on employees’ sharing of security advice and troubleshooting: Empirical networks</span>
@@ -259,6 +275,9 @@ permalink: /publications/
       <!-- Hidden abstract block -->
     </div>
   </li>
+</ol>
+<h3 class="year">2015</h3>
+<ol>
     <li>
       <div id="Dang-Pham2015b">
           <span class="title">Demystifying online personas of Vietnamese young adults on Facebook: A Q-methodology approach</span>
@@ -286,6 +305,9 @@ permalink: /publications/
         <!-- Hidden abstract block -->
       </div>
     </li>
+</ol>
+<h3 class="year">2013</h3>
+<ol>
   <li>
     <div id="Nkhoma2013">
         <span class="title">Contributing Factors of Information Security Investments in South East Asia SMBs: A Technology-Organisational-Environment Approach</span>
@@ -315,7 +337,8 @@ permalink: /publications/
 </ol>
 
 
-<h2 class="year">Refereed conference papers</h2>
+<h2 class="category">Refereed conference papers</h2>
+<h3 class="year">2020</h3>
 <ol>
   <li>
     <div id="Dang-Pham2020a">
@@ -379,6 +402,9 @@ permalink: /publications/
       <!-- Hidden abstract block -->
     </div>
   </li>
+</ol>
+<h3 class="year">2018</h3>
+<ol>
   <li>
       <div id="Truong2018">
           <span class="title"><a href="https://researchbank.rmit.edu.au/view/rmit:53888" target="\_blank">The Influences of Perceived Innovativeness on Customer Satisfaction in Hotel Service Operation: A Conceptual Framework</a></span>
@@ -394,6 +420,9 @@ permalink: /publications/
         <!-- Hidden abstract block -->
       </div>
   </li>
+</ol>
+<h3 class="year">2017</h3>
+<ol>
   <li>
       <div id="Akbari2017">
           <span class="title">Empirical social network analysis in sustainable supply chain in Vietnam</span>
@@ -452,6 +481,9 @@ permalink: /publications/
         <!-- Hidden abstract block -->
       </div>
     </li>
+</ol>
+<h3 class="year">2016</h3>
+<ol>
   <li>
     <div id="Teo2016">
         <span class="title">A social network analysis approach to manage information risks and sharing for supply chain performance</span>
@@ -480,6 +512,9 @@ permalink: /publications/
       <!-- Hidden abstract block -->
     </div>
   </li>
+</ol>
+<h3 class="year">2015</h3>
+<ol>
     <li>
       <div id="Dang-Pham2015a">
           <span class="title">Investigating the formation of information security climate perceptions with social network analysis: a research proposal</span>
@@ -508,6 +543,9 @@ permalink: /publications/
         <!-- Hidden abstract block -->
       </div>
     </li>
+</ol>
+<h3 class="year">2014</h3>
+<ol>
   <li>
     <div id="Dang-Pham2014">
         <span class="title">Towards a complete understanding of information security misbehaviours: a proposal for future research with social network approach</span>
@@ -534,6 +572,9 @@ permalink: /publications/
       <!-- Hidden abstract block -->
     </div>
   </li>
+</ol>
+<h3 class="year">2013</h3>
+<ol>
   <li>
     <div id="Dang2013a">
         <span class="title">Information Availability as Driver of Information Security Investments: a Systematic Review Approach</span>
@@ -561,6 +602,9 @@ permalink: /publications/
       <!-- Hidden abstract block -->
     </div>
   </li>
+</ol>
+<h3 class="year">2012</h3>
+<ol>
   <li>
     <div id="nkhoma_towards_2012">
         <span class="title">Towards an Understanding of Implementation and Benefits of ICT in Education: Review of Issues to be Considered by Developing Countries.</span>
@@ -578,7 +622,8 @@ permalink: /publications/
 </ol>
 
 
-<h2 class="year">Refereed book chapters</h2>
+<h2 class="category">Refereed book chapters</h2>
+<h3 class="year">2021</h3>
 <ol>
   <li>
     <div id="Dang-Pham2021digitalkaizen_bookchapter">
@@ -595,6 +640,9 @@ permalink: /publications/
       <!-- Hidden abstract block -->
     </div>
   </li>
+</ol>
+<h3 class="year">2018</h3>
+<ol>
   <li>
       <div id="Nkhoma2018">
           <span class="title"><a href="https://link.springer.com/chapter/10.1007/978-3-319-97181-0_17" target="\_blank">Information Security Landscape in Vietnam: Insights from Two Research Surveys</a></span>
@@ -612,7 +660,8 @@ permalink: /publications/
   </li>
 </ol>
 
-<h2 class="year">Reports</h2>
+<h2 class="category">Reports</h2>
+<h3 class="year">2018</h3>
 <ol>
   <li>
       <div id="Dang-Pham2018">
