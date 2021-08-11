@@ -7,8 +7,23 @@ permalink: /publications/
 - <a href="https://scholar.google.com.vn/citations?user=lkYFFvAAAAAJ" target="\_blank">Google Scholar profile</a>
 - <a href="https://orcid.org/0000-0002-7798-6635" target="\_blank">ORCID profile</a>
 
-<h2 class="year">Refereed journal articles</h2>
+<h3 class="year">2021</h3>
 <ol>
+  <li>
+    <div id="Dang-Pham2021digitalkaizen_bookchapter">
+        <span class="title"><a href="#" target="\_blank">Digital Kaizen at FPT Software: Principles and Practices for Digital Transformations</a></span>
+        <br><span class="author">
+            <strong>Duy Dang-Pham</strong>,
+            Ai-Phuong Hoang,
+            Diem-Trang Vo,
+            and Quang Tran Duc Tri
+        </span>
+        <span class="periodical"><br>
+          <em>Digitalization Cases Vol. 2 (forthcoming)</em>
+        </span>
+      <!-- Hidden abstract block -->
+    </div>
+  </li>
   <li>
     <div id="Dang-Pham2021trustworthiness">
         <span class="title"><a href="/assets/papers/Duy_Categorizing Young Facebook Users.pdf" target="\_blank">Categorizing young Facebook users based on their differential preference of social media heuristics: A Q-Methodology approach</a></span>
@@ -22,6 +37,56 @@ permalink: /publications/
         </span>
         <span class="periodical"><br>
           <em>Pacific Asia Journal of the Association for Information Systems</em>
+        </span>
+      <!-- Hidden abstract block -->
+    </div>
+  </li>
+</ol>
+
+<h3 class="year">2020</h3>
+<ol>
+  <li>
+    <div id="Dang-Pham2020a">
+        <span class="title"><a href="/assets/papers/ACIS 2020_XSEC_cameraReady.pdf" target="\_blank">Explainable Information Security: Development of a Construct and Instrument</a></span>
+        <br><span class="author">
+            <strong>Duy Dang-Pham</strong>,
+            Ai-Phuong Hoang,
+            Diem-Trang Vo,
+            and Karlheinz Kautz
+        </span>
+        <span class="periodical"><br>
+          <em>In the 31st Australasian Conference on Information Systems (ACIS 2020)</em>
+        </span>
+      <!-- Hidden abstract block -->
+    </div>
+  </li>
+  <li>
+    <div id="Dang-Pham2020b">
+        <span class="title"><a href="/assets/papers/ACIS 2020 Digital Kaizen_cameraReady.pdf" target="\_blank">Digital Kaizen: An approach for conducting stepwise digital transformation</a> - <mark>Best Paper Award (1st Runner-Up)</mark></span>
+        <br><span class="author">
+            <strong>Duy Dang-Pham</strong>,
+            Ai-Phuong Hoang,
+            Diem-Trang Vo,
+            and Karlheinz Kautz
+        </span>
+        <span class="periodical"><br>
+          <em>In the 31st Australasian Conference on Information Systems (ACIS 2020)</em>
+        </span>
+      <!-- Hidden abstract block -->
+    </div>
+  </li>
+  <li>
+    <div id="Dang-Pham2020c">
+        <span class="title"><a href="#" target="\_blank">A Machine Learning-based Approach to Vietnamese Handwritten Medical Record Recognition</a></span>
+        <br><span class="author">
+            Tuan Phung,
+            Minh Ngoc Dinh,
+            <strong>Duy Dang-Pham</strong>,
+            Van Hoang,
+            and Louise Thwaites
+        </span>
+        <span class="periodical"><br>
+          <em>In the 31st Australasian Conference on Information Systems (ACIS 2020)</em>
         </span>
       <!-- Hidden abstract block -->
     </div>
@@ -70,6 +135,26 @@ permalink: /publications/
       <!-- Hidden abstract block -->
     </div>
   </li>
+  <li>
+    <div id="MinhHoang2020">
+        <span class="title"><a href="https://ieeexplore.ieee.org/abstract/document/9140781/" target="\_blank">Network Analytics for Improving Students’ Cybersecurity Awareness in Online Learning Systems</a></span>
+        <br><span class="author">
+            Minh Bui Thi Hoang,
+            <strong>Duy Dang-Pham</strong>,
+            Ai-Phuong Hoang, 
+            Bao Gia Le,
+            and Mathews Nkhoma
+        </span>
+        <span class="periodical"><br>
+          <em>2020 RIVF International Conference on Computing and Communication Technologies (RIVF)</em>
+        </span>
+      <!-- Hidden abstract block -->
+    </div>
+  </li>
+</ol>
+
+<h3 class="year">2019</h3>
+  <ol>
     <li>
       <div id="Nkhoma2019">
           <span class="title"><a href="https://www.tandfonline.com/doi/abs/10.1080/0144929X.2019.1617349" target="\_blank">Learning analytics techniques and visualisation with textual data for determining causes of academic failure</a></span>
@@ -102,6 +187,38 @@ permalink: /publications/
         <!-- Hidden abstract block -->
       </div>
     </li>
+  </ol>
+
+<h3 class="year">2018</h3>
+  <ol>
+    <li>
+      <div id="Dang-Pham2018">
+          <span class="title"><a href="http://aaisnet.org/wp-content/uploads/2019/10/ACPHIS_Report_Co-authorship_SNA2018.pdf" target="\_blank">A Social Network Analysis of Co-authorship at the Australasian Conference on Information Systems (ACIS)</a></span>
+          <br><span class="author">
+              <strong>Duy Dang-Pham</strong>,
+              and Karlheinz Kautz
+          </span>
+          <span class="periodical"><br>
+            <em>Australian Council of Professors and Heads of Information Systems (ACPHIS) Report</em>
+          </span>
+        <!-- Hidden abstract block -->
+      </div>
+    </li>
+    <li>
+      <div id="Truong2018">
+          <span class="title"><a href="https://researchbank.rmit.edu.au/view/rmit:53888" target="\_blank">The Influences of Perceived Innovativeness on Customer Satisfaction in Hotel Service Operation: A Conceptual Framework</a></span>
+          <br><span class="author">
+              Ngan Tuyet Truong,
+              Mathews Nkhoma, 
+              Robert McClelland,
+              and <strong>Duy Dang-Pham</strong>
+          </span>
+          <span class="periodical"><br>
+            <em>In TTRA APac 2018: Travel and Tourism Research in the Global South: Advancing through Cooperation and Collaboration</em>
+          </span>
+        <!-- Hidden abstract block -->
+      </div>
+    </li>
     <li>
       <div id="Teo2018">
           <span class="title"><a href="https://www.journal.oscm-forum.org/journal/journal/download/20180318122200_Paper_3_Vol._11_No_2,_2018_.pdf" target="\_blank">Understanding intra-organisational information dependency: An empirical network analysis of Vietnamese freight forwarding industry</a></span>
@@ -117,6 +234,25 @@ permalink: /publications/
         <!-- Hidden abstract block -->
       </div>
     </li>
+    <li>
+      <div id="Nkhoma2018">
+          <span class="title"><a href="https://link.springer.com/chapter/10.1007/978-3-319-97181-0_17" target="\_blank">Information Security Landscape in Vietnam: Insights from Two Research Surveys</a></span>
+          <br><span class="author">
+              Mathews Nkhoma, 
+              <strong>Duy Dang-Pham</strong>,
+              Tram Hoai Le,
+              and Clara Nkhoma 
+          </span>
+          <span class="periodical"><br>
+            <em>Cyber Criminology</em>
+          </span>
+        <!-- Hidden abstract block -->
+      </div>
+    </li>
+  </ol>
+
+<h3 class="year">2017</h3>
+  <ol>
     <li>
       <div id="Dang-Pham2017a">
           <span class="title"><a href="https://link.springer.com/article/10.1007/s10796-017-9796-5" target="\_blank">Investigating the diffusion of IT consumerization in the workplace: A case study using social network analysis</a></span>
@@ -232,169 +368,6 @@ permalink: /publications/
       </div>
     </li>
     <li>
-      <div id="Dang-Pham2017f">
-          <span class="title"><a href="https://www.sciencedirect.com/science/article/pii/S0167404817301177" target="\_blank">Investigation into the formation of information security influence: Network analysis of an emerging organisation</a></span>
-          <br><span class="author">
-              <strong>Duy Dang-Pham</strong>,
-              Siddhi Pittayachawan, 
-              and Vince Bruno 
-          </span>
-          <span class="periodical"><br>
-            <em>Computers and Security</em>
-          </span>
-        <!-- Hidden abstract block -->
-      </div>
-    </li>
-  <li>
-    <div id="Dang-Pham2016">
-        <span class="title">Impacts of security climate on employees’ sharing of security advice and troubleshooting: Empirical networks</span>
-        <br><span class="author">
-            <strong>Duy Dang-Pham</strong>,
-            Siddhi Pittayachawan, 
-            and Vince Bruno 
-        </span>
-        <span class="periodical"><br>
-          <em>Business Horizons</em>
-        </span>
-      <!-- Hidden abstract block -->
-    </div>
-  </li>
-    <li>
-      <div id="Dang-Pham2015b">
-          <span class="title">Demystifying online personas of Vietnamese young adults on Facebook: A Q-methodology approach</span>
-          <br><span class="author">
-              <strong>Duy Dang-Pham</strong>,
-              Siddhi Pittayachawan, 
-              and Mathews Nkhoma
-          </span>
-          <span class="periodical"><br>
-            <em>Australasian Journal of Information Systems</em>
-          </span>
-        <!-- Hidden abstract block -->
-      </div>
-    </li>
-    <li>
-      <div id="Dang-Pham2015d">
-          <span class="title">Comparing intention to avoid malware across contexts in a BYOD-enabled Australian university: A Protection Motivation Theory approach</span>
-          <br><span class="author">
-              <strong>Duy Dang-Pham</strong>,
-              and Siddhi Pittayachawan 
-          </span>
-          <span class="periodical"><br>
-            <em>Computers and Security</em>
-          </span>
-        <!-- Hidden abstract block -->
-      </div>
-    </li>
-  <li>
-    <div id="Nkhoma2013">
-        <span class="title">Contributing Factors of Information Security Investments in South East Asia SMBs: A Technology-Organisational-Environment Approach</span>
-        <br><span class="author">
-            Mathews Nkhoma, 
-            and <strong>Duy Dang-Pham</strong>
-        </span>
-        <span class="periodical"><br>
-          <em>International Journal of Information Security and Privacy</em>
-        </span>
-      <!-- Hidden abstract block -->
-    </div>
-  </li>
-  <li>
-    <div id="Nkhoma2013a">
-        <span class="title">Contributing Factors of Cloud Computing Adoption: a Technology-Organisation-Environment Framework Approach</span>
-        <br><span class="author">
-            Mathews Nkhoma, 
-            and <strong>Duy Dang-Pham</strong>
-        </span>
-        <span class="periodical"><br>
-          <em>International Journal of Information Systems and Engineering (IJISE)</em>
-        </span>
-      <!-- Hidden abstract block -->
-    </div>
-  </li>
-</ol>
-
-
-<h2 class="year">Refereed conference papers</h2>
-<ol>
-  <li>
-    <div id="Dang-Pham2020a">
-        <span class="title"><a href="/assets/papers/ACIS 2020_XSEC_cameraReady.pdf" target="\_blank">Explainable Information Security: Development of a Construct and Instrument</a></span>
-        <br><span class="author">
-            <strong>Duy Dang-Pham</strong>,
-            Ai-Phuong Hoang,
-            Diem-Trang Vo,
-            and Karlheinz Kautz
-        </span>
-        <span class="periodical"><br>
-          <em>In the 31st Australasian Conference on Information Systems (ACIS 2020)</em>
-        </span>
-      <!-- Hidden abstract block -->
-    </div>
-  </li>
-  <li>
-    <div id="Dang-Pham2020b">
-        <span class="title"><a href="/assets/papers/ACIS 2020 Digital Kaizen_cameraReady.pdf" target="\_blank">Digital Kaizen: An approach for conducting stepwise digital transformation</a> - <mark>Best Paper Award (1st Runner-Up)</mark></span>
-        <br><span class="author">
-            <strong>Duy Dang-Pham</strong>,
-            Ai-Phuong Hoang,
-            Diem-Trang Vo,
-            and Karlheinz Kautz
-        </span>
-        <span class="periodical"><br>
-          <em>In the 31st Australasian Conference on Information Systems (ACIS 2020)</em>
-        </span>
-      <!-- Hidden abstract block -->
-    </div>
-  </li>
-  <li>
-    <div id="Dang-Pham2020c">
-        <span class="title"><a href="#" target="\_blank">A Machine Learning-based Approach to Vietnamese Handwritten Medical Record Recognition</a></span>
-        <br><span class="author">
-            Tuan Phung,
-            Minh Ngoc Dinh,
-            <strong>Duy Dang-Pham</strong>,
-            Van Hoang,
-            and Louise Thwaites
-        </span>
-        <span class="periodical"><br>
-          <em>In the 31st Australasian Conference on Information Systems (ACIS 2020)</em>
-        </span>
-      <!-- Hidden abstract block -->
-    </div>
-  </li>
-  <li>
-    <div id="MinhHoang2020">
-        <span class="title"><a href="https://ieeexplore.ieee.org/abstract/document/9140781/" target="\_blank">Network Analytics for Improving Students’ Cybersecurity Awareness in Online Learning Systems</a></span>
-        <br><span class="author">
-            Minh Bui Thi Hoang,
-            <strong>Duy Dang-Pham</strong>,
-            Ai-Phuong Hoang, 
-            Bao Gia Le,
-            and Mathews Nkhoma
-        </span>
-        <span class="periodical"><br>
-          <em>2020 RIVF International Conference on Computing and Communication Technologies (RIVF)</em>
-        </span>
-      <!-- Hidden abstract block -->
-    </div>
-  </li>
-  <li>
-      <div id="Truong2018">
-          <span class="title"><a href="https://researchbank.rmit.edu.au/view/rmit:53888" target="\_blank">The Influences of Perceived Innovativeness on Customer Satisfaction in Hotel Service Operation: A Conceptual Framework</a></span>
-          <br><span class="author">
-              Ngan Tuyet Truong,
-              Mathews Nkhoma, 
-              Robert McClelland,
-              and <strong>Duy Dang-Pham</strong>
-          </span>
-          <span class="periodical"><br>
-            <em>In TTRA APac 2018: Travel and Tourism Research in the Global South: Advancing through Cooperation and Collaboration</em>
-          </span>
-        <!-- Hidden abstract block -->
-      </div>
-  </li>
-  <li>
       <div id="Akbari2017">
           <span class="title">Empirical social network analysis in sustainable supply chain in Vietnam</span>
           <br><span class="author">
@@ -452,7 +425,24 @@ permalink: /publications/
         <!-- Hidden abstract block -->
       </div>
     </li>
-  <li>
+    <li>
+      <div id="Dang-Pham2017f">
+          <span class="title"><a href="https://www.sciencedirect.com/science/article/pii/S0167404817301177" target="\_blank">Investigation into the formation of information security influence: Network analysis of an emerging organisation</a></span>
+          <br><span class="author">
+              <strong>Duy Dang-Pham</strong>,
+              Siddhi Pittayachawan, 
+              and Vince Bruno 
+          </span>
+          <span class="periodical"><br>
+            <em>Computers and Security</em>
+          </span>
+        <!-- Hidden abstract block -->
+      </div>
+    </li>
+  </ol>
+
+<h3 class="year">2016</h3>
+  <ol><li>
     <div id="Teo2016">
         <span class="title">A social network analysis approach to manage information risks and sharing for supply chain performance</span>
         <br><span class="author">
@@ -480,6 +470,24 @@ permalink: /publications/
       <!-- Hidden abstract block -->
     </div>
   </li>
+  <li>
+    <div id="Dang-Pham2016">
+        <span class="title">Impacts of security climate on employees’ sharing of security advice and troubleshooting: Empirical networks</span>
+        <br><span class="author">
+            <strong>Duy Dang-Pham</strong>,
+            Siddhi Pittayachawan, 
+            and Vince Bruno 
+        </span>
+        <span class="periodical"><br>
+          <em>Business Horizons</em>
+        </span>
+      <!-- Hidden abstract block -->
+    </div>
+  </li>
+</ol>
+
+<h3 class="year">2015</h3>
+  <ol>
     <li>
       <div id="Dang-Pham2015a">
           <span class="title">Investigating the formation of information security climate perceptions with social network analysis: a research proposal</span>
@@ -490,6 +498,20 @@ permalink: /publications/
           </span>
           <span class="periodical"><br>
             <em>In the 19th Pacific Asia Conference on Information Systems (PACIS)</em>
+          </span>
+        <!-- Hidden abstract block -->
+      </div>
+    </li>
+    <li>
+      <div id="Dang-Pham2015b">
+          <span class="title">Demystifying online personas of Vietnamese young adults on Facebook: A Q-methodology approach</span>
+          <br><span class="author">
+              <strong>Duy Dang-Pham</strong>,
+              Siddhi Pittayachawan, 
+              and Mathews Nkhoma
+          </span>
+          <span class="periodical"><br>
+            <em>Australasian Journal of Information Systems</em>
           </span>
         <!-- Hidden abstract block -->
       </div>
@@ -508,6 +530,23 @@ permalink: /publications/
         <!-- Hidden abstract block -->
       </div>
     </li>
+    <li>
+      <div id="Dang-Pham2015d">
+          <span class="title">Comparing intention to avoid malware across contexts in a BYOD-enabled Australian university: A Protection Motivation Theory approach</span>
+          <br><span class="author">
+              <strong>Duy Dang-Pham</strong>,
+              and Siddhi Pittayachawan 
+          </span>
+          <span class="periodical"><br>
+            <em>Computers and Security</em>
+          </span>
+        <!-- Hidden abstract block -->
+      </div>
+    </li>
+  </ol>
+
+<h3 class="year">2014</h3>
+<ol>
   <li>
     <div id="Dang-Pham2014">
         <span class="title">Towards a complete understanding of information security misbehaviours: a proposal for future research with social network approach</span>
@@ -534,6 +573,10 @@ permalink: /publications/
       <!-- Hidden abstract block -->
     </div>
   </li>
+</ol>
+
+<h3 class="year">2013</h3>
+<ol>
   <li>
     <div id="Dang2013a">
         <span class="title">Information Availability as Driver of Information Security Investments: a Systematic Review Approach</span>
@@ -562,6 +605,36 @@ permalink: /publications/
     </div>
   </li>
   <li>
+    <div id="Nkhoma2013">
+        <span class="title">Contributing Factors of Information Security Investments in South East Asia SMBs: A Technology-Organisational-Environment Approach</span>
+        <br><span class="author">
+            Mathews Nkhoma, 
+            and <strong>Duy Dang-Pham</strong>
+        </span>
+        <span class="periodical"><br>
+          <em>International Journal of Information Security and Privacy</em>
+        </span>
+      <!-- Hidden abstract block -->
+    </div>
+  </li>
+  <li>
+    <div id="Nkhoma2013a">
+        <span class="title">Contributing Factors of Cloud Computing Adoption: a Technology-Organisation-Environment Framework Approach</span>
+        <br><span class="author">
+            Mathews Nkhoma, 
+            and <strong>Duy Dang-Pham</strong>
+        </span>
+        <span class="periodical"><br>
+          <em>International Journal of Information Systems and Engineering (IJISE)</em>
+        </span>
+      <!-- Hidden abstract block -->
+    </div>
+  </li>
+</ol>
+
+<h3 class="year">2012</h3>
+<ol>
+  <li>
     <div id="nkhoma_towards_2012">
         <span class="title">Towards an Understanding of Implementation and Benefits of ICT in Education: Review of Issues to be Considered by Developing Countries.</span>
         <br><span class="author">
@@ -575,56 +648,4 @@ permalink: /publications/
       <!-- Hidden abstract block -->
     </div>
   </li>
-</ol>
-
-
-<h2 class="year">Refereed book chapters</h2>
-<ol>
-  <li>
-    <div id="Dang-Pham2021digitalkaizen_bookchapter">
-        <span class="title"><a href="#" target="\_blank">Digital Kaizen at FPT Software: Principles and Practices for Digital Transformations</a></span>
-        <br><span class="author">
-            <strong>Duy Dang-Pham</strong>,
-            Ai-Phuong Hoang,
-            Diem-Trang Vo,
-            and Quang Tran Duc Tri
-        </span>
-        <span class="periodical"><br>
-          <em>Digitalization Cases Vol. 2 (forthcoming)</em>
-        </span>
-      <!-- Hidden abstract block -->
-    </div>
-  </li>
-  <li>
-      <div id="Nkhoma2018">
-          <span class="title"><a href="https://link.springer.com/chapter/10.1007/978-3-319-97181-0_17" target="\_blank">Information Security Landscape in Vietnam: Insights from Two Research Surveys</a></span>
-          <br><span class="author">
-              Mathews Nkhoma, 
-              <strong>Duy Dang-Pham</strong>,
-              Tram Hoai Le,
-              and Clara Nkhoma 
-          </span>
-          <span class="periodical"><br>
-            <em>Cyber Criminology</em>
-          </span>
-        <!-- Hidden abstract block -->
-      </div>
-  </li>
-</ol>
-
-<h2 class="year">Reports</h2>
-<ol>
-  <li>
-      <div id="Dang-Pham2018">
-          <span class="title"><a href="http://aaisnet.org/wp-content/uploads/2019/10/ACPHIS_Report_Co-authorship_SNA2018.pdf" target="\_blank">A Social Network Analysis of Co-authorship at the Australasian Conference on Information Systems (ACIS)</a></span>
-          <br><span class="author">
-              <strong>Duy Dang-Pham</strong>,
-              and Karlheinz Kautz
-          </span>
-          <span class="periodical"><br>
-            <em>Australian Council of Professors and Heads of Information Systems (ACPHIS) Report</em>
-          </span>
-        <!-- Hidden abstract block -->
-      </div>
-    </li>
 </ol>
