@@ -8,7 +8,6 @@ permalink: /publications/
 - <a href="https://orcid.org/0000-0002-7798-6635" target="\_blank">ORCID profile</a>
 
 <h2 class="category">Refereed journal articles</h2>
-<h3 class="year">2021</h3>
 <ol>
   <li>
     <div id="Dang-Pham2021trustworthiness">
@@ -22,14 +21,11 @@ permalink: /publications/
             and Mathews Nkhoma
         </span>
         <span class="periodical"><br>
-          <em>Pacific Asia Journal of the Association for Information Systems</em>
+          <em>Pacific Asia Journal of the Association for Information Systems</em>, <span class="year">2021</span>
         </span>
       <!-- Hidden abstract block -->
     </div>
   </li>
-</ol>
-<h3 class="year">2020</h3>
-<ol>
   <li>
     <div id="Schinckus2020">
         <span class="title"><a href="https://journals.sagepub.com/doi/abs/10.1177/0260107920938559" target="\_blank">Interdependences between Cryptocurrencies: A Network Analysis from 2013 to 2018</a></span>
@@ -40,7 +36,7 @@ permalink: /publications/
         </span>
         <span class="periodical"><br>
           <em>Journal of Interdisciplinary Economics</em>
-        </span>
+        </span>, <span class="year">2020</span>
       <!-- Hidden abstract block -->
     </div>
   </li>
