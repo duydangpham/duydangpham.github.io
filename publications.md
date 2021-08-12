@@ -21,8 +21,8 @@ permalink: /publications/
             and Mathews Nkhoma
         </span>
         <span class="periodical"><br>
-          <em>Pacific Asia Journal of the Association for Information Systems</em><span class="year">(2021)</span>
-        </span>
+          <em>Pacific Asia Journal of the Association for Information Systems</em>
+        </span><span class="year">(2021)</span>
       <!-- Hidden abstract block -->
     </div>
   </li>
@@ -36,7 +36,7 @@ permalink: /publications/
         </span>
         <span class="periodical"><br>
           <em>Journal of Interdisciplinary Economics</em>
-        </span><span class="year">(2020)</span>
+        </span><span class="year">(2021)</span>
       <!-- Hidden abstract block -->
     </div>
   </li>
