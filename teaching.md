@@ -2,6 +2,7 @@
 layout: page
 title: Teaching
 permalink: /teaching/
+image: ../assets/img/feedback_wordcloud.png
 ---
 
 <img src="../assets/img/feedback_wordcloud.png" alt="A word cloud of qualitative feedback from my students" width="80%" style="display: block; margin-left: auto; margin-right: auto;">
