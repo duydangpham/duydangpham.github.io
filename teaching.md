@@ -4,8 +4,19 @@ title: Teaching
 permalink: /teaching/
 ---
 
+<img src="../assets/img/feedback_wordcloud.png" alt="A word cloud of qualitative feedback from my students" width="80%" style="display: block; margin-left: auto; margin-right: auto;">
+<figcaption style="text-align: center;">A word cloud of qualitative feedback from my students</figcaption>
+
 <h2>School of Business & Management (2021 – present)</h2>
 <hr />
+
+<a href="#" target="\_blank">INTE2555 Technology Futures (Postgraduate / MBA)</a>
+
+This course develops your skills in evaluating current and emerging technology trends and evaluating the potential impacts on, and opportunities for, businesses considering integrated future technologies. You will explore developments in technologies including the evolution of a technology, the characteristics of a technology and its implications on managerial functions. You will also evaluate how technological changes affect stakeholder management and their ethical implications, and how to respond to business challenges by developing solutions to meet business objectives arising from emerging technologies.
+
+<a href="#" target="\_blank">MKTG1418 Marketing Intelligence</a>
+
+This course covers the fundamentals of a topic area whose importance is growing rapidly in the current marketing environment. You will explore the nature and scope of marketing research. You will master the latest market research tools and learn to select the appropriate methodologies to conduct market research. You will learn to use the data gathered to get insights into your market, product, audience, competition. You will also learn to report the information in a fashion that facilitates generating a cohesive view of the company's market situation and therefore enhances decision making.
 
 <a href="http://www1.rmit.edu.au/browse/;ID=052663heparta;STATUS=A" target="\_blank">COMM2789 Digital Content Creation</a>
 
