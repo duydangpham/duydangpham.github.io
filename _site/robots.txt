@@ -1,2 +1,2 @@
 User-agent: *
-Sitemap: https://duydangpham.github.io/sitemap.xml
+Sitemap: https://www.drduydangpham.com/sitemap.xml

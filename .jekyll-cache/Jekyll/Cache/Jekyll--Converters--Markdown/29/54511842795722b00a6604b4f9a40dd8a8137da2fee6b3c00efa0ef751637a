@@ -1,0 +1,116 @@
+I"u<h3>Ph.D. Candidates</h3>
+<hr />
+
+<table>
+  <thead>
+    <tr>
+      <th>Full name</th>
+      <th>Program</th>
+      <th>Thesis title</th>
+      <th>Progress</th>
+      <th>Supervisors</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><a href="https://orcid.org/0000-0002-8925-6226" target="\_blank">Ngan Tuyet Truong</a></td>
+      <td>Doctor of Philosophy (Management)</td>
+      <td>The influences of innovativeness on customer satisfaction: the case of hotel operations (tentative title)</td>
+      <td>Thesis submission</td>
+      <td>Mathews Nkhoma (Primary), Robert McClelland (Associate), Duy Dang-Pham (Associate)</td>
+    </tr>
+    <tr>
+      <td>Minh Hoang Thi Bui</td>
+      <td>Doctor of Philosophy (Management)</td>
+      <td>Quality assessment of digitalized learning learning programs in higher education in Vietnam (tentative title)</td>
+      <td>Mid-candidature Review</td>
+      <td>Mathews Nkhoma (Primary), Duy Dang-Pham (Primary), Ai-Phuong Hoang (Associate)</td>
+    </tr>
+    <tr>
+      <td>Diem-Trang Vo</td>
+      <td>Doctor of Philosophy (Business)</td>
+      <td>Adoption of AI-driven technology in healthcare (tentative title)</td>
+      <td>Confirmation of Candidature</td>
+      <td>Long Nguyen Van Thang (Primary), Duy Dang-Pham (Associate), Ai-Phuong Hoang (Associate)</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3>Undergraduate Students</h3>
+<hr />
+
+<p>BH120 - Bachelor of Engineering (Software Engineering) (Honours)
+<br />
+BP162 - Bachelor of Information Technology</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Full name</th>
+      <th>Program</th>
+      <th>Capstone project</th>
+      <th>Year</th>
+      <th>Supervisors</th>
+      <th>Industry partner</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Thanh Nguyen Tan, Dong Nguyen Dong, Phi Tran, An Nguyen Le</td>
+      <td>BH120</td>
+      <td>LinkedIn scraper and recommender</td>
+      <td>2020</td>
+      <td>Duy Dang-Pham</td>
+      <td><a href="https://www.navigosgroup.com/" target="\_blank">Navigos Group</a></td>
+    </tr>
+    <tr>
+      <td>Hinh Dinh Nguyen Huy, Tu Nguyen Hoang Cam, Hieu Nguyen Trung, Huy Hoang</td>
+      <td>BH120 <br /> BP162</td>
+      <td>Real estate auto-listing web application</td>
+      <td>2020</td>
+      <td>Duy Dang-Pham</td>
+      <td><a href="http://amberos.com/" target="\_blank">Amberos</a></td>
+    </tr>
+    <tr>
+      <td>Thanh Phu Gia</td>
+      <td>BH120</td>
+      <td>An online tool for automatic data preprocessing</td>
+      <td>2020</td>
+      <td>Duy Dang-Pham</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>Long Nguyen Hoang</td>
+      <td>BH120</td>
+      <td>Implementation of graph theory and gamification in knowledge management system</td>
+      <td>2020</td>
+      <td>Duy Dang-Pham</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>Tuan Phung Minh, Long Tran Hoang</td>
+      <td>BH120</td>
+      <td>An accurate pipeline approach to Vietnamese handwritten medical record recognition</td>
+      <td>2020</td>
+      <td>Duy Dang-Pham, Minh Ngoc Dinh</td>
+      <td><a href="http://www.oucru.org/ho-chi-minh-city/" target="\_blank">Oxford University Clinical Research Unit (OUCRU) - Hospital for Tropical Diseases</a></td>
+    </tr>
+    <tr>
+      <td>Huy Tran Nguyen Duc</td>
+      <td>BH120</td>
+      <td>Music recommender system with audio features</td>
+      <td>2019</td>
+      <td>Duy Dang-Pham</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>Dat Le Duy, Duy Doan Le, Quang Tran Huu</td>
+      <td>BH120</td>
+      <td>HERMESITO - A job recommender system</td>
+      <td>2019</td>
+      <td>Duy Dang-Pham</td>
+      <td><a href="https://www.navigosgroup.com/" target="\_blank">Navigos Group</a></td>
+    </tr>
+  </tbody>
+</table>
+:ET
