@@ -8,7 +8,8 @@ permalink: /career-highlights/
 
 | Date | Event |
 | ---- | ----- |
-| 1 July | Co-founded the <a href="https://communities.aisnet.org/vietnamais/home" target="\_blank">Vietnam Chapter of the Association for Information Systems (VAIS)</a> |
+| 15 Oct | Co-edited the Springer book titled <a href="https://vn-ais.org/infosys-research-in-vietnam-book/" target="\_blank">"Information Systems Research in Vietnam"</a> |
+| 1 July | Co-founded the <a href="https://vn-ais.org/" target="\_blank">Vietnam Chapter of the Association for Information Systems (VAIS)</a> |
 | 8 Jun | Received the 2021 Living RMIT Values award |
 | 1 Jun | Appointed **Senior Lecturer of Business Innovation** in the School of Business & Management |
 | 4 Feb | Section Editor for Australasian Journal of Information Systems (ABDC A-ranked, Q2) |
