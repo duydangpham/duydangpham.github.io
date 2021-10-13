@@ -37,7 +37,7 @@ I am [supervising several Ph.D. candidates](/students), and I always seek strong
 
 ## Membership
 
-I am the Co-founding Member and Secrectary of the <a href="https://communities.aisnet.org/vietnamais/home" target="\_blank">Vietnam Chapter of Association for Information Systems (VAIS)</a>. I am a member of the following associations:
+I am the Co-founding Member and Secrectary of the <a href="https://vn-ais.org/" target="\_blank">Vietnam Chapter of Association for Information Systems (VAIS)</a>. I am a member of the following associations:
 <ul>
   <li><a href="https://aisnet.org/" target="\_blank">Association for Information Systems (AIS)</a></li>
   <li><a href="https://vn-ais.org/" target="\_blank">AIS Vietnam Chapter</a></li>
@@ -48,7 +48,7 @@ I am the Co-founding Member and Secrectary of the <a href="https://communities.a
 I am serving in the editorial boards for the following refereed journals and conference proceedings:
 <ul>
   <li>Australasian Journal of Information Systems (AJIS) (Section Editor & Reviewer)</li>
-  <li>Computers & Security (Reviewer)</li>
+  <li>Computers and Security (Reviewer)</li>
   <li>Computers in Human Behavior (Reviewer)</li>
   <li>ICIS 2021 (Associate Editor & Reviewer)</li>
   <li>PACIS 2020 (Associate Editor & Reviewer)</li>

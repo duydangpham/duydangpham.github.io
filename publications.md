@@ -7,6 +7,41 @@ permalink: /publications/
 - <a href="https://scholar.google.com.vn/citations?user=lkYFFvAAAAAJ" target="\_blank">Google Scholar profile</a>
 - <a href="https://orcid.org/0000-0002-7798-6635" target="\_blank">ORCID profile</a>
 
+<h2 class="category" style="color:red;">New publications</h2>
+<ol>
+  <li>
+    <div id="Dang-Pham2022InfoSecPower">
+        <span class="title"><a href="#" target="\_blank">Identifying Information Security Opinion Leaders in Organizations: Insights from the Theory of Social Power Bases and Social Network Analysis</a></span>
+        <br><span class="author">
+            <strong>Duy Dang-Pham</strong>,
+            Karlheinz Kautz,
+            Ai-Phuong Hoang,
+            and Siddhi Pittayachawan
+        </span>
+        <span class="periodical"><br>
+          <em>Computers and Security</em>
+        </span><span class="year">(Forthcoming)</span>
+      <!-- Hidden abstract block -->
+    </div>
+  </li>
+    <li>
+    <div id="Ha2021kol-brandlove">
+        <span class="title"><a href="#" target="\_blank">The Impacts of Influencers on CSR Communication</a></span>
+        <br><span class="author">
+            <strong>Ha Tran</strong>,
+            Diem-Trang Vo,
+            Long Nguyen Van Thang,
+            Duy Dang-Pham,
+            and Khai Nguyen
+        </span>
+        <span class="periodical"><br>
+          <em>In the 2021 Australian and New Zealand Marketing Academy conference (ANZMAC 2021)</em>
+        </span><span class="year">(2021)</span>
+      <!-- Hidden abstract block -->
+    </div>
+  </li>
+</ol>
+
 <h2 class="category">Refereed journal articles</h2>
 <ol>
   <li>
