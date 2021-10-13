@@ -28,10 +28,10 @@ permalink: /publications/
     <div id="Ha2021kol-brandlove">
         <span class="title"><a href="#" target="\_blank">The Impacts of Influencers on CSR Communication</a></span>
         <br><span class="author">
-            <strong>Ha Tran</strong>,
+            Ha Tran,
             Diem-Trang Vo,
             Long Nguyen Van Thang,
-            Duy Dang-Pham,
+            <strong>Duy Dang-Pham</strong>,
             and Khai Nguyen
         </span>
         <span class="periodical"><br>
