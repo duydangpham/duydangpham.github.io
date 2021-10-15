@@ -13,8 +13,6 @@ Some personal notes on getting involved in multi-disciplinary research collabora
 <img src="/assets/img/Elsevier-collab-image.jpg" alt="research collaboration" width="100%" style="display: block; margin-left: auto; margin-right: auto;">
 <figcaption style="text-align: center;">Image source: https://www.elsevier.com/connect/a-brief-guide-to-research-collaboration-for-the-young-scholar</figcaption>
 
-I have been involved in research collaborations with researchers in different disciplines/fields, at different stages of the project e.g., ideation, data collection and analysis etc. Research collaboration is beneficial in general, but considerations need to be taken in order to make the collaboration effective.
-
 ### 1. What benefits do I get from research collaboration?
 As mentioned earlier, getting involved in a research collaboration offers a range of benefits. First, depending on how the tasks are managed, research collaboration would be one of the fastest ways to produce a publication. I have been involved in some collaborations where a team of three people were able to finish writing up a journal manuscript in a week (and eventually got it accepted for publication). However, it should be emphasize that outputs should not be the only expectation from a research collaboration. Gaining new knowledge and experiences, stepping into a new field or area of research, and more importantly, expanding your research network, are all important reasons for getting involved in a collaborative project.
 
