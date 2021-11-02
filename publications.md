@@ -1,8 +1,11 @@
 ---
 layout: page
-title: Publications
-permalink: /publications/
+title: Research & Publications
+permalink: /research-and-publications/
 ---
+
+## Research impact statement
+To be updated.
 
 - <a href="https://scholar.google.com.vn/citations?user=lkYFFvAAAAAJ" target="\_blank">Google Scholar profile</a>
 - <a href="https://orcid.org/0000-0002-7798-6635" target="\_blank">ORCID profile</a>
@@ -10,21 +13,21 @@ permalink: /publications/
 <h2 class="category" style="color:red;">New publications</h2>
 <ol>
   <li>
-    <div id="Dang-Pham2022InfoSecPower">
-        <span class="title"><a href="#" target="\_blank">Identifying Information Security Opinion Leaders in Organizations: Insights from the Theory of Social Power Bases and Social Network Analysis</a></span>
+    <div id="Dang-Pham2021digitalkaizen_bookchapter">
+        <span class="title"><a href="https://link.springer.com/chapter/10.1007/978-3-030-80003-1_18" target="\_blank">Digital Kaizen at FPT Software: Principles and Practices for Digital Transformations</a></span>
         <br><span class="author">
             <strong>Duy Dang-Pham</strong>,
-            Karlheinz Kautz,
             Ai-Phuong Hoang,
-            and Siddhi Pittayachawan
+            Diem-Trang Vo,
+            and Quang Tran Duc Tri
         </span>
         <span class="periodical"><br>
-          <em>Computers and Security</em>
-        </span><span class="year">(Forthcoming)</span>
+          <em>Digitalization Cases Vol. 2</em>
+        </span><span class="year"> (Forthcoming)</span>
       <!-- Hidden abstract block -->
     </div>
   </li>
-    <li>
+  <li>
     <div id="Ha2021kol-brandlove">
         <span class="title"><a href="#" target="\_blank">The Impacts of Influencers on CSR Communication</a></span>
         <br><span class="author">
@@ -44,6 +47,21 @@ permalink: /publications/
 
 <h2 class="category">Refereed journal articles</h2>
 <ol>
+  <li>
+    <div id="Dang-Pham2022InfoSecPower">
+        <span class="title"><a href="https://www.sciencedirect.com/science/article/pii/S0167404821003291" target="\_blank">Identifying Information Security Opinion Leaders in Organizations: Insights from the Theory of Social Power Bases and Social Network Analysis</a></span>
+        <br><span class="author">
+            <strong>Duy Dang-Pham</strong>,
+            Karlheinz Kautz,
+            Ai-Phuong Hoang,
+            and Siddhi Pittayachawan
+        </span>
+        <span class="periodical"><br>
+          <em>Computers and Security</em>
+        </span><span class="year">(Forthcoming)</span>
+      <!-- Hidden abstract block -->
+    </div>
+  </li>
   <li>
     <div id="Dang-Pham2021trustworthiness">
         <span class="title"><a href="/assets/papers/Duy_Categorizing Young Facebook Users.pdf" target="\_blank">Categorizing young Facebook users based on their differential preference of social media heuristics: A Q-Methodology approach</a></span>
@@ -613,21 +631,6 @@ permalink: /publications/
 
 <h2 class="category">Refereed book chapters</h2>
 <ol>
-  <li>
-    <div id="Dang-Pham2021digitalkaizen_bookchapter">
-        <span class="title"><a href="#" target="\_blank">Digital Kaizen at FPT Software: Principles and Practices for Digital Transformations</a></span>
-        <br><span class="author">
-            <strong>Duy Dang-Pham</strong>,
-            Ai-Phuong Hoang,
-            Diem-Trang Vo,
-            and Quang Tran Duc Tri
-        </span>
-        <span class="periodical"><br>
-          <em>Digitalization Cases Vol. 2</em>
-        </span><span class="year"> (Forthcoming)</span>
-      <!-- Hidden abstract block -->
-    </div>
-  </li>
   <li>
       <div id="Nkhoma2018">
           <span class="title"><a href="https://link.springer.com/chapter/10.1007/978-3-319-97181-0_17" target="\_blank">Information Security Landscape in Vietnam: Insights from Two Research Surveys</a></span>
