@@ -25,10 +25,10 @@ I completed my Ph.D. (Business Information Systems) degree at RMIT University (A
 
 My teaching and research interests focus on the following areas:
 <ul>
-  <li style="margin-bottom: 0;">cybersecurity management & behaviors</li>
-  <li style="margin-bottom: 0;">digital business & digital transformation</li>
+  <li style="margin-bottom: 0;">information security management & behaviors</li>
+  <li style="margin-bottom: 0;">digital transformation</li>
   <li style="margin-bottom: 0;">data analytics for business and education</li>
-  <li style="margin-bottom: 0;">human-centered artificial intelligence</li>
+  <li style="margin-bottom: 0;">algorithmic decision making & algorithmic experience</li>
 </ul>
 
 My research projects employed both quantitative and qualitative methods, and I am especially interested in <a href="https://en.wikipedia.org/wiki/Social_network_analysis" target="\_blank">social network analysis</a> methods, and <a href="https://en.wikipedia.org/wiki/Action_research" target="\_blank">action research</a> and <a href="https://en.wikipedia.org/wiki/Design_science_(methodology)" target="\_blank">design science</a> approaches. 
