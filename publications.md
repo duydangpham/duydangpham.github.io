@@ -23,7 +23,7 @@ To be updated.
         </span>
         <span class="periodical"><br>
           <em>Digitalization Cases Vol. 2</em>
-        </span><span class="year"> (Forthcoming)</span>
+        </span><span class="year">(2021)</span>
       <!-- Hidden abstract block -->
     </div>
   </li>
@@ -58,7 +58,7 @@ To be updated.
         </span>
         <span class="periodical"><br>
           <em>Computers and Security</em>
-        </span><span class="year">(Forthcoming)</span>
+        </span><span class="year">(2022)</span>
       <!-- Hidden abstract block -->
     </div>
   </li>
