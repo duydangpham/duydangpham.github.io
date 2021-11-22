@@ -22,3 +22,6 @@ permalink: /media/
 | Aug 26, 2015 | <a href="https://news.zing.vn/tham-vong-cua-nghien-cuu-sinh-viet-o-australia-post571398.html" target="_/blank">Tham vọng của nghiên cứu sinh Việt ở Australia</a> | Zing News |
 | Aug 26, 2015 | <a href="http://kenh14.vn/hoc-duong/thu-hep-khoang-cach-giua-gioi-hoc-thuat-va-doanh-nghiep-20150825113511837.chn" target="_/blank">Thu hẹp khoảng cách giữa giới học thuật và doanh nghiệp</a> | Kenh14 |
 | Aug 25, 2015 | <a href="https://www.rmit.edu.au/news/all-news/2015/august/vietnam-alumnus-aims-to-narrow-gap" target="_/blank">Vietnam alumnus aims to narrow gap between academia and industry</a> | RMIT Australia News |
+
+# One-paragraph bio:
+Dr Duy Dang-Pham is a Senior Lecturer of Business Innovation in the School of Business & Management (SBM), RMIT Vietnam. Prior to joining SBM, he was Lecturer of IT and Senior Program Manager (IT and Software Engineering) in the School of Science, Engineering & Technology (SSET). In 2016, Duy received the RMIT Prize for Research Impact (Enterprise), which recognized his active engagement with the industry through conducting impactful research. Since 2018, he has received various research and teaching awards from RMIT University, including the "Living RMIT’s Values" award in 2021 which recognized his contributions to growing the programs while maintaining excellence in research and teaching.
