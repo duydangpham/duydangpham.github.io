@@ -7,10 +7,10 @@
 #
 layout: page
 title: Information Security Management & Digital Business Academic
-image: /assets/img/duydangpham_2021_facebook_OG.jpg
+image: /assets/img/duydangpham2021.jpeg
 ---
 
-<img src="assets/img/duydangpham_2021_2.jpg" alt="Duy Dang-Pham portrait" width="30%" style="border-radius: 50%; float: right; margin-left:40px; margin-bottom:30px">
+<img src="assets/img/duydangpham2021.jpeg" alt="Duy Dang-Pham portrait" width="30%" style="border-radius: 50%; float: right; margin-left:40px; margin-bottom:30px">
 
 I am Senior Lecturer (Business Innovation) in the <a href="https://www.rmit.edu.vn/about-us/schools-and-centres/school-of-business-and-management" target="\_blank">School of Business &amp; Management</a>, RMIT University (Saigon South Campus, Vietnam).
 
