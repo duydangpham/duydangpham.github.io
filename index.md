@@ -12,7 +12,7 @@ image: /assets/img/duydangpham2021.jpg
 
 <img src="assets/img/duydangpham2021.jpg" alt="Duy Dang-Pham portrait" width="30%" style="border-radius: 50%; float: right; margin-left:40px; margin-bottom:30px;">
 
-I am Senior Lecturer (Business Innovation) in the <a href="https://www.rmit.edu.vn/about-us/schools-and-centres/school-of-business-and-management" target="\_blank">School of Business &amp; Management</a>, RMIT University (Saigon South Campus, Vietnam).
+I am a Senior Lecturer (Business Innovation) in the <a href="https://www.rmit.edu.vn/about-us/schools-and-centres/school-of-business-and-management" target="\_blank">School of Business &amp; Management</a>, RMIT University (Saigon South Campus, Vietnam). I am also the HDR Coordinator and Designated Authority in the School of Business &amp; Management, leading and mentoring both Ph.D. candidates and supervisors to pursue the university's HDR priorities and develop school specific HDR strategy.
 
 Prior to joining the School of Business & Management, I have been Lecturer (Information Technology) in the <a href="https://www.rmit.edu.vn/our-schools-centres/school-science-technology" target="\_blank">School of Science &amp; Technology</a> for three years, where I [taught courses](/teaching) in computer science areas such as data science & machine learning, data structures & algorithms, user-centered design, and technology leadership.
 
