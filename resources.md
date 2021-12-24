@@ -73,3 +73,10 @@ These books all good and they are useful for me to some extent, but I am still c
 - <a href="https://www.weforum.org/" target="\_blank">World Economic Forum</a>
 - <a href="https://www.gartner.com/smarterwithgartner" target="\_blank">Gartner</a>
 - <a href="https://www.chuyendoi.so/" target="\_blank">Chuyen Doi So Blog (Vietnamese)</a>
+
+## Ideas
+### Digital and computational social science
+- https://acrl.ala.org/dh/2014/04/09/defining-digital-social-sciences/ 
+- https://journals.sagepub.com/bigdata
+- https://link.springer.com/book/10.1057/9781137453662
+- https://jaredmwr.wordpress.com/
