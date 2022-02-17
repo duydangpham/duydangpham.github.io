@@ -1,11 +1,13 @@
 ---
 layout: page
-title: Awards
+title: Research Grants & Awards
 permalink: /research-grants-and-awards/
 ---
 
 # Research grants
+
 | Year | Research grant | Members | Funding source | Value |
+| ---- | -------------- | ------- | -------------- | ----- |
 | 2021 | Modeling vaccine-related information to create hybrid information hubs for people with disabilities in Vietnam and Indonesia | Abdul Rohman, Duy Dang-Pham | Vaccine Confidence Fund | USD 221,840 |
 | 2020 | Empowering the citizens: toward an inclusive digital nation | Trung Nguyen, Ai-Phuong Hoang, Burkhard Schrage, Long Nguyen Van Thang, Duy Dang-Pham | RMIT Vietnam Thematic Research Grant 2021 | USD 17,660 |
 | 2020 | Drivers of the employees' information security compliance: novel insights from employee engagement and empowerment theories | Duy Dang-Pham, Quang Tran, Ai-Phuong Hoang, Long Nguyen Van Thang | RMIT Vietnam Internal Research Grant Scheme 2020  | USD 8,300 |
