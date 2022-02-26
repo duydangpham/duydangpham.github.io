@@ -12,6 +12,7 @@ permalink: /students/
 | <a href="https://orcid.org/0000-0002-8925-6226" target="\_blank">Ngan Tuyet Truong</a> | Doctor of Philosophy (Management) | The influences of innovativeness on customer satisfaction: the case of hotel operations (tentative title) | Thesis submission | Mathews Nkhoma (Primary), Robert McClelland (Associate), Duy Dang-Pham (Associate) |
 | Minh Hoang Thi Bui | Doctor of Philosophy (Management) | Quality assessment of digitalized learning learning programs in higher education in Vietnam (tentative title) | Mid-candidature Review | Mathews Nkhoma (Primary), Duy Dang-Pham (Primary), Ai-Phuong Hoang (Associate) |
 | Diem-Trang Vo | Doctor of Philosophy (Business) | Adoption of AI-driven technology in healthcare (tentative title) | Confirmation of Candidature | Long Nguyen Van Thang (Primary), Duy Dang-Pham (Associate), Ai-Phuong Hoang (Associate) |
+| Khanh-Linh Nguyen | Doctor of Philosophy (Business) | The influences of Growth Mindset, Occupational Self-efficacy, Mastery Goal Orientation, and Grit on Workplace Learning – a moderated sequential-mediation model in Vietnam’s banking industry (tentative title) | Confirmation of Candidature | Duy Dang-Pham (Primary), Seng Kok (Primary), Burkhard Schrage (Associate) |
 
 <h3>Undergraduate Students</h3>
 <hr />
