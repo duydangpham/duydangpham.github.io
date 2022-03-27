@@ -6,7 +6,7 @@
 # See: https://jekyllrb.com/docs/themes/#overriding-theme-defaults
 #
 layout: page
-title: Information Security Management & Digital Business Academic
+title: Information Security Management & Digital Transformation Academic
 image: /assets/img/duydangpham2021.jpg
 ---
 
