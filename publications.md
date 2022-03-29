@@ -41,8 +41,10 @@ To be updated.
             and Siddhi Pittayachawan
         </span>
         <span class="periodical"><br>
-          <em>Computers and Security</em> <p style="color:red">[ABDC A; SJR Q1]</p>
-        </span><span class="year">(2022)</span>
+          <em>Computers and Security</em>
+        </span>
+        <span class="year">(2022)</span>
+        <span><p style="color:red">[ABDC A; SJR Q1]</p></span>
       <!-- Hidden abstract block -->
     </div>
   </li>
@@ -87,8 +89,9 @@ To be updated.
             and Mathews Nkhoma
         </span>
         <span class="periodical"><br>
-          <em>Journal of Hospitality and Tourism Technology</em> <p style="color:red">[ABDC B; SJR Q1]</p>
+          <em>Journal of Hospitality and Tourism Technology</em>
         </span><span class="year">(2020)</span>
+        <span><p style="color:red">[ABDC B; SJR Q1]</p></span>
       <!-- Hidden abstract block -->
     </div>
   </li>
@@ -119,8 +122,9 @@ To be updated.
             and Susan Thomas
         </span>
         <span class="periodical"><br>
-          <em>Behaviour and Information Technology</em> <p style="color:red">[ABDC A; SJR Q1]</p>
+          <em>Behaviour and Information Technology</em> 
         </span><span class="year">(2019)</span>
+        <span><p style="color:red">[ABDC A; SJR Q1]</p></span>
       <!-- Hidden abstract block -->
     </div>
   </li>
@@ -134,8 +138,9 @@ To be updated.
             and Vince Bruno 
         </span>
         <span class="periodical"><br>
-          <em>Australasian Journal of Information Systems</em> <p style="color:red">[ABDC A; SJR Q2]</p>
+          <em>Australasian Journal of Information Systems</em>
         </span><span class="year">(2019)</span>
+        <span><p style="color:red">[ABDC A; SJR Q2]</p></span>
       <!-- Hidden abstract block -->
     </div>
   </li>
@@ -164,8 +169,9 @@ To be updated.
             and Karlheinz Kautz
         </span>
         <span class="periodical"><br>
-          <em>Information Systems Frontiers</em> <p style="color:red">[ABDC A; SJR Q1]</p>
+          <em>Information Systems Frontiers</em> 
         </span><span class="year">(2017)</span>
+        <span><p style="color:red">[ABDC A; SJR Q1]</p></span>
       <!-- Hidden abstract block -->
     </div>
   </li>
@@ -178,8 +184,9 @@ To be updated.
             and Vince Bruno 
         </span>
         <span class="periodical"><br>
-          <em>Information and Management</em> <p style="color:red">[ABDC A*; SJR Q1]</p>
+          <em>Information and Management</em> 
         </span><span class="year">(2017)</span>
+        <span><p style="color:red">[ABDC A*; SJR Q1]</p></span>
       <!-- Hidden abstract block -->
     </div>
   </li>
@@ -193,8 +200,10 @@ To be updated.
             and Joan Richardson
         </span>
         <span class="periodical"><br>
-          <em>Australasian Journal of Information Systems</em> <p style="color:red">[ABDC A; SJR Q2]</p>
-        </span><span class="year">(2017)</span>
+          <em>Australasian Journal of Information Systems</em> 
+        </span>
+        <span class="year">(2017)</span>
+        <span><p style="color:red">[ABDC A; SJR Q2]</p></span>
       <!-- Hidden abstract block -->
     </div>
   </li>
@@ -207,8 +216,10 @@ To be updated.
               and Vince Bruno 
           </span>
           <span class="periodical"><br>
-            <em>Computers and Security</em> <p style="color:red">[ABDC A; SJR Q1]</p>
-          </span><span class="year">(2017)</span>
+            <em>Computers and Security</em> 
+          </span>
+          <span class="year">(2017)</span>
+          <span><p style="color:red">[ABDC A; SJR Q1]</p></span>
         <!-- Hidden abstract block -->
       </div>
     </li>
@@ -221,8 +232,10 @@ To be updated.
             and Vince Bruno 
         </span>
         <span class="periodical"><br>
-          <em>Computers in Human Behavior</em> <p style="color:red">[ABDC A; SJR Q1]</p>
-        </span><span class="year">(2017)</span>
+          <em>Computers in Human Behavior</em> 
+        </span>
+        <span class="year">(2017)</span>
+        <span><p style="color:red">[ABDC A; SJR Q1]</p></span>
       <!-- Hidden abstract block -->
     </div>
   </li>
@@ -277,8 +290,10 @@ To be updated.
             and Vince Bruno 
         </span>
         <span class="periodical"><br>
-          <em>Computers and Security</em> <p style="color:red">[ABDC A; SJR Q1]</p>
-        </span><span class="year">(2017)</span>
+          <em>Computers and Security</em> 
+        </span>
+        <span class="year">(2017)</span>
+        <span><p style="color:red">[ABDC A; SJR Q1]</p></span>
       <!-- Hidden abstract block -->
     </div>
   </li>
@@ -291,8 +306,9 @@ To be updated.
             and Vince Bruno 
         </span>
         <span class="periodical"><br>
-          <em>Business Horizons</em> <p style="color:red">[ABDC B; SJR Q1]</p>
+          <em>Business Horizons</em> 
         </span><span class="year">(2016)</span>
+        <span><p style="color:red">[ABDC B; SJR Q1]</p></span>
       <!-- Hidden abstract block -->
     </div>
   </li>
@@ -305,8 +321,10 @@ To be updated.
             and Mathews Nkhoma
         </span>
         <span class="periodical"><br>
-          <em>Australasian Journal of Information Systems</em> <p style="color:red">[ABDC A; SJR Q2]</p>
-        </span><span class="year">(2015)</span>
+          <em>Australasian Journal of Information Systems</em> 
+        </span>
+        <span class="year">(2015)</span>
+        <span><p style="color:red">[ABDC A; SJR Q2]</p></span>
       <!-- Hidden abstract block -->
     </div>
   </li>
@@ -318,8 +336,10 @@ To be updated.
             and Siddhi Pittayachawan 
         </span>
         <span class="periodical"><br>
-          <em>Computers and Security</em> <p style="color:red">[ABDC A; SJR Q1]</p>
-        </span><span class="year">(2015)</span>
+          <em>Computers and Security</em> 
+        </span>
+        <span class="year">(2015)</span>
+        <span><p style="color:red">[ABDC A; SJR Q1]</p></span>
       <!-- Hidden abstract block -->
     </div>
   </li>
