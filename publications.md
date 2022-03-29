@@ -44,7 +44,7 @@ To be updated.
           <em>Computers and Security</em>
         </span>
         <span class="year">(2022)</span>
-        <span><p style="color:red">[ABDC A; SJR Q1]</p></span>
+        <span style="color:red">[ABDC A; SJR Q1]</span>
       <!-- Hidden abstract block -->
     </div>
   </li>
@@ -91,7 +91,7 @@ To be updated.
         <span class="periodical"><br>
           <em>Journal of Hospitality and Tourism Technology</em>
         </span><span class="year">(2020)</span>
-        <span><p style="color:red">[ABDC B; SJR Q1]</p></span>
+        <span style="color:red">[ABDC B; SJR Q1]</span>
       <!-- Hidden abstract block -->
     </div>
   </li>
@@ -124,7 +124,7 @@ To be updated.
         <span class="periodical"><br>
           <em>Behaviour and Information Technology</em> 
         </span><span class="year">(2019)</span>
-        <span><p style="color:red">[ABDC A; SJR Q1]</p></span>
+        <span style="color:red">[ABDC A; SJR Q1]</span>
       <!-- Hidden abstract block -->
     </div>
   </li>
@@ -140,7 +140,7 @@ To be updated.
         <span class="periodical"><br>
           <em>Australasian Journal of Information Systems</em>
         </span><span class="year">(2019)</span>
-        <span><p style="color:red">[ABDC A; SJR Q2]</p></span>
+        <span style="color:red">[ABDC A; SJR Q2]</span>
       <!-- Hidden abstract block -->
     </div>
   </li>
@@ -171,7 +171,7 @@ To be updated.
         <span class="periodical"><br>
           <em>Information Systems Frontiers</em> 
         </span><span class="year">(2017)</span>
-        <span><p style="color:red">[ABDC A; SJR Q1]</p></span>
+        <span style="color:red">[ABDC A; SJR Q1]</span>
       <!-- Hidden abstract block -->
     </div>
   </li>
@@ -186,7 +186,7 @@ To be updated.
         <span class="periodical"><br>
           <em>Information and Management</em> 
         </span><span class="year">(2017)</span>
-        <span><p style="color:red">[ABDC A*; SJR Q1]</p></span>
+        <span style="color:red">[ABDC A*; SJR Q1]</span>
       <!-- Hidden abstract block -->
     </div>
   </li>
@@ -203,7 +203,7 @@ To be updated.
           <em>Australasian Journal of Information Systems</em> 
         </span>
         <span class="year">(2017)</span>
-        <span><p style="color:red">[ABDC A; SJR Q2]</p></span>
+        <span style="color:red">[ABDC A; SJR Q2]</span>
       <!-- Hidden abstract block -->
     </div>
   </li>
@@ -219,7 +219,7 @@ To be updated.
             <em>Computers and Security</em> 
           </span>
           <span class="year">(2017)</span>
-          <span><p style="color:red">[ABDC A; SJR Q1]</p></span>
+          <span style="color:red">[ABDC A; SJR Q1]</span>
         <!-- Hidden abstract block -->
       </div>
     </li>
@@ -235,7 +235,7 @@ To be updated.
           <em>Computers in Human Behavior</em> 
         </span>
         <span class="year">(2017)</span>
-        <span><p style="color:red">[ABDC A; SJR Q1]</p></span>
+        <span style="color:red">[ABDC A; SJR Q1]</span>
       <!-- Hidden abstract block -->
     </div>
   </li>
@@ -293,7 +293,7 @@ To be updated.
           <em>Computers and Security</em> 
         </span>
         <span class="year">(2017)</span>
-        <span><p style="color:red">[ABDC A; SJR Q1]</p></span>
+        <span style="color:red">[ABDC A; SJR Q1]</span>
       <!-- Hidden abstract block -->
     </div>
   </li>
@@ -308,7 +308,7 @@ To be updated.
         <span class="periodical"><br>
           <em>Business Horizons</em> 
         </span><span class="year">(2016)</span>
-        <span><p style="color:red">[ABDC B; SJR Q1]</p></span>
+        <span style="color:red">[ABDC B; SJR Q1]</span>
       <!-- Hidden abstract block -->
     </div>
   </li>
@@ -324,7 +324,7 @@ To be updated.
           <em>Australasian Journal of Information Systems</em> 
         </span>
         <span class="year">(2015)</span>
-        <span><p style="color:red">[ABDC A; SJR Q2]</p></span>
+        <span style="color:red">[ABDC A; SJR Q2]</span>
       <!-- Hidden abstract block -->
     </div>
   </li>
@@ -339,7 +339,7 @@ To be updated.
           <em>Computers and Security</em> 
         </span>
         <span class="year">(2015)</span>
-        <span><p style="color:red">[ABDC A; SJR Q1]</p></span>
+        <span style="color:red">[ABDC A; SJR Q1]</span>
       <!-- Hidden abstract block -->
     </div>
   </li>
