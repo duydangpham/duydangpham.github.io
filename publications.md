@@ -27,22 +27,6 @@ To be updated.
       <!-- Hidden abstract block -->
     </div>
   </li>
-  <li>
-    <div id="Ha2021kol-brandlove">
-        <span class="title"><a href="#" target="\_blank">The Impacts of Influencers on CSR Communication</a></span>
-        <br><span class="author">
-            Ha Tran,
-            Diem-Trang Vo,
-            Long Nguyen Van Thang,
-            <strong>Duy Dang-Pham</strong>,
-            and Khai Nguyen
-        </span>
-        <span class="periodical"><br>
-          <em>In the 2021 Australian and New Zealand Marketing Academy conference (ANZMAC 2021)</em>
-        </span><span class="year">(2021)</span>
-      <!-- Hidden abstract block -->
-    </div>
-  </li>
 </ol>
 
 <h2 class="category">Refereed journal articles</h2>
@@ -57,7 +41,7 @@ To be updated.
             and Siddhi Pittayachawan
         </span>
         <span class="periodical"><br>
-          <em>Computers and Security</em>
+          <em>Computers and Security</em> <p style="color:red">[ABDC A; SJR Q1]</p>
         </span><span class="year">(2022)</span>
       <!-- Hidden abstract block -->
     </div>
@@ -103,7 +87,7 @@ To be updated.
             and Mathews Nkhoma
         </span>
         <span class="periodical"><br>
-          <em>Journal of Hospitality and Tourism Technology</em>
+          <em>Journal of Hospitality and Tourism Technology</em> <p style="color:red">[ABDC B; SJR Q1]</p>
         </span><span class="year">(2020)</span>
       <!-- Hidden abstract block -->
     </div>
@@ -135,7 +119,7 @@ To be updated.
             and Susan Thomas
         </span>
         <span class="periodical"><br>
-          <em>Behaviour and Information Technology</em>
+          <em>Behaviour and Information Technology</em> <p style="color:red">[ABDC A; SJR Q1]</p>
         </span><span class="year">(2019)</span>
       <!-- Hidden abstract block -->
     </div>
@@ -150,7 +134,7 @@ To be updated.
             and Vince Bruno 
         </span>
         <span class="periodical"><br>
-          <em>Australasian Journal of Information Systems</em>
+          <em>Australasian Journal of Information Systems</em> <p style="color:red">[ABDC A; SJR Q2]</p>
         </span><span class="year">(2019)</span>
       <!-- Hidden abstract block -->
     </div>
@@ -180,7 +164,7 @@ To be updated.
             and Karlheinz Kautz
         </span>
         <span class="periodical"><br>
-          <em>Information Systems Frontiers</em>
+          <em>Information Systems Frontiers</em> <p style="color:red">[ABDC A; SJR Q1]</p>
         </span><span class="year">(2017)</span>
       <!-- Hidden abstract block -->
     </div>
@@ -194,7 +178,7 @@ To be updated.
             and Vince Bruno 
         </span>
         <span class="periodical"><br>
-          <em>Information and Management</em>
+          <em>Information and Management</em> <p style="color:red">[ABDC A*; SJR Q1]</p>
         </span><span class="year">(2017)</span>
       <!-- Hidden abstract block -->
     </div>
@@ -209,7 +193,7 @@ To be updated.
             and Joan Richardson
         </span>
         <span class="periodical"><br>
-          <em>Australasian Journal of Information Systems</em>
+          <em>Australasian Journal of Information Systems</em> <p style="color:red">[ABDC A; SJR Q2]</p>
         </span><span class="year">(2017)</span>
       <!-- Hidden abstract block -->
     </div>
@@ -223,7 +207,7 @@ To be updated.
               and Vince Bruno 
           </span>
           <span class="periodical"><br>
-            <em>Computers and Security</em>
+            <em>Computers and Security</em> <p style="color:red">[ABDC A; SJR Q1]</p>
           </span><span class="year">(2017)</span>
         <!-- Hidden abstract block -->
       </div>
@@ -237,7 +221,7 @@ To be updated.
             and Vince Bruno 
         </span>
         <span class="periodical"><br>
-          <em>Computers in Human Behavior</em>
+          <em>Computers in Human Behavior</em> <p style="color:red">[ABDC A; SJR Q1]</p>
         </span><span class="year">(2017)</span>
       <!-- Hidden abstract block -->
     </div>
@@ -293,7 +277,7 @@ To be updated.
             and Vince Bruno 
         </span>
         <span class="periodical"><br>
-          <em>Computers and Security</em>
+          <em>Computers and Security</em> <p style="color:red">[ABDC A; SJR Q1]</p>
         </span><span class="year">(2017)</span>
       <!-- Hidden abstract block -->
     </div>
@@ -307,7 +291,7 @@ To be updated.
             and Vince Bruno 
         </span>
         <span class="periodical"><br>
-          <em>Business Horizons</em>
+          <em>Business Horizons</em> <p style="color:red">[ABDC B; SJR Q1]</p>
         </span><span class="year">(2016)</span>
       <!-- Hidden abstract block -->
     </div>
@@ -321,7 +305,7 @@ To be updated.
             and Mathews Nkhoma
         </span>
         <span class="periodical"><br>
-          <em>Australasian Journal of Information Systems</em>
+          <em>Australasian Journal of Information Systems</em> <p style="color:red">[ABDC A; SJR Q2]</p>
         </span><span class="year">(2015)</span>
       <!-- Hidden abstract block -->
     </div>
@@ -334,7 +318,7 @@ To be updated.
             and Siddhi Pittayachawan 
         </span>
         <span class="periodical"><br>
-          <em>Computers and Security</em>
+          <em>Computers and Security</em> <p style="color:red">[ABDC A; SJR Q1]</p>
         </span><span class="year">(2015)</span>
       <!-- Hidden abstract block -->
     </div>
@@ -369,6 +353,22 @@ To be updated.
 
 <h2 class="category">Refereed conference papers</h2>
 <ol>
+  <li>
+    <div id="Ha2021kol-brandlove">
+        <span class="title"><a href="#" target="\_blank">The Impacts of Influencers on CSR Communication</a></span>
+        <br><span class="author">
+            Ha Tran,
+            Diem-Trang Vo,
+            Long Nguyen Van Thang,
+            <strong>Duy Dang-Pham</strong>,
+            and Khai Nguyen
+        </span>
+        <span class="periodical"><br>
+          <em>In the 2021 Australian and New Zealand Marketing Academy conference (ANZMAC 2021)</em>
+        </span><span class="year">(2021)</span>
+      <!-- Hidden abstract block -->
+    </div>
+  </li>
   <li>
     <div id="Dang-Pham2020a">
         <span class="title"><a href="/assets/papers/ACIS 2020_XSEC_cameraReady.pdf" target="\_blank">Explainable Information Security: Development of a Construct and Instrument</a></span>
