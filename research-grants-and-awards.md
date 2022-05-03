@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Research Grants & Awards
+title: Grants & Awards
 permalink: /research-grants-and-awards/
 ---
 
