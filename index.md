@@ -33,7 +33,7 @@ My teaching and research interests focus on the following areas:
 
 My research projects employed both quantitative and qualitative methods, and I am especially interested in <a href="https://en.wikipedia.org/wiki/Social_network_analysis" target="\_blank">social network analysis</a> methods, and <a href="https://en.wikipedia.org/wiki/Action_research" target="\_blank">action research</a> and <a href="https://en.wikipedia.org/wiki/Design_science_(methodology)" target="\_blank">design science</a> approaches. 
 
-I am [supervising several Ph.D. candidates](/students), and I always seek strong candidates who would like to do research in the areas listed above. Please find information about the Ph.D. programs and relevant contacts for further enquiries on this <a href="https://www.google.com/url?q=https%3A%2F%2Fwww.rmit.edu.vn%2Fresearch-supervisors-rmit-vietnam&amp;sa=D&amp;sntz=1&amp;usg=AFQjCNEnpCoHibQT84cOWMBhVtSt-8mwSQ" target="\_blank">webpage</a>.
+I am [supervising several Ph.D. candidates](/teaching), and I always seek strong candidates who would like to do research in the areas listed above. Please find information about the Ph.D. programs and relevant contacts for further enquiries on this <a href="https://www.google.com/url?q=https%3A%2F%2Fwww.rmit.edu.vn%2Fresearch-supervisors-rmit-vietnam&amp;sa=D&amp;sntz=1&amp;usg=AFQjCNEnpCoHibQT84cOWMBhVtSt-8mwSQ" target="\_blank">webpage</a>.
 
 ## Membership
 
