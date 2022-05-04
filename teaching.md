@@ -8,7 +8,40 @@ image: ../assets/img/feedback_wordcloud.png
 <img src="../assets/img/feedback_wordcloud.png" alt="A word cloud of qualitative feedback from my students" width="80%" style="display: block; margin-left: auto; margin-right: auto;">
 <figcaption style="text-align: center;">A word cloud of qualitative feedback from my students</figcaption>
 
-<h2>School of Business & Management (2021 – present)</h2>
+# Content
+1. [Ph.D. Candidates](#phd-candidates)
+2. [Undergraduate Students](#undergrads)
+3. [School of Business & Management (2021 – present)](#sbm)
+4. [School of Science, Engineering, and Technology (2018 – 2021)](#sset)
+5. [School of Business IT and Logistics (2014 – 2017)](#sbitl)
+
+<h2>Ph.D. Candidates</h2><a name="phd-candidates"></a>
+<hr />
+| Full name | Program | Thesis title | Progress | Supervisors |
+| --------- | ------- | ------------ | -------- | ----------- |
+| <a href="https://orcid.org/0000-0002-8925-6226" target="\_blank">Ngan Tuyet Truong</a> | Doctor of Philosophy (Management) | The influences of innovativeness on customer satisfaction: the case of hotel operations (tentative title) | Thesis Examination | Mathews Nkhoma (Primary), Robert McClelland (Associate), Duy Dang-Pham (Associate) |
+| Minh Hoang Thi Bui | Doctor of Philosophy (Management) | Quality assessment of digitalized learning learning programs in higher education in Vietnam (tentative title) | Third Milesone Review | Mathews Nkhoma (Primary), Duy Dang-Pham (Primary), Ai-Phuong Hoang (Associate) |
+| Diem-Trang Vo | Doctor of Philosophy (Business) | Adoption of AI-driven technology in healthcare (tentative title) | Mid-candidature Review | Long Nguyen Van Thang (Primary), Duy Dang-Pham (Associate), Ai-Phuong Hoang (Associate) |
+| Khanh-Linh Nguyen | Doctor of Philosophy (Business) | The influences of Growth Mindset, Occupational Self-efficacy, Mastery Goal Orientation, and Grit on Workplace Learning – a moderated sequential-mediation model in Vietnam’s banking industry (tentative title) | Mid-candidature Review | Duy Dang-Pham (Primary), Seng Kok (Primary), Burkhard Schrage (Associate) |
+| Anna Felipe | Doctor of Philosophy (Computer Science) | Converging Computer Science and Engineering pedagogy to Achieve Creative Mindset of Student for Start-up (tentative title) | Confirmation of Candidature | James Harland (Primary), Duy Dang-Pham (Associate), Iouri Belski (Associate) |
+
+<h2>Undergraduate Students</h3><a name="undergrads"></a>
+<hr />
+BH120 - Bachelor of Engineering (Software Engineering) (Honours)
+<br>
+BP162 - Bachelor of Information Technology
+
+| Full name | Program | Capstone project | Year | Supervisors | Industry partner |
+| --------- | ------- | ---------------- | ---- | ----------- | ---------------- |
+| Thanh Nguyen Tan, Dong Nguyen Dong, Phi Tran, An Nguyen Le | BH120 | LinkedIn scraper and recommender | 2020 | Duy Dang-Pham | <a href="https://www.navigosgroup.com/" target="\_blank">Navigos Group</a> |
+| Hinh Dinh Nguyen Huy, Tu Nguyen Hoang Cam, Hieu Nguyen Trung, Huy Hoang | BH120 <br> BP162 | Real estate auto-listing web application | 2020 | Duy Dang-Pham | <a href="http://amberos.com/" target="\_blank">Amberos</a> |
+| Thanh Phu Gia | BH120 | An online tool for automatic data preprocessing | 2020 | Duy Dang-Pham | |
+| Long Nguyen Hoang | BH120 | Implementation of graph theory and gamification in knowledge management system | 2020 | Duy Dang-Pham | |
+| Tuan Phung Minh, Long Tran Hoang | BH120 | An accurate pipeline approach to Vietnamese handwritten medical record recognition | 2020 | Duy Dang-Pham, Minh Ngoc Dinh | <a href="http://www.oucru.org/ho-chi-minh-city/" target="\_blank">Oxford University Clinical Research Unit (OUCRU) - Hospital for Tropical Diseases</a> |
+| Huy Tran Nguyen Duc | BH120 | Music recommender system with audio features | 2019 | Duy Dang-Pham | |
+| Dat Le Duy, Duy Doan Le, Quang Tran Huu | BH120 | HERMESITO - A job recommender system | 2019 | Duy Dang-Pham | <a href="https://www.navigosgroup.com/" target="\_blank">Navigos Group</a> |
+
+<h2>School of Business & Management (2021 – present)</h2><a name="sbm"></a>
 <hr />
 
 <a href="#" target="\_blank">INTE2555 Technology Futures (Postgraduate / MBA)</a>
@@ -27,7 +60,7 @@ Digital content plays a crucial role in a successful digital marketing campaign.
 
 In this course you will learn to critically examine alternative approaches for analysing and interpreting organisations. The course adopts a multiple perspective and interdisciplinary approach which provides you with toolset to analyse organisations through different theoretical lenses and at different levels: systems, structures, social interactions and the individual.  It develops organisational analysis and critical reasoning skills through the application and assessment of different perspectives to business case studies examined in the course. The course examines different knowledge assumptions and their implications and practical consequences for future managers.
 
-<h2>School of Science and Technology (2018 – 2021)</h2>
+<h2>School of Science, Engineering, and Technology (2018 – 2021)</h2><a name="sset"></a>
 <hr />
 
 <a href="https://www.rmit.edu.au/courses/004073" target="\_blank">COSC2083 Introduction to Information Technology</a>
@@ -63,7 +96,7 @@ Machine Learning involves automatically identifying patterns in data to suggest 
 
 This course is the first half of a research and development (R&D) project that comprises two sequential courses (Part A and Part B) and is the capstone for all engineering programmes within the School of Engineering. In this culminating academic experience you will apply your technical knowledge and further develop your research, design and professional engineering skills. The authentic project maybe industry based and focuses on producing well-managed practical and pertinent solutions to either discipline specific, or cross disciplinary engineering problems, through robust research and established engineering design processes.
 
-<h2>School of Business IT and Logistics (2014 – 2017)</h2>
+<h2>School of Business IT and Logistics (2014 – 2017)</h2><a name="sbitl"></a>
 <hr />
 
 <a href="https://www.rmit.edu.au/courses/008219" target="\_blank">OMGT1082 Introduction to Logistics and Supply Chain Management</a>
