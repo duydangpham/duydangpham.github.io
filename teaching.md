@@ -8,7 +8,7 @@ image: ../assets/img/feedback_wordcloud.png
 <img src="../assets/img/feedback_wordcloud.png" alt="A word cloud of qualitative feedback from my students" width="80%" style="display: block; margin-left: auto; margin-right: auto;">
 <figcaption style="text-align: center;">A word cloud of qualitative feedback from my students</figcaption>
 
-# Content
+<h2>Content</h2>
 1. [Ph.D. Candidates](#phd-candidates)
 2. [Undergraduate Students](#undergrads)
 3. [School of Business & Management (2021 – present)](#sbm)
@@ -25,7 +25,7 @@ image: ../assets/img/feedback_wordcloud.png
 | Khanh-Linh Nguyen | Doctor of Philosophy (Business) | The influences of Growth Mindset, Occupational Self-efficacy, Mastery Goal Orientation, and Grit on Workplace Learning – a moderated sequential-mediation model in Vietnam’s banking industry (tentative title) | Mid-candidature Review | Duy Dang-Pham (Primary), Seng Kok (Primary), Burkhard Schrage (Associate) |
 | Anna Felipe | Doctor of Philosophy (Computer Science) | Converging Computer Science and Engineering pedagogy to Achieve Creative Mindset of Student for Start-up (tentative title) | Confirmation of Candidature | James Harland (Primary), Duy Dang-Pham (Associate), Iouri Belski (Associate) |
 
-<h2>Undergraduate Students</h3><a name="undergrads"></a>
+<h2>Undergraduate Students</h2><a name="undergrads"></a>
 <hr />
 BH120 - Bachelor of Engineering (Software Engineering) (Honours)
 <br>
