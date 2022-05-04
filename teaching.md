@@ -60,7 +60,7 @@ Digital content plays a crucial role in a successful digital marketing campaign.
 
 In this course you will learn to critically examine alternative approaches for analysing and interpreting organisations. The course adopts a multiple perspective and interdisciplinary approach which provides you with toolset to analyse organisations through different theoretical lenses and at different levels: systems, structures, social interactions and the individual.  It develops organisational analysis and critical reasoning skills through the application and assessment of different perspectives to business case studies examined in the course. The course examines different knowledge assumptions and their implications and practical consequences for future managers.
 
-<h2>School of Science, Engineering, and Technology (2018 – 2021)</h2><a name="sset"></a>
+<h2>School of Science, Engineering & Technology (2018 – 2021)</h2><a name="sset"></a>
 <hr />
 
 <a href="https://www.rmit.edu.au/courses/004073" target="\_blank">COSC2083 Introduction to Information Technology</a>
@@ -96,7 +96,7 @@ Machine Learning involves automatically identifying patterns in data to suggest 
 
 This course is the first half of a research and development (R&D) project that comprises two sequential courses (Part A and Part B) and is the capstone for all engineering programmes within the School of Engineering. In this culminating academic experience you will apply your technical knowledge and further develop your research, design and professional engineering skills. The authentic project maybe industry based and focuses on producing well-managed practical and pertinent solutions to either discipline specific, or cross disciplinary engineering problems, through robust research and established engineering design processes.
 
-<h2>School of Business IT and Logistics (2014 – 2017)</h2><a name="sbitl"></a>
+<h2>School of Business IT & Logistics (2014 – 2017)</h2><a name="sbitl"></a>
 <hr />
 
 <a href="https://www.rmit.edu.au/courses/008219" target="\_blank">OMGT1082 Introduction to Logistics and Supply Chain Management</a>
