@@ -33,15 +33,19 @@ Tất cả dự án này sẽ kêu gọi sự hợp tác chặt chẽ giữa tô
 
 #### Chương 1 - Giới thiệu về Chuyển đổi số: Các khái niệm căn bản
 
-#### Chương 2 - 
+#### Chương 2 - Chiến lược Chuyển đổi số
 
-#### Chương 3 -
+#### Chương 3 - Tiến hành Chuyển đổi số
 
-#### Chương 4 -
+#### Chương 4 - Con người
 
-#### Chương 5 -
+#### Chương 5 - Quy trình
 
-#### Chương 6 -
+#### Chương 6 - Công nghệ
+
+#### Chương 7 - Đo lường
+
+#### Chương 8 - Tương lai Chuyển đổi số
 
 # Thành viên dự án xuất bản sách <a name="project-members"></a>
 
