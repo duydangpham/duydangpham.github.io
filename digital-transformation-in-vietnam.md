@@ -34,7 +34,7 @@ Tất cả dự án này sẽ kêu gọi sự hợp tác chặt chẽ giữa tô
 #### Chương 1 - Giới thiệu về Chuyển đổi số: Các khái niệm căn bản
 <ul>
   <li style="margin-bottom: 0;">Khái niệm Chuyển đổi số</li>
-  <li style="margin-bottom: 0;">Đổi mới Mô hình kinh doanh</li>
+  <li style="margin-bottom: 0;">DT vs. IT-enabled transformation</li>
   <li style="margin-bottom: 0;"></li>
   <li style="margin-bottom: 0;"></li>
 </ul>
@@ -42,9 +42,11 @@ Tất cả dự án này sẽ kêu gọi sự hợp tác chặt chẽ giữa tô
 #### Chương 2 - Chiến lược Chuyển đổi số
 <ul>
   <li style="margin-bottom: 0;">Tổng quan</li>
+  <li style="margin-bottom: 0;">Business model and Value propositions</li>
   <li style="margin-bottom: 0;">Roadmap cho Chuyển đổi số</li>
   <li style="margin-bottom: 0;">Key areas of focus</li>
   <li style="margin-bottom: 0;">Value realisation</li>
+  <li style="margin-bottom: 0;">Digital maturity</li>
 </ul>
 
 #### Chương 3 - Tiến hành Chuyển đổi số
@@ -57,16 +59,17 @@ Tất cả dự án này sẽ kêu gọi sự hợp tác chặt chẽ giữa tô
 
 #### Chương 4 - Con người
 <ul>
-  <li style="margin-bottom: 0;">Building skills</li>
+  <li style="margin-bottom: 0;">Roles and skills</li>
   <li style="margin-bottom: 0;">Digital culture</li>
-  <li style="margin-bottom: 0;"></li>
-  <li style="margin-bottom: 0;"></li>
+  <li style="margin-bottom: 0;">Recruitment</li>
+  <li style="margin-bottom: 0;">Leadership</li>
 </ul>
 
 #### Chương 5 - Quy trình
 
 #### Chương 6 - Công nghệ
 <ul>
+  <li style="margin-bottom: 0;">Emerging technologies (Gartner Hype Cycles)</li>
   <li style="margin-bottom: 0;">ICT integration</li>
   <li style="margin-bottom: 0;">Financial support & budgeting</li>
   <li style="margin-bottom: 0;"></li>
@@ -76,6 +79,13 @@ Tất cả dự án này sẽ kêu gọi sự hợp tác chặt chẽ giữa tô
 #### Chương 7 - Đo lường
 
 #### Chương 8 - Tương lai Chuyển đổi số
+<ul>
+  <li style="margin-bottom: 0;">Ethics and regulations</li>
+  <li style="margin-bottom: 0;"></li>
+  <li style="margin-bottom: 0;"></li>
+  <li style="margin-bottom: 0;"></li>
+  <li style="margin-bottom: 0;"></li>
+</ul>
 
 # Thành viên dự án xuất bản sách <a name="project-members"></a>
 
@@ -102,5 +112,9 @@ Anh/chị làm nghiên cứu trong lĩnh vực chuyển đổi số, hoặc chuy
 
 # Tài liệu
 
+#### Chương 1 - Giới thiệu về Chuyển đổi số: Các khái niệm căn bản
+- Understanding digital transformation: A review and a research agenda - https://www.sciencedirect.com/science/article/pii/S0963868717302196
+
 #### Chương 2 - Chiến lược Chuyển đổi số
 - Digital transformation strategies - https://link.springer.com/article/10.1007/s12599-015-0401-5
+- Challenges for digital transformation – towards a conceptual decision support guide for managers - https://www.tandfonline.com/doi/full/10.1080/12460125.2018.1468697
