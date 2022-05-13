@@ -25,20 +25,67 @@ Nhu cầu có một tài nguyên CĐS dành cho Việt Nam này càng thực t�
 
 Để đạt được mục tiêu phát triển nguồn tài nguyên CĐS cho Việt Nam nói trên không phải là chuyện dễ, và cũng không thể thực hiện trong một sớm một chiều, và chắc chắn một mình tôi và đồng nghiệp trong giới học thuật tại Việt Nam, Úc, Mỹ, Đức, và các nước khác sẽ không thể làm được.
 
-Chính vì thế, tôi xin mạnh dạn lập nên dự án này nhằm từng bước nhỏ một xây dựng nguồn tài nguyên CĐS nói trên, bắt đầu với dự án xuất bản cuốn sách "Chuyển đổi số tại Việt Nam" (chi tiết ở mục tiếp theo), và từ đó sẽ tiến hành các dự án khác về lâu dài, bao gồm việc thiết kế một chương trình huấn luyện CĐS cho môi trường Việt Nam. 
+Chính vì thế, tôi mạnh dạn lập nên dự án này nhằm từng bước nhỏ một xây dựng nguồn tài nguyên CĐS nói trên, bắt đầu với dự án xuất bản cuốn sách "Chuyển đổi số tại Việt Nam" (chi tiết ở mục tiếp theo), và từ đó sẽ tiến hành các dự án khác về lâu dài, bao gồm việc thiết kế một chương trình huấn luyện CĐS cho môi trường Việt Nam. 
 
 Tất cả dự án này sẽ kêu gọi sự hợp tác chặt chẽ giữa tôi và đồng nghiệp học giả, nghiên cứu sinh trong lĩnh vực CĐS, cũng như với các chuyên gia CĐS tại Việt Nam.
 
 # Kế hoạch xuất bản sách "Chuyển đổi số tại Việt Nam" <a name="book-plan"></a>
+#### Chương 1 - Giới thiệu về Chuyển đổi số: Các khái niệm căn bản
+<ul>
+  <li style="margin-bottom: 0;">Khái niệm Chuyển đổi số</li>
+  <li style="margin-bottom: 0;">DT vs. IT-enabled transformation</li>
+  <li style="margin-bottom: 0;"></li>
+  <li style="margin-bottom: 0;"></li>
+</ul>
 
-#### Chương 1 - Các khái niệm về Chuyển đổi số
 #### Chương 2 - Chiến lược Chuyển đổi số
-#### Chương 3 - Thực hiện Chuyển đổi số
+<ul>
+  <li style="margin-bottom: 0;">Tổng quan</li>
+  <li style="margin-bottom: 0;">Business model and Value propositions</li>
+  <li style="margin-bottom: 0;">Roadmap cho Chuyển đổi số</li>
+  <li style="margin-bottom: 0;">Key areas of focus</li>
+  <li style="margin-bottom: 0;">Value realisation</li>
+  <li style="margin-bottom: 0;">Digital maturity</li>
+</ul>
+
+#### Chương 3 - Tiến hành Chuyển đổi số
+<ul>
+  <li style="margin-bottom: 0;">Pre-assessment</li>
+  <li style="margin-bottom: 0;">Formulating strategic objectives and goals</li>
+  <li style="margin-bottom: 0;">Designing DT</li>
+  <li style="margin-bottom: 0;">Implementing DT</li>
+</ul>
+
 #### Chương 4 - Con người
+<ul>
+  <li style="margin-bottom: 0;">Roles and skills</li>
+  <li style="margin-bottom: 0;">Digital culture</li>
+  <li style="margin-bottom: 0;">Recruitment</li>
+  <li style="margin-bottom: 0;">Leadership</li>
+</ul>
+
 #### Chương 5 - Quy trình
+
 #### Chương 6 - Công nghệ
+<ul>
+  <li style="margin-bottom: 0;">Emerging technologies (Gartner Hype Cycles)</li>
+  <li style="margin-bottom: 0;">ICT integration</li>
+  <li style="margin-bottom: 0;">Financial support & budgeting</li>
+  <li style="margin-bottom: 0;"></li>
+  <li style="margin-bottom: 0;"></li>
+</ul>
+
 #### Chương 7 - Đo lường
-#### Chương 8 - Tương lai của Chuyển đổi số
+
+#### Chương 8 - Tương lai Chuyển đổi số
+<ul>
+  <li style="margin-bottom: 0;">Ethics and regulations</li>
+  <li style="margin-bottom: 0;"></li>
+  <li style="margin-bottom: 0;"></li>
+  <li style="margin-bottom: 0;"></li>
+  <li style="margin-bottom: 0;"></li>
+</ul>
+>>>>>>> 26252d892fe949ba1d4779e7802e183dba787801
 
 # Thành viên dự án xuất bản sách <a name="project-members"></a>
 
@@ -62,3 +109,12 @@ Profile
 
 # Liên lạc <a name="contact"></a>
 Anh/chị làm nghiên cứu trong lĩnh vực chuyển đổi số, hoặc chuyên gia chuyển đổi số tại Việt Nam có nhã ý hợp tác với chúng tôi trong dự án "Digital Transformation in Vietnam" xin vui lòng liên lạc với Tiến sĩ Duy Đặng bằng cách gửi email đến địa chỉ [duy.dangphamthien@rmit.edu.vn](mailto:duy.dangphamthien@rmit.edu.vn). Xin trân trọng sự quan tâm và đóng góp của quý anh/chị!
+
+# Tài liệu
+
+#### Chương 1 - Giới thiệu về Chuyển đổi số: Các khái niệm căn bản
+- Understanding digital transformation: A review and a research agenda - https://www.sciencedirect.com/science/article/pii/S0963868717302196
+
+#### Chương 2 - Chiến lược Chuyển đổi số
+- Digital transformation strategies - https://link.springer.com/article/10.1007/s12599-015-0401-5
+- Challenges for digital transformation – towards a conceptual decision support guide for managers - https://www.tandfonline.com/doi/full/10.1080/12460125.2018.1468697
