@@ -31,17 +31,14 @@ Tất cả dự án này sẽ kêu gọi sự hợp tác chặt chẽ giữa tô
 
 # Kế hoạch xuất bản sách "Chuyển đổi số tại Việt Nam" <a name="book-plan"></a>
 
-#### Chương 1 - Giới thiệu về Chuyển đổi số: Các khái niệm căn bản
-
-#### Chương 2 - 
-
-#### Chương 3 -
-
-#### Chương 4 -
-
-#### Chương 5 -
-
-#### Chương 6 -
+#### Chương 1 - Các khái niệm về Chuyển đổi số
+#### Chương 2 - Chiến lược Chuyển đổi số
+#### Chương 3 - Thực hiện Chuyển đổi số
+#### Chương 4 - Con người
+#### Chương 5 - Quy trình
+#### Chương 6 - Công nghệ
+#### Chương 7 - Đo lường
+#### Chương 8 - Tương lai của Chuyển đổi số
 
 # Thành viên dự án xuất bản sách <a name="project-members"></a>
 
