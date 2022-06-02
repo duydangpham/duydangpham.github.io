@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Teaching
+title: Teaching & Supervision
 permalink: /teaching/
 image: ../assets/img/feedback_wordcloud.png
 ---
@@ -23,6 +23,7 @@ image: ../assets/img/feedback_wordcloud.png
 | Minh Hoang Thi Bui | Doctor of Philosophy (Management) | Quality assessment of digitalized learning learning programs in higher education in Vietnam (tentative title) | Third Milesone Review | Mathews Nkhoma (Primary), Duy Dang-Pham (Primary), Ai-Phuong Hoang (Associate) |
 | Diem-Trang Vo | Doctor of Philosophy (Business) | Adoption of AI-driven technology in healthcare (tentative title) | Mid-candidature Review | Long Nguyen Van Thang (Primary), Duy Dang-Pham (Associate), Ai-Phuong Hoang (Associate) |
 | Khanh-Linh Nguyen | Doctor of Philosophy (Business) | The influences of Growth Mindset, Occupational Self-efficacy, Mastery Goal Orientation, and Grit on Workplace Learning – a moderated sequential-mediation model in Vietnam’s banking industry (tentative title) | Mid-candidature Review | Duy Dang-Pham (Primary), Seng Kok (Primary), Burkhard Schrage (Associate) |
+| Qui Nguyen Ngoc | Doctor of Philosophy (Management) | The impact of faculty job satisfaction on retention and performance in Vietnam higher education sector | Thesis submission | Robert McClelland (Primary), Duy Dang-Pham (Associate), Susan Thomas (Associate), Majo George (Associate) |
 | Anna Felipe | Doctor of Philosophy (Computer Science) | Converging Computer Science and Engineering pedagogy to Achieve Creative Mindset of Student for Start-up (tentative title) | Confirmation of Candidature | James Harland (Primary), Duy Dang-Pham (Associate), Iouri Belski (Associate) |
 
 <h2>Undergraduate Students</h2><a name="undergrads"></a>
