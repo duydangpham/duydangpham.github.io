@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Teaching & Supervision
-permalink: /teaching/
+permalink: /teaching-and-supervision/
 image: ../assets/img/feedback_wordcloud.png
 ---
 
@@ -93,7 +93,7 @@ The main objective of this course is for you to acquire the tools and techniques
 
 Machine Learning involves automatically identifying patterns in data to suggest future predictions about a task: e.g., predicting future house prices from historical data and trends. The explosion of data in different fields, such as health and finance, and in sources such as social media, has made Machine Learning an increasingly core Computer Science competency, with many companies investing in data analytics and the world's major IT companies (such as Google, Facebook, and others) establishing Machine Learning labs. This course will introduce the basic Machine Learning concepts, covering supervised and unsupervised techniques, evaluation, as well as specific approaches such as deep neural networks. Students will learn how to apply such techniques to a range of problems, using open source Machine Learning toolkits, and learn how to analyse outputs from the applications. Students will perform assignments that involve a variety of real world datasets from a variety of domains.
 
-<a href="/teaching/capstone-project" target="\_blank">Capstone Projects</a>
+Capstone Projects
 
 This course is the first half of a research and development (R&D) project that comprises two sequential courses (Part A and Part B) and is the capstone for all engineering programmes within the School of Engineering. In this culminating academic experience you will apply your technical knowledge and further develop your research, design and professional engineering skills. The authentic project maybe industry based and focuses on producing well-managed practical and pertinent solutions to either discipline specific, or cross disciplinary engineering problems, through robust research and established engineering design processes.
 

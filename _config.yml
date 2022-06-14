@@ -57,8 +57,7 @@ header_pages:
  - publications.md
  - research-grants-and-awards.md
  - media.md
- - teaching.md
- - resources.md
+ - teaching-and-supervision.md
 
 # Build settings
 theme: minima
