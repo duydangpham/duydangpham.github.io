@@ -13,6 +13,21 @@ To be updated.
 <h2 class="category" style="color:red;">New publications</h2>
 <ol>
   <li>
+    <div id="DiemTrang2022pacis">
+        <span class="title"><a href="https://aisel.aisnet.org/pacis2022/174/" target="\_blank">Value co-destruction in AI-powered mobile applications: analysis of customer reviews</a></span>
+        <br><span class="author">
+            Diem-Trang Vo,
+            <strong>Duy Dang-Pham</strong>,
+            Ai-Phuong Hoang,
+            and Long Nguyen Van Thang
+        </span>
+        <span class="periodical"><br>
+          <em>In the 26th Pacific Asia Conference on Information Systems (PACIS)</em>
+        </span><span class="year">(2022)</span>
+      <!-- Hidden abstract block -->
+    </div>
+  </li>
+  <li>
     <div id="Dang-Pham2021digitalkaizen_bookchapter">
         <span class="title"><a href="https://link.springer.com/chapter/10.1007/978-3-030-80003-1_18" target="\_blank">Digital Kaizen at FPT Software: Principles and Practices for Digital Transformations</a></span>
         <br><span class="author">
