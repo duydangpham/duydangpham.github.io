@@ -13,6 +13,23 @@ To be updated.
 <h2 class="category" style="color:red;">New publications</h2>
 <ol>
   <li>
+    <div id="Dang-Pham2022InfoSecPower">
+        <span class="title"><a href="https://www.sciencedirect.com/science/article/pii/S0167404821003291" target="\_blank">Identifying Information Security Opinion Leaders in Organizations: Insights from the Theory of Social Power Bases and Social Network Analysis</a></span>
+        <br><span class="author">
+            <strong>Duy Dang-Pham</strong>,
+            Karlheinz Kautz,
+            Ai-Phuong Hoang,
+            and Siddhi Pittayachawan
+        </span>
+        <span class="periodical"><br>
+          <em>Computers and Security</em>
+        </span>
+        <span class="year">(2022)</span>
+        <span style="color:red">[ABDC A; SJR Q1]</span>
+      <!-- Hidden abstract block -->
+    </div>
+  </li>
+  <li>
     <div id="DiemTrang2022pacis">
         <span class="title"><a href="https://aisel.aisnet.org/pacis2022/174/" target="\_blank">Value co-destruction in AI-powered mobile applications: analysis of customer reviews</a></span>
         <br><span class="author">
@@ -46,23 +63,6 @@ To be updated.
 
 <h2 class="category">Refereed journal articles</h2>
 <ol>
-  <li>
-    <div id="Dang-Pham2022InfoSecPower">
-        <span class="title"><a href="https://www.sciencedirect.com/science/article/pii/S0167404821003291" target="\_blank">Identifying Information Security Opinion Leaders in Organizations: Insights from the Theory of Social Power Bases and Social Network Analysis</a></span>
-        <br><span class="author">
-            <strong>Duy Dang-Pham</strong>,
-            Karlheinz Kautz,
-            Ai-Phuong Hoang,
-            and Siddhi Pittayachawan
-        </span>
-        <span class="periodical"><br>
-          <em>Computers and Security</em>
-        </span>
-        <span class="year">(2022)</span>
-        <span style="color:red">[ABDC A; SJR Q1]</span>
-      <!-- Hidden abstract block -->
-    </div>
-  </li>
   <li>
     <div id="Dang-Pham2021trustworthiness">
         <span class="title"><a href="/assets/papers/Duy_Categorizing Young Facebook Users.pdf" target="\_blank">Categorizing young Facebook users based on their differential preference of social media heuristics: A Q-Methodology approach</a></span>
