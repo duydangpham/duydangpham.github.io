@@ -8,7 +8,7 @@ image: /assets/img/2022_06/phd.jpg
 comments: true
 excerpt_separator: <!-- excerpt -->
 ---
-My research collaborators and I are calling for applications for **five (5) PhD projects** which will be **fully funded by scholarships** (covering tuition fee, living stipend, and a AUD $3,000 allowance for research activities). Details of the four projects are provided in this post.<!-- excerpt -->
+My research collaborators and I are calling for applications for **five (5) PhD projects** which will be **fully funded by scholarships** (covering tuition fee, living stipend, and a AUD $3,000 allowance for research activities). Details of the projects are provided in this post.<!-- excerpt -->
 
 The five projects below can also be found in <a href="https://www.rmit.edu.au/research/research-degrees/find-a-project" target="\_blank">**this link**</a> (search for the keyword "RMIT Vietnam")
 
