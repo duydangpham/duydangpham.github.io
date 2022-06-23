@@ -18,9 +18,9 @@ The five projects below can also be found in <a href="https://www.rmit.edu.au/re
 - These five projects belong to either a PhD program in Business or in Management at RMIT University. That means once you completed the project and met all requirements of the program, you will graduate with a **PhD degree in Business or in Management**.
 
 **What is the nature of the scholarships and the study mode?**
-- These scholarships are for **full-time study**. Although a full-time PhD means that you should devote your time to research most of the time (plus you will receive a stipend to support your cost of living), you can work for a maximum of 8 hours per week (note that this will still be based on negotiation and performance in your PhD progress). In that case, we would encourage you to work as a Research Assistant or engage in teaching at RMIT Vietnam.
+- These scholarships are for **full-time study**. Although a full-time PhD means that you should devote your time to research most of the time (plus you will receive a stipend to support your cost of living), you can work for a maximum of 8 hours per week (note that this will still be based on negotiation and your PhD progress). In that case, we would encourage you to work as a Research Assistant or engage in teaching at RMIT Vietnam.
 - For each project, you will be working with a team of supervisors who are Professors and experts in the relevant field of that project. We are based in Ho Chi Minh City and in Melbourne.
-- There are facility and office space for PhD candidates, so you are welcome to come and work on your PhD on our campus in Ho Chi Minh City or in Ha Noi. You are **not required** to be on campus all the times. We **normally require meeting bimonthly (online or face-to-face)** to discuss the PhD progress.
+- There is office space for PhD candidates, so you are welcome to come and work on your PhD on our campus in Ho Chi Minh City or in Ha Noi. You are **not required** to be on campus all the times. We **normally require meeting biweekly (online or face-to-face)** to discuss the PhD progress.
 
 **How do I apply for a project?**
 - Candidates wishing to apply for a Higher Degree by Research will need to provide a research proposal which is aligned to your chosen research project. 
