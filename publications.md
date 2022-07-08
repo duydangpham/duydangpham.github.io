@@ -2,6 +2,7 @@
 layout: page
 title: Research
 permalink: /research-and-publications/
+image: /assets/img/duy_research.jpg
 ---
 
 ## Research impact statement
