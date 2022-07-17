@@ -1,17 +1,10 @@
 ---
 layout: page
-title: Research
-permalink: /research-and-publications/
-image: /assets/img/duy_research.jpg
+title: Publications
+permalink: /publications/
+image: /assets/img/research_thrusts.jpg
 ---
-
-## Research impact statement
-To be updated.
-
-- <a href="https://scholar.google.com.vn/citations?user=lkYFFvAAAAAJ" target="\_blank">Google Scholar profile</a>
-- <a href="https://orcid.org/0000-0002-7798-6635" target="\_blank">ORCID profile</a>
-
-<h2 class="category" style="color:red;">New publications</h2>
+<h1 class="category" style="color:red;">New publications</h1>
 <ol>
   <li>
     <div id="Dang-Pham2022InfoSecPower">
@@ -62,7 +55,7 @@ To be updated.
   </li>
 </ol>
 
-<h2 class="category">Refereed journal articles</h2>
+<h1 class="category">Peer-reviewed journal articles</h1>
 <ol>
   <li>
     <div id="Dang-Pham2021trustworthiness">
@@ -78,6 +71,7 @@ To be updated.
         <span class="periodical"><br>
           <em>Pacific Asia Journal of the Association for Information Systems</em>
         </span><span class="year">(2021)</span>
+        <span style="color:red">[ABDC B]</span>
       <!-- Hidden abstract block -->
     </div>
   </li>
@@ -281,6 +275,7 @@ To be updated.
         <span class="periodical"><br>
           <em>Journal of Information Security and Applications</em>
         </span><span class="year">(2017)</span>
+        <span style="color:red">[SJR Q1]</span>
       <!-- Hidden abstract block -->
     </div>
   </li>
@@ -387,7 +382,7 @@ To be updated.
   </li>
 </ol>
 
-<h2 class="category">Refereed conference papers</h2>
+<h1 class="category">Peer-reviewed conference papers</h1>
 <ol>
   <li>
     <div id="Ha2021kol-brandlove">
@@ -665,7 +660,7 @@ To be updated.
   </li>
 </ol>
 
-<h2 class="category">Refereed book chapters</h2>
+<h1 class="category">Books and book chapters</h1>
 <ol>
   <li>
       <div id="Nkhoma2018">
@@ -684,7 +679,7 @@ To be updated.
   </li>
 </ol>
 
-<h2 class="category">Reports</h2>
+<h1 class="category">Reports</h1>
 <ol>
   <li>
       <div id="Dang-Pham2018">

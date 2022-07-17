@@ -21,12 +21,12 @@ minima:
   social_links:
     twitter: dtdangpham
     github: duydangpham
+    linkedin: duydangpham
     # devto: jekyll
     # dribbble: jekyll
     # facebook: jekyll
     # flickr:   jekyll
     # instagram: jekyll
-    # linkedin: jekyll
     # pinterest: jekyll
     # youtube: jekyll
     # youtube_channel: UC8CXR0-3I70i1tfPg1PAE1g
@@ -54,10 +54,10 @@ minima:
 # this and add the path to the pages in order as they should show up
 header_pages:
  - blog.md
+ - research.md
  - publications.md
- - research-grants-and-awards.md
- - media.md
- - teaching-and-supervision.md
+ - awards-and-press.md
+ - teaching-and-phd-supervision.md
 
 # Build settings
 theme: minima
