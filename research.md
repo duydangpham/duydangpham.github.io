@@ -2,7 +2,7 @@
 layout: page
 title: Research
 permalink: /research/
-image: /assets/img/duy_research.jpg
+image: /assets/img/research_thrusts.jpg
 ---
 
 <h1>Content</h1>
