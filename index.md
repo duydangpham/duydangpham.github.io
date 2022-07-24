@@ -6,7 +6,7 @@
 # See: https://jekyllrb.com/docs/themes/#overriding-theme-defaults
 #
 layout: page
-title: 
+title: Digital Transformation and Information Security Management Researcher
 image: /assets/img/duydangpham2021.jpg
 ---
 
