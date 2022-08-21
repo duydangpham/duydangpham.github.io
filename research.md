@@ -287,10 +287,12 @@ Some broad research questions that I and my collaborators are addressing in this
 
 See the full list of my research publications [here](/publications).
 
-# Research grants (~USD 312,000) <a name="grants"></a>
+# Research grants (~USD 320,000) <a name="grants"></a>
 <hr>
 | Year | Research grant | Members | Funding source | Value |
 | ---- | -------------- | ------- | -------------- | ----- |
+| 2022 | Investigating Approaches to Digital Transformation Implementation | Duy Dang-Pham, Karlheinz Kautz, Ai-Phuong Hoang, Lukas Parker | Innovation Proof of Concept Funding - RMIT University | AUD 8,960 (approx. USD 6,200) |
+| 2022 | Digital Competence for Vietnamese Citizens: Towards an Inclusive Digital Nation | Ngoc Pham, Trung Nguyen, Duy Dang-Pham, Ai-Phuong Hoang, Hiep Pham | D3 Research Activity Fund Scheme - RMIT University | AUD 5,000 (approx. USD 3,500) |
 | 2022 | Improving Digital Competence of Local Authorities, Businesses, and Citizens in Dak Nong and Binh Phuoc Provinces: Towards a Digital Nation | Trung Nguyen, Duy Dang-Pham, Ai-Phuong Hoang, Ha Tran | Aus4Skills Australian Alumni Grants Fund Round 4 | VND 232,785,000 (approx. USD 10,150) |
 | 2021 | Modeling vaccine-related information to create hybrid information hubs for people with disabilities in Vietnam and Indonesia | Abdul Rohman, Duy Dang-Pham | Vaccine Confidence Fund | USD 221,840 |
 | 2020 | Empowering the citizens: toward an inclusive digital nation | Trung Nguyen, Ai-Phuong Hoang, Burkhard Schrage, Long Nguyen Van Thang, Duy Dang-Pham | RMIT Vietnam Thematic Research Grant 2021 | USD 17,660 |
