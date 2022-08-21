@@ -1,4 +1,4 @@
-I"je<h1>Content</h1>
+I"èg<h1>Content</h1>
 <ol>
   <li><a href="#short-background">A short background</a></li>
   <li><a href="#research-thrusts">Research thrusts</a>
@@ -300,7 +300,7 @@ Adoption of technologies is a topic of interest of many information systems rese
 
 <p>See the full list of my research publications <a href="/publications">here</a>.</p>
 
-<h1 id="research-grants-usd-312000-">Research grants (~USD 312,000) <a name="grants"></a></h1>
+<h1 id="research-grants-usd-320000-">Research grants (~USD 320,000) <a name="grants"></a></h1>
 <hr />
 
 <table>
@@ -314,6 +314,20 @@ Adoption of technologies is a topic of interest of many information systems rese
     </tr>
   </thead>
   <tbody>
+    <tr>
+      <td>2022</td>
+      <td>Investigating Approaches to Digital Transformation Implementation</td>
+      <td>Duy Dang-Pham, Karlheinz Kautz, Ai-Phuong Hoang, Lukas Parker</td>
+      <td>Innovation Proof of Concept Funding - RMIT University</td>
+      <td>AUD 8,960 (approx. USD 6,200)</td>
+    </tr>
+    <tr>
+      <td>2022</td>
+      <td>Digital Competence for Vietnamese Citizens: Towards an Inclusive Digital Nation</td>
+      <td>Ngoc Pham, Trung Nguyen, Duy Dang-Pham, Ai-Phuong Hoang, Hiep Pham</td>
+      <td>D3 Research Activity Fund Scheme - RMIT University</td>
+      <td>AUD 5,000 (approx. USD 3,500)</td>
+    </tr>
     <tr>
       <td>2022</td>
       <td>Improving Digital Competence of Local Authorities, Businesses, and Citizens in Dak Nong and Binh Phuoc Provinces: Towards a Digital Nation</td>
