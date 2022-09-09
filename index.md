@@ -14,13 +14,9 @@ image: /assets/img/duydangpham2021.jpg
 
 I am a Senior Lecturer in the <a href="https://www.rmit.edu.vn/about-us/schools-and-centres/school-of-business-and-management" target="\_blank">School of Business &amp; Management</a>, RMIT University (Saigon South Campus, Vietnam) as well as HDR Coordinator and Designated Authority in the School, leading and mentoring both Ph.D. candidates and supervisors to pursue the university's HDR priorities and contributing to developing school-specific HDR strategies.
 
-<<<<<<< HEAD
 I am also Stream Lead (Organisational Innovation Capability Advancement &amp; Governance) of the <a href="https://www.rmit.edu.au/research/our-research/enabling-capability-platforms/global-business-innovation" target="\_blank">Global Business Innovation ECP (Enabling Capability Platform)</a> in RMIT Australia, and Co-Lead of the <a href="https://www.rmit.edu.vn/about-us/schools-and-centres/school-of-business-and-management/scc-hub/people" target="\_blank">Managing Smart Transformation research cluster</a> in RMIT Vietnam.
 
 Prior to joining the School of Business & Management, I have been Lecturer in the <a href="https://www.rmit.edu.vn/our-schools-centres/school-science-technology" target="\_blank">School of Science, Engineering &amp; Technology</a> for three years, where I [taught courses](/teaching) in computer science areas such as data science & machine learning, data structures & algorithms, user-centered design, and technology leadership.
-=======
-Prior to joining the School of Business & Management, I was Lecturer (Information Technology) in the <a href="https://www.rmit.edu.vn/our-schools-centres/school-science-technology" target="\_blank">School of Science, Engineering &amp; Technology</a>, where I [taught](/teaching) data science & machine learning, data structures & algorithms, user-centered design, and technology leadership. During this time, I was also the Senior Program Manager for two undergraduate programs, <a href="https://www.rmit.edu.vn/study-at-rmit/undergraduate-programs/bachelor-engineering-software-engineering-honours" target="\_blank">Bachelor of Engineering (Software Engineering) (Honours)</a> and <a href="https://www.rmit.edu.vn/study-at-rmit/undergraduate-programs/bachelor-information-technology" target="\_blank">Bachelor of Information Technology</a>. My responsibilities included growing the programs and academic teams, leading initiatives that enhanced research, learning & teaching, and developing strategic relationships with key industry partners in the technology and engineering areas such as Microsoft, IBM, Intel, VNG, ABB, Bosch, and Ericsson. 
->>>>>>> 774a3ba8d7863754ad3392122a935cc6594f5c07
 
 I have received various [research and teaching awards](/research-grants-and-awards) at RMIT University, including the <a href="https://www.rmit.edu.au/research/research-expertise/our-reputation/research-awards/past-recipients" target="\_blank">2016 RMIT Prize for Research Impact (Enterprise category)</a> for my active engagement with the industry through conducting research, and the "Living RMIT's Values" award in 2021 which recognised my contributions to growing the programs while maintaining excellence in research and teaching.
 
@@ -39,7 +35,7 @@ Read more about my research program and research thrusts [**here**](/research).
 I am [supervising several Ph.D. candidates](/teaching-and-phd-supervision), and I always seek strong candidates who would like to do research in the areas listed above. Please find information about Ph.D. research opportunities <a href="https://www.drduydangpham.com/2022/06/11/phd-scholarship-at-rmit-vietnam.html" target="\_blank">here</a>.
 
 # Updates
-<script>loadXMLDoc(5)</script>
+<script>loadXMLDoc(8)</script>
 <table id="showUpdates" style="font-size:90%"></table>
 <!-- <div id="showUpdates"></div> -->
 View older updates [**here**](/updates) .
