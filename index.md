@@ -6,7 +6,7 @@
 # See: https://jekyllrb.com/docs/themes/#overriding-theme-defaults
 #
 layout: page
-title: Information Security Management & Digital Transformation Academic
+title: Digital Transformation and Information Security Management Researcher
 image: /assets/img/duydangpham2021.jpg
 ---
 
@@ -14,49 +14,55 @@ image: /assets/img/duydangpham2021.jpg
 
 I am a Senior Lecturer in the <a href="https://www.rmit.edu.vn/about-us/schools-and-centres/school-of-business-and-management" target="\_blank">School of Business &amp; Management</a>, RMIT University (Saigon South Campus, Vietnam) as well as HDR Coordinator and Designated Authority in the School, leading and mentoring both Ph.D. candidates and supervisors to pursue the university's HDR priorities and contributing to developing school-specific HDR strategies.
 
+<<<<<<< HEAD
 I am also Stream Lead (Organisational Innovation Capability Advancement &amp; Governance) of the <a href="https://www.rmit.edu.au/research/our-research/enabling-capability-platforms/global-business-innovation" target="\_blank">Global Business Innovation ECP (Enabling Capability Platform)</a> in RMIT Australia, and Co-Lead of the <a href="https://www.rmit.edu.vn/about-us/schools-and-centres/school-of-business-and-management/scc-hub/people" target="\_blank">Managing Smart Transformation research cluster</a> in RMIT Vietnam.
 
 Prior to joining the School of Business & Management, I have been Lecturer in the <a href="https://www.rmit.edu.vn/our-schools-centres/school-science-technology" target="\_blank">School of Science, Engineering &amp; Technology</a> for three years, where I [taught courses](/teaching) in computer science areas such as data science & machine learning, data structures & algorithms, user-centered design, and technology leadership.
+=======
+Prior to joining the School of Business & Management, I was Lecturer (Information Technology) in the <a href="https://www.rmit.edu.vn/our-schools-centres/school-science-technology" target="\_blank">School of Science, Engineering &amp; Technology</a>, where I [taught](/teaching) data science & machine learning, data structures & algorithms, user-centered design, and technology leadership. During this time, I was also the Senior Program Manager for two undergraduate programs, <a href="https://www.rmit.edu.vn/study-at-rmit/undergraduate-programs/bachelor-engineering-software-engineering-honours" target="\_blank">Bachelor of Engineering (Software Engineering) (Honours)</a> and <a href="https://www.rmit.edu.vn/study-at-rmit/undergraduate-programs/bachelor-information-technology" target="\_blank">Bachelor of Information Technology</a>. My responsibilities included growing the programs and academic teams, leading initiatives that enhanced research, learning & teaching, and developing strategic relationships with key industry partners in the technology and engineering areas such as Microsoft, IBM, Intel, VNG, ABB, Bosch, and Ericsson. 
+>>>>>>> 774a3ba8d7863754ad3392122a935cc6594f5c07
 
-During this time, I was also the Senior Program Manager for two undergraduate programs, <a href="https://www.rmit.edu.vn/study-at-rmit/undergraduate-programs/bachelor-engineering-software-engineering-honours" target="\_blank">Bachelor of Engineering (Software Engineering) (Honours)</a> and <a href="https://www.rmit.edu.vn/study-at-rmit/undergraduate-programs/bachelor-information-technology" target="\_blank">Bachelor of Information Technology</a>. My responsibilities included growing the programs and academic teams, leading initiatives that enhanced research, learning & teaching, and developing strategic relationships with key industry partners in the technology and engineering areas such as Microsoft, IBM, Intel, VNG, ABB, Bosch, and Ericsson. 
+I have received various [research and teaching awards](/research-grants-and-awards) at RMIT University, including the <a href="https://www.rmit.edu.au/research/research-expertise/our-reputation/research-awards/past-recipients" target="\_blank">2016 RMIT Prize for Research Impact (Enterprise category)</a> for my active engagement with the industry through conducting research, and the "Living RMIT's Values" award in 2021 which recognised my contributions to growing the programs while maintaining excellence in research and teaching.
 
-In 2016, I was awarded the <a href="https://www.rmit.edu.au/research/research-expertise/our-reputation/research-awards/past-recipients" target="\_blank">RMIT Prize for Research Impact (Enterprise category)</a>, which recognized my active engagement with the industry through conducting research. Since 2018, I have received various [research and teaching awards](/research-grants-and-awards) at RMIT University, including the "Living RMIT's Values" award in 2021 which recognized my contributions to growing the programs while maintaining excellence in research and teaching.
+I am a Co-founding Member and Secretary of the <a href="https://vn-ais.org/" target="\_blank">Vietnam Chapter of Association for Information Systems (VAIS)</a>. 
 
-## Expertise
-I completed my Ph.D. (Business Information Systems) degree at RMIT University (Australia) in May 2018, under the co-supervision of Dr. Siddhi Pittayachawan, Dr. Vince Bruno, and Professor Karlheinz Kautz. For my Ph.D. research, I proposed the use of social network analysis as an analytical and novel method to improve organizational information security, by identifying and leveraging organizational networks and key influencers within the workplace to increase information security awareness. I published [14 research articles](/publications) on this topic in journals such as Information & Management, Computers in Human Behavior, Computers & Security, and conference proceedings such as ACIS and PACIS, as well as various [news articles](/media).
-
-My teaching and research interests focus on the following areas:
+# Teaching and research interests
+My teaching and research interests focus on the following areas, which are under the common theme of **Digital Transformation**:
 <ul>
-  <li style="margin-bottom: 0;">information security management & behaviors</li>
-  <li style="margin-bottom: 0;">digital transformation</li>
-  <li style="margin-bottom: 0;">data analytics for business and education</li>
-  <li style="margin-bottom: 0;">algorithmic decision making & algorithmic experience</li>
+  <li style="margin-bottom: 0;">Information security behaviours and management</li>
+  <li style="margin-bottom: 0;">Managing digital transformation</li>
+  <li style="margin-bottom: 0;">Adoption of emerging technologies</li>
 </ul>
 
-My research projects employed both quantitative and qualitative methods, and I am especially interested in <a href="https://en.wikipedia.org/wiki/Social_network_analysis" target="\_blank">social network analysis</a> methods, and <a href="https://en.wikipedia.org/wiki/Action_research" target="\_blank">action research</a> and <a href="https://en.wikipedia.org/wiki/Design_science_(methodology)" target="\_blank">design science</a> approaches. 
+Read more about my research program and research thrusts [**here**](/research).
 
-I am [supervising several Ph.D. candidates](/teaching), and I always seek strong candidates who would like to do research in the areas listed above. Please find information about the Ph.D. programs and relevant contacts for further enquiries on this <a href="https://www.google.com/url?q=https%3A%2F%2Fwww.rmit.edu.vn%2Fresearch-supervisors-rmit-vietnam&amp;sa=D&amp;sntz=1&amp;usg=AFQjCNEnpCoHibQT84cOWMBhVtSt-8mwSQ" target="\_blank">webpage</a>.
+I am [supervising several Ph.D. candidates](/teaching-and-phd-supervision), and I always seek strong candidates who would like to do research in the areas listed above. Please find information about Ph.D. research opportunities <a href="https://www.drduydangpham.com/2022/06/11/phd-scholarship-at-rmit-vietnam.html" target="\_blank">here</a>.
 
-## Membership
+# Updates
+<script>loadXMLDoc(5)</script>
+<table id="showUpdates" style="font-size:90%"></table>
+<!-- <div id="showUpdates"></div> -->
+View older updates [**here**](/updates) .
 
-I am the Co-founding Member and Secretary of the <a href="https://vn-ais.org/" target="\_blank">Vietnam Chapter of Association for Information Systems (VAIS)</a>. I am a member of the following associations:
+# Membership
+
 <ul>
   <li><a href="https://aisnet.org/" target="\_blank">Association for Information Systems (AIS)</a></li>
-  <li><a href="https://vn-ais.org/" target="\_blank">AIS Vietnam Chapter</a></li>
-  <li><a href="https://communities.aisnet.org/sigsec/home" target="\_blank">Special Interest Group in Information Security and Privacy (SIG SEG)</a></li>
+  <li><a href="https://vn-ais.org/" target="\_blank">AIS Vietnam Chapter (VAIS)</a></li>
+  <li><a href="https://communities.aisnet.org/sigsec/home" target="\_blank">Special Interest Group in Information Security and Privacy (SIGSEG)</a></li>
   <li><a href="#" target="\_blank">Australian Information Security Association (AISA)</a></li>
 </ul>
 
 I am serving in the editorial boards for the following refereed journals and conference proceedings:
 <ul>
   <li>Australasian Journal of Information Systems (AJIS) (Section Editor & Reviewer)</li>
-  <li>Computers and Security (Reviewer)</li>
+  <li>Computers & Security (Reviewer)</li>
   <li>Computers in Human Behavior (Reviewer)</li>
   <li>ICIS 2021 (Associate Editor & Reviewer)</li>
   <li>PACIS 2020 (Associate Editor & Reviewer)</li>
 </ul>
 
-## Research groups
+# Research groups
 
 <ul>
   <li><a href="https://cpow.org.au/people/people/" target="\_blank">Centre for People, Organisation, and Work (CPOW)</a></li>

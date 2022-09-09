@@ -85,7 +85,6 @@ Tất cả dự án này sẽ kêu gọi sự hợp tác chặt chẽ giữa tô
   <li style="margin-bottom: 0;"></li>
   <li style="margin-bottom: 0;"></li>
 </ul>
->>>>>>> 26252d892fe949ba1d4779e7802e183dba787801
 
 # Thành viên dự án xuất bản sách <a name="project-members"></a>
 
@@ -104,17 +103,3 @@ Tiến sĩ Hoàng Ái Phương hiện là Giảng viên khoa Kinh doanh và Qu�
 #### Chinh Dinh | Vice Director & CIO - ACFC & VFBS
 <img src="../assets/img/chinhdinh.jpg" alt="Chinh Dinh portrait" width="15%" style="border-radius: 50%; float: left; margin-right:20px; margin-bottom:15px;">
 Profile
-
-# Định hướng lâu dài <a name="future-directions"></a>
-
-# Liên lạc <a name="contact"></a>
-Anh/chị làm nghiên cứu trong lĩnh vực chuyển đổi số, hoặc chuyên gia chuyển đổi số tại Việt Nam có nhã ý hợp tác với chúng tôi trong dự án "Digital Transformation in Vietnam" xin vui lòng liên lạc với Tiến sĩ Duy Đặng bằng cách gửi email đến địa chỉ [duy.dangphamthien@rmit.edu.vn](mailto:duy.dangphamthien@rmit.edu.vn). Xin trân trọng sự quan tâm và đóng góp của quý anh/chị!
-
-# Tài liệu
-
-#### Chương 1 - Giới thiệu về Chuyển đổi số: Các khái niệm căn bản
-- Understanding digital transformation: A review and a research agenda - https://www.sciencedirect.com/science/article/pii/S0963868717302196
-
-#### Chương 2 - Chiến lược Chuyển đổi số
-- Digital transformation strategies - https://link.springer.com/article/10.1007/s12599-015-0401-5
-- Challenges for digital transformation – towards a conceptual decision support guide for managers - https://www.tandfonline.com/doi/full/10.1080/12460125.2018.1468697
