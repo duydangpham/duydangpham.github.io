@@ -6,6 +6,7 @@ image: /assets/img/binhphuoc2022.jpg
 ---
 
 <img src="../assets/img/binhphuoc2022.jpg" alt="Digital Transformation training for more than 4,000 participants who are citizens, business representatives, and government officials in Binh Phuoc province in 2022" width="80%" style="display: block; margin-left: auto; margin-right: auto;">
+<figcaption style="text-align: center;">Digital Transformation training for more than 4,000 participants who are citizens, business representatives, and government officials in Binh Phuoc province in 2022</figcaption>
 
 # Funded projects and research grants (~USD 320,000)
 <hr>
