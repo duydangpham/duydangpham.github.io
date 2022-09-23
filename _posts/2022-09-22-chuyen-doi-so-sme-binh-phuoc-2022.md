@@ -4,7 +4,7 @@ title: "Tập huấn Chuyển đổi số cho SMEs tại Bình Phước"
 author:
 - Duy Dang-Pham
 meta: "Tập huấn Chuyển đổi số cho SMEs tại Bình Phước"
-image: /assets/img/binhphuoc2022.jpg
+image: /assets/img/binhphuoc2022_collage.jpg
 comments: true
 excerpt_separator: <!-- excerpt -->
 ---
