@@ -25,5 +25,7 @@ Digital transformation should not focus on digital technology, but on digital st
 
 I quite like the story of digital transformation of SMEs because this topic is very much practical in Vietnam, where over 80% of businesses are SMEs. In the coming October, I am planning to organise a workshop on digital transformation for F&B businesses, which I found to be another interesting topic.
 
+&nbsp;
+
 Link to the news article on RMIT Vietnam website:
 https://www.rmit.edu.vn/news/all-news/2022/sep/rmit-university-helps-provinces-boost-their-digital-transformation
