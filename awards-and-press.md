@@ -37,6 +37,7 @@ Tiến sĩ Đặng Phạm Thiên Duy hiện là Giảng viên Cấp cao và Ch�
 
 | Date | Title | Source |
 | ---- | ----- | ------ |
+| Oct 10, 2022 | <a href="https://ictnews.vietnamnet.vn/thu-hep-khoang-cach-so-de-tien-toi-mot-viet-nam-so-toan-dien-5002614.html" target="_/blank">Thu hẹp khoảng cách số để tiến tới một Việt Nam số toàn diện</a> | ICT News/VietnamNet |
 | Jan 20, 2021 | <a href="https://www.rmit.edu.vn/news/all-news/2021/july/new-collaboration-to-boost-research-in-information-systems" target="_/blank">New collaboration to boost research in information systems</a> | RMIT Vietnam News |
 | Jan 13, 2021 | <a href="https://www.rmit.edu.vn/news/all-news/2021/jan/rmits-digital-transformation-research-recognised-with-international-award" target="_/blank">RMIT’s digital transformation research recognised with international award</a> | RMIT Vietnam News |
 | Mar 18, 2020 | <a href="https://www.rmit.edu.vn/news/all-news/2020/mar/ai-powered-robot-can-read-novels-and-write-poetry" target="_/blank">AI-powered robot can read novels and write poetry</a> | RMIT Vietnam News |
