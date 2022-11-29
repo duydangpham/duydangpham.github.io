@@ -11,7 +11,7 @@ image: ../assets/img/feedback_wordcloud.png
 <h3>Content</h3>
 1. [Ph.D. Candidates](#phd-candidates)
 2. [Undergraduate Students](#undergrads)
-3. [School of Business & Management (2021 – present)](#sbm)
+3. [School of Business & Management (2021 – present)](#tbs)
 4. [School of Science, Engineering, and Technology (2018 – 2021)](#sset)
 5. [School of Business IT and Logistics (2014 – 2017)](#sbitl)
 
@@ -42,7 +42,7 @@ BP162 - Bachelor of Information Technology
 | Huy Tran Nguyen Duc | BH120 | Music recommender system with audio features | 2019 | |
 | Dat Le Duy, Duy Doan Le, Quang Tran Huu | BH120 | HERMESITO - A job recommender system | 2019 | <a href="https://www.navigosgroup.com/" target="\_blank">Navigos Group</a> |
 
-<h3>School of Business & Management (2021 – present)</h3><a name="sbm"></a>
+<h3>The Business School (2021 – present)</h3><a name="tbs"></a>
 <hr />
 
 <a href="#" target="\_blank">INTE2555 Technology Futures (Postgraduate / MBA)</a>

@@ -7,16 +7,16 @@
 #
 layout: page
 title: Digital Transformation and Information Security Management Researcher
-image: /assets/img/duydangpham2021.jpg
+image: /assets/img/duydangpham2022_2.jpg
 ---
 
-<img src="assets/img/duydangpham2021.jpg" alt="Duy Dang-Pham portrait" width="30%" style="border-radius: 50%; float: right; margin-left:40px; margin-bottom:30px;">
+<img src="assets/img/duydangpham2022_2.jpg" alt="Duy Dang-Pham portrait" width="30%" style="border-radius: 50%; float: right; margin-left:40px; margin-bottom:30px;">
 
-I am a Senior Lecturer in the <a href="https://www.rmit.edu.vn/about-us/schools-and-centres/school-of-business-and-management" target="\_blank">School of Business &amp; Management</a>, RMIT University (Saigon South Campus, Vietnam) as well as HDR Coordinator and Designated Authority in the School, leading and mentoring both Ph.D. candidates and supervisors to pursue the university's HDR priorities and contributing to developing school-specific HDR strategies.
+I am a Senior Lecturer in <a href="https://www.rmit.edu.vn/about-us/schools-and-centres/school-of-business-and-management" target="\_blank">The Business School</a>, RMIT University (Saigon South Campus, Vietnam), as well as HDR Coordinator and Designated Authority in the School, leading and mentoring both Ph.D. candidates and supervisors to pursue the university's HDR priorities and contributing to developing school-specific HDR strategies.
 
-I am also Stream Lead (Organisational Innovation Capability Advancement &amp; Governance) of the <a href="https://www.rmit.edu.au/research/our-research/enabling-capability-platforms/global-business-innovation" target="\_blank">Global Business Innovation ECP (Enabling Capability Platform)</a> in RMIT Australia, and Co-Lead of the <a href="https://www.rmit.edu.vn/about-us/schools-and-centres/school-of-business-and-management/scc-hub/people" target="\_blank">Managing Smart Transformation research cluster</a> in RMIT Vietnam.
+I am also Stream Lead (Organisational Innovation Capability Advancement &amp; Governance) of the <a href="https://www.rmit.edu.au/research/our-research/enabling-capability-platforms/global-business-innovation" target="\_blank">Global Business Innovation ECP (Enabling Impact Platform)</a> in RMIT Australia, and Co-Lead of the <a href="https://www.rmit.edu.vn/about-us/schools-and-centres/school-of-business-and-management/scc-hub/people" target="\_blank">Managing Smart Transformation research cluster</a> in RMIT Vietnam.
 
-Prior to joining the School of Business & Management, I have been Lecturer in the <a href="https://www.rmit.edu.vn/our-schools-centres/school-science-technology" target="\_blank">School of Science, Engineering &amp; Technology</a> for three years, where I [taught courses](/teaching) in computer science areas such as data science & machine learning, data structures & algorithms, user-centered design, and technology leadership.
+Prior to joining The Business School, I have been Lecturer in the <a href="https://www.rmit.edu.vn/our-schools-centres/school-science-technology" target="\_blank">School of Science, Engineering &amp; Technology</a> for three years, where I [taught courses](/teaching) in computer science areas such as data science & machine learning, data structures & algorithms, user-centered design, and technology leadership.
 
 I have received various [research and teaching awards](/research-grants-and-awards) at RMIT University, including the <a href="https://www.rmit.edu.au/research/research-expertise/our-reputation/research-awards/past-recipients" target="\_blank">2016 RMIT Prize for Research Impact (Enterprise category)</a> for my active engagement with the industry through conducting research, and the "Living RMIT's Values" award in 2021 which recognised my contributions to growing the programs while maintaining excellence in research and teaching.
 
