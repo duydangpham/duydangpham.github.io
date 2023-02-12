@@ -104,13 +104,15 @@ if($do == 'login') {
 
 	// save data
 	if($do == 'save') {
-
+		
 		// sort-id
 		$d['sid'] = !empty($d['uid']) ? substr($d['uid'], 0, 8) : date('mdhi'); // better: row id
 
 		// filenname
 		$filename = defined('EXPORT_DIR') ? EXPORT_DIR : dirname(__FILE__);
 		$filename .= (substr($filename,-1) == '/' ? NULL : '/').(!empty($name) ? preg_replace(array('/ /', '/\./', '/([^a-zA-Z0-9_]+)/'), array('_', '_', NULL), $name) : 'data').'.csv';
+
+		echo $filename;
 
 		// open file
 		if(!is_file($filename)) {
