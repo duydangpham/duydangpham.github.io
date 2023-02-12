@@ -1,7 +1,24 @@
-I"ít<h1 class="category" style="color:red;">New publications</h1>
+I"<h1 class="category" style="color:red;">New publications</h1>
 <ol>
   <li>
-    <div id="Dang-Pham2022InfoSecPower">
+    <div id="DangPham2022DigitalKaizen">
+        <span class="title"><a href="https://journal.acs.org.au/index.php/ajis/article/download/3851/1273" target="\_blank">Digital Kaizen: An Approach to Digital Transformation</a></span>
+        <br /><span class="author">
+            <strong>Duy Dang-Pham</strong>,
+            Ai-Phuong Hoang,
+            Diem-Trang Vo,
+            and Karlheinz Kautz
+        </span>
+        <span class="periodical"><br />
+          <em>Australasian Journal of Information Systems</em>
+        </span>
+        <span class="year">(2022)</span>
+        <span style="color:red">[ABDC A; SJR Q2]</span>
+      <!-- Hidden abstract block -->
+    </div>
+  </li>
+  <li>
+    <div id="DangPham2022InfoSecPower">
         <span class="title"><a href="https://www.sciencedirect.com/science/article/pii/S0167404821003291" target="\_blank">Identifying Information Security Opinion Leaders in Organizations: Insights from the Theory of Social Power Bases and Social Network Analysis</a></span>
         <br /><span class="author">
             <strong>Duy Dang-Pham</strong>,
@@ -18,22 +35,7 @@
     </div>
   </li>
   <li>
-    <div id="DiemTrang2022pacis">
-        <span class="title"><a href="https://aisel.aisnet.org/pacis2022/174/" target="\_blank">Value co-destruction in AI-powered mobile applications: analysis of customer reviews</a></span>
-        <br /><span class="author">
-            Diem-Trang Vo,
-            <strong>Duy Dang-Pham</strong>,
-            Ai-Phuong Hoang,
-            and Long Nguyen Van Thang
-        </span>
-        <span class="periodical"><br />
-          <em>In the 26th Pacific Asia Conference on Information Systems (PACIS)</em>
-        </span><span class="year">(2022)</span>
-      <!-- Hidden abstract block -->
-    </div>
-  </li>
-  <li>
-    <div id="Dang-Pham2021digitalkaizen_bookchapter">
+    <div id="DangPham2021digitalkaizen_bookchapter">
         <span class="title"><a href="https://link.springer.com/chapter/10.1007/978-3-030-80003-1_18" target="\_blank">Digital Kaizen at FPT Software: Principles and Practices for Digital Transformations</a></span>
         <br /><span class="author">
             <strong>Duy Dang-Pham</strong>,
@@ -52,7 +54,7 @@
 <h1 class="category">Peer-reviewed journal articles</h1>
 <ol>
   <li>
-    <div id="Dang-Pham2021trustworthiness">
+    <div id="DangPham2021trustworthiness">
         <span class="title"><a href="/assets/papers/Duy_Categorizing Young Facebook Users.pdf" target="\_blank">Categorizing young Facebook users based on their differential preference of social media heuristics: A Q-Methodology approach</a></span>
         <br /><span class="author">
             <strong>Duy Dang-Pham</strong>,
@@ -133,7 +135,7 @@
     </div>
   </li>
   <li>
-    <div id="Dang-Pham2019">
+    <div id="DangPham2019">
         <span class="title"><a href="http://journal.acs.org.au/index.php/ajis/article/view/1822" target="\_blank">Explaining the Development of Information Security Climate and an Information Security Support Network: A Longitudinal Social Network Analysis</a></span>
         <br /><span class="author">
             <strong>Duy Dang-Pham</strong>,
@@ -164,7 +166,7 @@
     </div>
   </li>
   <li>
-    <div id="Dang-Pham2017a">
+    <div id="DangPham2017a">
         <span class="title"><a href="https://link.springer.com/article/10.1007/s10796-017-9796-5" target="\_blank">Investigating the diffusion of IT consumerization in the workplace: A case study using social network analysis</a></span>
         <br /><span class="author">
             <strong>Duy Dang-Pham</strong>,
@@ -180,7 +182,7 @@
     </div>
   </li>
   <li>
-    <div id="Dang-Pham2017b">
+    <div id="DangPham2017b">
         <span class="title"><a href="https://www.sciencedirect.com/science/article/abs/pii/S0378720616303858" target="\_blank">Applying network analysis to investigate interpersonal influence of information security behaviours in the workplace</a></span>
         <br /><span class="author">
             <strong>Duy Dang-Pham</strong>,
@@ -212,7 +214,7 @@
     </div>
   </li>
     <li>
-      <div id="Dang-Pham2017c">
+      <div id="DangPham2017c">
           <span class="title"><a href="https://www.sciencedirect.com/science/article/pii/S0167404817300639" target="\_blank">Applications of social network analysis in behavioural information security research: concepts and empirical analysis</a></span>
           <br /><span class="author">
               <strong>Duy Dang-Pham</strong>,
@@ -274,7 +276,7 @@
     </div>
   </li>
   <li>
-    <div id="Dang-Pham2017b">
+    <div id="DangPham2017b">
         <span class="title"><a href="https://www.igi-global.com/article/effects-of-team-collaboration-on-sharing-information-security-advice/181566" target="\_blank">Effects of Team Collaboration on Sharing Information Security Advice: Insights from Network Analysis</a></span>
         <br /><span class="author">
             <strong>Duy Dang-Pham</strong>,
@@ -287,7 +289,7 @@
     </div>
   </li>
   <li>
-    <div id="Dang-Pham2017f">
+    <div id="DangPham2017f">
         <span class="title"><a href="https://www.sciencedirect.com/science/article/pii/S0167404817301177" target="\_blank">Investigation into the formation of information security influence: Network analysis of an emerging organisation</a></span>
         <br /><span class="author">
             <strong>Duy Dang-Pham</strong>,
@@ -303,7 +305,7 @@
     </div>
   </li>
   <li>
-    <div id="Dang-Pham2016">
+    <div id="DangPham2016">
         <span class="title">Impacts of security climate on employeesâ€™ sharing of security advice and troubleshooting: Empirical networks</span>
         <br /><span class="author">
             <strong>Duy Dang-Pham</strong>,
@@ -318,7 +320,7 @@
     </div>
   </li>
   <li>
-    <div id="Dang-Pham2015b">
+    <div id="DangPham2015b">
         <span class="title">Demystifying online personas of Vietnamese young adults on Facebook: A Q-methodology approach</span>
         <br /><span class="author">
             <strong>Duy Dang-Pham</strong>,
@@ -334,7 +336,7 @@
     </div>
   </li>
   <li>
-    <div id="Dang-Pham2015d">
+    <div id="DangPham2015d">
         <span class="title">Comparing intention to avoid malware across contexts in a BYOD-enabled Australian university: A Protection Motivation Theory approach</span>
         <br /><span class="author">
             <strong>Duy Dang-Pham</strong>,
@@ -379,6 +381,36 @@
 <h1 class="category">Peer-reviewed conference papers</h1>
 <ol>
   <li>
+    <div id="trang2022emac">
+        <span class="title"><a href="#" target="\_blank">Effects of authenticity on customer retention of AI-powered branded app: A conceptual paper</a></span>
+        <br /><span class="author">
+            Diem-Trang Vo,
+            Long Nguyen Van Thang,
+            <strong>Duy Dang-Pham</strong>,
+            and Ai-Phuong Hoang
+        </span>
+        <span class="periodical"><br />
+          <em>Proceedings of the European Marketing Academy (EMAC 2021)</em>
+        </span><span class="year">(2022)</span>
+      <!-- Hidden abstract block -->
+    </div>
+  </li>
+  <li>
+    <div id="DiemTrang2022pacis">
+        <span class="title"><a href="https://aisel.aisnet.org/pacis2022/174/" target="\_blank">Value co-destruction in AI-powered mobile applications: analysis of customer reviews</a></span>
+        <br /><span class="author">
+            Diem-Trang Vo,
+            <strong>Duy Dang-Pham</strong>,
+            Ai-Phuong Hoang,
+            and Long Nguyen Van Thang
+        </span>
+        <span class="periodical"><br />
+          <em>In the 26th Pacific Asia Conference on Information Systems (PACIS)</em>
+        </span><span class="year">(2022)</span>
+      <!-- Hidden abstract block -->
+    </div>
+  </li>
+  <li>
     <div id="Ha2021kol-brandlove">
         <span class="title"><a href="#" target="\_blank">The Impacts of Influencers on CSR Communication</a></span>
         <br /><span class="author">
@@ -395,7 +427,7 @@
     </div>
   </li>
   <li>
-    <div id="Dang-Pham2020a">
+    <div id="DangPham2020a">
         <span class="title"><a href="/assets/papers/ACIS 2020_XSEC_cameraReady.pdf" target="\_blank">Explainable Information Security: Development of a Construct and Instrument</a></span>
         <br /><span class="author">
             <strong>Duy Dang-Pham</strong>,
@@ -410,7 +442,7 @@
     </div>
   </li>
   <li>
-    <div id="Dang-Pham2020b">
+    <div id="DangPham2020b">
         <span class="title"><a href="/assets/papers/ACIS 2020 Digital Kaizen_cameraReady.pdf" target="\_blank">Digital Kaizen: An approach for conducting stepwise digital transformation</a> - <mark>Best Paper Award (1st Runner-Up)</mark></span>
         <br /><span class="author">
             <strong>Duy Dang-Pham</strong>,
@@ -425,7 +457,7 @@
     </div>
   </li>
   <li>
-    <div id="Dang-Pham2020c">
+    <div id="DangPham2020c">
         <span class="title"><a href="#" target="\_blank">A Machine Learning-based Approach to Vietnamese Handwritten Medical Record Recognition</a></span>
         <br /><span class="author">
             Tuan Phung,
@@ -487,7 +519,7 @@
     </div>
   </li>
   <li>
-    <div id="Dang-Pham2017c">
+    <div id="DangPham2017c">
         <span class="title">Recognition of employees as transformational leaders: a social network analysis approach</span>
         <br /><span class="author">
             <strong>Duy Dang-Pham</strong>,
@@ -502,7 +534,7 @@
     </div>
   </li>
   <li>
-    <div id="Dang-Pham2017d">
+    <div id="DangPham2017d">
         <span class="title"><a href="https://www.researchgate.net/profile/Duy_Dang-Pham/publication/321418616_Exploring_the_ACIS_Community_through_the_Analysis_of_Co-authorship_across_Institutions/links/5a20cf2faca272ab5a6207c7/Exploring-the-ACIS-Community-through-the-Analysis-of-Co-authorship-across-Institutions.pdf" target="\_blank">Exploring the ACIS Community through the Analysis of Co-authorship across Institutions</a></span>
         <br /><span class="author">
             <strong>Duy Dang-Pham</strong>,
@@ -515,7 +547,7 @@
     </div>
   </li>
   <li>
-    <div id="Dang-Pham2017e">
+    <div id="DangPham2017e">
         <span class="title"><a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3112947" target="\_blank">Understanding the Formation of Information Security Climate Perceptions: A Longitudinal Social Network Analysis</a> - <mark>Best Paper Award (2nd Runner-Up)</mark></span>
         <br /><span class="author">
             <strong>Duy Dang-Pham</strong>,
@@ -544,7 +576,7 @@
     </div>
   </li>
   <li>
-    <div id="Dang-Pham2016a">
+    <div id="DangPham2016a">
       <span class="title">Who influences information security behaviours of young home computer users in Vietnam? An ego-centric network analysis approach</span>
       <br /><span class="author">
           <strong>Duy Dang-Pham</strong>,
@@ -558,7 +590,7 @@
     </div>
   </li>
   <li>
-    <div id="Dang-Pham2015a">
+    <div id="DangPham2015a">
       <span class="title">Investigating the formation of information security climate perceptions with social network analysis: a research proposal</span>
       <br /><span class="author">
           <strong>Duy Dang-Pham</strong>,
@@ -572,7 +604,7 @@
     </div>
   </li>
   <li>
-    <div id="Dang-Pham2015c">
+    <div id="DangPham2015c">
       <span class="title">Factors of people-centric security climate: conceptual model and exploratory study in Vietnam</span>
       <br /><span class="author">
           <strong>Duy Dang-Pham</strong>,
@@ -586,7 +618,7 @@
     </div>
   </li>
   <li>
-    <div id="Dang-Pham2014">
+    <div id="DangPham2014">
       <span class="title">Towards a complete understanding of information security misbehaviours: a proposal for future research with social network approach</span>
       <br /><span class="author">
           <strong>Duy Dang-Pham</strong>,
@@ -625,7 +657,7 @@
     </div>
   </li>
   <li>
-    <div id="Dang-Pham2013">
+    <div id="DangPham2013">
         <span class="title">Contextual difference and intention to perform information security behaviours against malware in a BYOD environment: A protection motivation theory approach</span>
         <br /><span class="author">
             <strong>Duy Dang-Pham</strong>,
@@ -657,6 +689,37 @@
 <h1 class="category">Books and book chapters</h1>
 <ol>
   <li>
+      <div id="dang2023securitytoe">
+          <span class="title">Protecting Organizational Information Security at Home During the COVID-19 Pandemic in Vietnam: Exploratory Findings from Technology-Organization-Environment Framework</span>
+          <br /><span class="author">
+              <strong>Duy Dang-Pham</strong>,
+              Hiep Pham,
+              Ai-Phuong Hoang,
+              and Long Nguyen Van Thang
+          </span>
+          <span class="periodical"><br />
+            <em>Information Systems Research in Vietnam: A Shared Vision and New Frontiers</em>
+          </span><span class="year">(2023)</span>
+        <!-- Hidden abstract block -->
+      </div>
+  </li>
+  <li>
+      <div id="vais2023isbookintro">
+          <span class="title">Introduction to Information Systems Research in Vietnam: A Shared Vision</span>
+          <br /><span class="author">
+              Thuan Nguyen Hoang,
+              <strong>Duy Dang-Pham</strong>,
+              Hoanh-Su Le,
+              Prasanta Bhattacharya,
+              and Tuan Q. Phan
+          </span>
+          <span class="periodical"><br />
+            <em>Information Systems Research in Vietnam: A Shared Vision and New Frontiers</em>
+          </span><span class="year">(2023)</span>
+        <!-- Hidden abstract block -->
+      </div>
+  </li>
+  <li>
       <div id="Nkhoma2018">
           <span class="title"><a href="https://link.springer.com/chapter/10.1007/978-3-319-97181-0_17" target="\_blank">Information Security Landscape in Vietnam: Insights from Two Research Surveys</a></span>
           <br /><span class="author">
@@ -676,7 +739,7 @@
 <h1 class="category">Reports</h1>
 <ol>
   <li>
-      <div id="Dang-Pham2018">
+      <div id="DangPham2018">
           <span class="title"><a href="http://aaisnet.org/wp-content/uploads/2019/10/ACPHIS_Report_Co-authorship_SNA2018.pdf" target="\_blank">A Social Network Analysis of Co-authorship at the Australasian Conference on Information Systems (ACIS)</a></span>
           <br /><span class="author">
               <strong>Duy Dang-Pham</strong>,
