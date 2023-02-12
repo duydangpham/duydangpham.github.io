@@ -70,7 +70,7 @@
   </item>
 
   <!-- URL for data transmission via POST/GET (leave blank if not required) -->
-  <item id="submitUrl">https://drduydangpham.com/htmlq/backend/exe.php?do=save</item>
+  <item id="submitUrl">http://drduydangpham.com/htmlq/backend/exe.php?do=save</item>
   <!-- request mode (post|get) -->
   <item id="submitUrlMethod">post</item>
 
