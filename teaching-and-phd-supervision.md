@@ -19,12 +19,14 @@ image: ../assets/img/feedback_wordcloud.png
 <hr />
 | Full name | Program | Thesis title | Progress | Supervisors |
 | --------- | ------- | ------------ | -------- | ----------- |
-| <a href="https://orcid.org/0000-0002-8925-6226" target="\_blank">Ngan Tuyet Truong</a> | Doctor of Philosophy (Management) | Service Innovation Management for Customer Satisfaction and Behavioural Intentions: The Case of Boutique Hotel Sector in an Emerging Country | Completed (2022) | Mathews Nkhoma (Primary), Robert McClelland (Associate), Duy Dang-Pham (Associate) |
+| Hien Nguyen Thi Thu | DR204 Doctor of Philosophy (Management) | Digital transformation and digitalisation of healthcare in Vietnam | Pre-Confirmation of Candidature | Duy Dang-Pham (Primary), Ai-Phuong Hoang (Associate), Karlheinz Kautz (Primary) |
+| Diem-Trang Vo | Doctor of Philosophy (Business) | Co-Creating Values with Customers through AI-Powered Branded App: the Mediating Role of Perceived Authenticity | Mid-candidature Review | Long Nguyen Van Thang (Primary), Duy Dang-Pham (Primary), Ai-Phuong Hoang (Associate) |
+| Khanh-Linh Nguyen | Doctor of Philosophy (Business) | The nexus between psychological attributes and workplace learning – a sequential-mediation model in Vietnam’s banking and retail industries | Mid-candidature Review | Duy Dang-Pham (Primary), Seng Kok (Primary), Burkhard Schrage (Associate) |
+| Minh Hoang Thi Bui | Doctor of Philosophy (Management) | Effects of Student Interaction on Dropout Intention in Online Learning Degree Programs at Higher Education Institutions | Thesis Examination | Mathews Nkhoma (Primary), Duy Dang-Pham (Primary), Ai-Phuong Hoang (Associate) |
+| Anna Felipe | Doctor of Philosophy (Computer Science) | Converging Computer Science and Engineering pedagogy to Achieve Creative Mindset of Student for Start-up (tentative title) | Mid-candidature Review | James Harland (Primary), Duy Dang-Pham (Associate), Edouard Amouroux (Associate) |
 | Qui Nguyen Ngoc | Doctor of Philosophy (Management) | The impact of faculty job satisfaction on retention and performance in Vietnam higher education sector | Completed (2023) | Robert McClelland (Primary), Duy Dang-Pham (Associate), Susan Thomas (Associate), Majo George (Associate) |
-| Minh Hoang Thi Bui | Doctor of Philosophy (Management) | Quality assessment of digitalized learning learning programs in higher education in Vietnam (tentative title) | Thesis Examination | Mathews Nkhoma (Primary), Duy Dang-Pham (Primary), Ai-Phuong Hoang (Associate) |
-| Diem-Trang Vo | Doctor of Philosophy (Business) | Adoption of AI-driven technology in healthcare (tentative title) | Mid-candidature Review | Long Nguyen Van Thang (Primary), Duy Dang-Pham (Associate), Ai-Phuong Hoang (Associate) |
-| Khanh-Linh Nguyen | Doctor of Philosophy (Business) | The influences of Growth Mindset, Occupational Self-efficacy, Mastery Goal Orientation, and Grit on Workplace Learning – a moderated sequential-mediation model in Vietnam’s banking industry (tentative title) | Mid-candidature Review | Duy Dang-Pham (Primary), Seng Kok (Primary), Burkhard Schrage (Associate) |
-| Anna Felipe | Doctor of Philosophy (Computer Science) | Converging Computer Science and Engineering pedagogy to Achieve Creative Mindset of Student for Start-up (tentative title) | Mid-candidature Review | James Harland (Primary), Duy Dang-Pham (Associate), Iouri Belski (Associate) |
+| <a href="https://orcid.org/0000-0002-8925-6226" target="\_blank">Ngan Tuyet Truong</a> | Doctor of Philosophy (Management) | Service Innovation Management for Customer Satisfaction and Behavioural Intentions: The Case of Boutique Hotel Sector in an Emerging Country | Completed (2022) | Mathews Nkhoma (Primary), Robert McClelland (Associate), Duy Dang-Pham (Associate) |
+
 
 <h3>Undergraduate Capstone Project Supervision</h3><a name="undergrads"></a>
 <hr />
@@ -60,6 +62,16 @@ Digital content plays a crucial role in a successful digital marketing campaign.
 <a href="http://www1.rmit.edu.au/browse/;ID=001360heparta;STATUS=A" target="\_blank">BUSM2301 Organisational Analysis</a>
 
 In this course you will learn to critically examine alternative approaches for analysing and interpreting organisations. The course adopts a multiple perspective and interdisciplinary approach which provides you with toolset to analyse organisations through different theoretical lenses and at different levels: systems, structures, social interactions and the individual.  It develops organisational analysis and critical reasoning skills through the application and assessment of different perspectives to business case studies examined in the course. The course examines different knowledge assumptions and their implications and practical consequences for future managers.
+
+<a href="#" target="\_blank">ISYS2109 Business Information Systems</a>
+
+Information systems have become pervasive and now underpin everything a business does. This course provides insights into how Information systems and related information technologies are driving innovation, new business models, hyper-competition and digital business transformation. Drawing on case studies, the following concepts will be examined:
+- business value of information systems
+- data and information management
+- business analytics and decision-making
+- managing security, privacy and ethical issues in information systems
+
+You will be equipped with sought-after business and technical skills that play an important role in assisting organisations to make the most out of modern information and communication technologies.
 
 <h3>School of Science, Engineering & Technology (2018 – 2021)</h3><a name="sset"></a>
 <hr />
