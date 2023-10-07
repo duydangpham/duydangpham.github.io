@@ -41,17 +41,39 @@ image: /assets/img/research_thrusts.jpg
     </div>
   </li>
   <li>
-    <div id="DangPham2021digitalkaizen_bookchapter">
-        <span class="title"><a href="https://link.springer.com/chapter/10.1007/978-3-030-80003-1_18" target="\_blank">Digital Kaizen at FPT Software: Principles and Practices for Digital Transformations</a></span>
+    <div id="Vo2023DigitalTouchpoint">
+        <span class="title"><a href="https://www.emerald.com/insight/content/doi/10.1108/JRIM-02-2023-0042/full/html" target="\_blank">Examining authenticity on digital touchpoint: a thematic and bibliometric review of 15 years' literature</a></span>
         <br><span class="author">
-            <strong>Duy Dang-Pham</strong>,
-            Ai-Phuong Hoang,
             Diem-Trang Vo,
-            and Quang Tran Duc Tri
+            Mai Nguyen Quynh,
+            Long Nguyen,
+            Thuan Nguyen,
+            <strong>Duy Dang-Pham</strong>,
+            and Ai-Phuong Hoang
         </span>
         <span class="periodical"><br>
-          <em>Digitalization Cases Vol. 2</em>
-        </span><span class="year">(2021)</span>
+          <em>Journal of Research in Interactive Marketing</em>
+        </span>
+        <span class="year">(2023)</span>
+        <span style="color:red">[ABDC B; SJR Q1]</span>
+      <!-- Hidden abstract block -->
+    </div>
+  </li>
+  <li>
+    <div id="Rohman2023DisabilityData">
+        <span class="title"><a href="https://journals.sagepub.com/doi/full/10.1177/20539517231160523" target="\_blank">Disability data and its situational and contextual irrationalities in the Global South</a></span>
+        <br><span class="author">
+            Abdul Rohman,
+            Dyah Pitaloka,
+            Erlina Erlina,
+            <strong>Duy Dang-Pham</strong>,
+            and Ade Prastyani
+        </span>
+        <span class="periodical"><br>
+          <em>Big Data & Society</em>
+        </span>
+        <span class="year">(2023)</span>
+        <span style="color:red">[SJR Q1]</span>
       <!-- Hidden abstract block -->
     </div>
   </li>
@@ -59,6 +81,23 @@ image: /assets/img/research_thrusts.jpg
 
 <h1 class="category">Peer-reviewed journal articles</h1>
 <ol>
+  <li>
+    <div id="Rohman2023PrivacyContinuum">
+        <span class="title"><a href="https://link.springer.com/article/10.1007/s10209-023-01021-x" target="\_blank">A continuum of context in informational privacy transmissions: insights from people with disabilities in Vietnam</a></span>
+        <br><span class="author">
+            Abdul Rohman,
+            <strong>Duy Dang-Pham</strong>,
+            Dyah Pitaloka,
+            Erlina Erlina,
+            and Ade Prastyani
+        </span>
+        <span class="periodical"><br>
+          <em>Universal Access in the Information Society</em>
+        </span>
+        <span class="year">(2023)</span>
+      <!-- Hidden abstract block -->
+    </div>
+  </li>
   <li>
     <div id="DangPham2021trustworthiness">
         <span class="title"><a href="/assets/papers/Duy_Categorizing Young Facebook Users.pdf" target="\_blank">Categorizing young Facebook users based on their differential preference of social media heuristics: A Q-Methodology approach</a></span>
@@ -696,7 +735,7 @@ image: /assets/img/research_thrusts.jpg
 <ol>
   <li>
       <div id="dang2023securitytoe">
-          <span class="title">Protecting Organizational Information Security at Home During the COVID-19 Pandemic in Vietnam: Exploratory Findings from Technology-Organization-Environment Framework</span>
+          <span class="title"><a href="https://link.springer.com/chapter/10.1007/978-981-19-3804-7_6" target="\_blank">Protecting Organizational Information Security at Home During the COVID-19 Pandemic in Vietnam: Exploratory Findings from Technology-Organization-Environment Framework</a></span>
           <br><span class="author">
               <strong>Duy Dang-Pham</strong>,
               Hiep Pham,
@@ -711,7 +750,7 @@ image: /assets/img/research_thrusts.jpg
   </li>
   <li>
       <div id="vais2023isbookintro">
-          <span class="title">Introduction to Information Systems Research in Vietnam: A Shared Vision</span>
+          <span class="title"><a href="https://link.springer.com/chapter/10.1007/978-981-19-3804-7_1" target="\_blank">Introduction to Information Systems Research in Vietnam: A Shared Vision</a></span>
           <br><span class="author">
               Thuan Nguyen Hoang,
               <strong>Duy Dang-Pham</strong>,
