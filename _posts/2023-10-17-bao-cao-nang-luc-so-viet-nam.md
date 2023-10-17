@@ -14,5 +14,5 @@ Báo cáo dài 32 trang này tóm tắt nghiên cứu của nhóm về năng l�
 
 Dữ liệu khảo sát được thu thập từ 723 người dân sinh sống tại các tỉnh thành như TP Hồ Chí Minh, Hà Nội, Bình Phước, và Đắk Nông. Báo cáo cũng tham khảo các bài học chuyển đổi số từ các quốc gia như Singapore, Hàn Quốc, Estonia và Phần Lan để dựa vào kết quả khảo sát để đưa ra các khuyến nghị liên quan đến chuyển đổi số cho Việt Nam.
 
-Đọc và tải báo cáo (tiếng Việt) tại <a href="https://www.drduydangpham.com/assets/papers/Enhancing%20Digital%20Competence_AVPI%20Report%20VIE.pdf" target="\_blank">đây</a>: https://www.drduydangpham.com/assets/papers/Enhancing%20Digital%20Competence_AVPI%20Report%20VIE.pdf
-Đọc và tải báo cáo (tiếng Anh) tại <a href="https://avpi.org.au/vi/resources/enhancing-digital-competence-impacts-and-policy-implications-from-a-study-in-vietnam/" target="\_blank">đây</a>: https://avpi.org.au/vi/resources/enhancing-digital-competence-impacts-and-policy-implications-from-a-study-in-vietnam/
+- Đọc và tải báo cáo (tiếng Việt) tại <a href="https://www.drduydangpham.com/assets/papers/Enhancing%20Digital%20Competence_AVPI%20Report%20VIE.pdf" target="\_blank">đây</a>
+- Đọc và tải báo cáo (tiếng Anh) tại <a href="https://avpi.org.au/vi/resources/enhancing-digital-competence-impacts-and-policy-implications-from-a-study-in-vietnam/" target="\_blank">đây</a>
