@@ -6,7 +6,7 @@
 # See: https://jekyllrb.com/docs/themes/#overriding-theme-defaults
 #
 layout: page
-title: Digital Transformation and Information Security Management Researcher
+title: Management Information Systems (MIS) Expert and Researcher | Academic Manager
 image: /assets/img/duydangpham2022_2.jpg
 ---
 
