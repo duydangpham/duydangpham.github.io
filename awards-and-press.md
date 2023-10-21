@@ -35,6 +35,8 @@ Tiến sĩ Đặng Phạm Thiên Duy hiện là Giảng viên Cấp cao và Ch�
 
 # Press
 
+- Media coverage book: https://rmitvietnam.coveragebook.com/b/4486a8fc898ec52c
+
 | Date | Title | Source |
 | ---- | ----- | ------ |
 | Oct 10, 2022 | <a href="https://ictnews.vietnamnet.vn/thu-hep-khoang-cach-so-de-tien-toi-mot-viet-nam-so-toan-dien-5002614.html" target="_/blank">Thu hẹp khoảng cách số để tiến tới một Việt Nam số toàn diện</a> | ICT News/VietnamNet |
