@@ -3,8 +3,13 @@ layout: profiles
 permalink: /people/
 title: people
 description: members of the lab or group
+<<<<<<< HEAD:_pages/profiles.md
 nav: true
 nav_order: 7
+=======
+nav: false
+nav_order: 6
+>>>>>>> 27fa0e41 (update):backup/profiles.md
 
 profiles:
   # if you want to include more than one profile, just replicate the following block
