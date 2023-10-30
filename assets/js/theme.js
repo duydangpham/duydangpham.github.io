@@ -1,5 +1,6 @@
 // Has to be in the head tag, otherwise a flicker effect will occur.
 
+<<<<<<< HEAD
 // Toggle through light, dark, and system theme settings.
 let toggleThemeSetting = () => {
   let themeSetting = determineThemeSetting();
@@ -74,11 +75,64 @@ let applyTheme = () => {
       bodyElement.setAttribute("data-jp-theme-name", "JupyterLab Light");
     }
   }
+=======
+let toggleTheme = (theme) => {
+  if (theme == "dark") {
+    setTheme("light");
+  } else {
+    setTheme("dark");
+  }
+};
+
+let setTheme = (theme) => {
+  transTheme();
+  setHighlight(theme);
+  setGiscusTheme(theme);
+
+  if (theme) {
+    document.documentElement.setAttribute("data-theme", theme);
+
+    // Add class to tables.
+    let tables = document.getElementsByTagName("table");
+    for (let i = 0; i < tables.length; i++) {
+      if (theme == "dark") {
+        tables[i].classList.add("table-dark");
+      } else {
+        tables[i].classList.remove("table-dark");
+      }
+    }
+
+    // Set jupyter notebooks themes.
+    let jupyterNotebooks = document.getElementsByClassName("jupyter-notebook-iframe-container");
+    for (let i = 0; i < jupyterNotebooks.length; i++) {
+      let bodyElement = jupyterNotebooks[i].getElementsByTagName("iframe")[0].contentWindow.document.body;
+      if (theme == "dark") {
+        bodyElement.setAttribute("data-jp-theme-light", "false");
+        bodyElement.setAttribute("data-jp-theme-name", "JupyterLab Dark");
+      } else {
+        bodyElement.setAttribute("data-jp-theme-light", "true");
+        bodyElement.setAttribute("data-jp-theme-name", "JupyterLab Light");
+      }
+    }
+
+  } else {
+    document.documentElement.removeAttribute("data-theme");
+  }
+
+  localStorage.setItem("theme", theme);
+>>>>>>> 0deb0635 (new website)
 
   // Updates the background of medium-zoom overlay.
   if (typeof medium_zoom !== "undefined") {
     medium_zoom.update({
+<<<<<<< HEAD
       background: getComputedStyle(document.documentElement).getPropertyValue("--global-bg-color") + "ee", // + 'ee' for trasparency.
+=======
+      background:
+        getComputedStyle(document.documentElement).getPropertyValue(
+          "--global-bg-color"
+        ) + "ee", // + 'ee' for trasparency.
+>>>>>>> 0deb0635 (new website)
     });
   }
 };
@@ -107,6 +161,7 @@ let setGiscusTheme = (theme) => {
   });
 };
 
+<<<<<<< HEAD
 let addMermaidZoom = (records, observer) => {
   var svgs = d3.selectAll(".mermaid svg");
   svgs.each(function () {
@@ -198,6 +253,8 @@ let setSearchTheme = (theme) => {
   }
 };
 
+=======
+>>>>>>> 0deb0635 (new website)
 let transTheme = () => {
   document.documentElement.classList.add("transition");
   window.setTimeout(() => {
@@ -205,6 +262,7 @@ let transTheme = () => {
   }, 500);
 };
 
+<<<<<<< HEAD
 // Determine the expected state of the theme toggle, which can be "dark", "light", or
 // "system". Default is "system".
 let determineThemeSetting = () => {
@@ -250,3 +308,17 @@ let initTheme = () => {
     applyTheme();
   });
 };
+=======
+let initTheme = (theme) => {
+  if (theme == null || theme == "null") {
+    const userPref = window.matchMedia;
+    if (userPref && userPref("(prefers-color-scheme: dark)").matches) {
+      theme = "dark";
+    }
+  }
+
+  setTheme(theme);
+};
+
+initTheme(localStorage.getItem("theme"));
+>>>>>>> 0deb0635 (new website)
