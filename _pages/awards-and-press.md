@@ -1,7 +1,7 @@
 ---
 layout: page
 permalink: /awards-and-press/
-title: awards and press
+title: awards & press
 description: 
 nav: true
 nav_order: 4
