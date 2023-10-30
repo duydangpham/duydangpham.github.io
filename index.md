@@ -6,7 +6,7 @@
 # See: https://jekyllrb.com/docs/themes/#overriding-theme-defaults
 #
 layout: page
-title: Management Information Systems (MIS) Expert and Researcher | Academic Manager
+title: Version 2
 image: /assets/img/duydangpham2022_2.jpg
 ---
 
