@@ -1,8 +1,8 @@
 ---
 layout: post
-date: 2016-01-15 07:59:00-0400
+date: 2018-08-31 00:00:00-0700
 inline: true
 related_posts: false
 ---
 
-A simple inline announcement with Markdown emoji! :sparkles: :smile:
+I received a scholarship to complete the Graduate Certificate in Digital Tertiary Learning & Teaching from RMIT Vietnam.
