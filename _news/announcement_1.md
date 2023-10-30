@@ -1,8 +1,8 @@
 ---
 layout: post
-date: 2015-10-22 15:59:00-0400
+date: 2018-05-08 00:00:00-0700
 inline: true
 related_posts: false
 ---
 
-A simple inline announcement.
+I was appointed Lecturer of Information Technology in the School of Science & Technology in RMIT University Vietnam.
