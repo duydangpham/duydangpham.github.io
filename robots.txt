@@ -1,4 +1,4 @@
 User-agent: *
 Disallow:
 
-Sitemap: https://drduydangpham.com/sitemap.xml
+Sitemap: https://www.drduydangpham.com/sitemap.xml
