@@ -1,34 +1,43 @@
-"Adams":
-  - firstname: ["Edwin", "E.", "E. P.", "Edwin Plimpton"]
-    url: https://en.wikipedia.org/wiki/Edwin_Plimpton_Adams
+"Kautz":
+  - firstname: ["Karl", "Karlheinz", "K.", "K"]
+    url: https://scholar.google.com.vn/citations?user=ZLyMN08AAAAJ&hl=en
 
-"Podolsky":
-  - firstname: ["Boris", "B.", "B. Y.", "Boris Yakovlevich"]
-    url: https://en.wikipedia.org/wiki/Boris_Podolsky
+"Pittayachawan":
+  - firstname: ["Siddhi", "S", "S."]
+    url: https://scholar.google.com.vn/citations?user=ALJaVKkAAAAJ&hl=en
 
-"Rosen":
-  - firstname: ["Nathan", "N."]
-    url: https://en.wikipedia.org/wiki/Nathan_Rosen
+"Bruno":
+  - firstname: ["Vince", "Vincenzo", "V.", "V"]
+    url: https://scholar.google.com.vn/citations?user=aa0qGtIAAAAJ&hl=en
 
-"Bach": 
-  - firstname: ["Johann Sebastian", "J. S."]
-    url: https://en.wikipedia.org/wiki/Johann_Sebastian_Bach
+"McClelland":
+  - firstname: ["Robert", "Robert James", "R", "R."]
+    url: https://scholar.google.com/citations?user=mEQrPqkAAAAJ
 
-  - firstname: ["Carl Philipp Emanuel", "C. P. E."]
-    url: https://en.wikipedia.org/wiki/Carl_Philipp_Emanuel_Bach
+"Hoang":
+  - firstname: ["Ai-Phuong", "Ai Phuong"]
+    url: https://www.rmit.edu.vn/contact-us/staff-profiles/h/hoang-ai-phuong
 
-"Przibram":
-  - firstname: ["Karl"]
-    url: https://link.springer.com/article/10.1007/s00016-019-00242-z
+"Nguyen":
+  - firstname: ["Long Van Thang", "Long TV"]
+    url: https://scholar.google.com.vn/citations?user=JMVlsr4AAAAJ&hl=en
 
-"Schrödinger":
-  - firstname: ["Erwin"]
-    url: https://en.wikipedia.org/wiki/Erwin_Schr%C3%B6dinger
+"Vo":
+  - firstname: ["Diem-Trang"]
+    url: https://scholar.google.com.vn/citations?user=lkYFFvAAAAAJ&hl=en
 
-"Lorentz":
-  - firstname: ["Hendrik Antoon"]
-    url: https://en.wikipedia.org/wiki/Hendrik_Lorentz
+"Pham":
+  - firstname: ["Hiep", "Hiep Cong"]
+    url: https://scholar.google.com.vn/citations?user=ahSJ18AAAAAJ&hl=en
 
-"Planck":
-  - firstname: ["Max"]
-    url: https://en.wikipedia.org/wiki/Max_Planck
+"Nguyen Hoang":
+  - firstname: ["Thuan"]
+    url: https://scholar.google.com.vn/citations?user=pj7CKfIAAAAJ&hl=en
+
+"Phan":
+  - firstname: ["Tuan", "Tuan Q"]
+    url: https://scholar.google.com.vn/citations?user=TLvXHasAAAAJ&hl=en
+
+"Nkhoma":
+  - firstname: ["Mathews"]
+    url: https://www.rmit.edu.au/contact/staff-contacts/academic-staff/n/nkhoma---mathews
