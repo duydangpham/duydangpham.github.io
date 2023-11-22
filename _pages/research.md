@@ -5,6 +5,16 @@ title: research
 description: 
 nav: true
 nav_order: 2
+dropdown: true
+children:
+    - title: research thrusts
+      permalink: /research/
+    - title: divider
+    - title: publications
+      permalink: /publications/
+    - title: divider
+    - title: projects
+      permalink: /projects/
 ---
 
 1. [A short background](#short-background)

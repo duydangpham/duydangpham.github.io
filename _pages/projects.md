@@ -1,10 +1,9 @@
 ---
 layout: page
 permalink: /projects/
-title: project
+title: projects
 description: 
 nav: true
-<<<<<<< HEAD
 nav_order: 3
 display_categories: [work, fun]
 horizontal: false
@@ -64,7 +63,8 @@ horizontal: false
   {% endif %}
 {% endif %}
 </div>
-=======
+nav: false
+>>>>>>> 058440a7 (re arrange pages)
 nav_order: 1
 ---
 
