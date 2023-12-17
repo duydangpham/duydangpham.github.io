@@ -12,10 +12,12 @@ nav_order: 1
 
 <br>
 
-### funded projects and research grants (~USD 320,000)
+### funded projects and research grants (~USD 341,500)
 <hr>
 | Year | Research grant | Members | Funding source | Value |
 | ---- | -------------- | ------- | -------------- | ----- |
+| 2023 | AI Chatbot for supporting staff and patients of the University Medical Center Hospital in Vietnam: An action research project | Duy Dang-Pham, Mai Do, Long Nguyen, Minh Dinh | Tier 2 2024 Thematic Research Grant - RMIT Vietnam | AUD 29,153 (approx. USD 19,500) |
+| 2023 | Development of an AI chatbot for recommending foods at a restaurant to reduce food waste and improve customer satisfaction | Duy Dang-Pham | EIP Platform Activity - RMIT University | AUD 3,000 (approx. USD 2,000) |
 | 2022 | Investigating Approaches to Digital Transformation Implementation | Duy Dang-Pham, Karlheinz Kautz, Ai-Phuong Hoang, Lukas Parker | Innovation Proof of Concept Funding - RMIT University | AUD 8,960 (approx. USD 6,200) |
 | 2022 | Digital Competence for Vietnamese Citizens: Towards an Inclusive Digital Nation | Ngoc Pham, Trung Nguyen, Duy Dang-Pham, Ai-Phuong Hoang, Hiep Pham | D3 Research Activity Fund Scheme - RMIT University | AUD 5,000 (approx. USD 3,500) |
 | 2022 | Improving Digital Competence of Local Authorities, Businesses, and Citizens in Dak Nong and Binh Phuoc Provinces: Towards a Digital Nation | Trung Nguyen, Duy Dang-Pham, Ai-Phuong Hoang, Ha Tran | Aus4Skills Australian Alumni Grants Fund Round 4 | VND 232,785,000 (approx. USD 10,150) |
