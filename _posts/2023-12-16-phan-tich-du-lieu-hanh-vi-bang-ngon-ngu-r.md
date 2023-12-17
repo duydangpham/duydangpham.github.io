@@ -1,8 +1,8 @@
 ---
 layout: post
 title: "Phân tích dữ liệu hành vi bằng ngôn ngữ R"
-date: 2023-10-17 00:00:00-0700
-description: 
+date: 2023-12-16 00:00:00-0700
+description: Trong thời đại trí tuệ nhân tạo và học máy càng ngày càng phổ biến, các doanh nghiệp thường tập trung vào việc phân tích dữ liệu lớn, tổng hợp hàng trăm nghìn biến (variables/indicators) được thu thập tự động để đưa ra kết luận về một vấn đề gì đấy, mà dữ liệu liên quan đến tâm lý và hành vi truyền thống được thu thập thông qua khảo sát hay phỏng vấn đôi khi bị lu mờ, dù công dụng của loại dữ liệu này, nếu làm đúng, có thể mang lại lợi ích lớn trong việc hiểu thêm về một người nào đấy. Trong bài post này, mình sẽ sử dụng ngôn ngữ R để phân tích một bộ dữ liệu mẫu liên quan đến hành vi bảo mật thông tin của nhân viên một doanh nghiệp lớn ở TPHCM, nơi mình đã tư vấn nâng cấp hệ thống bảo mật thông tin từ năm 2014.
 tags: 
 categories: research
 image: /assets/img/2023_12/climateplssem.png
