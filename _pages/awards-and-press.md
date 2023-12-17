@@ -8,12 +8,12 @@ nav_order: 4
 ---
 
 ### one-paragraph bio:
-Dr Duy Dang is a Senior Lecturer and Senior Program Manager for the PhD programs in the The Business School, RMIT Vietnam. Duy has received various research and teaching awards, including the RMIT Prize for Research Impact (Enterprise), which recognized his active engagement with the industry through conducting impactful research. His teaching and research focus on information security management, digital transformation, and applied analytics for business and education. Duy is also a Co-founder and Secretary of the Vietnam Chapter of the Association for Information Systems (VAIS).
+Dr Duy Dang is a Senior Lecturer and Senior Program Manager for the PhD programs in The Business School, RMIT Vietnam. Duy has received various research and teaching awards, including the RMIT Prize for Research Impact (Enterprise), which recognized his active engagement with the industry through conducting impactful research. His teaching and research focus on information security management, digital transformation, and applied analytics for business and education. Duy is also a Co-founder and Secretary of the Vietnam Chapter of the Association for Information Systems (VAIS).
 
 <br>
 
 ### one-paragraph bio (Vietnamese):
-Tiến sĩ Đặng Phạm Thiên Duy hiện là Giảng viên Cấp cao và Chủ nhiệm Cấp cao cho chương trình đào tạo Tiến sĩ thuộc Khoa Kinh doanh và Quản trị tại Đại học RMIT Việt Nam. Tiến sĩ Duy đã nhận các giải thưởng khác nhau về giáo dục và nghiên cứu, bao gồm giải thưởng Tác động nghiên cứu từ RMIT toàn cầu trong năm 2016, ghi nhận các đóng góp thiết thực cho doanh nghiệp tại Việt Nam thông qua các công trình nghiên cứu của ông. Tiến sĩ Duy nghiên cứu và tham gia giảng dạy ở các bậc Cử nhân, Thạc sĩ và Tiến sĩ, tập trung vào các chủ đề như quản lý bảo mật thông tin, quản lý công nghệ, chuyển đổi số, và ứng dụng phân tích dữ liệu trong doanh nghiệp và giáo dục. Ông cũng là Đồng sáng lập kiêm Thư ký của Hiệp hội nghiên cứu Hệ thống thông tin - Chi hội Việt Nam (VAIS).
+Tiến sĩ Đặng Phạm Thiên Duy hiện là Giảng viên Cấp cao và Chủ nhiệm Cấp cao cho chương trình đào tạo Tiến sĩ thuộc Khoa Kinh doanh tại Đại học RMIT Việt Nam. Tiến sĩ Duy đã nhận các giải thưởng khác nhau về giáo dục và nghiên cứu, bao gồm giải thưởng Tác động nghiên cứu từ RMIT toàn cầu trong năm 2016, ghi nhận các đóng góp thiết thực cho doanh nghiệp tại Việt Nam thông qua các công trình nghiên cứu của ông. Tiến sĩ Duy nghiên cứu và tham gia giảng dạy ở các bậc Cử nhân, Thạc sĩ và Tiến sĩ, tập trung vào các chủ đề như quản lý bảo mật thông tin, quản lý công nghệ, chuyển đổi số, và ứng dụng phân tích dữ liệu trong doanh nghiệp và giáo dục. Ông cũng là Đồng sáng lập kiêm Thư ký của Hiệp hội nghiên cứu Hệ thống thông tin - Chi hội Việt Nam (VAIS).
 
 <br>
 
