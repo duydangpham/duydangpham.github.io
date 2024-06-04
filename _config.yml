@@ -9,7 +9,7 @@ last_name: Dang-Pham
 contact_note: >
   You can even add a little note about which of these is the best way to reach you.
 description: > # the ">" symbol means to ignore newlines until "footer_text:"
-  Dr. Duy Dang-Pham (Đặng Phạm Thiên Duy) is an academic at RMIT University (Saigon South Campus, Vietnam). He teaches and conducts research in the areas of cybersecurity management and behaviors, digital business and digital transformation, business and learning analytics, and human-centered artificial intelligence.
+  Dr. Duy Dang-Pham (Đặng Phạm Thiên Duy) | Fulbright Scholar-in-Residence 2024 | MIS Educator & Researcher | Academic Manager | PhD
 footer_text: >
   Powered by <a href="https://jekyllrb.com/" target="_blank">Jekyll</a> with <a href="https://github.com/alshedivat/al-folio">al-folio</a> theme.
   Hosted by <a href="https://pages.github.com/" target="_blank">GitHub Pages</a>.
@@ -56,11 +56,7 @@ posts_in_search: true
 bib_search: true
 
 # Dimensions
-<<<<<<< HEAD
 max_width: 930px
-=======
-max_width: 900px
->>>>>>> b6102bd0 (update about section)
 
 # TODO: add layout settings (single page vs. multi-page)
 
@@ -157,20 +153,6 @@ collections:
     output: true
   projects:
     output: true
-<<<<<<< HEAD
-=======
-    permalink: /projects/:path/
-
-announcements:
-  enabled: true
-  scrollable: true # adds a vertical scroll bar if there are more than 3 news items
-  limit: 5 # leave blank to include all the news in the `_news` folder
-
-latest_posts:
-  enabled: false
-  scrollable: true # adds a vertical scroll bar if there are more than 3 new posts items
-  limit: 3 # leave blank to include all the blog posts
->>>>>>> b6102bd0 (update about section)
 
 # -----------------------------------------------------------------------------
 # Jekyll settings
