@@ -2,7 +2,7 @@
 layout: about
 title: about
 permalink: /
-subtitle: Fulbright S-I-R '24 | MIS Educator & Researcher | Academic Manager
+subtitle: Fulbright S-I-R '24 | MIS Researcher & Consultant | Academic Manager
 
 profile:
   align: right
