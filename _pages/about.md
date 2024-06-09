@@ -2,35 +2,16 @@
 layout: about
 title: about
 permalink: /
-<<<<<<< HEAD
-<<<<<<< HEAD
-subtitle: <a href='#'>Affiliations</a>. Address. Contacts. Motto. Etc.
-=======
-subtitle: Management Information Systems (MIS) Expert & Researcher | Academic Manager
->>>>>>> 27fa0e41 (update)
-=======
-subtitle: Fulbright S-I-R '24 | MIS Educator & Researcher | Academic Manager
->>>>>>> b6102bd0 (update about section)
+subtitle: Fulbright S-I-R '24 | MIS Researcher & Consultant | Academic Manager
 
 profile:
   align: right
   image: duydangpham.jpeg
   image_circular: false # crops the image to make it circular
   more_info: >
-<<<<<<< HEAD
-    <p>555 your office number</p>
-    <p>123 your address street</p>
-    <p>Your City, State 12345</p>
-
-=======
     
 news: true  # includes a list of news items
-<<<<<<< HEAD
-latest_posts: true  # includes a list of the newest posts
->>>>>>> 27fa0e41 (update)
-=======
 latest_posts: false  # includes a list of the newest posts
->>>>>>> b6102bd0 (update about section)
 selected_papers: true # includes a list of papers marked as "selected={true}"
 social: true # includes social icons at the bottom of the page
 
