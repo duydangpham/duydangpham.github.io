@@ -2,11 +2,11 @@
 layout: about
 title: about
 permalink: /
-subtitle: Fulbright S-I-R '24 | MIS Researcher & Consultant | Academic Manager
+subtitle: Fulbright U.S. S-I-R '24 | MIS Researcher & Consultant | Academic Manager
 
 profile:
   align: right
-  image: duydangpham.jpeg
+  image: duydangpham2024.jpg
   image_circular: false # crops the image to make it circular
   more_info: >
     
