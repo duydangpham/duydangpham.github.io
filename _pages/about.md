@@ -43,15 +43,15 @@ Beyond academia, I am:
 - **Visiting lecturer** for MBA programs at international universities in Vietnam, delivering courses on digital business and information systems
 - Passionate **investor** and **home barista**, continuously refining my knowledge and skills in both fields every day
 
-## Work with me
+### work with me
 I provide expert consulting, training, and advisory services at the intersection of academic research, digital transformation, and cybersecurity. You’re welcome to connect with me via email or LinkedIn (links below) for inquiries, collaborations, or consulting opportunities.
 
-### Academic & Research Services
+#### academic & research services
 - Research mentorship for PhD candidates and early-career researchers
 - Grant proposal writing and research funding consulting
 - Research workshops on social network analysis, digital transformation, and cybersecurity
 
-### Executive & Professional Education
+#### executive & erofessional education
 - Keynote speaking and corporate training on digital innovation, cybersecurity, and AI adoption
 - Teaching in MBA and executive education programs on digital business and MIS
 - Capacity-building programs for government agencies and policymakers
