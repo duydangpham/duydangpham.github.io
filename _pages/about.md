@@ -51,7 +51,7 @@ I provide expert consulting, training, and advisory services at the intersection
 - Grant proposal writing and research funding consulting
 - Research workshops on social network analysis, digital transformation, and cybersecurity
 
-#### executive & erofessional education
+#### executive & professional education
 - Keynote speaking and corporate training on digital innovation, cybersecurity, and AI adoption
 - Teaching in MBA and executive education programs on digital business and MIS
 - Capacity-building programs for government agencies and policymakers
