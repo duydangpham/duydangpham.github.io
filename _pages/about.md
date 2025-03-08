@@ -2,7 +2,7 @@
 layout: about
 title: about
 permalink: /
-subtitle: Fulbright U.S. S-I-R '24 | MIS Researcher & Consultant | Academic Manager
+subtitle: MIS Researcher & Educator | Research Consultant | Academic Manager | Fulbright U.S. S-I-R '24 
 
 profile:
   align: right
@@ -28,18 +28,18 @@ latest_posts:
 
 Welcome to my personal website!
 
-I am a Senior Lecturer in <a href="https://www.rmit.edu.vn/about-us/schools-and-centres/the-business-school" target="\_blank">The Business School</a>, RMIT University (Saigon South Campus, Vietnam), where I am teaching and conducting research in the management information systems (MIS) areas, while managing six Doctoral programs under the business & management disciplines.
+I am a Senior Lecturer at <a href="https://www.rmit.edu.vn/about-us/schools-and-centres/the-business-school" target="\_blank">The Business School</a>, RMIT University (Saigon South Campus, Vietnam), where I teach and conduct research in the field of Management Information Systems (MIS).
 
-Prior to joining The Business School, I have been Lecturer in the <a href="https://www.rmit.edu.vn/our-schools-centres/school-science-technology" target="\_blank">School of Science, Engineering &amp; Technology</a> for three years, where I [taught courses](/teaching-and-phd-supervision) in computer science areas such as data science & machine learning, data structures & algorithms, user-centered design, and technology leadership.
+In addition to my teaching and research roles, I serve as the **Associate Head of Department (Research)** within the school, providing leadership to enhance research excellence, foster a collaborative and innovative research culture, and support academic staff and PhD candidates in advancing their research agendas. My role involves facilitating research initiatives, mentoring early-career researchers, and driving the department's strategic research priorities, including securing external research funding and strengthening industry engagement.
 
-Prior to my current roles, I was teaching and conducting research in the <a href="https://www.rmit.edu.vn/our-schools-centres/school-science-technology" target="\_blank">School of Science, Engineering &amp; Technology</a>, where I was also spearheading their Bachelor of IT and Bachelor of Software Engineering programs.
+Prior to my current role, I served as **HDR Coordinator & Delegated Authority** in TBS, managing six PhD programs across various business and management disciplines. Before transitioning to TBS, I was teaching and conducting research in the <a href="https://www.rmit.edu.vn/our-schools-centres/school-science-technology" target="\_blank">School of Science, Engineering &amp; Technology</a>, where I was the **Senior Program Manager** managing their two flagship programs, Bachelor of IT and Bachelor of Software Engineering.
 
-As an MIS educator and researcher, my conversations and writing cover areas such as:
+As an MIS scholar and practitioner, my conversations and writing cover areas such as:
 - Information security governance and behaviors
 - Digital transformation and digitalization
 - Digital innovations and technologies (e.g., artificial intelligence, blockchains, Internet of Things)
 
-I'm privileged to collaborate with brilliant [PhD candidates](/teaching) on various MIS and management research topics, including five candidates under current supervision and another three graduates.
+I'm privileged to collaborate with brilliant [PhD candidates](/teaching) on various MIS and management research topics.
 
 Together with my research partners, I have written/co-authored over 60 [articles](/publications) for internationally recognized research journals and conferences (available on my <a href="https://scholar.google.com.vn/citations?hl=en&user=lkYFFvAAAAAJ" target="\_blank">Google Scholar profile</a>). We have also acquired successfully a total [research funding](/_projects/) amount of approximately US$ 341,500 (up to 2023).
 
@@ -48,13 +48,11 @@ In 2024, I was honored to be appointed <a href="https://fulbrightscholars.org/si
 I am [supervising several Ph.D. candidates](/teaching-and-phd-supervision), and I always seek strong candidates who would like to do research in the areas listed above. Please find information about Ph.D. research opportunities <a href="https://www.drduydangpham.com/2022/06/11/phd-scholarship-at-rmit-vietnam.html" target="\_blank">here</a>.
 
 Beyond academia, I am:
-- Co-founder of the <a href="https://vn-ais.org/" target="\_blank">Vietnam Chapter of Association for Information Systems (VAIS)</a>
-- Consultant for digitalization projects
-- Trainer for digital literacy and cybersecurity programs for government agencies and corporate entities
-- Research Lead for a <a href="https://genderdiversity.vn/" target="\_blank">gender equality and inclusion program</a> funded by the US Consulate General in Vietnam
-- Visiting Lecturer for MBA programs at international and local universities in Vietnam
-- Managing my personal investments
-
-I write and share my thoughts and reflections (in Vietnamese) on various topics about life and careers on a <a href="https://duydangpham.substack.com/" target="\_blank">Substack blog</a>, with the ambition to compile a personal playbook (inspired by <a href="https://www.amazon.com/Almanack-Naval-Ravikant-Wealth-Happiness/dp/1544514212" target="\_blank">the Almanack of Naval Ravikant</a>). Please <a href="https://duydangpham.substack.com/" target="\_blank">check it out</a> if you are interested.
+- **Co-founder** of the <a href="https://vn-ais.org/" target="\_blank">Vietnam Chapter of the Association for Information Systems (VAIS)</a>, fostering a network for IS researchers and professionals
+- **Research consultant** for digital transformation and technology adoption projects across industries at organizational and national levels
+- **Keynote speaker** and **trainer** for digital literacy and cybersecurity initiatives, working with government agencies and corporate entities
+- **Research lead** for various sustainability projects, including a <a href="https://genderdiversity.vn/" target="\_blank">gender equality and inclusion program</a> funded by the US Consulate General in Vietnam
+- **Visiting lecturer** for MBA programs at international universities in Vietnam, delivering courses on digital business and information systems
+- Passionate **investor** and **home barista**, continuously refining my knowledge and skills in both fields every day
 
 <hr>
