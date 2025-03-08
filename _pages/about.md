@@ -28,7 +28,7 @@ latest_posts:
 
 Welcome to my personal website!
 
-I am a Senior Lecturer at <a href="https://www.rmit.edu.vn/about-us/schools-and-centres/the-business-school" target="\_blank">The Business School</a>, RMIT University (Saigon South Campus, Vietnam), where I teach and conduct research in the field of Management Information Systems (MIS).
+I am a **Senior Lecturer** at <a href="https://www.rmit.edu.vn/about-us/schools-and-centres/the-business-school" target="\_blank">The Business School</a>, RMIT University (Saigon South Campus, Vietnam), where I teach and conduct research in the field of Management Information Systems (MIS).
 
 In addition to my teaching and research roles, I serve as the **Associate Head of Department (Research)** within the school, providing leadership to enhance research excellence, foster a collaborative and innovative research culture, and support academic staff and PhD candidates in advancing their research agendas. My role involves facilitating research initiatives, mentoring early-career researchers, and driving the department's strategic research priorities, including securing external research funding and strengthening industry engagement.
 
@@ -43,7 +43,7 @@ I'm privileged to collaborate with brilliant [PhD candidates](/teaching) on vari
 
 Together with my research partners, I have written/co-authored over 60 [articles](/publications) for internationally recognized research journals and conferences (available on my <a href="https://scholar.google.com.vn/citations?hl=en&user=lkYFFvAAAAAJ" target="\_blank">Google Scholar profile</a>). We have also acquired successfully a total [research funding](/_projects/) amount of approximately US$ 341,500 (up to 2023).
 
-In 2024, I was honored to be appointed <a href="https://fulbrightscholars.org/sir" target="\_blank">Fulbright Scholar-in-Residence</a> at the <a href="https://www.gonzaga.edu/school-of-business-administration/undergraduate/business-administration/management-information-systems" target="\_blank">School of Business Administration</a>, Gonzaga University, USA.
+In 2024, I was honored to be appointed <b><a href="https://www.gonzaga.edu/news-events/stories/2024/8/12/meet-fulbright-scholar-in-residence-duy-dang" target="\_blank">Fulbright Scholar-in-Residence</a></b> at the <a href="https://www.gonzaga.edu/school-of-business-administration/undergraduate/business-administration/management-information-systems" target="\_blank">School of Business Administration</a>, Gonzaga University, USA.
 
 I am [supervising several Ph.D. candidates](/teaching-and-phd-supervision), and I always seek strong candidates who would like to do research in the areas listed above. Please find information about Ph.D. research opportunities <a href="https://www.drduydangpham.com/2022/06/11/phd-scholarship-at-rmit-vietnam.html" target="\_blank">here</a>.
 
@@ -54,5 +54,19 @@ Beyond academia, I am:
 - **Research lead** for various sustainability projects, including a <a href="https://genderdiversity.vn/" target="\_blank">gender equality and inclusion program</a> funded by the US Consulate General in Vietnam
 - **Visiting lecturer** for MBA programs at international universities in Vietnam, delivering courses on digital business and information systems
 - Passionate **investor** and **home barista**, continuously refining my knowledge and skills in both fields every day
+
+## Work with me
+I provide expert consulting, training, and advisory services at the intersection of academic research, digital transformation, and cybersecurity. You’re welcome to connect with me via email or LinkedIn (links below) for inquiries, collaborations, or consulting opportunities.
+
+### Academic & Research Services
+- Research mentorship for PhD candidates and early-career researchers
+- Grant proposal writing and research funding consulting
+- Research workshops on social network analysis, digital transformation, and cybersecurity
+
+### Executive & Professional Education
+- Keynote speaking and corporate training on digital innovation, cybersecurity, and AI adoption
+- Teaching in MBA and executive education programs on digital business and MIS
+- Capacity-building programs for government agencies and policymakers
+- Advisory on emerging technologies (AI, blockchain, IoT etc.), digital transformation, cybersecurity, and diversity and inclusion for tech and research industries
 
 <hr>
