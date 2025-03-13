@@ -46,12 +46,8 @@ Beyond academia, I am:
 ### work with me
 I provide expert consulting, training, and advisory services at the intersection of academic research, digital transformation, and cybersecurity. You’re welcome to connect with me via email or LinkedIn (links below) for inquiries, collaborations, or consulting opportunities.
 
-#### academic & research services
-- Research mentorship for PhD candidates and early-career researchers
-- Grant proposal writing and research funding consulting
-- Research workshops on social network analysis, digital transformation, and cybersecurity
-
 #### executive & professional education
+- Research workshops on social network analysis, digital transformation, and cybersecurity
 - Keynote speaking and corporate training on digital innovation, cybersecurity, and AI adoption
 - Teaching in MBA and executive education programs on digital business and MIS
 - Capacity-building programs for government agencies and policymakers
