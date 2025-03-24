@@ -13,8 +13,8 @@ children:
     - title: publications
       permalink: /publications/
     - title: divider
-    - title: projects
-      permalink: /projects/
+    - title: grants
+      permalink: /grants/
 ---
 
 1. [A short background](#short-background)

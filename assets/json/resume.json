@@ -3,22 +3,7 @@
     "name": "Duy Dang-Pham",
     "image": "",
     "email": "dr.duydangpham@gmail.com",
-    "url": "https://drduydangpham.com",
-    "summary": "A German-born theoretical physicist, widely ranked among the greatest and most influential scientists of all time",
-    "location": {
-      "address": "2712 Broadway St",
-      "postalCode": "CA 94115",
-      "city": "San Francisco",
-      "countryCode": "US",
-      "region": "California"
-    },
-    "profiles": [
-      {
-        "network": "Twitter",
-        "username": "AlbertEinstein",
-        "url": "https://twitter.com/AlbertEinstein"
-      }
-    ]
+    "url": "https://drduydangpham.com"
   },
   "work": [
     {
@@ -28,7 +13,6 @@
       "startDate": "1933-01-01",
       "endDate": "1955-01-01",
       "summary": "Teaching at Palmer Physical Laboratory (now 302 Frist Campus Center). While not a professor at Princeton, I associated with the physics professors and continued to give lectures on campus.",
-<<<<<<< HEAD
       "highlights": ["Relativity"]
     }
   ],
@@ -48,31 +32,13 @@
     {
       "institution": "University of Zurich, Zurich, Switzerland",
       "location": "Zurich, Switzerland",
-=======
-      "highlights": [
-        "Relativity"
-      ]
-    }
-  ],
-  "volunteer": [],
-  "education": [
-    {
-      "institution": "University of Zurich, Zurich, Switzerland",
->>>>>>> 0deb0635 (new website)
       "url": "https://www.uzh.ch/",
       "area": "Software Development",
       "studyType": "PhD",
       "startDate": "1905-01-01",
       "endDate": "1905-01-01",
-<<<<<<< HEAD
       "score": "10",
       "courses": ["Theory of Relativity"]
-=======
-      "score": "",
-      "courses": [
-        "Theory of Relativity"
-      ]
->>>>>>> 0deb0635 (new website)
     }
   ],
   "awards": [
@@ -80,7 +46,6 @@
       "title": "Nobel Prize in Physics",
       "date": "1921-11-01",
       "awarder": "Royal Swedish Academy of Sciences",
-<<<<<<< HEAD
       "url": "https://www.nobelprize.org/prizes/physics/1921/einstein/biographical/",
       "summary": "The Nobel Prizes are five separate prizes that, according to Alfred Nobel's will of 1895, are awarded to 'those who, during the preceding year, have conferred the greatest benefit to humankind.'"
     }
@@ -216,25 +181,3 @@
     }
   ]
 }
-=======
-      "summary": "The Nobel Prizes are five separate prizes that, according to Alfred Nobel's will of 1895, are awarded to 'those who, during the preceding year, have conferred the greatest benefit to humankind.'"
-    }
-  ],
-  "certificates": [],
-  "publications": [],
-  "skills": [],
-  "languages": [
-    {
-      "language": "German",
-      "fluency": "Native speaker"
-    },
-    {
-      "language": "English",
-      "fluency": "Fluent"
-    }
-  ],
-  "interests": [],
-  "references": [],
-  "projects": []
-}
->>>>>>> 0deb0635 (new website)

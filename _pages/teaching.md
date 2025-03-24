@@ -4,7 +4,7 @@ permalink: /teaching/
 title: teaching
 description: 
 nav: true
-nav_order: 6
+nav_order: 3
 ---
 
 <img src="../assets/img/feedback_wordcloud.png" alt="A word cloud of qualitative feedback from my students" width="80%" style="display: block; margin-left: auto; margin-right: auto;">
