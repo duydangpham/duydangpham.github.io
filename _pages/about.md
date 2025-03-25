@@ -41,11 +41,11 @@ As an MIS scholar and practitioner, my conversations and writing cover areas suc
 
 I'm privileged to collaborate with brilliant [PhD candidates](/teaching) on various MIS and management research topics.
 
-Together with my research partners, I have written/co-authored over 60 [articles](/publications) for internationally recognized research journals and conferences (available on my <a href="https://scholar.google.com.vn/citations?hl=en&user=lkYFFvAAAAAJ" target="\_blank">Google Scholar profile</a>). We have also acquired successfully a total [research funding](/_projects/) amount of approximately US$ 341,500 (up to 2023).
+Together with my research partners, I have written/co-authored over 60 [articles](/publications) for internationally recognized research journals and conferences (available on my <a href="https://scholar.google.com.vn/citations?hl=en&user=lkYFFvAAAAAJ" target="\_blank">Google Scholar profile</a>). We have also acquired successfully a total [research funding](/grants) amount of approximately US$ 341,500 (up to 2023).
 
 In 2024, I was honored to be appointed <b><a href="https://www.gonzaga.edu/news-events/stories/2024/8/12/meet-fulbright-scholar-in-residence-duy-dang" target="\_blank">Fulbright Scholar-in-Residence</a></b> at the <a href="https://www.gonzaga.edu/school-of-business-administration/undergraduate/business-administration/management-information-systems" target="\_blank">School of Business Administration</a>, Gonzaga University, USA.
 
-I am [supervising several Ph.D. candidates](/teaching-and-phd-supervision), and I always seek strong candidates who would like to do research in the areas listed above. Please find information about Ph.D. research opportunities <a href="https://www.drduydangpham.com/2022/06/11/phd-scholarship-at-rmit-vietnam.html" target="\_blank">here</a>.
+I am [supervising several Ph.D. candidates](/collaborators), and I always seek strong candidates who would like to do research in the areas listed above. Please find information about Ph.D. research opportunities <a href="https://www.drduydangpham.com/2022/06/11/phd-scholarship-at-rmit-vietnam.html" target="\_blank">here</a>.
 
 Beyond academia, I am:
 - **Co-founder** of the <a href="https://vn-ais.org/" target="\_blank">Vietnam Chapter of the Association for Information Systems (VAIS)</a>, fostering a network for IS researchers and professionals
