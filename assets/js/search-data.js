@@ -504,6 +504,11 @@ ninja.data = [{
           description: "British Standards Institution (BSI)",
           section: "Projects",handler: () => {
               window.location.href = "/projects/20_project/";
+            },},{id: "projects-ai-and-automation-for-human-resources-hr",
+          title: 'AI and automation for Human Resources (HR)',
+          description: "PNJ Jewelry Production and Trading (PNJP)",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/21_project/";
             },},{id: "projects-cybersecurity-incident-response-amp-decree-13",
           title: 'Cybersecurity Incident Response &amp;amp; Decree 13',
           description: "PPJ Group",
