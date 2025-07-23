@@ -30,13 +30,6 @@ ninja.data = [{
               handler: () => {
                 window.location.href = "/grants/";
               },
-            },{id: "dropdown-tbs-hdr-faqs",
-              title: "TBS HDR FAQs",
-              description: "",
-              section: "Dropdown",
-              handler: () => {
-                window.location.href = "/tbs_hdr/";
-              },
             },{id: "nav-teaching",
           title: "teaching",
           description: "",
