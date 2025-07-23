@@ -15,8 +15,6 @@ children:
     - title: divider
     - title: grants
       permalink: /grants/
-    - title: TBS HDR FAQs
-      permalink: /tbs_hdr/
 ---
 
 1. [A short background](#short-background)
