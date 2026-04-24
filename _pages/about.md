@@ -6,7 +6,7 @@ subtitle: MIS Researcher & Educator | Research Consultant | Academic Manager | F
 
 profile:
   align: right
-  image: duydangpham2024.jpg
+  image: duydangpham_2026.JPG
   image_circular: false # crops the image to make it circular
   more_info: >
     
