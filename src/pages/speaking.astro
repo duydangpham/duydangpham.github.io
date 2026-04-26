@@ -1,0 +1,173 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { personSchema } from '../data/schema-person';
+
+const title = 'Speaking';
+const description =
+  'Dr. Duy Dang-Pham is available for keynotes, workshops, and executive education on Organisational Network Analysis, AI strategy, AI champions, and digital transformation.';
+const canonicalUrl = '/speaking';
+
+const topics = [
+  {
+    icon: '⬡',
+    title: 'Organisational Network Analysis for Leaders',
+    audience: 'C-suite, HR leaders, OD practitioners',
+    description:
+      'How to use multiplex ONA to uncover hidden influence patterns, knowledge bottlenecks, and informal leadership — and act on these insights to improve collaboration, reduce turnover risk, and accelerate change.',
+  },
+  {
+    icon: '◈',
+    title: 'Designing AI Champion Programs',
+    audience: 'Digital transformation leaders, CHROs, CIOs',
+    description:
+      'A practical, evidence-based framework for identifying Oracle, Broker, and Silo-Buster archetypes inside your organisation and building a champion network that drives grass-roots AI adoption.',
+  },
+  {
+    icon: '◲',
+    title: 'AI Strategy for Vietnamese & Southeast Asian Organisations',
+    audience: 'Executives, boards, government agencies',
+    description:
+      'Contextualised AI strategy: from AI readiness assessment and workforce upskilling to governance frameworks and the ethical dimensions of AI deployment in ASEAN cultural contexts.',
+  },
+  {
+    icon: '◉',
+    title: 'Information Security Culture & Governance',
+    audience: 'CISOs, compliance teams, senior managers',
+    description:
+      'Why technical controls alone are insufficient — and how to build a security-positive organisational culture through behavioural science, network-based intervention design, and evidence-based governance.',
+  },
+  {
+    icon: '◑',
+    title: 'Network Science for the Modern Organisation',
+    audience: 'General audiences, academic communities',
+    description:
+      'An accessible introduction to graph theory, betweenness centrality, and community detection — and why these mathematical tools are transforming how we understand organisations, cities, and society.',
+  },
+];
+
+const engagements = [
+  { year: '2024', event: 'Fulbright Scholar-in-Residence Lecture Series', org: 'Gonzaga University', location: 'Spokane, WA, USA', topic: 'AI Strategy & Organisational Network Analysis' },
+  { year: '2023', event: 'ACIS 2023 Research Presentation', org: 'Australasian Conference on Information Systems', location: 'Wellington, New Zealand', topic: 'AI Champion Program Design Using ONA' },
+  { year: '2023', event: 'Executive Education Workshop', org: 'NetIQ / Corporate Partner', location: 'Ho Chi Minh City, Vietnam', topic: 'Multiplex ONA for HR & Leadership Teams' },
+  { year: '2022', event: 'PACIS 2022 Research Presentation', org: 'Pacific Asia Conference on Information Systems', location: 'Taipei, Taiwan', topic: 'Multiplex ONA Framework for AI Support Networks' },
+  { year: '2022', event: 'AI Transformation Summit (Panelist)', org: 'Vietnam Digital Economy Forum', location: 'Hanoi, Vietnam', topic: 'AI Champions & Grass-roots Digital Adoption' },
+  { year: '2021', event: 'RMIT Thought Leadership Seminar', org: 'RMIT University Vietnam', location: 'Ho Chi Minh City, Vietnam', topic: 'ONA and Knowledge Flows in Remote Work Settings' },
+  { year: '2020', event: 'ACIS 2020 Research Presentation', org: 'Australasian Conference on Information Systems', location: 'Melbourne, Australia (online)', topic: 'Information Security Policy Violations — Best Paper' },
+];
+---
+
+<BaseLayout
+  title={title}
+  description={description}
+  lang="en"
+  canonicalUrl={canonicalUrl}
+  jsonLd={personSchema}
+>
+  <div class="container--content">
+
+    <header class="page-header">
+      <h1>Speaking</h1>
+      <p class="lead">
+        I speak on organisational network analysis, AI champion programs, AI strategy, and
+        information security governance — for academic conferences, corporate boards, executive
+        education programmes, and public forums. My talks combine network-science rigour with
+        practical, actionable insights drawn from 15+ years of research in Southeast Asian
+        organisational contexts.
+      </p>
+      <a class="enquiry-btn" href="/contact">Enquire about speaking →</a>
+    </header>
+
+    <!-- Topics -->
+    <section class="section-block">
+      <h2>Keynote &amp; workshop topics</h2>
+      <div class="topics-grid">
+        {topics.map((t) => (
+          <article class="topic-card">
+            <div class="topic-card__icon" aria-hidden="true">{t.icon}</div>
+            <div>
+              <h3 class="topic-card__title">{t.title}</h3>
+              <p class="topic-card__audience">Audience: {t.audience}</p>
+              <p class="topic-card__desc">{t.description}</p>
+            </div>
+          </article>
+        ))}
+      </div>
+    </section>
+
+    <!-- Past engagements -->
+    <section class="section-block">
+      <h2>Selected past engagements</h2>
+      <div class="engagements">
+        {engagements.map((e) => (
+          <div class="engagement">
+            <span class="engagement__year">{e.year}</span>
+            <div class="engagement__detail">
+              <strong class="engagement__event">{e.event}</strong>
+              <span class="engagement__org">{e.org} · {e.location}</span>
+              <span class="engagement__topic">{e.topic}</span>
+            </div>
+          </div>
+        ))}
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="speaking-cta">
+      <h2>Invite me to speak</h2>
+      <p>
+        If you are organising a conference, executive retreat, corporate seminar, or academic
+        event and would like to discuss a speaking engagement, please reach out. I deliver
+        sessions in <strong>English</strong> and <strong>Vietnamese</strong> and can tailor
+        content to your audience and goals.
+      </p>
+      <a class="cta-btn cta-btn--primary" href="/contact">Get in touch →</a>
+    </section>
+
+  </div>
+</BaseLayout>
+
+<style>
+.page-header { gap: var(--space-lg); }
+
+.page-header .lead {
+  margin-bottom: 0;
+}
+
+.section-block { gap: 1rem; }
+
+.section-block h2 { margin-bottom: 0; }
+
+/* Topics */
+.topics-grid { display: grid; gap: 1rem; }
+
+.topic-card {
+  display: flex;
+  gap: 1rem;
+  align-items: flex-start;
+}
+
+.topic-card__icon { font-size: 1.35rem; flex-shrink: 0; color: var(--color-primary); line-height: 1.2; margin-top: 0.1rem; }
+.topic-card__title { margin-bottom: 0.25rem; }
+.topic-card__audience { color: var(--color-text-muted); font-style: italic; margin: 0 0 0.55rem; }
+.topic-card__desc { margin: 0; color: var(--color-text-secondary); line-height: 1.7; }
+
+/* Engagements */
+.engagements { display: grid; gap: 0.9rem; }
+
+.engagement {
+  display: grid;
+  grid-template-columns: 56px 1fr;
+  gap: 0.9rem;
+}
+
+.engagement__year { font-family: var(--font-mono); font-weight: 600; color: var(--color-primary); padding-top: 0.1rem; }
+.engagement__detail { display: flex; flex-direction: column; gap: 0.2rem; }
+.engagement__event { font-weight: 600; color: var(--color-text-primary); }
+.engagement__org { color: var(--color-text-muted); }
+.engagement__topic { color: var(--color-primary-dark); font-style: italic; }
+
+/* CTA */
+.speaking-cta { gap: 1rem; }
+.speaking-cta h2 { margin-bottom: 0; }
+.speaking-cta p { color: var(--color-text-secondary); margin-bottom: var(--space-lg); line-height: 1.7; }
+</style>

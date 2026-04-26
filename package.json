@@ -1,6 +1,17 @@
 {
-  "devDependencies": {
-    "@shopify/prettier-plugin-liquid": "1.4.0",
-    "prettier": "3.1.1"
+  "name": "drduydangpham-site",
+  "version": "0.0.1",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "new:post": "node ./scripts/create-post.mjs",
+    "import:publications": "node ./scripts/import-publications.mjs"
+  },
+  "dependencies": {
+    "@astrojs/rss": "latest",
+    "astro": "^4.0.0"
   }
 }

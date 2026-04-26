@@ -1,0 +1,315 @@
+---
+import {
+  buildPublicationSearchText,
+  getPublicationDoiUrl,
+  getPublicationPrimaryUrl,
+  type PublicationEntry,
+} from '../utils/publications';
+
+interface Props {
+  publication: PublicationEntry;
+}
+
+const { publication } = Astro.props;
+
+function normalizeAuthorName(value: string): string {
+  return value.toLowerCase().replace(/[^a-z]/g, '');
+}
+
+const highlightedNames = new Set([
+  'Duy Dang-Pham',
+  'Duy Dang Pham',
+  'Duy Dang',
+  'Duy Dang Pham Thien',
+  'Dang Pham Thien Duy',
+  'DPT Dang',
+  'D. Dang',
+].map(normalizeAuthorName));
+
+const primaryUrl = getPublicationPrimaryUrl(publication);
+const doiUrl = getPublicationDoiUrl(publication);
+const rawLinks = [
+  publication.data.pdf
+    ? { label: 'PDF', href: publication.data.pdf }
+    : undefined,
+  doiUrl ? { label: 'DOI', href: doiUrl } : undefined,
+  publication.data.url && publication.data.url !== doiUrl && publication.data.url !== publication.data.pdf
+    ? { label: 'Link', href: publication.data.url }
+    : undefined,
+];
+const links = rawLinks.filter(
+  (link): link is { label: string; href: string } => Boolean(link),
+);
+
+function getAuthorSeparator(index: number, total: number): string {
+  if (index === total - 1) {
+    return '';
+  }
+
+  if (index === total - 2) {
+    return total === 2 ? ' and ' : ', and ';
+  }
+
+  return ', ';
+}
+
+const searchText = buildPublicationSearchText(publication);
+---
+
+<article class="publication-card" data-publication-search={searchText}>
+  <div class="publication-card__preview">
+    {publication.data.thumbnail ? (
+      <img
+        class="publication-card__image"
+        src={publication.data.thumbnail}
+        alt={`Preview for ${publication.data.title}`}
+        loading="lazy"
+      />
+    ) : (
+      <div class="publication-card__placeholder" aria-hidden="true">
+        <span>{publication.data.year}</span>
+      </div>
+    )}
+  </div>
+
+  <div class="publication-card__body">
+    {publication.data.award && <p class="publication-card__award">{publication.data.award}</p>}
+
+    <h3 class="publication-card__title">
+      {primaryUrl ? (
+        <a href={primaryUrl} target="_blank" rel="noopener noreferrer">
+          {publication.data.title}
+        </a>
+      ) : (
+        publication.data.title
+      )}
+    </h3>
+
+    <p class="publication-card__authors">
+      {publication.data.authors.map((author, index) => (
+        <>
+          <span
+            class:list={[
+              'publication-card__author',
+              highlightedNames.has(normalizeAuthorName(author)) &&
+                'publication-card__author--self',
+            ]}
+          >
+            {author}
+          </span>
+          {getAuthorSeparator(index, publication.data.authors.length)}
+        </>
+      ))}
+    </p>
+
+    <p class="publication-card__venue">
+      {publication.data.journal && <em>{publication.data.journal}</em>}
+      {publication.data.journal && ', '}
+      {publication.data.year}
+    </p>
+
+    {(publication.data.tags.length > 0 || links.length > 0) && (
+      <div class="publication-card__meta">
+        {publication.data.tags.length > 0 && (
+          <div class="publication-card__tags" aria-label="Publication tags">
+            {publication.data.tags.map((tag) => (
+              <span class="tag">{tag}</span>
+            ))}
+          </div>
+        )}
+
+        {links.length > 0 && (
+          <div class="publication-card__links" aria-label="Publication links">
+            {links.map((link) => (
+              <a
+                class="publication-card__link"
+                href={link.href}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                {link.label}
+              </a>
+            ))}
+          </div>
+        )}
+      </div>
+    )}
+
+    {publication.data.abstract && (
+      <details class="publication-card__abstract">
+        <summary>Abstract</summary>
+        <div class="publication-card__abstract-content">
+          <p>{publication.data.abstract}</p>
+        </div>
+      </details>
+    )}
+  </div>
+</article>
+
+<style>
+.publication-card {
+  display: grid;
+  grid-template-columns: minmax(0, 7rem) minmax(0, 1fr);
+  gap: 1.1rem;
+  align-items: start;
+}
+
+.publication-card__preview {
+  min-width: 0;
+}
+
+.publication-card__image,
+.publication-card__placeholder {
+  aspect-ratio: 0.78;
+  width: 100%;
+  border: 1px solid var(--color-border);
+  border-radius: calc(var(--radius-md) - 4px);
+  background: linear-gradient(180deg, rgb(255 255 255 / 0.94), rgb(247 249 252 / 0.9));
+  box-shadow: var(--shadow-soft);
+}
+
+.publication-card__image {
+  object-fit: cover;
+}
+
+.publication-card__placeholder {
+  display: grid;
+  place-items: center;
+  color: var(--color-text-muted);
+  font-family: var(--font-mono);
+  font-size: 0.94rem;
+  letter-spacing: 0.08em;
+}
+
+.publication-card__body {
+  min-width: 0;
+}
+
+.publication-card__award {
+  margin-bottom: 0.55rem;
+  color: var(--color-accent-dark);
+  font-size: var(--text-sm);
+  font-weight: 700;
+}
+
+.publication-card__title {
+  margin-bottom: 0.55rem;
+  font-size: var(--title-card);
+  line-height: 1.24;
+}
+
+.publication-card__title a {
+  color: var(--color-text-primary);
+}
+
+.publication-card__title a:hover {
+  color: var(--color-primary);
+}
+
+.publication-card__authors,
+.publication-card__venue {
+  margin-bottom: 0.55rem;
+}
+
+.publication-card__authors {
+  color: var(--color-text-secondary);
+  font-size: var(--text-sm);
+  line-height: 1.72;
+}
+
+.publication-card__author--self {
+  color: var(--color-primary-dark);
+  font-weight: 700;
+}
+
+.publication-card__venue {
+  color: var(--color-text-muted);
+  font-size: var(--text-sm);
+}
+
+.publication-card__venue em {
+  color: inherit;
+  font-family: var(--font-serif);
+}
+
+.publication-card__meta {
+  display: grid;
+  gap: 0.8rem;
+  margin-top: 0.8rem;
+}
+
+.publication-card__tags,
+.publication-card__links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.publication-card__link {
+  display: inline-flex;
+  align-items: center;
+  min-height: 2.25rem;
+  padding: 0.42rem 0.8rem;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-pill);
+  background: rgb(255 255 255 / 0.82);
+  color: var(--color-text-primary);
+  font-size: 0.8rem;
+  font-weight: 700;
+}
+
+.publication-card__link:hover {
+  border-color: rgb(116 43 57 / 0.22);
+  color: var(--color-primary);
+}
+
+.publication-card__abstract {
+  margin-top: 1rem;
+  border-top: 1px solid var(--color-border);
+  padding-top: 1rem;
+}
+
+.publication-card__abstract summary {
+  display: inline-flex;
+  align-items: center;
+  min-height: 2.25rem;
+  padding: 0.42rem 0.8rem;
+  border: 1px solid rgb(116 43 57 / 0.14);
+  border-radius: var(--radius-pill);
+  background: rgb(116 43 57 / 0.08);
+  color: var(--color-primary-dark);
+  font-size: 0.8rem;
+  font-weight: 700;
+  cursor: pointer;
+  list-style: none;
+}
+
+.publication-card__abstract summary::-webkit-details-marker {
+  display: none;
+}
+
+.publication-card__abstract[open] summary {
+  background: rgb(116 43 57 / 0.12);
+}
+
+.publication-card__abstract-content {
+  margin-top: 0.9rem;
+  color: var(--color-text-secondary);
+  font-size: var(--text-sm);
+  line-height: 1.76;
+}
+
+.publication-card__abstract-content p:last-child {
+  margin-bottom: 0;
+}
+
+@media (max-width: 767px) {
+  .publication-card {
+    grid-template-columns: 1fr;
+  }
+
+  .publication-card__preview {
+    max-width: 8.5rem;
+  }
+}
+</style>

@@ -1,0 +1,58 @@
+---
+import { render } from 'astro:content';
+import { createBlogPostSchema } from '../../data/schema-blog-post';
+import PostLayout from '../../layouts/PostLayout.astro';
+import {
+  estimateReadingTimeMinutes,
+  getInsightsIndexUrl,
+  getPublishedPosts,
+  getPostRouteSlug,
+  getPostUrl,
+  type PostEntry,
+} from '../../utils/posts';
+
+export async function getStaticPaths() {
+  const posts = await getPublishedPosts();
+
+  return posts.map((post) => ({
+    params: { slug: getPostRouteSlug(post) },
+    props: { post },
+  }));
+}
+
+const { post } = Astro.props as { post: PostEntry };
+const canonicalUrl = getPostUrl(post);
+const { Content, headings } = await render(post);
+const readingTime = estimateReadingTimeMinutes(post.body);
+
+const jsonLd = createBlogPostSchema({
+  title: post.data.title,
+  description: post.data.description,
+  url: `https://drduydangpham.com${canonicalUrl}`,
+  lang: 'en',
+  datePublished: post.data.date.toISOString(),
+  dateModified: post.data.updatedDate?.toISOString(),
+  tags: post.data.tags,
+  ogImage: post.data.ogImage
+    ? new URL(post.data.ogImage, 'https://drduydangpham.com').toString()
+    : undefined,
+});
+---
+
+<PostLayout
+  title={post.data.title}
+  description={post.data.description}
+  lang="en"
+  canonicalUrl={canonicalUrl}
+  publishedAt={post.data.date}
+  updatedAt={post.data.updatedDate}
+  tags={post.data.tags}
+  readingTime={readingTime}
+  backHref={getInsightsIndexUrl()}
+  backLabel="Back to Insights"
+  headings={headings}
+  jsonLd={jsonLd}
+  ogImage={post.data.ogImage}
+>
+  <Content />
+</PostLayout>

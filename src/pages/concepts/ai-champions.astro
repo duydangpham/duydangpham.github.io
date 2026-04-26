@@ -1,0 +1,283 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { createConceptPageSchema } from '../../data/schema-concept-page';
+
+const canonicalUrl = '/concepts/ai-champions';
+
+const jsonLd = createConceptPageSchema({
+  name: 'AI Champions',
+  description:
+    'AI Champions are individuals identified through Organisational Network Analysis as having the network position, influence, and credibility to drive grass-roots AI adoption within their organisations. Three archetypes exist: Oracle (high betweenness centrality across all network layers), Broker (high inter-community betweenness), and Silo Buster (peripheral but cross-community connector).',
+  url: `https://drduydangpham.com${canonicalUrl}`,
+  faqs: [
+    {
+      question: 'What is an AI Champion?',
+      answer:
+        'An AI Champion is an employee identified through ONA as having the network position and social capital to credibly advocate for AI adoption among peers. Unlike top-down executive mandates, AI Champions influence adoption organically through trusted relationships.',
+    },
+    {
+      question: 'What are the three AI Champion archetypes?',
+      answer:
+        'Oracle: high betweenness centrality across all network layers — the expert everyone trusts. Broker: high betweenness between community clusters — the cross-boundary connector. Silo Buster: low internal centrality but high inter-community ties — prevents knowledge hoarding and spreads AI practices beyond isolated teams.',
+    },
+    {
+      question: 'How are AI Champions identified using ONA?',
+      answer:
+        'We administer a multiplex ONA survey to map five network layers. Betweenness centrality is computed per layer and aggregated. Infomap community detection identifies cluster boundaries. Individuals are then classified as Oracle, Broker, or Silo Buster based on their structural position across these measures.',
+    },
+    {
+      question: 'Why are AI Champions more effective than top-down AI mandates?',
+      answer:
+        'Change research consistently shows that peer influence is more persuasive than authority. AI Champions are already trusted within their social networks — making their AI endorsements far more credible and behaviour-changing than directives from senior leadership.',
+    },
+    {
+      question: 'How is an AI Champion Program designed?',
+      answer:
+        'After ONA-based identification, Champions receive specialised training in AI tools relevant to their role, a mandate to share learnings with their network, structured "champion hours" to assist colleagues, and periodic recognition and feedback. ONA is re-administered after 6–12 months to measure network change.',
+    },
+  ],
+});
+
+const title = 'AI Champions';
+const description =
+  'AI Champions are ONA-identified individuals who drive grass-roots AI adoption through their network position and social capital. Learn about the three archetypes — Oracle, Broker, and Silo Buster — and how to design an AI Champion Program.';
+---
+
+<BaseLayout
+  title={title}
+  description={description}
+  lang="en"
+  canonicalUrl={canonicalUrl}
+  jsonLd={jsonLd}
+>
+  <div class="container--content">
+
+    <header class="concept-header">
+      <div class="concept-header__eyebrow">
+        <a href="/research">Research</a> / Concepts
+      </div>
+      <h1>AI Champions</h1>
+      <p class="lead">
+        AI Champions are network-identified individuals whose structural position within the
+        organisation gives them the social capital to drive organic, peer-to-peer AI adoption
+        — far more effectively than top-down mandates alone.
+      </p>
+    </header>
+
+    <section class="concept-section">
+      <h2>The problem with top-down AI adoption</h2>
+      <p>
+        Most organisations attempt AI adoption through executive mandates: a leadership
+        decision is made, a strategy is announced, training programmes are rolled out, and
+        employees are expected to change their behaviour. The results are predictably mixed.
+        Survey after survey shows that AI adoption rates stagnate not because tools are
+        unavailable, but because <em>social trust</em> is missing.
+      </p>
+      <p>
+        Employees adopt new technologies when people <em>they already trust</em> model and
+        advocate for those technologies. The challenge is identifying who those trusted
+        individuals are — because they rarely appear on the org chart. This is precisely the
+        problem that ONA and AI Champion programs are designed to solve.
+      </p>
+    </section>
+
+    <!-- Archetypes -->
+    <section class="concept-section">
+      <h2>The three AI Champion archetypes</h2>
+      <p>
+        Using betweenness centrality and Infomap community detection applied to multiplex ONA
+        data, my research has identified three distinct archetypes that every effective AI
+        champion program needs:
+      </p>
+
+      <div class="archetype-cards">
+        <div class="archetype-card archetype-card--oracle">
+          <div class="archetype-card__header">
+            <span class="archetype-card__icon" aria-hidden="true">◎</span>
+            <div>
+              <h3 class="archetype-card__name">Oracle</h3>
+              <p class="archetype-card__tag">High cross-layer betweenness centrality</p>
+            </div>
+          </div>
+          <p class="archetype-card__body">
+            Oracles are the most central individuals across multiple network layers — the
+            people everyone turns to for advice, information, and trust. Their AI endorsement
+            carries maximum credibility and propagates rapidly through the network. When an
+            Oracle says "this AI tool changed how I work," the message is heard and believed.
+          </p>
+          <p class="archetype-card__body">
+            <strong>Program role:</strong> Core advocates and visible sponsors of the AI
+            champion program. Prioritise for early AI tool access, deep training, and
+            public recognition.
+          </p>
+        </div>
+
+        <div class="archetype-card archetype-card--broker">
+          <div class="archetype-card__header">
+            <span class="archetype-card__icon" aria-hidden="true">◇</span>
+            <div>
+              <h3 class="archetype-card__name">Broker</h3>
+              <p class="archetype-card__tag">High inter-community betweenness</p>
+            </div>
+          </div>
+          <p class="archetype-card__body">
+            Brokers sit at the boundary between organisational communities (departments,
+            divisions, or informal groups identified by Infomap). They are the translators
+            and connectors who relay knowledge across silos. A Broker in Sales who is also
+            connected to Engineering can transfer AI use-cases between otherwise disconnected
+            teams.
+          </p>
+          <p class="archetype-card__body">
+            <strong>Program role:</strong> Cross-functional AI knowledge transfer agents.
+            Equip Brokers with AI case studies from multiple domains and empower them to
+            facilitate cross-departmental AI learning sessions.
+          </p>
+        </div>
+
+        <div class="archetype-card archetype-card--silo">
+          <div class="archetype-card__header">
+            <span class="archetype-card__icon" aria-hidden="true">◈</span>
+            <div>
+              <h3 class="archetype-card__name">Silo Buster</h3>
+              <p class="archetype-card__tag">Low internal centrality, high inter-community ties</p>
+            </div>
+          </div>
+          <p class="archetype-card__body">
+            Silo Busters are not the most prominent figures within their own teams, but they
+            maintain meaningful connections across multiple organisational communities.
+            Without deliberate program design, isolated teams risk developing divergent AI
+            practices or — worse — remaining entirely un-reached by AI adoption efforts.
+            Silo Busters prevent this by acting as the last-mile connectors.
+          </p>
+          <p class="archetype-card__body">
+            <strong>Program role:</strong> Outreach specialists for hard-to-reach pockets
+            of the organisation. Identify which isolated communities they bridge and
+            task them with ensuring no team is left behind.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Program design -->
+    <section class="concept-section">
+      <h2>Designing an AI Champion Program</h2>
+      <p>
+        An effective AI Champion Program built on ONA data follows five phases:
+      </p>
+      <ol class="program-steps">
+        <li>
+          <strong>ONA diagnostic</strong> — administer a multiplex ONA survey to map all five network layers across the target population.
+        </li>
+        <li>
+          <strong>Archetype classification</strong> — compute betweenness centrality per layer, run Infomap community detection, classify each individual as Oracle, Broker, or Silo Buster.
+        </li>
+        <li>
+          <strong>Program design</strong> — define role-specific Champion responsibilities, training content, time allocations ("champion hours"), recognition mechanisms, and success metrics.
+        </li>
+        <li>
+          <strong>Activation</strong> — onboard Champions with dedicated AI training, communication templates, and access to an internal Champion community of practice.
+        </li>
+        <li>
+          <strong>Measurement</strong> — re-administer the ONA after 6–12 months to track whether the AI Support network has expanded, silos have dissolved, and adoption rates have improved.
+        </li>
+      </ol>
+    </section>
+
+    <!-- FAQ -->
+    <section class="concept-section faq-section">
+      <h2>Frequently asked questions</h2>
+      <div class="faq-list">
+        <details class="faq-item">
+          <summary>What is an AI Champion?</summary>
+          <p>An AI Champion is an employee identified through ONA as having the network position and social capital to credibly advocate for AI adoption among peers. Unlike top-down executive mandates, AI Champions influence adoption organically through trusted relationships.</p>
+        </details>
+        <details class="faq-item">
+          <summary>What are the three AI Champion archetypes?</summary>
+          <p>Oracle: high betweenness centrality across all network layers — the expert everyone trusts. Broker: high betweenness between community clusters — the cross-boundary connector. Silo Buster: low internal centrality but high inter-community ties — prevents knowledge hoarding and spreads AI practices beyond isolated teams.</p>
+        </details>
+        <details class="faq-item">
+          <summary>How are AI Champions identified using ONA?</summary>
+          <p>We administer a multiplex ONA survey to map five network layers. Betweenness centrality is computed per layer and aggregated. Infomap community detection identifies cluster boundaries. Individuals are then classified as Oracle, Broker, or Silo Buster based on their structural position.</p>
+        </details>
+        <details class="faq-item">
+          <summary>Why are AI Champions more effective than top-down AI mandates?</summary>
+          <p>Change research consistently shows that peer influence is more persuasive than authority. AI Champions are already trusted within their social networks — making their AI endorsements far more credible and behaviour-changing than directives from senior leadership.</p>
+        </details>
+        <details class="faq-item">
+          <summary>How is an AI Champion Program designed?</summary>
+          <p>After ONA-based identification, Champions receive specialised training, a mandate to share learnings, structured "champion hours" to assist colleagues, and periodic recognition. ONA is re-administered after 6–12 months to measure network change.</p>
+        </details>
+      </div>
+    </section>
+
+    <nav class="related-concepts" aria-label="Related concepts">
+      <h2>Related concepts</h2>
+      <div class="related-grid">
+        <a class="related-card" href="/concepts/organizational-network-analysis">
+          <strong>Organisational Network Analysis</strong>
+          <p>The multiplex ONA framework that underpins AI Champion identification.</p>
+        </a>
+        <a class="related-card" href="/concepts/betweenness-centrality">
+          <strong>Betweenness Centrality</strong>
+          <p>The key metric for classifying Oracle and Broker archetypes.</p>
+        </a>
+      </div>
+    </nav>
+
+  </div>
+</BaseLayout>
+
+<style>
+.concept-header { gap: var(--space-sm); }
+.concept-header__eyebrow { font-size: 0.85rem; color: var(--color-text-muted); margin-bottom: var(--space-sm); }
+.concept-header__eyebrow a { color: var(--color-primary-dark); text-decoration: underline; }
+.concept-header h1 { max-width: none; margin-bottom: 0; font-size: clamp(2.35rem, 5vw, 3.8rem); }
+.concept-header .lead { margin: 0; max-width: 60ch; }
+
+.concept-section { gap: 1rem; }
+.concept-section h2 { margin-bottom: 0; }
+.concept-section p, .concept-section li { color: var(--color-text-secondary); line-height: 1.75; }
+.concept-section p { margin-bottom: 0; }
+.concept-section a { color: var(--color-primary-dark); text-decoration: underline; }
+
+/* Archetype cards */
+.archetype-cards { display: grid; gap: var(--space-lg); margin-top: var(--space-lg); }
+
+.archetype-card { border-top: 4px solid var(--color-border); }
+.archetype-card--oracle { border-top-color: var(--color-primary); }
+.archetype-card--broker { border-top-color: var(--color-accent); }
+.archetype-card--silo   { border-top-color: #c07000; }
+
+.archetype-card__header { display: flex; align-items: flex-start; gap: var(--space-md); margin-bottom: var(--space-lg); }
+.archetype-card__icon { font-size: 1.75rem; line-height: 1; flex-shrink: 0; }
+.archetype-card--oracle .archetype-card__icon { color: var(--color-primary); }
+.archetype-card--broker .archetype-card__icon { color: var(--color-accent); }
+.archetype-card--silo   .archetype-card__icon { color: #c07000; }
+
+.archetype-card__name { font-size: 1.25rem; margin-bottom: 0.2rem; }
+.archetype-card__tag { font-size: 0.8rem; color: var(--color-text-muted); font-style: italic; margin: 0; }
+.archetype-card__body { margin-bottom: var(--space-md); font-size: 0.95rem; }
+.archetype-card__body:last-child { margin-bottom: 0; }
+
+/* Program steps */
+.program-steps { counter-reset: none; padding-left: 0; list-style: none; display: grid; gap: var(--space-md); }
+.program-steps li { display: flex; gap: var(--space-md); padding: var(--space-md) var(--space-lg); background: var(--color-background-secondary); border-radius: var(--radius-md); font-size: 0.95rem; color: var(--color-text-secondary); line-height: 1.65; counter-increment: steps; }
+.program-steps li::before { content: counter(steps, decimal-leading-zero); font-family: var(--font-mono); font-size: 0.75rem; font-weight: 700; color: var(--color-accent); flex-shrink: 0; padding-top: 0.15rem; }
+
+/* FAQ */
+.faq-list { display: grid; gap: var(--space-sm); }
+.faq-item summary { padding: var(--space-md) var(--space-lg); font-weight: 600; cursor: pointer; list-style: none; display: flex; justify-content: space-between; align-items: center; font-size: 0.975rem; }
+.faq-item summary::-webkit-details-marker { display: none; }
+.faq-item summary::after { content: '+'; font-size: 1.25rem; color: var(--color-accent); transition: transform var(--transition-base); }
+.faq-item[open] summary::after { content: '−'; }
+.faq-item p { padding: 0 var(--space-lg) var(--space-lg); margin: 0; color: var(--color-text-secondary); font-size: 0.9rem; line-height: 1.7; }
+
+/* Related */
+.related-concepts { margin-top: var(--space-xl); }
+.related-concepts h2 { margin-bottom: var(--space-lg); }
+.related-grid { display: grid; gap: var(--space-md); grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); }
+.related-card { display: block; text-decoration: none; transition: border-color var(--transition-base), box-shadow var(--transition-base); }
+.related-card:hover { border-color: var(--color-border); box-shadow: 0 4px 12px rgb(0 0 0 / 0.06); }
+.related-card strong { display: block; font-size: 1rem; color: var(--color-text-primary); margin-bottom: var(--space-xs); }
+.related-card p { margin: 0; font-size: 0.875rem; color: var(--color-text-secondary); line-height: 1.5; }
+</style>

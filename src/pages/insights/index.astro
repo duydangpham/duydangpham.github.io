@@ -1,0 +1,155 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { getPostUrl, getPublishedPosts } from '../../utils/posts';
+
+const title = 'Insights';
+const description =
+  'Writing by Dr. Duy Dang-Pham on Organisational Network Analysis, AI strategy, AI champions, information security, and digital transformation in Southeast Asia.';
+const canonicalUrl = '/insights/';
+
+const posts = await getPublishedPosts();
+const allTags = [...new Set(posts.flatMap((p) => p.data.tags))].sort();
+const hasContent = posts.length > 0;
+---
+
+<BaseLayout
+  title={title}
+  description={description}
+  lang="en"
+  canonicalUrl={canonicalUrl}
+>
+  <div class="container--content">
+
+    <header class="page-header">
+      <h1>Insights</h1>
+      <p class="lead">
+        Longer-form writing on Organisational Network Analysis, AI strategy, AI champion
+        programs, information security, and digital transformation — drawing on my research
+        and practical work across Vietnam and Southeast Asia.
+      </p>
+    </header>
+
+    {hasContent ? (
+      <>
+        {allTags.length > 0 && (
+          <nav class="tag-nav" aria-label="Filter by topic">
+            <span class="tag-nav__label">Topics:</span>
+            {allTags.map((tag) => (
+              <span class="tag">{tag}</span>
+            ))}
+          </nav>
+        )}
+
+        <ol class="post-list">
+          {posts.map((post) => (
+            <li class="post-item">
+              <article>
+                <div class="post-item__meta">
+                  <time class="post-item__date" datetime={post.data.date.toISOString()}>
+                    {post.data.date.toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })}
+                  </time>
+                  <div class="post-item__tags">
+                    {post.data.tags.map((tag) => <span class="tag tag--sm">{tag}</span>)}
+                  </div>
+                </div>
+                <h2 class="post-item__title">
+                  <a href={getPostUrl(post)}>{post.data.title}</a>
+                </h2>
+                {post.data.description && (
+                  <p class="post-item__excerpt">{post.data.description}</p>
+                )}
+                <a class="post-item__readmore" href={getPostUrl(post)}>
+                  Read more →
+                </a>
+              </article>
+            </li>
+          ))}
+        </ol>
+      </>
+    ) : (
+      <!-- Empty state while no posts exist yet -->
+      <div class="empty-state">
+        <div class="empty-state__icon" aria-hidden="true">✍️</div>
+        <h2 class="empty-state__title">Coming soon</h2>
+        <p class="empty-state__body">
+          I am currently preparing a series of Insights posts on Organisational Network
+          Analysis, AI champion program design, information security governance, and
+          digital transformation in Vietnamese enterprises. Check back soon, or explore
+          my published research in the meantime.
+        </p>
+        <p class="empty-state__hint">
+          To publish your first post, add a Markdown file in <code>src/content/posts/</code>
+          and set <code>draft: false</code>.
+        </p>
+        <div class="empty-state__actions">
+          <a class="cta-btn cta-btn--primary" href="/publications">View publications →</a>
+          <a class="cta-btn cta-btn--outline" href="/research">Research areas</a>
+        </div>
+
+        <!-- Upcoming topics preview -->
+        <div class="upcoming">
+          <h3>Upcoming topics</h3>
+          <ul class="upcoming-list">
+            <li>How to run your first ONA study: a step-by-step guide</li>
+            <li>Oracle, Broker, Silo-Buster: understanding your AI champion archetypes</li>
+            <li>Why your AI transformation is stalling (and what network science can reveal)</li>
+            <li>Betweenness centrality for non-mathematicians</li>
+            <li>Building a security-positive culture: beyond policy and compliance</li>
+            <li>Infomap community detection explained for organisational leaders</li>
+          </ul>
+        </div>
+      </div>
+    )}
+
+  </div>
+</BaseLayout>
+
+<style>
+.page-header { gap: var(--space-lg); }
+
+/* Tags */
+.tag-nav { display: flex; flex-wrap: wrap; align-items: center; gap: var(--space-sm); margin-bottom: 1rem; padding: 1rem 1.2rem; }
+.tag--sm { font-size: 0.73rem; }
+
+/* Post list */
+.post-list { list-style: none; padding: 0; margin: 0; display: grid; gap: 1rem; }
+
+.post-item {
+  padding: var(--space-card);
+}
+
+.post-item__meta { display: flex; flex-wrap: wrap; align-items: center; gap: 0.75rem; margin-bottom: 0.8rem; }
+.post-item__date { font-family: var(--font-mono); color: var(--color-text-muted); }
+.post-item__tags { display: flex; flex-wrap: wrap; gap: var(--space-xs); }
+
+.post-item__title { font-size: clamp(1.3rem, 2vw, 1.55rem); line-height: 1.18; margin-bottom: 0.7rem; }
+.post-item__title a { color: var(--color-text-primary); text-decoration: underline; text-decoration-thickness: 0.08em; text-underline-offset: 0.2em; }
+.post-item__title a:hover { color: var(--color-primary-dark); }
+
+.post-item__excerpt { color: var(--color-text-secondary); line-height: 1.72; margin-bottom: 1rem; }
+.post-item__readmore { font-weight: 600; font-size: 0.9rem; color: var(--color-primary-dark); text-decoration: underline; text-decoration-thickness: 0.08em; text-underline-offset: 0.2em; }
+.post-item__readmore:hover { color: var(--color-primary); }
+
+/* Empty state */
+.empty-state {
+  padding: var(--space-2xl);
+  text-align: center;
+}
+
+.empty-state__icon { font-size: 3rem; margin-bottom: var(--space-lg); display: block; }
+.empty-state__title { font-size: 1.75rem; margin-bottom: var(--space-md); }
+.empty-state__body { color: var(--color-text-secondary); max-width: 54ch; margin-inline: auto; margin-bottom: var(--space-xl); line-height: 1.7; }
+.empty-state__hint { color: var(--color-text-muted); max-width: 54ch; margin-inline: auto; margin-bottom: var(--space-xl); font-size: 0.925rem; line-height: 1.7; }
+.empty-state__hint code { padding: 0.15rem 0.35rem; border-radius: var(--radius-sm); background: var(--color-background-secondary); font-family: var(--font-mono); font-size: 0.82em; }
+
+.empty-state__actions { display: flex; flex-wrap: wrap; gap: var(--space-md); justify-content: center; margin-bottom: var(--space-2xl); }
+
+.upcoming {
+  text-align: left;
+  max-width: 52ch;
+  margin-inline: auto;
+}
+.upcoming h3 { font-size: 1.125rem; margin-bottom: var(--space-md); }
+.upcoming-list { margin: 0; padding-left: 1.25rem; display: grid; gap: var(--space-sm); }
+.upcoming-list li { color: var(--color-text-secondary); font-size: 0.925rem; line-height: 1.5; }
+</style>

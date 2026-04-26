@@ -1,0 +1,280 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { createConceptPageSchema } from '../../data/schema-concept-page';
+
+const canonicalUrl = '/concepts/organizational-network-analysis';
+
+const jsonLd = createConceptPageSchema({
+  name: 'Organisational Network Analysis (ONA)',
+  description:
+    'Organisational Network Analysis (ONA) is the application of social network methods to study the relationships, information flows, and influence structures within and between organisations, using graph-theoretic metrics to reveal informal organisational dynamics invisible to traditional surveys.',
+  url: `https://drduydangpham.com${canonicalUrl}`,
+  sameAs: ['https://en.wikipedia.org/wiki/Organizational_network_analysis'],
+  faqs: [
+    {
+      question: 'What is Organisational Network Analysis (ONA)?',
+      answer:
+        'ONA is the systematic mapping and analysis of formal and informal relationships within an organisation using social network methods. It reveals who shares information with whom, who influences decisions, and where knowledge bottlenecks exist — insights that org charts and employee surveys cannot provide.',
+    },
+    {
+      question: 'What is a multiplex network in ONA?',
+      answer:
+        'A multiplex network layers multiple relationship types — such as Work Advice, AI Support, Trust, Information, and Collaboration ties — into a single analytical model. Examining all layers simultaneously reveals richer structural patterns than any single network type can provide.',
+    },
+    {
+      question: 'What metrics are used in ONA?',
+      answer:
+        'Common ONA metrics include degree centrality (number of direct connections), betweenness centrality (how often a person lies on the shortest path between others), closeness centrality, and eigenvector centrality. Community detection algorithms such as Infomap identify clusters of tightly connected individuals.',
+    },
+    {
+      question: 'How is ONA data collected?',
+      answer:
+        'ONA data is typically collected via relational surveys asking employees to nominate whom they turn to for specific purposes (e.g., "Who do you ask for advice about AI tools?"). Passive data from email metadata, collaboration tools, or calendars can supplement survey data.',
+    },
+    {
+      question: 'What can ONA reveal that traditional HR tools cannot?',
+      answer:
+        'ONA uncovers the informal organisation: the real knowledge brokers, hidden silos, overloaded central nodes, peripheral employees at risk of disengagement, and the true information pathways through which change and innovation travel — all invisible on an org chart.',
+    },
+  ],
+});
+
+const title = 'Organisational Network Analysis (ONA)';
+const description =
+  'A comprehensive guide to Organisational Network Analysis — what it is, how it works, key metrics, and how Dr. Duy Dang-Pham applies multiplex ONA to reveal hidden influence structures in Vietnamese and Southeast Asian organisations.';
+---
+
+<BaseLayout
+  title={title}
+  description={description}
+  lang="en"
+  canonicalUrl={canonicalUrl}
+  jsonLd={jsonLd}
+>
+  <div class="container--content">
+
+    <header class="concept-header">
+      <div class="concept-header__eyebrow">
+        <a href="/research">Research</a> / Concepts
+      </div>
+      <h1>Organisational Network Analysis</h1>
+      <p class="concept-header__abbr">ONA</p>
+      <p class="lead">
+        Organisational Network Analysis (ONA) applies social network methods to map the
+        invisible relational architecture inside organisations — revealing who really
+        influences whom, where knowledge flows, and where it gets stuck.
+      </p>
+    </header>
+
+    <!-- Definition -->
+    <section class="concept-section">
+      <h2>What is ONA?</h2>
+      <p>
+        Every organisation has two structures: the <em>formal</em> structure depicted in an
+        org chart, and the <em>informal</em> structure — the real network of relationships
+        through which work actually gets done, decisions are influenced, and knowledge travels.
+        Organisational Network Analysis is the discipline that maps and measures this second,
+        informal structure using the mathematical tools of graph theory and social network
+        analysis.
+      </p>
+      <p>
+        In a traditional ONA study, employees are asked a series of relational questions:
+        "Whom do you turn to for work advice?", "Whom do you trust with sensitive information?",
+        "Who helps you with AI tools?" These responses are modelled as a directed graph in which
+        nodes represent people and edges represent relationships. Network-science algorithms then
+        compute structural metrics that reveal patterns invisible to conventional surveys or
+        management intuition.
+      </p>
+    </section>
+
+    <!-- Multiplex ONA -->
+    <section class="concept-section">
+      <h2>Multiplex ONA: the five-layer framework</h2>
+      <p>
+        My research extends classical ONA by employing a <strong>multiplex network</strong>
+        framework — simultaneously analysing five distinct relationship layers within a single
+        integrated model:
+      </p>
+      <div class="layer-grid">
+        <div class="layer layer--work">
+          <strong class="layer__name">Work Advice</strong>
+          <p class="layer__desc">Who do people turn to for task-related expertise and problem-solving guidance?</p>
+        </div>
+        <div class="layer layer--ai">
+          <strong class="layer__name">AI Support</strong>
+          <p class="layer__desc">Who helps colleagues navigate AI tools, interpret AI outputs, or overcome AI-related challenges?</p>
+        </div>
+        <div class="layer layer--trust">
+          <strong class="layer__name">Trust</strong>
+          <p class="layer__desc">Whom do people trust to share sensitive or politically charged organisational information?</p>
+        </div>
+        <div class="layer layer--info">
+          <strong class="layer__name">Information</strong>
+          <p class="layer__desc">Who proactively shares timely and relevant organisational information with others?</p>
+        </div>
+        <div class="layer layer--collab">
+          <strong class="layer__name">Collaboration</strong>
+          <p class="layer__desc">Who actively collaborates on cross-functional projects and initiatives?</p>
+        </div>
+      </div>
+      <p>
+        By integrating all five layers, multiplex ONA produces a far richer and more reliable
+        picture of organisational structure than any single-layer analysis. Individuals who are
+        central across multiple layers are particularly influential — and particularly critical
+        to organisational resilience.
+      </p>
+    </section>
+
+    <!-- Key metrics -->
+    <section class="concept-section">
+      <h2>Key ONA metrics</h2>
+      <div class="metrics-grid">
+        <div class="metric">
+          <strong class="metric__name">Betweenness Centrality</strong>
+          <p class="metric__desc">
+            Measures how often a person lies on the shortest path between all other pairs of
+            people in the network. High betweenness = a critical bridge or broker.
+            <a href="/concepts/betweenness-centrality">Learn more →</a>
+          </p>
+        </div>
+        <div class="metric">
+          <strong class="metric__name">Degree Centrality</strong>
+          <p class="metric__desc">
+            The count of direct connections. High degree = a hub. In the AI Support layer,
+            high in-degree identifies the go-to AI experts.
+          </p>
+        </div>
+        <div class="metric">
+          <strong class="metric__name">Closeness Centrality</strong>
+          <p class="metric__desc">
+            How quickly a person can reach all others in the network. High closeness = rapid
+            information access and influence spread.
+          </p>
+        </div>
+        <div class="metric">
+          <strong class="metric__name">Infomap Community Detection</strong>
+          <p class="metric__desc">
+            An algorithm that identifies tightly connected clusters (communities) within the
+            network by modelling information flow. Essential for spotting silos and natural
+            team boundaries.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Applications -->
+    <section class="concept-section">
+      <h2>Applications in practice</h2>
+      <p>ONA insights enable a range of high-value organisational interventions:</p>
+      <ul>
+        <li><strong>AI champion identification</strong> — using betweenness centrality and Infomap to find Oracle, Broker, and Silo-Buster archetypes who can lead grass-roots AI adoption.</li>
+        <li><strong>Change management</strong> — identifying the informal influencers who must be engaged for a transformation initiative to succeed or fail.</li>
+        <li><strong>Knowledge retention</strong> — spotting over-centralised knowledge brokers whose departure would create organisational knowledge loss.</li>
+        <li><strong>Team design</strong> — using community structure to inform agile team composition and cross-functional collaboration design.</li>
+        <li><strong>Security governance</strong> — mapping information-sharing networks to identify where sensitive data flows inappropriately.</li>
+        <li><strong>Onboarding optimisation</strong> — connecting new hires to the right informal network nodes to accelerate integration.</li>
+      </ul>
+    </section>
+
+    <!-- FAQ -->
+    <section class="concept-section faq-section">
+      <h2>Frequently asked questions</h2>
+      <div class="faq-list">
+        <details class="faq-item">
+          <summary>What is Organisational Network Analysis (ONA)?</summary>
+          <p>ONA is the systematic mapping and analysis of formal and informal relationships within an organisation using social network methods. It reveals who shares information with whom, who influences decisions, and where knowledge bottlenecks exist — insights that org charts and employee surveys cannot provide.</p>
+        </details>
+        <details class="faq-item">
+          <summary>What is a multiplex network in ONA?</summary>
+          <p>A multiplex network layers multiple relationship types — such as Work Advice, AI Support, Trust, Information, and Collaboration ties — into a single analytical model. Examining all layers simultaneously reveals richer structural patterns than any single network type can provide.</p>
+        </details>
+        <details class="faq-item">
+          <summary>What metrics are used in ONA?</summary>
+          <p>Common ONA metrics include degree centrality, betweenness centrality (how often a person lies on the shortest path between others), closeness centrality, and eigenvector centrality. Community detection algorithms such as Infomap identify clusters of tightly connected individuals.</p>
+        </details>
+        <details class="faq-item">
+          <summary>How is ONA data collected?</summary>
+          <p>ONA data is typically collected via relational surveys asking employees to nominate whom they turn to for specific purposes. Passive data from email metadata, collaboration tools, or calendars can supplement survey data.</p>
+        </details>
+        <details class="faq-item">
+          <summary>What can ONA reveal that traditional HR tools cannot?</summary>
+          <p>ONA uncovers the informal organisation: the real knowledge brokers, hidden silos, overloaded central nodes, peripheral employees at risk of disengagement, and the true information pathways through which change and innovation travel — all invisible on an org chart.</p>
+        </details>
+      </div>
+    </section>
+
+    <!-- Related -->
+    <nav class="related-concepts" aria-label="Related concepts">
+      <h2>Related concepts</h2>
+      <div class="related-grid">
+        <a class="related-card" href="/concepts/ai-champions">
+          <strong>AI Champions</strong>
+          <p>How ONA identifies Oracle, Broker, and Silo-Buster archetypes for AI adoption programs.</p>
+        </a>
+        <a class="related-card" href="/concepts/betweenness-centrality">
+          <strong>Betweenness Centrality</strong>
+          <p>The key metric for identifying brokers and bridges in organisational networks.</p>
+        </a>
+      </div>
+    </nav>
+
+  </div>
+</BaseLayout>
+
+<style>
+.concept-header { gap: var(--space-sm); }
+.concept-header__eyebrow { font-size: 0.85rem; color: var(--color-text-muted); margin-bottom: var(--space-sm); }
+.concept-header__eyebrow a { color: var(--color-primary-dark); text-decoration: underline; }
+.concept-header h1 { max-width: none; margin-bottom: 0; font-size: clamp(2.35rem, 5vw, 3.8rem); }
+.concept-header__abbr { font-family: var(--font-mono); color: var(--color-text-muted); margin: 0; }
+.concept-header .lead { margin: 0; max-width: 60ch; }
+
+.concept-section { gap: 1rem; }
+.concept-section h2 { margin-bottom: 0; }
+.concept-section p, .concept-section li { color: var(--color-text-secondary); line-height: 1.75; }
+.concept-section p { margin-bottom: 0; }
+.concept-section ul { display: grid; gap: var(--space-sm); padding-left: 1.25rem; }
+.concept-section ul li { color: var(--color-text-secondary); }
+.concept-section a { color: var(--color-primary-dark); text-decoration: underline; }
+
+/* Layer grid */
+.layer-grid { display: grid; gap: var(--space-md); margin-block: var(--space-lg); }
+
+.layer {
+  border-radius: var(--radius-md);
+  border-left: 3px solid var(--color-border);
+}
+.layer--work  { border-left-color: var(--color-primary); background: color-mix(in srgb, var(--color-primary) 5%, transparent); }
+.layer--ai    { border-left-color: var(--color-accent); background: color-mix(in srgb, var(--color-accent) 5%, transparent); }
+.layer--trust { border-left-color: #c07000; background: color-mix(in srgb, #c07000 5%, transparent); }
+.layer--info  { border-left-color: #0070c0; background: color-mix(in srgb, #0070c0 5%, transparent); }
+.layer--collab{ border-left-color: #6a0070; background: color-mix(in srgb, #6a0070 5%, transparent); }
+
+.layer__name { display: block; font-size: 0.95rem; margin-bottom: 0.25rem; }
+.layer__desc { margin: 0; font-size: 0.875rem; color: var(--color-text-secondary); line-height: 1.6; }
+
+/* Metrics grid */
+.metrics-grid { display: grid; gap: var(--space-md); grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); }
+.metric__name { display: block; margin-bottom: var(--space-sm); font-size: 0.975rem; }
+.metric__desc { margin: 0; font-size: 0.875rem; color: var(--color-text-secondary); line-height: 1.6; }
+.metric__desc a { color: var(--color-primary-dark); }
+
+/* FAQ */
+.faq-list { display: grid; gap: var(--space-sm); }
+.faq-item summary { padding: var(--space-md) var(--space-lg); font-weight: 600; cursor: pointer; list-style: none; display: flex; justify-content: space-between; align-items: center; font-size: 0.975rem; color: var(--color-text-primary); }
+.faq-item summary::-webkit-details-marker { display: none; }
+.faq-item summary::after { content: '+'; font-size: 1.25rem; color: var(--color-primary); transition: transform var(--transition-base); }
+.faq-item[open] summary::after { content: '−'; }
+.faq-item p { padding: 0 var(--space-lg) var(--space-lg); margin: 0; color: var(--color-text-secondary); font-size: 0.9rem; line-height: 1.7; }
+
+/* Related */
+.related-concepts { margin-top: var(--space-xl); }
+.related-concepts h2 { margin-bottom: var(--space-lg); }
+.related-grid { display: grid; gap: var(--space-md); grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); }
+.related-card { display: block; text-decoration: none; transition: border-color var(--transition-base), box-shadow var(--transition-base); }
+.related-card:hover { border-color: var(--color-border); box-shadow: 0 4px 12px rgb(0 0 0 / 0.06); }
+.related-card strong { display: block; font-size: 1rem; color: var(--color-text-primary); margin-bottom: var(--space-xs); }
+.related-card p { margin: 0; font-size: 0.875rem; color: var(--color-text-secondary); line-height: 1.5; }
+
+@media (min-width: 768px) { .layer-grid { grid-template-columns: 1fr 1fr; } }
+</style>

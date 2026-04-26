@@ -1,0 +1,90 @@
+---
+import en from '../i18n/en';
+
+const ui = en;
+
+const quickLinks = [
+  { label: ui.nav.about, href: '/about' },
+  { label: ui.nav.research, href: '/research' },
+  { label: ui.nav.netiq, href: '/netiq' },
+  { label: ui.nav.projects, href: '/projects' },
+  { label: ui.nav.insights, href: '/insights/' },
+  { label: ui.nav.speaking, href: '/speaking' },
+  { label: ui.nav.publications, href: '/publications' },
+  { label: ui.nav.contact, href: '/contact' },
+];
+---
+
+<footer class="site-footer">
+  <div class="container site-footer__grid">
+    <div>
+      <a class="site-footer__brand" href="/">
+        {ui.siteName}
+      </a>
+      <p class="site-footer__title">{ui.footer.oneLineTitle}</p>
+    </div>
+
+    <div>
+      <h2 class="site-footer__heading">{ui.footer.quickLinks}</h2>
+      <ul class="site-footer__links">
+        {quickLinks.map((item) => (
+          <li>
+            <a class="site-footer__link" href={item.href}>
+              {item.label}
+            </a>
+          </li>
+        ))}
+      </ul>
+    </div>
+
+    <div>
+      <h2 class="site-footer__heading">{ui.footer.connect}</h2>
+      <ul class="site-footer__links">
+        <li>
+          <a
+            class="site-footer__link"
+            href="https://scholar.google.com.vn/citations?user=lkYFFvAAAAAJ"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            {ui.footer.googleScholar}
+          </a>
+        </li>
+        <li>
+          <a
+            class="site-footer__link"
+            href="https://orcid.org/0000-0002-7798-6635"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            {ui.footer.orcid}
+          </a>
+        </li>
+        <li>
+          <a
+            class="site-footer__link"
+            href="LINKEDIN_URL_PLACEHOLDER"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            {ui.footer.linkedIn}
+          </a>
+        </li>
+        <li>
+          <a
+            class="site-footer__link"
+            href="mailto:EMAIL_PLACEHOLDER"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            {ui.footer.email}
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="container site-footer__bottom">
+    <p>{ui.footer.copyright}</p>
+  </div>
+</footer>

@@ -1,0 +1,87 @@
+---
+import en from '../i18n/en';
+
+interface Props {
+  currentPath: string;
+}
+
+const { currentPath } = Astro.props;
+const ui = en;
+
+const navItems = [
+  { label: ui.nav.about, href: '/about' },
+  { label: ui.nav.research, href: '/research' },
+  { label: ui.nav.netiq, href: '/netiq' },
+  { label: ui.nav.projects, href: '/projects' },
+  { label: ui.nav.insights, href: '/insights/' },
+  { label: ui.nav.speaking, href: '/speaking' },
+  { label: ui.nav.publications, href: '/publications' },
+  { label: ui.nav.contact, href: '/contact' },
+];
+
+const homeHref = '/';
+
+const normalizePath = (path: string) =>
+  path.length > 1 ? path.replace(/\/+$/, '') : path;
+
+const normalizedCurrentPath = normalizePath(currentPath);
+
+const isActive = (href: string) => {
+  const normalizedHref = normalizePath(href);
+
+  if (normalizedHref.endsWith('/insights')) {
+    return (
+      normalizedCurrentPath === normalizedHref ||
+      normalizedCurrentPath.startsWith(`${normalizedHref}/`)
+    );
+  }
+
+  return normalizedCurrentPath === normalizedHref;
+};
+---
+
+<header class="site-header">
+  <div class="container site-header__inner">
+    <a class="site-brand" href={homeHref}>
+      <span class="site-brand__name">{ui.siteName}</span>
+    </a>
+
+    <nav class="site-nav site-nav--desktop" aria-label={ui.navigationLabel}>
+      <ul class="site-nav__list">
+        {navItems.map((item) => (
+          <li>
+            <a
+              class="site-nav__link"
+              href={item.href}
+              aria-current={isActive(item.href) ? 'page' : undefined}
+            >
+              {item.label}
+            </a>
+          </li>
+        ))}
+      </ul>
+    </nav>
+
+    <details class="site-nav__mobile">
+      <summary class="site-nav__toggle" aria-label={ui.menu}>
+        {ui.menu}
+      </summary>
+
+      <nav class="site-nav site-nav__panel" aria-label={ui.navigationLabel}>
+        <ul class="site-nav__list">
+          {navItems.map((item) => (
+            <li>
+              <a
+                class="site-nav__link"
+                href={item.href}
+                aria-current={isActive(item.href) ? 'page' : undefined}
+              >
+                {item.label}
+              </a>
+            </li>
+          ))}
+        </ul>
+      </nav>
+    </details>
+  </div>
+</header>

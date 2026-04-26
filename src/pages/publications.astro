@@ -1,0 +1,344 @@
+---
+import PublicationItem from '../components/PublicationItem.astro';
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { getPublications, groupPublicationsByYear } from '../utils/publications';
+
+const title = 'Publications';
+const description =
+  'Peer-reviewed journal articles, conference papers, and book chapters by Dr. Duy Dang-Pham on Organisational Network Analysis, AI strategy, information security, and digital transformation.';
+const canonicalUrl = '/publications';
+
+const publications = await getPublications();
+const groupedPublications = groupPublicationsByYear(publications);
+const yearAnchors = groupedPublications.map(([year]) => year);
+const hasPublications = publications.length > 0;
+---
+
+<BaseLayout
+  title={title}
+  description={description}
+  lang="en"
+  canonicalUrl={canonicalUrl}
+>
+  <div class="container--content publications-page" data-publications-root>
+    <header class="page-header">
+      <h1>Publications</h1>
+      <p class="lead">
+        Peer-reviewed journal articles, conference papers, and book chapters. For the
+        complete and most current record, please see my
+        <a
+          href="https://scholar.google.com.vn/citations?user=lkYFFvAAAAAJ"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Google Scholar profile
+        </a>
+        and
+        <a
+          href="https://orcid.org/0000-0002-7798-6635"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          ORCID page
+        </a>.
+      </p>
+    </header>
+
+    {hasPublications ? (
+      <>
+        <section class="publication-toolbar section-block">
+          <div class="publication-toolbar__search">
+            <label class="publication-toolbar__label" for="publication-filter">
+              Filter publications
+            </label>
+            <input
+              id="publication-filter"
+              class="publication-toolbar__input"
+              type="search"
+              placeholder="Search by title, author, venue, keyword, or abstract"
+              autocomplete="off"
+              data-publication-filter
+            />
+          </div>
+
+          <div class="publication-toolbar__meta">
+            <p class="publication-toolbar__count" data-publication-count>
+              {publications.length} publications
+            </p>
+
+            {yearAnchors.length > 0 && (
+              <nav class="publication-toolbar__years" aria-label="Jump to publication year">
+                {yearAnchors.map((year) => (
+                  <a class="tag publication-toolbar__year" href={`#year-${year}`}>
+                    {year}
+                  </a>
+                ))}
+              </nav>
+            )}
+          </div>
+        </section>
+
+        <p class="publication-filter-empty" hidden data-filter-empty role="status">
+          No publications matched that search. Try a different keyword.
+        </p>
+
+        {groupedPublications.map(([year, items]) => (
+          <section class="year-group" id={`year-${year}`} data-year-group>
+            <h2 class="year-group__heading">{year}</h2>
+            <ol class="publication-list">
+              {items.map((publication) => (
+                <li class="publication-list__item pub-item" data-publication-item>
+                  <PublicationItem publication={publication} />
+                </li>
+              ))}
+            </ol>
+          </section>
+        ))}
+
+        <div class="scholar-cta section-block">
+          <p>
+            Looking for citation metrics, co-author networks, or the full external record?
+          </p>
+          <div class="scholar-cta__links">
+            <a
+              class="cta-btn cta-btn--primary"
+              href="https://scholar.google.com.vn/citations?user=lkYFFvAAAAAJ"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Google Scholar
+            </a>
+            <a
+              class="cta-btn cta-btn--outline"
+              href="https://orcid.org/0000-0002-7798-6635"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              ORCID
+            </a>
+          </div>
+        </div>
+      </>
+    ) : (
+      <div class="empty-state">
+        <h2 class="empty-state__title">Publication archive coming soon</h2>
+        <p class="empty-state__body">
+          I am preparing the full publication archive for this site. In the meantime,
+          please refer to my Google Scholar or ORCID profile for the most up-to-date list
+          of publications.
+        </p>
+        <div class="empty-state__actions">
+          <a
+            class="cta-btn cta-btn--primary"
+            href="https://scholar.google.com.vn/citations?user=lkYFFvAAAAAJ"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Google Scholar
+          </a>
+          <a
+            class="cta-btn cta-btn--outline"
+            href="https://orcid.org/0000-0002-7798-6635"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            ORCID
+          </a>
+        </div>
+      </div>
+    )}
+  </div>
+
+  <script is:inline>
+    const initPublicationFilter = () => {
+      const root = document.querySelector('[data-publications-root]');
+
+      if (!(root instanceof HTMLElement) || root.dataset.filterReady === 'true') {
+        return;
+      }
+
+      root.dataset.filterReady = 'true';
+
+      const input = root.querySelector('[data-publication-filter]');
+      const items = [...root.querySelectorAll('[data-publication-item]')];
+      const groups = [...root.querySelectorAll('[data-year-group]')];
+      const count = root.querySelector('[data-publication-count]');
+      const empty = root.querySelector('[data-filter-empty]');
+
+      if (!(input instanceof HTMLInputElement)) {
+        return;
+      }
+
+      const update = () => {
+        const query = input.value.trim().toLowerCase();
+        const hasQuery = query.length > 0;
+        let visibleCount = 0;
+
+        items.forEach((item) => {
+          if (!(item instanceof HTMLElement)) {
+            return;
+          }
+
+          const searchable =
+            item.querySelector('[data-publication-search]')?.dataset.publicationSearch ?? '';
+          const matches = query === '' || searchable.includes(query);
+
+          item.hidden = !matches;
+
+          if (matches) {
+            visibleCount += 1;
+          }
+        });
+
+        groups.forEach((group) => {
+          if (!(group instanceof HTMLElement)) {
+            return;
+          }
+
+          const hasVisibleItems = group.querySelector('[data-publication-item]:not([hidden])');
+          group.hidden = !hasVisibleItems;
+        });
+
+        if (count instanceof HTMLElement) {
+          count.textContent = `${visibleCount} publication${visibleCount === 1 ? '' : 's'}`;
+        }
+
+        if (empty instanceof HTMLElement) {
+          empty.hidden = !(hasQuery && visibleCount === 0);
+        }
+      };
+
+      input.addEventListener('input', update);
+      update();
+    };
+
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', initPublicationFilter, { once: true });
+    } else {
+      initPublicationFilter();
+    }
+
+    document.addEventListener('astro:page-load', initPublicationFilter);
+  </script>
+</BaseLayout>
+
+<style>
+.publications-page .page-header .lead a {
+  color: var(--color-primary-dark);
+  text-decoration: underline;
+  text-decoration-thickness: 0.08em;
+  text-underline-offset: 0.2em;
+}
+
+.publication-toolbar {
+  gap: 1rem;
+}
+
+.publication-toolbar__search {
+  display: grid;
+  gap: 0.6rem;
+}
+
+.publication-toolbar__label {
+  color: var(--color-text-muted);
+  font-size: 0.74rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.publication-toolbar__input {
+  width: 100%;
+  min-height: 3.1rem;
+  padding: 0.9rem 1rem;
+  border: 1px solid var(--color-border);
+  border-radius: calc(var(--radius-md) - 4px);
+  background: rgb(255 255 255 / 0.88);
+  color: var(--color-text-primary);
+}
+
+.publication-toolbar__input::placeholder {
+  color: var(--color-text-muted);
+}
+
+.publication-toolbar__meta {
+  display: grid;
+  gap: 0.8rem;
+}
+
+.publication-toolbar__count {
+  margin: 0;
+  color: var(--color-text-secondary);
+  font-size: var(--text-sm);
+}
+
+.publication-filter-empty {
+  margin: 0;
+  color: var(--color-text-secondary);
+  font-size: var(--text-sm);
+  line-height: 1.6;
+}
+
+.publication-toolbar__years {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.publication-toolbar__year {
+  text-decoration: none;
+}
+
+.publication-filter-empty {
+  text-align: center;
+}
+
+.publication-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 1rem;
+}
+
+.publication-list__item {
+  margin: 0;
+}
+
+.year-group__heading {
+  margin-bottom: 0.25rem;
+  color: var(--color-primary-dark);
+  font-family: var(--font-mono);
+  font-size: 1rem;
+  letter-spacing: 0.08em;
+}
+
+.scholar-cta {
+  text-align: center;
+}
+
+.scholar-cta p {
+  margin: 0 0 var(--space-md);
+  color: var(--color-text-secondary);
+}
+
+.scholar-cta__links,
+.empty-state__actions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: var(--space-md);
+}
+
+@media (min-width: 768px) {
+  .publication-toolbar {
+    grid-template-columns: minmax(0, 1.35fr) minmax(0, 0.85fr);
+    align-items: end;
+  }
+
+  .publication-toolbar__meta {
+    justify-items: end;
+    text-align: right;
+  }
+}
+</style>

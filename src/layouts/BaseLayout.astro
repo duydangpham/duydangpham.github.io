@@ -1,0 +1,64 @@
+---
+import '../styles/global.css';
+import Head from '../components/Head.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import en from '../i18n/en';
+
+interface Props {
+  title: string;
+  description: string;
+  lang?: 'en';
+  canonicalUrl: string;
+  alternateUrl?: string;
+  jsonLd?: Record<string, unknown> | Array<Record<string, unknown>>;
+  ogImage?: string;
+}
+
+const {
+  title,
+  description,
+  lang = 'en',
+  canonicalUrl,
+  jsonLd,
+  ogImage,
+} = Astro.props;
+
+const ui = en;
+const siteOrigin = Astro.site ?? new URL('https://drduydangpham.com');
+const toAbsoluteUrl = (url: string) => new URL(url, siteOrigin).toString();
+const canonicalAbsolute = toAbsoluteUrl(canonicalUrl);
+const currentPath = new URL(canonicalAbsolute).pathname;
+---
+
+<!doctype html>
+<html lang={lang}>
+  <head>
+    <Head
+      title={title}
+      description={description}
+      canonicalUrl={canonicalAbsolute}
+      lang={lang}
+      jsonLd={jsonLd}
+      ogImage={ogImage}
+    />
+    <link
+      rel="preload"
+      href="/fonts/Gambetta-Italic.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
+    />
+    <slot name="head" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main-content">{ui.skipToContent}</a>
+    <div class="site-shell">
+      <Header currentPath={currentPath} />
+      <main id="main-content" class="site-main">
+        <slot />
+      </main>
+      <Footer />
+    </div>
+  </body>
+</html>

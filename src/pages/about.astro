@@ -1,0 +1,758 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { personSchema } from '../data/schema-person';
+import { hasProfilePortrait, profilePortraitSrc } from '../utils/portrait';
+
+const title = 'About';
+const description =
+  'Learn about Dr. Duy Dang-Pham — Senior Lecturer in MIS at RMIT University Vietnam, Fulbright Scholar-in-Residence 2024, Co-founder & CEO of NetIQ, and author of 60+ peer-reviewed publications.';
+const canonicalUrl = '/about';
+---
+
+<BaseLayout
+  title={title}
+  description={description}
+  lang="en"
+  canonicalUrl={canonicalUrl}
+  jsonLd={personSchema}
+>
+  <div class="container--content">
+
+    <!-- ── Page header ── -->
+    <header class="page-header">
+      <div class="page-header__photo-wrap">
+        {hasProfilePortrait && profilePortraitSrc ? (
+          <img
+            class="page-header__photo"
+            src={profilePortraitSrc}
+            alt="Dr. Duy Dang-Pham"
+            width="180"
+            height="220"
+            loading="eager"
+          />
+        ) : (
+          <div class="page-header__photo-fallback" aria-hidden="true">DD</div>
+        )}
+      </div>
+      <div class="page-header__text">
+        <h1 class="page-header__name">Dr. Duy Dang-Pham</h1>
+        <p class="page-header__titles">
+          Senior Lecturer in Management Information Systems<br />
+          <strong>RMIT University Vietnam</strong>
+        </p>
+        <p class="page-header__titles">
+          Co-founder &amp; CEO<br />
+          <strong>NetIQ</strong>
+        </p>
+        <div class="page-header__badges">
+          <span class="badge">Fulbright Scholar-in-Residence 2024</span>
+          <span class="badge badge--accent">60+ Publications</span>
+        </div>
+      </div>
+    </header>
+
+    <!-- ── Biography ── -->
+    <section class="prose-section">
+      <h2>Biography</h2>
+      <p>
+        Every organisation has two structures: the one on the org chart, and the one
+        that actually determines how knowledge flows, how trust is built, and whether
+        a new technology takes root or quietly dies.
+        <strong>My work is about the second one.</strong>
+      </p>
+
+      <p>
+        I'm Dr. Duy Dang-Pham — Senior Lecturer in Management Information Systems at RMIT University Vietnam co-founder of <strong>NetIQ</strong>, and a researcher who has spent 15 years asking one persistent question: <em>How do the human networks inside organisations shape the way technology is adopted, knowledge is shared, and security is maintained?</em>
+      </p>
+      <p>
+        My approach is deliberately <strong>human-centric</strong>. In a moment when organisations are under enormous pressure to adopt AI, I am less interested in the technology itself than in the people it must work through. AI adoption succeeds or fails not because of the algorithm — but because of whether the right people, in the right positions of informal influence, believe in it and carry it forward. ONA gives us a rigorous, evidence-based way to find those people and empower them. <em>That is what I mean by network intelligence.</em>
+      </p>
+
+      <p>
+        My research covers three interconnected areas:
+        <ul>
+          <li><em>information security governance</em> — examining why people comply with or deviate from security policies and how organisations build security-positive cultures;</li>
+          <li><em>organisational network analysis</em> — multiplex ONA methods mapping five relationship layers simultaneously to reveal how organisations actually function; and </li>
+          <li><em>AI adoption strategy</em> — including the identification of AI champion archetypes that drive grass-roots adoption. </li>
+        </ul>
+      </p>
+      <p>  
+        Conducted primarily in Vietnamese and Southeast Asian contexts, this work has produced <strong>70+ peer-reviewed publications</strong> in highly ranked academic journals such as <em>Computers in Human Behavior</em>, <em>Information &amp; Management</em>, <em>Information Systems Frontiers</em>, and <em>Computers &amp; Security</em>, and three co-edited book volumes of <em>Information Systems Research in Vietnam</em>.
+      </p>
+
+      <p>
+        If you lead an organisation navigating AI adoption or digital transformation, the question I hear most often is: <em>"We've done everything right on paper — why isn't it working?"</em> The answer is almost always in the network. The champions you've appointed don't hold informal influence. The knowledge you assumed was flowing freely is pooling in silos. The resistance you're encountering isn't irrational — it reflects relationship structures the strategy never accounted for. 
+      </p>
+      <p>
+        <strong>NetIQ exists to make those structures visible</strong>, and to help you design interventions that work with your organisation's real architecture, not against it.
+      </p>
+
+      <ul>
+        <li><strong>Explore my research</strong> — <a href="/research">Research &amp; Publications</a></li>
+        <li><strong>Work with NetIQ</strong> — <a href="/netiq">NetIQ</a></li>
+        <li><strong>Invite me to speak</strong> — <a href="/speaking">Speaking</a></li>
+      </ul>
+    </section>
+
+    <!-- ── Positions ── -->
+    <section class="prose-section">
+      <h2>Academic &amp; Professional positions</h2>
+      <div class="timeline">
+        <div class="timeline__item">
+          <span class="timeline__period">Jan 2025–present</span>
+          <div class="timeline__content">
+            <strong class="timeline__role">Associate Head of Department — Research &amp; Innovation</strong>
+            <span class="timeline__org">RMIT University Vietnam · Ho Chi Minh City, Vietnam</span>
+            <p class="timeline__detail">
+              In this senior leadership role within The Business School, I oversee the department's research strategy and innovation agenda — driving research quality, building academic capability, fostering industry and community engagement, and advancing RMIT Vietnam's position as a leading research institution in Southeast Asia.
+            </p>
+          </div>
+        </div>
+        <div class="timeline__item">
+          <span class="timeline__period">Jan 2022–Jan 2025</span>
+          <div class="timeline__content">
+            <strong class="timeline__role">HDR Coordinator &amp; Senior Program Manager — PhD Programs</strong>
+            <span class="timeline__org">RMIT University Vietnam · Ho Chi Minh City, Vietnam</span>
+            <p class="timeline__detail">
+              As HDR Coordinator and Designated Authority for Higher Degree by Research in The Business School, I lead and mentor both PhD candidates and supervisors, uphold the university's HDR standards, and shape school-specific doctoral strategy — supporting the next generation of researchers in information systems, digital business, and related fields.
+            </p>
+          </div>
+        </div>
+        <div class="timeline__item">
+          <span class="timeline__period">Jun 2021–present</span>
+          <div class="timeline__content">
+            <strong class="timeline__role">Senior Lecturer — Digital Marketing &amp; Information Systems</strong>
+            <span class="timeline__org">RMIT University Vietnam · Ho Chi Minh City, Vietnam</span>
+            <p class="timeline__detail">
+              Teaching and conducting research across digital transformation, data analytics, and information systems at RMIT University Vietnam. Key contributions in this role include co-founding the Vietnam Chapter of the
+              Association for Information Systems (VAIS); securing, as part of a research
+              team, an external grant of approximately USD 220,000 for research on
+              applying social media data analytics to promote vaccination support for
+              people with disabilities; and co-editing a Springer book series on
+              information systems research in Vietnam.
+            </p>
+          </div>
+        </div>
+        <div class="timeline__item">
+          <span class="timeline__period">Jan 2024–present</span>
+          <div class="timeline__content">
+            <strong class="timeline__role">Visiting Lecturer — MBA</strong>
+            <span class="timeline__org">Western Sydney University Vietnam</span>
+            <p class="timeline__detail">
+              Teaching the MBA-level course <em>Innovation Through Digital Technology</em>
+              (BUSM7045), equipping senior professionals with frameworks and tools for
+              leading technology-driven innovation in their organisations.
+            </p>
+          </div>
+        </div>
+        <div class="timeline__item">
+          <span class="timeline__period">Jul 2021–present</span>
+          <div class="timeline__content">
+            <strong class="timeline__role">Co-Founder &amp; Secretary</strong>
+            <span class="timeline__org">Vietnam Chapter of the Association for Information Systems (VAIS) · Ho Chi Minh City, Vietnam</span>
+            <p class="timeline__detail">
+              Co-founded VAIS, the Vietnamese chapter of the Association for Information
+              Systems — the world's leading professional association for information
+              systems research, teaching, and practice. Under VAIS's stewardship, Ho Chi
+              Minh City hosted the Pacific Asia Conference on Information Systems (PACIS
+              2024), the largest regional IS research and industry conference in the
+              Asia-Pacific.
+            </p>
+          </div>
+        </div>
+        <div class="timeline__item">
+          <span class="timeline__period">Dec 2023–present</span>
+          <div class="timeline__content">
+            <strong class="timeline__role">Consultant — Digital Transformation &amp; Standards Adoption</strong>
+            <span class="timeline__org">BSI (British Standards Institution) · Remote</span>
+            <p class="timeline__detail">
+              Conducting independent research and needs assessments on digital
+              transformation and the adoption of international standards in Vietnam,
+              engaging professionals across the private and public sectors through
+              in-depth interviews and workshops to inform BSI's advisory and standards
+              development work in the region.
+            </p>
+          </div>
+        </div>
+        <div class="timeline__item">
+          <span class="timeline__period">Aug 2024–Jan 2025</span>
+          <div class="timeline__content">
+            <strong class="timeline__role">Fulbright U.S. Scholar-in-Residence</strong>
+            <span class="timeline__org">Gonzaga University / The Fulbright Program · Spokane, Washington, USA</span>
+            <p class="timeline__detail">
+              Appointed as a Fulbright Scholar-in-Residence at Gonzaga University under
+              the US State Department's Fulbright Scholar Program — delivering lectures,
+              workshops, and research seminars on AI strategy, Organisational Network
+              Analysis, and digital transformation to students and faculty, while
+              deepening cross-cultural perspectives on technology adoption and
+              organisational change.
+            </p>
+          </div>
+        </div>
+        <div class="timeline__item">
+          <span class="timeline__period">May 2023–Nov 2023</span>
+          <div class="timeline__content">
+            <strong class="timeline__role">Visiting Lecturer — Data Analytics for Business</strong>
+            <span class="timeline__org">UEH International School of Business</span>
+            <p class="timeline__detail">
+              Delivered the online course <em>Data Analytics for Business</em>, equipping
+              postgraduate students with practical skills in data-driven decision-making
+              and analytical tools for business contexts.
+            </p>
+          </div>
+        </div>
+        <div class="timeline__item">
+          <span class="timeline__period">May 2020–Jun 2021</span>
+          <div class="timeline__content">
+            <strong class="timeline__role">Senior Program Manager — Software Engineering &amp; Information Technology</strong>
+            <span class="timeline__org">RMIT University Vietnam</span>
+            <p class="timeline__detail">
+              Led the two largest programs in RMIT Vietnam's School of Science,
+              Engineering &amp; Technology — Bachelor of Engineering (Software Engineering)
+              (Honours) and Bachelor of Information Technology — managing a team of 18
+              academics while maintaining enrolment growth through the COVID-19 pandemic,
+              expanding the teaching team from 9 to 18 within five months, and
+              championing the successful launch of the Bachelor of IT in Hanoi, five new
+              Minor streams in Vietnam, and the PhD program in Computer Science and IT at
+              RMIT Vietnam. Maintained strategic relationships with 20+ industry partners
+              including Microsoft, IBM, Ericsson, VNG, KMS Technology, ABB, Bosch, and
+              Intel. Recognised with the "Living RMIT's Values" award in 2021.
+            </p>
+          </div>
+        </div>
+        <div class="timeline__item">
+          <span class="timeline__period">Jun 2018–Jun 2021</span>
+          <div class="timeline__content">
+            <strong class="timeline__role">Lecturer — Information Technology</strong>
+            <span class="timeline__org">RMIT University Vietnam · Vietnam</span>
+            <p class="timeline__detail">
+              Served as Research Cluster Lead (Computing Technologies) and Stream Lead
+              (Data Science &amp; Artificial Intelligence) in the School of Science and
+              Technology, teaching and coordinating courses including User-centred Design,
+              Machine Learning, Technology Leadership, and Practical Data Science.
+              Conducted research on behavioural information security, social network
+              analysis, and innovation management; supervised PhD candidates; secured
+              USD 71,000 in research funding; and maintained active industry partnerships
+              with organisations including Grab, Lazada, Alibaba, VNG, and Zalo.
+            </p>
+          </div>
+        </div>
+        <div class="timeline__item">
+          <span class="timeline__period">Mar 2014–Feb 2017</span>
+          <div class="timeline__content">
+            <strong class="timeline__role">PhD Candidate &amp; Teaching Assistant</strong>
+            <span class="timeline__org">RMIT University · Melbourne, Australia</span>
+            <p class="timeline__detail">
+              Completed doctoral research in information security and social network
+              analysis while supporting the teaching of logistics and supply chain
+              management courses across online and face-to-face modes — serving
+              approximately 100 students per semester, including incarcerated students and
+              students in rural areas with limited connectivity. Helped lift student
+              satisfaction in <em>Supply Chain Analysis and Design</em> above 90% in
+              Semester 2, 2014, contributing to the team's College of Business
+              Recognition Award.
+            </p>
+          </div>
+        </div>
+        <div class="timeline__item">
+          <span class="timeline__period">Feb 2011–Feb 2012</span>
+          <div class="timeline__content">
+            <strong class="timeline__role">Business Systems Analyst</strong>
+            <span class="timeline__org">TRG International · Vietnam</span>
+            <p class="timeline__detail">
+              Implemented financial and retail ERP systems (SunSystems and RetailPro) for
+              enterprise clients in Vietnam — analysing business requirements, designing
+              add-in tools, consulting on system architecture, and delivering training to
+              internal and external users.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── Education ── -->
+    <section class="prose-section">
+      <h2>Education</h2>
+      <div class="edu-list">
+        <div class="edu-item">
+          <span class="edu-item__degree">Doctor of Philosophy (PhD), Business Information Systems</span>
+          <span class="edu-item__institution">RMIT University, Australia</span>
+        </div>
+        <div class="edu-item">
+          <span class="edu-item__degree">Bachelor of Business (Honours), Honours First Class</span>
+          <span class="edu-item__institution">RMIT University, Australia</span>
+        </div>
+        <div class="edu-item">
+          <span class="edu-item__degree">Bachelor of Business (Business Information Systems) with Distinction</span>
+          <span class="edu-item__institution">RMIT University Vietnam, Vietnam</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── Awards ── -->
+    <section class="prose-section">
+      <h2>Awards &amp; Honours</h2>
+      <div class="awards">
+        <div class="award">
+          <span class="award__year">2021</span>
+          <div>
+            <strong class="award__title">2021 Living RMIT Values Award</strong>
+          </div>
+        </div>
+        <div class="award">
+          <span class="award__year">2020</span>
+          <div>
+            <strong class="award__title">
+              ACS Best Paper Award (1st Runner Up) in the 31st Australasian Conference
+              on Information Systems
+            </strong>
+          </div>
+        </div>
+        <div class="award">
+          <span class="award__year">2020</span>
+          <div>
+            <strong class="award__title">
+              2019 College of SEH Recognition of Outstanding Student Experience (ROSE)
+              Award (COSC2130 Professional Computing Practice)
+            </strong>
+          </div>
+        </div>
+        <div class="award">
+          <span class="award__year">2020</span>
+          <div>
+            <strong class="award__title">
+              2019 College of SEH Recognition of Outstanding Student Experience (ROSE)
+              Award (OENG1130 Technology Leadership)
+            </strong>
+          </div>
+        </div>
+        <div class="award">
+          <span class="award__year">2020</span>
+          <div>
+            <strong class="award__title">
+              2019 College of SEH Recognition of Outstanding Student Experience (ROSE)
+              Award (COSC2083 Introduction to IT)
+            </strong>
+          </div>
+        </div>
+        <div class="award">
+          <span class="award__year">2020</span>
+          <div>
+            <strong class="award__title">
+              2020 School of Science &amp; Technology Recognition for Achievements in
+              Research
+            </strong>
+          </div>
+        </div>
+        <div class="award">
+          <span class="award__year">2019</span>
+          <div>
+            <strong class="award__title">
+              2019 School of Science &amp; Technology Recognition for Achievement in
+              Learning and Teaching Activities (Semester 2019-B)
+            </strong>
+          </div>
+        </div>
+        <div class="award">
+          <span class="award__year">2019</span>
+          <div>
+            <strong class="award__title">
+              2019 School of Science &amp; Technology Recognition for Achievement in
+              Learning and Teaching Activities (Semester 2019-A)
+            </strong>
+          </div>
+        </div>
+        <div class="award">
+          <span class="award__year">2019</span>
+          <div>
+            <strong class="award__title">
+              2019 School of Science &amp; Technology Recognition for Achievements in
+              Research
+            </strong>
+          </div>
+        </div>
+        <div class="award">
+          <span class="award__year">2018</span>
+          <div>
+            <strong class="award__title">
+              Nominee for the 2018 Australian Council of Professors and Heads of
+              Information Systems (ACPHIS) Doctoral Thesis Award
+            </strong>
+          </div>
+        </div>
+        <div class="award">
+          <span class="award__year">2018</span>
+          <div>
+            <strong class="award__title">
+              RMIT Vietnam 2018 Graduate Certificate in Digital Tertiary Learning and
+              Teaching Scholarship
+            </strong>
+          </div>
+        </div>
+        <div class="award">
+          <span class="award__year">2017</span>
+          <div>
+            <strong class="award__title">
+              ACS Best Paper Award (2nd Runner Up) in the 28th Australasian Conference
+              on Information Systems
+            </strong>
+          </div>
+        </div>
+        <div class="award">
+          <span class="award__year">2016</span>
+          <div>
+            <strong class="award__title">2016 HDR A* Journal Publication Scheme Award</strong>
+          </div>
+        </div>
+        <div class="award">
+          <span class="award__year">2016</span>
+          <div>
+            <strong class="award__title">
+              2016 RMIT Prize for Research Impact-Higher Degree by Research (Enterprise)
+            </strong>
+          </div>
+        </div>
+        <div class="award">
+          <span class="award__year">2014</span>
+          <div>
+            <strong class="award__title">
+              College of Business Recognition-Supply Chain Analysis and Design (for
+              achieving 90% satisfaction in Semester 2, 2014)
+            </strong>
+          </div>
+        </div>
+        <div class="award">
+          <span class="award__year">2014</span>
+          <div>
+            <strong class="award__title">
+              RMIT International Postgraduate Research Scholarship (IPRS) 2014
+            </strong>
+          </div>
+        </div>
+        <div class="award">
+          <span class="award__year">2013</span>
+          <div>
+            <strong class="award__title">
+              Vice-Chancellor's List Award (for being in top 2% of RMIT University's
+              graduates in 2013)
+            </strong>
+          </div>
+        </div>
+        <div class="award">
+          <span class="award__year">2013</span>
+          <div>
+            <strong class="award__title">
+              Most Authoritative Paper award in A Scholarly Conference on Emerging
+              Technologies for Information Systems and Business Management (ASCENT 2013)
+            </strong>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── Teaching ── -->
+    <section class="prose-section">
+      <h2>Teaching</h2>
+      <p>
+        My teaching spans undergraduate and postgraduate levels across three schools
+        at RMIT University Vietnam, and reflects the same applied, human-centric
+        orientation that drives my research. 
+      </p>
+      <p>  
+        In The Business School (2021–present), I teach courses including <strong>Technology Futures</strong> (MBA), <strong>Business Information Systems</strong>, and <strong>Organisational Analysis</strong> — equipping students with frameworks to navigate digital transformation, evaluate emerging technologies, and lead with data. Earlier, in the School of Science, Engineering &amp; Technology (2018–2021), I taught more technically oriented courses including <strong>Machine Learning</strong>, <strong>Data Structures &amp; Algorithms</strong>, <strong>User-centred Design</strong>, and <strong>Technology Leadership</strong> — bridging computer science fundamentals with the organisational and human dimensions of technology. My teaching career began in the School of Business IT &amp; Logistics at RMIT Melbourne (2014–2017), where I taught logistics and supply chain management while completing my PhD.
+      </p>
+      <p>
+        I have supervised <strong>eleven PhD candidates</strong> across doctoral
+        programs in Management, Business, and Computer Science — five of whom
+        completed their degrees between 2022 and 2026 — with active research projects
+        spanning digital transformation in healthcare, AI-powered customer
+        experiences, workplace learning, and online education. I also supervise
+        undergraduate capstone projects through industry partnerships with
+        organisations including Navigos Group and the Oxford University Clinical
+        Research Unit (OUCRU), connecting students with real-world research and
+        development challenges.
+      </p>
+    </section>
+
+    <!-- ── Connect ── -->
+    <section class="prose-section connect-section">
+      <h2>Connect</h2>
+      <div class="connect-links">
+        <a
+          class="connect-link"
+          href="https://scholar.google.com.vn/citations?user=lkYFFvAAAAAJ"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <span class="connect-link__icon" aria-hidden="true">📚</span>
+          Google Scholar
+        </a>
+        <a
+          class="connect-link"
+          href="https://orcid.org/0000-0002-7798-6635"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <span class="connect-link__icon" aria-hidden="true">🔬</span>
+          ORCID 0000-0002-7798-6635
+        </a>
+        <a class="connect-link" href="/contact">
+          <span class="connect-link__icon" aria-hidden="true">✉️</span>
+          Contact form
+        </a>
+      </div>
+    </section>
+
+  </div>
+</BaseLayout>
+
+<style>
+.page-header {
+  align-items: center;
+}
+
+.page-header__photo-wrap {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.page-header__photo,
+.page-header__photo-fallback {
+  width: min(100%, 220px);
+  aspect-ratio: 4 / 5;
+  border-radius: 28px;
+}
+
+.page-header__photo {
+  object-fit: cover;
+  background: var(--color-surface-soft);
+  box-shadow: var(--shadow-soft);
+}
+
+.page-header__photo-fallback {
+  display: grid;
+  place-items: center;
+  border: 1px solid var(--color-border);
+  background:
+    radial-gradient(circle at top left, rgb(185 137 68 / 0.18), transparent 26%),
+    linear-gradient(180deg, rgb(255 255 255 / 0.92), rgb(255 255 255 / 0.74));
+  color: var(--color-primary);
+  font-size: clamp(2.3rem, 6vw, 3.8rem);
+  font-weight: 700;
+  letter-spacing: -0.08em;
+  box-shadow: var(--shadow-soft);
+}
+
+.page-header__name {
+  max-width: none;
+  margin-bottom: 0;
+  font-size: clamp(2.4rem, 5vw, 4rem);
+}
+
+.page-header__text {
+  display: grid;
+  gap: 0.65rem;
+}
+
+.page-header__titles {
+  margin: 0;
+  color: var(--color-text-secondary);
+  font-size: 1.05rem;
+  line-height: 1.5;
+}
+
+.page-header__badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-sm);
+  margin-top: 0.25rem;
+}
+
+.badge {
+  display: inline-block;
+  padding: 0.3rem 0.75rem;
+  border-radius: 999px;
+  background: var(--color-background-secondary);
+  border: 1px solid var(--color-border);
+  color: var(--color-text-secondary);
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+.badge--accent {
+  background: color-mix(in srgb, var(--color-primary) 10%, transparent);
+  border-color: var(--color-primary-light);
+  color: var(--color-primary-dark);
+}
+
+/* ── Prose sections ── */
+.prose-section {
+  gap: 1rem;
+}
+
+.prose-section:last-child {
+  border-bottom: none;
+}
+
+.prose-section h2 {
+  margin-bottom: 0;
+  color: var(--color-text-primary);
+}
+
+.prose-section p,
+.prose-section ul,
+.prose-section ol {
+  color: var(--color-text-secondary);
+  font-size: 1rem;
+  line-height: 1.75;
+}
+
+.prose-section a {
+  color: var(--color-primary-dark);
+  text-decoration: underline;
+}
+
+/* ── Timeline ── */
+.timeline {
+  display: grid;
+  gap: 1rem;
+}
+
+.timeline__item {
+  display: grid;
+  grid-template-columns: 140px 1fr;
+  gap: 1rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid var(--color-border-subtle);
+}
+
+.timeline__item:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.timeline__period {
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--color-primary);
+  padding-top: 0.15rem;
+}
+
+.timeline__role {
+  display: block;
+  font-size: 1rem;
+  color: var(--color-text-primary);
+  margin-bottom: 0.2rem;
+}
+
+.timeline__org {
+  display: block;
+  font-size: 0.9rem;
+  color: var(--color-text-muted);
+  margin-bottom: var(--space-sm);
+}
+
+.timeline__detail {
+  margin: 0;
+  line-height: 1.65;
+}
+
+/* ── Education ── */
+.edu-list { display: grid; gap: var(--space-md); }
+
+.edu-item {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  padding: var(--space-md) var(--space-lg);
+  background: var(--color-background-secondary);
+  border-radius: var(--radius-md);
+  border-left: 3px solid var(--color-primary);
+}
+
+.edu-item__degree {
+  font-weight: 600;
+  color: var(--color-text-primary);
+}
+
+.edu-item__institution {
+  font-size: 0.9rem;
+  color: var(--color-text-muted);
+}
+
+/* ── Awards ── */
+.awards { display: grid; gap: var(--space-md); }
+
+.award {
+  display: flex;
+  gap: var(--space-lg);
+  align-items: flex-start;
+  padding: var(--space-lg);
+  border: 1px solid var(--color-border-subtle);
+  border-radius: var(--radius-md);
+}
+
+.award__year {
+  flex-shrink: 0;
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--color-primary);
+  min-width: 3rem;
+  padding-top: 0.1rem;
+}
+
+.award__title {
+  display: block;
+  font-size: 1rem;
+  margin-bottom: 0.3rem;
+}
+
+.award__body {
+  margin: 0;
+  color: var(--color-text-secondary);
+}
+
+/* ── Connect ── */
+.connect-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-md);
+}
+
+.connect-link {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-sm);
+  color: var(--color-text-secondary);
+  font-size: 0.9rem;
+  font-weight: 500;
+  text-decoration: none;
+  transition: border-color var(--transition-base), color var(--transition-base);
+}
+
+.connect-link:hover {
+  border-color: var(--color-primary);
+  color: var(--color-primary-dark);
+}
+
+.connect-link__icon { font-size: 1rem; }
+
+/* ── Responsive ── */
+@media (min-width: 840px) {
+  .page-header {
+    grid-template-columns: minmax(180px, 220px) minmax(0, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .page-header {
+    justify-items: center;
+    align-items: center;
+    text-align: center;
+  }
+  .page-header__badges { justify-content: center; }
+  .timeline__item { grid-template-columns: 1fr; gap: var(--space-xs); }
+}
+</style>

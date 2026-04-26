@@ -1,0 +1,343 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { personSchema } from '../data/schema-person';
+
+const title = 'Research';
+const description =
+  'Explore Dr. Duy Dang-Pham\'s research in Organisational Network Analysis, AI Champion programs, information security governance, and digital transformation in Southeast Asian contexts.';
+const canonicalUrl = '/research';
+---
+
+<BaseLayout
+  title={title}
+  description={description}
+  lang="en"
+  canonicalUrl={canonicalUrl}
+  jsonLd={personSchema}
+>
+  <div class="container--content">
+
+    <header class="page-header">
+      <h1>Research</h1>
+      <p class="lead">
+        My research agenda bridges network science, organisational behaviour, and applied
+        artificial intelligence — with a particular focus on how Vietnamese and Southeast Asian
+        organisations can leverage social network data to make better decisions about technology
+        adoption, knowledge management, and security governance.
+      </p>
+    </header>
+
+    <!-- ── Area 1: ONA ── -->
+    <section class="research-area" id="ona">
+      <div class="research-area__header">
+        <div class="research-area__icon" aria-hidden="true">⬡</div>
+        <div>
+          <h2 class="research-area__title">Organisational Network Analysis</h2>
+          <p class="research-area__subtitle">Revealing the invisible structure of organisations</p>
+        </div>
+      </div>
+      <div class="research-area__body">
+        <p>
+          Organisational Network Analysis (ONA) is the application of social network methods
+          to the study of relationships, information flows, and influence structures within
+          and between organisations. My research in this area extends beyond traditional
+          single-layer network studies by employing <strong>multiplex network</strong> frameworks
+          that simultaneously examine five distinct relationship types:
+        </p>
+        <ul class="layer-list">
+          <li><span class="layer-pill layer-pill--work">Work Advice</span> — Who do people turn to for task-related guidance?</li>
+          <li><span class="layer-pill layer-pill--ai">AI Support</span> — Who helps colleagues navigate AI tools?</li>
+          <li><span class="layer-pill layer-pill--trust">Trust</span> — Whom do people trust with sensitive information?</li>
+          <li><span class="layer-pill layer-pill--info">Information</span> — Who shares timely organisational information?</li>
+          <li><span class="layer-pill layer-pill--collab">Collaboration</span> — Who actively collaborates on projects?</li>
+        </ul>
+        <p>
+          By overlaying these network layers, we can identify structural patterns invisible to
+          conventional surveys: knowledge silos, informal leaders, redundant communication paths,
+          and critical bridging nodes whose departure would fragment organisational knowledge.
+        </p>
+        <a class="area-link" href="/concepts/organizational-network-analysis">
+          Deep-dive: What is ONA? →
+        </a>
+      </div>
+    </section>
+
+    <!-- ── Area 2: AI Champions ── -->
+    <section class="research-area" id="ai-champions">
+      <div class="research-area__header">
+        <div class="research-area__icon research-area__icon--ai" aria-hidden="true">◈</div>
+        <div>
+          <h2 class="research-area__title">AI Champion Programs</h2>
+          <p class="research-area__subtitle">Grass-roots AI adoption through network-identified influencers</p>
+        </div>
+      </div>
+      <div class="research-area__body">
+        <p>
+          A central contribution of my work is the development of an evidence-based framework
+          for designing AI champion programs — initiatives that identify and empower key
+          individuals within an organisation to champion AI adoption among their peers.
+        </p>
+        <p>
+          Using betweenness centrality and Infomap community detection algorithms applied to
+          ONA data, I have identified three distinct AI champion archetypes:
+        </p>
+        <div class="archetype-grid">
+          <div class="archetype">
+            <strong class="archetype__name">Oracle</strong>
+            <p class="archetype__desc">
+              High betweenness centrality across all network layers. Oracles are the
+              go-to experts — their AI endorsement carries the most credibility and reach.
+            </p>
+          </div>
+          <div class="archetype">
+            <strong class="archetype__name">Broker</strong>
+            <p class="archetype__desc">
+              High betweenness between community clusters. Brokers are the cross-boundary
+              connectors who bridge departments and translate AI insights across silos.
+            </p>
+          </div>
+          <div class="archetype">
+            <strong class="archetype__name">Silo Buster</strong>
+            <p class="archetype__desc">
+              Low internal centrality but high inter-community ties. Silo Busters prevent
+              knowledge hoarding and ensure AI best practices spread beyond isolated teams.
+            </p>
+          </div>
+        </div>
+        <a class="area-link" href="/concepts/ai-champions">
+          Deep-dive: What are AI Champions? →
+        </a>
+      </div>
+    </section>
+
+    <!-- ── Area 3: InfoSec ── -->
+    <section class="research-area" id="infosec">
+      <div class="research-area__header">
+        <div class="research-area__icon research-area__icon--sec" aria-hidden="true">◉</div>
+        <div>
+          <h2 class="research-area__title">Information Security Governance</h2>
+          <p class="research-area__subtitle">Understanding and improving security behaviours in organisations</p>
+        </div>
+      </div>
+      <div class="research-area__body">
+        <p>
+          A significant strand of my research investigates the human and organisational
+          dimensions of information security. Rather than focusing solely on technical
+          controls, I examine why individuals comply with — or deviate from — security
+          policies, and how organisations can cultivate a security-positive culture.
+        </p>
+        <p>Key themes include:</p>
+        <ul>
+          <li>Security policy compliance and non-compliance drivers among employees</li>
+          <li>The role of organisational culture in shaping security behaviour</li>
+          <li>Social influence and peer pressure in information security contexts</li>
+          <li>Enterprise security governance frameworks in Vietnamese SMEs and MNCs</li>
+          <li>Phishing susceptibility and security awareness training effectiveness</li>
+          <li>Privacy concerns and digital literacy in Vietnamese online populations</li>
+        </ul>
+        <p>
+          This work draws on theories including Protection Motivation Theory, Theory of
+          Planned Behaviour, and Social Cognitive Theory, often combined with survey-based
+          structural equation modelling (PLS-SEM, CB-SEM) and qualitative methods.
+        </p>
+      </div>
+    </section>
+
+    <!-- ── Area 4: Digital Transformation ── -->
+    <section class="research-area" id="digital-transformation">
+      <div class="research-area__header">
+        <div class="research-area__icon research-area__icon--dt" aria-hidden="true">◲</div>
+        <div>
+          <h2 class="research-area__title">Digital Transformation</h2>
+          <p class="research-area__subtitle">Navigating large-scale technology change in emerging markets</p>
+        </div>
+      </div>
+      <div class="research-area__body">
+        <p>
+          My digital transformation research examines how individuals and organisations
+          navigate profound technology-driven change — and the social, cognitive, and
+          structural factors that determine whether transformation initiatives succeed or stall.
+        </p>
+        <p>Key topics include:</p>
+        <ul>
+          <li>Technology acceptance and adoption in Vietnamese enterprise contexts</li>
+          <li>Change management strategies for enterprise system implementations (ERP, CRM)</li>
+          <li>Knowledge transfer and organisational learning during digital transitions</li>
+          <li>AI readiness assessment frameworks for Vietnamese SMEs</li>
+          <li>Leadership and culture as enablers (or barriers) of digital change</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ── Methods ── -->
+    <section class="methods-section">
+      <h2>Research methods</h2>
+      <p>
+        I employ a pluralistic methodological approach, combining quantitative, qualitative,
+        and computational methods depending on the research question:
+      </p>
+      <div class="methods-grid">
+        <div class="method">
+          <strong>Quantitative</strong>
+          <p>Survey-based structural equation modelling (PLS-SEM, CB-SEM), regression analysis, multi-group analysis</p>
+        </div>
+        <div class="method">
+          <strong>Network Science</strong>
+          <p>Social network analysis, multiplex ONA, betweenness centrality, Infomap community detection, network visualisation</p>
+        </div>
+        <div class="method">
+          <strong>Qualitative</strong>
+          <p>Semi-structured interviews, case studies, thematic analysis, grounded theory</p>
+        </div>
+        <div class="method">
+          <strong>Mixed Methods</strong>
+          <p>Sequential and concurrent mixed-methods designs combining survey data with interview insights and network metrics</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── CTA ── -->
+    <div class="cta-bar">
+      <a class="cta-btn cta-btn--primary" href="/publications">View publications →</a>
+      <a class="cta-btn cta-btn--outline" href="/contact">Research collaboration enquiry</a>
+    </div>
+
+  </div>
+</BaseLayout>
+
+<style>
+.page-header {
+  gap: var(--space-lg);
+}
+
+/* ── Research area ── */
+.research-area {
+  gap: var(--space-lg);
+}
+
+.research-area__header {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  margin-bottom: 0;
+}
+
+.research-area__icon {
+  flex-shrink: 0;
+  font-size: 1.6rem;
+  color: var(--color-primary);
+  line-height: 1;
+  margin-top: 0.1rem;
+}
+.research-area__icon--ai  { color: var(--color-accent); }
+.research-area__icon--sec { color: var(--color-primary-dark); }
+.research-area__icon--dt  { color: var(--color-accent-light); }
+
+.research-area__title { margin-bottom: 0.2rem; }
+.research-area__subtitle { color: var(--color-text-muted); margin: 0; }
+
+.research-area__body p,
+.research-area__body ul,
+.research-area__body li {
+  color: var(--color-text-secondary);
+  line-height: 1.75;
+}
+
+.research-area__body p { margin-bottom: var(--space-md); }
+
+.area-link {
+  display: inline-block;
+  margin-top: var(--space-sm);
+  font-weight: 600;
+  font-size: 0.9rem;
+  color: var(--color-primary-dark);
+  text-decoration: underline;
+  text-decoration-thickness: 0.08em;
+  text-underline-offset: 0.2em;
+}
+.area-link:hover { color: var(--color-primary); }
+
+/* ── ONA layers ── */
+.layer-list {
+  list-style: none;
+  padding: 0;
+  margin: var(--space-md) 0 var(--space-lg);
+  display: grid;
+  gap: var(--space-sm);
+}
+
+.layer-list li {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+  font-size: 0.925rem !important;
+}
+
+.layer-pill {
+  display: inline-block;
+  padding: 0.2rem 0.65rem;
+  border-radius: 999px;
+  font-size: 0.78rem;
+  font-weight: 700;
+  white-space: nowrap;
+  letter-spacing: 0.02em;
+}
+
+.layer-pill--work  { background: color-mix(in srgb, var(--color-primary) 15%, transparent); color: var(--color-primary-dark); }
+.layer-pill--ai    { background: color-mix(in srgb, var(--color-accent) 15%, transparent);  color: var(--color-accent); }
+.layer-pill--trust { background: color-mix(in srgb, #c07000 15%, transparent); color: #7a4800; }
+.layer-pill--info  { background: color-mix(in srgb, #0070c0 12%, transparent); color: #004f8a; }
+.layer-pill--collab{ background: color-mix(in srgb, #6a0070 12%, transparent); color: #5a005a; }
+
+/* ── Archetype grid ── */
+.archetype-grid {
+  display: grid;
+  gap: 1rem;
+  margin-block: var(--space-md);
+}
+
+.archetype {
+  border-left: 3px solid var(--color-accent);
+}
+
+.archetype__name {
+  display: block;
+  color: var(--color-accent);
+  margin-bottom: var(--space-xs);
+}
+
+.archetype__desc {
+  margin: 0;
+  color: var(--color-text-secondary);
+  line-height: 1.6;
+}
+
+/* ── Methods ── */
+.methods-section {
+  gap: 1rem;
+}
+
+.methods-section h2 { margin-bottom: 0; }
+.methods-section > p { color: var(--color-text-secondary); margin-bottom: 0; }
+
+.methods-grid {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+}
+
+.method strong { display: block; margin-bottom: var(--space-xs); color: var(--color-text-primary); }
+.method p { margin: 0; font-size: var(--text-sm); color: var(--color-text-secondary); line-height: 1.6; }
+
+/* ── CTA ── */
+.cta-bar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.8rem;
+  margin-top: 1.15rem;
+}
+
+@media (min-width: 768px) {
+  .archetype-grid { grid-template-columns: repeat(3, 1fr); }
+}
+</style>
