@@ -16,6 +16,8 @@ const {
   ogImage = '/images/og-default.jpg',
 } = Astro.props;
 
+const GA_MEASUREMENT_ID = 'G-C8WPJ7CPWS';
+const shouldLoadAnalytics = import.meta.env.PROD;
 const fullTitle = `${title} | Dr. Duy Dang-Pham`;
 const siteOrigin = new URL(canonicalUrl, Astro.site ?? 'https://drduydangpham.com');
 const resolvedOgImage = new URL(ogImage, siteOrigin).toString();
@@ -39,6 +41,23 @@ const resolvedOgImage = new URL(ogImage, siteOrigin).toString();
 <meta name="twitter:title" content={fullTitle} />
 <meta name="twitter:description" content={description} />
 <meta name="twitter:image" content={resolvedOgImage} />
+
+{shouldLoadAnalytics && (
+  <>
+    <script
+      async
+      src={`https://www.googletagmanager.com/gtag/js?id=${GA_MEASUREMENT_ID}`}
+    ></script>
+    <script is:inline define:vars={{ GA_MEASUREMENT_ID }}>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag('js', new Date());
+      gtag('config', GA_MEASUREMENT_ID);
+    </script>
+  </>
+)}
 
 {jsonLd && <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />}
 
