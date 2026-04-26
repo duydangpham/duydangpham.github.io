@@ -5,23 +5,23 @@ export const personSchema: Record<string, unknown> = {
   name: 'Duy Dang-Pham',
   alternateName: ['Dr. Duy Dang-Pham', 'Duy Đặng Phạm'],
   honorificPrefix: 'Dr.',
-  jobTitle: 'Senior Lecturer; Co-founder and CEO',
+  jobTitle: 'Associate Head of Department (Research & Innovation)',
   description:
-    'Senior Lecturer in Management Information Systems at RMIT University Vietnam and Co-founder & CEO of NetIQ, a consulting firm specializing in Organizational Network Analysis and AI strategy. Fulbright Scholar-in-Residence 2024. Author of 60+ peer-reviewed publications on information security, digital transformation, and social network analysis.',
+    'Senior Lecturer in Management Information Systems at RMIT University Vietnam and Co-founder & CEO of NetIQ, a consulting firm specializing in Organizational Network Analysis and AI strategy. Fulbright Scholar-in-Residence 2024. Author of 70+ peer-reviewed publications on information security, digital transformation, and social network analysis.',
   url: 'https://drduydangpham.com',
   image: 'https://drduydangpham.com/assets/img/duydangpham_2026.JPG',
-  email: 'EMAIL_PLACEHOLDER',
+  email: 'duy.dang@netiq.vn',
   sameAs: [
     'https://scholar.google.com.vn/citations?user=lkYFFvAAAAAJ',
     'https://orcid.org/0000-0002-7798-6635',
-    'LINKEDIN_URL_PLACEHOLDER',
+    'https://www.linkedin.com/in/duydangpham/',
   ],
   affiliation: [
     {
       '@type': 'Organization',
       '@id': 'https://drduydangpham.com/#netiq',
       name: 'NetIQ',
-      url: 'NETIQ_URL_PLACEHOLDER',
+      url: 'https://netiq.vn',
     },
     {
       '@type': 'Organization',

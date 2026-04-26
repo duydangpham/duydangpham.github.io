@@ -13,6 +13,8 @@ const quickLinks = [
   { label: ui.nav.publications, href: '/publications' },
   { label: ui.nav.contact, href: '/contact' },
 ];
+
+const quickLinkColumns = [quickLinks.slice(0, 4), quickLinks.slice(4)];
 ---
 
 <footer class="site-footer">
@@ -24,17 +26,21 @@ const quickLinks = [
       <p class="site-footer__title">{ui.footer.oneLineTitle}</p>
     </div>
 
-    <div>
+    <div class="site-footer__nav">
       <h2 class="site-footer__heading">{ui.footer.quickLinks}</h2>
-      <ul class="site-footer__links">
-        {quickLinks.map((item) => (
-          <li>
-            <a class="site-footer__link" href={item.href}>
-              {item.label}
-            </a>
-          </li>
+      <div class="site-footer__nav-grid">
+        {quickLinkColumns.map((column) => (
+          <ul class="site-footer__links">
+            {column.map((item) => (
+              <li>
+                <a class="site-footer__link" href={item.href}>
+                  {item.label}
+                </a>
+              </li>
+            ))}
+          </ul>
         ))}
-      </ul>
+      </div>
     </div>
 
     <div>
@@ -63,7 +69,7 @@ const quickLinks = [
         <li>
           <a
             class="site-footer__link"
-            href="LINKEDIN_URL_PLACEHOLDER"
+            href="https://www.linkedin.com/in/duydangpham/"
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -73,7 +79,7 @@ const quickLinks = [
         <li>
           <a
             class="site-footer__link"
-            href="mailto:EMAIL_PLACEHOLDER"
+            href="mailto:duy.dang@netiq.vn"
             target="_blank"
             rel="noopener noreferrer"
           >

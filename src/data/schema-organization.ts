@@ -5,7 +5,7 @@ export const netiqSchema: Record<string, unknown> = {
   name: 'NetIQ',
   description:
     'Vietnamese consulting and training firm specializing in Organizational Network Analysis (ONA), AI strategy, and research advisory services. NetIQ helps organizations identify AI champions, map influence networks, and design AI adoption programs using network science methods.',
-  url: 'NETIQ_URL_PLACEHOLDER',
+  url: 'https://netiq.vn',
   founder: { '@id': 'https://drduydangpham.com/#person' },
   foundingLocation: { '@type': 'Country', name: 'Vietnam' },
   areaServed: ['Vietnam', 'Southeast Asia'],

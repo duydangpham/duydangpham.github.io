@@ -4,15 +4,15 @@ import { personSchema } from '../data/schema-person';
 
 const title = 'Contact';
 const description =
-  'Get in touch with Dr. Duy Dang-Pham for research collaboration, speaking engagements, NetIQ consulting, or media enquiries.';
+  'Get in touch with Dr. Duy Dang-Pham for research collaboration, speaking engagements, student supervision, or media enquiries. For NetIQ consulting, visit netiq.vn.';
 const canonicalUrl = '/contact';
 
 const reasons = [
   { icon: '🔬', label: 'Research collaboration', desc: 'Joint research projects, co-authorship, data sharing, or supervision enquiries.' },
   { icon: '🎤', label: 'Speaking engagements', desc: 'Keynotes, workshops, executive education, conference presentations.' },
-  { icon: '⬡', label: 'NetIQ consulting', desc: 'ONA diagnostics, AI champion program design, AI strategy training.' },
-  { icon: '📰', label: 'Media & press', desc: 'Expert commentary on AI strategy, ONA, digital transformation, or information security.' },
-  { icon: '🎓', label: 'Student supervision', desc: 'Honours, Masters by Research, PhD supervision at RMIT University Vietnam.' },
+  { icon: '⬡', label: 'NetIQ consulting', desc: 'ONA-based diagnostics for change initiatives across AI adoption, digital transformation, leadership, and beyond. For all consulting enquiries please visit netiq.vn.' },
+  { icon: '📰', label: 'Media & press', desc: 'Expert commentary on Organisational Network Analysis, AI adoption, digital transformation, information security, and organisational change in Vietnamese and Southeast Asian contexts.' },
+  { icon: '🎓', label: 'Student supervision', desc: 'PhD, Masters by Research, and Honours supervision across information systems, ONA, AI adoption, cybersecurity, and digital transformation.' },
   { icon: '✉️', label: 'General enquiries', desc: 'Anything else — I am happy to hear from you.' },
 ];
 ---
@@ -29,75 +29,15 @@ const reasons = [
     <header class="page-header">
       <h1>Contact</h1>
       <p class="lead">
-        I welcome enquiries about research collaboration, speaking opportunities, NetIQ
-        consulting, and student supervision. Please reach out via email or LinkedIn — I
-        respond to all serious enquiries within a few business days.
+        I welcome enquiries about research collaboration, speaking opportunities,
+        student supervision, and media. Please reach out via email — I respond to all
+        enquiries within a few business days. For NetIQ consulting and advisory, please
+        visit netiq.vn.
       </p>
     </header>
 
     <div class="contact-layout">
 
-      <!-- Left: contact details -->
-      <div class="contact-details">
-        <h2>Get in touch</h2>
-
-        <div class="contact-item">
-          <span class="contact-item__icon" aria-hidden="true">✉️</span>
-          <div>
-            <p class="contact-item__label">Email</p>
-            <a class="contact-item__value" href="mailto:EMAIL_PLACEHOLDER">
-              EMAIL_PLACEHOLDER
-            </a>
-            <p class="contact-item__note">Replace placeholder with actual address</p>
-          </div>
-        </div>
-
-        <div class="contact-item">
-          <span class="contact-item__icon" aria-hidden="true">🏛️</span>
-          <div>
-            <p class="contact-item__label">Office</p>
-            <p class="contact-item__value">
-              RMIT University Vietnam<br />
-              702 Nguyen Van Linh Blvd<br />
-              District 7, Ho Chi Minh City<br />
-              Vietnam
-            </p>
-          </div>
-        </div>
-
-        <div class="contact-item">
-          <span class="contact-item__icon" aria-hidden="true">🔗</span>
-          <div>
-            <p class="contact-item__label">Professional profiles</p>
-            <ul class="contact-links">
-              <li>
-                <a href="https://scholar.google.com.vn/citations?user=lkYFFvAAAAAJ" target="_blank" rel="noopener noreferrer">
-                  Google Scholar
-                </a>
-              </li>
-              <li>
-                <a href="https://orcid.org/0000-0002-7798-6635" target="_blank" rel="noopener noreferrer">
-                  ORCID 0000-0002-7798-6635
-                </a>
-              </li>
-              <li>
-                <a href="LINKEDIN_URL_PLACEHOLDER" target="_blank" rel="noopener noreferrer">
-                  LinkedIn
-                </a>
-              </li>
-            </ul>
-          </div>
-        </div>
-
-        <div class="response-note">
-          <p>
-            <strong>Response time:</strong> I aim to respond within 3–5 business days.
-            For urgent NetIQ consulting enquiries, please indicate this in your subject line.
-          </p>
-        </div>
-      </div>
-
-      <!-- Right: reasons to contact -->
       <div class="contact-reasons">
         <h2>How can I help?</h2>
         <div class="reasons-grid">
@@ -113,19 +53,66 @@ const reasons = [
         </div>
       </div>
 
+      <div class="contact-details">
+        <h2>Get in touch</h2>
+        <div class="contact-details__grid">
+          <div class="contact-item">
+            <span class="contact-item__icon" aria-hidden="true">✉️</span>
+            <div>
+              <p class="contact-item__label">Email</p>
+              <a class="contact-item__value" href="mailto:duy.dang@netiq.vn">
+                duy.dang@netiq.vn
+              </a>
+            </div>
+          </div>
+
+          <div class="contact-item">
+            <span class="contact-item__icon" aria-hidden="true">🔗</span>
+            <div>
+              <p class="contact-item__label">Professional profiles</p>
+              <ul class="contact-links">
+                <li>
+                  <a href="https://scholar.google.com.vn/citations?user=lkYFFvAAAAAJ" target="_blank" rel="noopener noreferrer">
+                    Google Scholar
+                  </a>
+                </li>
+                <li>
+                  <a href="https://orcid.org/0000-0002-7798-6635" target="_blank" rel="noopener noreferrer">
+                    ORCID 0000-0002-7798-6635
+                  </a>
+                </li>
+                <li>
+                  <a href="https://www.linkedin.com/in/duydangpham/" target="_blank" rel="noopener noreferrer">
+                    LinkedIn
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="response-note">
+            <p>
+              <strong>Response time:</strong> I aim to respond within 3–5 business days.
+              For NetIQ consulting and advisory enquiries, please visit netiq.vn directly
+              for faster service.
+            </p>
+          </div>
+        </div>
+      </div>
+
     </div>
 
     <!-- Map / location note -->
     <section class="location-section">
       <h2>Location</h2>
       <p>
-        I am based at <strong>RMIT University Vietnam</strong> in Ho Chi Minh City, with
-        regular travel to Hanoi and occasional international engagements. For in-person
-        meetings in Ho Chi Minh City, please contact me to arrange a suitable time.
+        I am based in Ho Chi Minh City, with regular travel to Hanoi and occasional
+        international engagements. For in-person meetings in Ho Chi Minh City, please
+        contact me to arrange a suitable time.
       </p>
       <p>
-        <strong>NetIQ</strong> serves clients across Vietnam and Southeast Asia, including
-        in-person and remote engagements.
+        NetIQ serves clients across Vietnam and Southeast Asia through in-person and
+        remote engagements. Visit <a href="https://netiq.vn" target="_blank" rel="noopener noreferrer">netiq.vn</a> for consulting services and enquiries.
       </p>
     </section>
 
@@ -138,26 +125,30 @@ const reasons = [
 /* ── Layout ── */
 .contact-layout {
   display: grid;
-  gap: 1rem;
+  gap: 1.1rem;
   margin-bottom: 1.1rem;
 }
 
 .contact-details h2,
 .contact-reasons h2 { margin-bottom: 0; }
 
+.contact-details__grid {
+  display: grid;
+  gap: 1rem;
+}
+
 /* ── Contact item ── */
 .contact-item {
   display: flex;
   gap: 0.9rem;
   align-items: flex-start;
-  margin-bottom: 1.1rem;
+  margin-bottom: 0;
 }
 .contact-item__icon { font-size: 1.25rem; flex-shrink: 0; margin-top: 0.1rem; }
 .contact-item__label { margin: 0 0 0.25rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.05em; color: var(--color-text-muted); }
 .contact-item__value { display: block; color: var(--color-text-secondary); line-height: 1.6; text-decoration: none; }
 a.contact-item__value { color: var(--color-primary-dark); text-decoration: underline; }
 a.contact-item__value:hover { color: var(--color-primary); }
-.contact-item__note { margin: 0.25rem 0 0; color: var(--color-text-muted); font-style: italic; }
 
 .contact-links { list-style: none; padding: 0; margin: 0; display: grid; gap: var(--space-xs); }
 .contact-links a { color: var(--color-primary-dark); text-decoration: underline; font-size: 0.95rem; }
@@ -172,12 +163,17 @@ a.contact-item__value:hover { color: var(--color-primary); }
 .response-note p { margin: 0; font-size: var(--text-sm); color: var(--color-text-secondary); line-height: 1.65; }
 
 /* ── Reasons ── */
-.reasons-grid { display: grid; gap: 0.9rem; }
+.reasons-grid {
+  display: grid;
+  gap: 0.9rem;
+  grid-template-columns: 1fr;
+}
 
 .reason {
   display: flex;
   gap: 0.9rem;
   align-items: flex-start;
+  height: 100%;
 }
 .reason__icon { font-size: 1.2rem; flex-shrink: 0; margin-top: 0.1rem; }
 .reason__label { display: block; margin-bottom: 0.25rem; }
@@ -187,7 +183,22 @@ a.contact-item__value:hover { color: var(--color-primary); }
 .location-section p { color: var(--color-text-secondary); line-height: 1.75; margin-bottom: var(--space-md); }
 
 /* ── Responsive ── */
+@media (min-width: 700px) {
+  .reasons-grid { grid-template-columns: 1fr 1fr; }
+}
+
 @media (min-width: 900px) {
-  .contact-layout { grid-template-columns: 1fr 1fr; }
+  .contact-details__grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    align-items: start;
+  }
+
+  .response-note {
+    grid-column: 1 / -1;
+  }
+}
+
+@media (min-width: 1100px) {
+  .reasons-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
 }
 </style>

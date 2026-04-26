@@ -17,7 +17,7 @@ const en = {
   footer: {
     quickLinks: 'Quick links',
     connect: 'Connect',
-    oneLineTitle: 'Senior Lecturer, RMIT Vietnam | Co-founder & CEO, NetIQ',
+    oneLineTitle: 'Associate Head of Department, RMIT Vietnam | Co-Founder, NetIQ',
     googleScholar: 'Google Scholar',
     orcid: 'ORCID',
     linkedIn: 'LinkedIn',

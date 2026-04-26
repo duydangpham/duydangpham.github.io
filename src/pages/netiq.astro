@@ -4,7 +4,7 @@ import { netiqSchema } from '../data/schema-organization';
 
 const title = 'NetIQ';
 const description =
-  'NetIQ is a Vietnamese consulting and training firm specialising in Organisational Network Analysis, AI champion programs, and AI strategy advisory services for organisations across Vietnam and Southeast Asia.';
+  "NetIQ is Vietnam's specialist in Organisational Network Analysis, helping organisations navigate change initiatives across AI adoption, digital transformation, leadership, and beyond. Founded by Dr. Duy Dang-Pham and grounded in peer-reviewed research.";
 const canonicalUrl = '/netiq';
 
 const services = [
@@ -12,35 +12,22 @@ const services = [
     icon: '⬡',
     name: 'ONA Consulting & Diagnostics',
     summary: "Map your organisation's real relationship networks",
-    body: 'We design and administer multiplex ONA surveys across five network layers — Work Advice, AI Support, Trust, Information, and Collaboration — then use network-science algorithms to identify key brokers, silos, and high-centrality nodes. Deliverables include interactive network visualisations, a diagnostic report, and a leadership briefing with prioritised recommendations.',
   },
   {
     icon: '◈',
     name: 'AI Champion Program Design',
     summary: 'Identify and empower your internal AI advocates',
-    body: 'Using betweenness centrality and Infomap community detection on your ONA data, we identify Oracle, Broker, and Silo-Buster archetypes and design a tailored AI champion program — including selection criteria, onboarding, activation playbooks, and progress-measurement frameworks.',
   },
   {
     icon: '◲',
     name: 'AI Strategy Training for Executives',
     summary: 'Build leadership fluency in AI across three stages',
-    body: 'Our executive education programme covers AI readiness assessment, strategic planning for AI adoption, and implementation governance — contextualised for Vietnamese and Southeast Asian regulatory, cultural, and competitive environments. Available as in-person workshops or blended formats.',
   },
   {
     icon: '◉',
     name: 'Research & Advisory Services',
     summary: 'Independent research support and strategic advisory',
-    body: 'We support organisations, government agencies, and academic institutions with independent research design, data collection, network analysis, and interpretation. Services include custom ONA study design, literature synthesis, policy advisory, and co-authorship on applied research projects.',
   },
-];
-
-const methodology = [
-  { step: '01', label: 'Needs Assessment', desc: 'Stakeholder interviews and organisational context mapping to define the right ONA scope and questions.' },
-  { step: '02', label: 'Survey Design & Administration', desc: 'Validated multiplex ONA survey instruments administered across target populations, with anonymisation protocols.' },
-  { step: '03', label: 'Network Analysis', desc: 'Betweenness centrality, degree centrality, Infomap community detection, and multiplex correlation analysis applied to clean relational data.' },
-  { step: '04', label: 'Interpretation & Reporting', desc: 'Interactive visualisations, executive summary, diagnostic report, and leadership workshop to interpret findings and plan actions.' },
-  { step: '05', label: 'Program Design & Implementation', desc: 'Design of AI champion programs, intervention plans, or structural changes informed by ONA findings.' },
-  { step: '06', label: 'Follow-up & Measurement', desc: 'Repeat ONA assessment (6–12 months) to measure network change and evaluate program impact.' },
 ];
 ---
 
@@ -55,20 +42,31 @@ const methodology = [
   <section class="netiq-hero">
     <div class="container netiq-hero__inner">
       <div class="netiq-hero__text">
-        <p class="netiq-hero__eyebrow">Consulting · Training · Research</p>
+        <p class="netiq-hero__eyebrow">Consulting · Training · Advisory</p>
         <h1 class="netiq-hero__title">NetIQ</h1>
         <p class="netiq-hero__sub">
-          Vietnam's specialist in Organisational Network Analysis and AI strategy
+          Vietnam's specialist in Organisational Network Analysis for change-driven organisations
         </p>
         <p class="netiq-hero__body">
-          NetIQ was co-founded by Dr. Duy Dang-Pham to translate cutting-edge network-science
-          research into practical solutions for Vietnamese and Southeast Asian organisations.
-          We help leadership teams understand the real — not the org-chart — structure of
-          their organisations, and use those insights to design more effective AI adoption
-          strategies.
+          Behind every change initiative — whether it is an AI rollout, a leadership
+          restructure, a DEI programme, or a post-merger integration — there is a
+          human network that will determine whether it succeeds or fails.
+          Organisational Network Analysis makes that network visible. NetIQ was founded
+          by Dr. Duy Dang-Pham to bring the rigour of academic network science to
+          Vietnamese and Southeast Asian organisations navigating exactly that
+          challenge. Our deepest expertise lies in AI adoption, digital transformation,
+          and information security — but ONA works wherever relationships, trust, and
+          informal influence shape whether change takes hold.
         </p>
         <div class="netiq-hero__actions">
-          <a class="btn btn--white" href="/contact">Work with NetIQ</a>
+          <a
+            class="btn btn--white"
+            href="https://netiq.vn"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Visit netiq.vn
+          </a>
           <a class="btn btn--ghost" href="#services">Our services ↓</a>
         </div>
       </div>
@@ -104,42 +102,38 @@ const methodology = [
     </div>
   </section>
 
-  <div class="container--content">
+  <div class="container--content netiq-shell">
 
     <!-- ── Services ── -->
     <section class="section-block" id="services">
       <h2>Services</h2>
+      <p class="section-lead">
+        ONA has been applied to leadership effectiveness, communication flow, DEI
+        initiatives, knowledge management, and change management broadly. The services
+        below represent our core practice areas — anchored in Dr. Dang-Pham's research
+        expertise.
+      </p>
       <div class="services-grid">
         {services.map((s) => (
           <article class="service-card">
             <div class="service-card__icon" aria-hidden="true">{s.icon}</div>
             <h3 class="service-card__name">{s.name}</h3>
             <p class="service-card__summary">{s.summary}</p>
-            <p class="service-card__body">{s.body}</p>
           </article>
         ))}
       </div>
-    </section>
-
-    <!-- ── Methodology ── -->
-    <section class="section-block" id="methodology">
-      <h2>Our methodology</h2>
-      <p class="section-lead">
-        NetIQ's ONA engagements follow a structured six-step process grounded in the
-        academic research of Dr. Dang-Pham and validated across Vietnamese and
-        international organisations.
+      <p class="section-lead services-note">
+        Full service details, engagement formats, and case studies are available at
+        netiq.vn
       </p>
-      <ol class="methodology-steps">
-        {methodology.map((m) => (
-          <li class="method-step">
-            <span class="method-step__number">{m.step}</span>
-            <div>
-              <strong class="method-step__label">{m.label}</strong>
-              <p class="method-step__desc">{m.desc}</p>
-            </div>
-          </li>
-        ))}
-      </ol>
+      <a
+        class="btn btn--outline"
+        href="https://netiq.vn"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Explore services at netiq.vn
+      </a>
     </section>
 
     <!-- ── Why NetIQ ── -->
@@ -148,32 +142,62 @@ const methodology = [
       <div class="why-grid">
         <div class="why-item">
           <strong>Academic rigour</strong>
-          <p>Methods developed and validated through 60+ peer-reviewed publications — not vendor frameworks or guesswork.</p>
+          <p>
+            Our methods have been tested, challenged, and refined across 70+
+            peer-reviewed publications — not assembled from a proprietary playbook.
+            When we tell you something about your organisation's network, the science
+            supports it.
+          </p>
         </div>
         <div class="why-item">
-          <strong>Local context expertise</strong>
-          <p>15+ years researching Vietnamese and Southeast Asian organisations — we understand your cultural, regulatory, and competitive environment.</p>
+          <strong>Broad application, deep expertise</strong>
+          <p>
+            ONA can be applied wherever human networks shape organisational outcomes —
+            leadership, communication, DEI, knowledge management, and change
+            management of any kind. Our deepest research expertise lies in AI adoption,
+            digital transformation, and information security, but the diagnostic
+            methodology is universal.
+          </p>
         </div>
         <div class="why-item">
-          <strong>End-to-end delivery</strong>
-          <p>From survey design and data collection to analysis, visualisation, leadership workshops, and program implementation support.</p>
+          <strong>One team, start to finish</strong>
+          <p>
+            You don't manage multiple vendors or translate findings into action
+            yourself. We take you from scoping question to implemented programme in a
+            single continuous engagement — with one team accountable throughout.
+          </p>
         </div>
         <div class="why-item">
           <strong>Actionable outputs</strong>
-          <p>Every engagement culminates in practical recommendations your leadership team can act on — not academic reports that gather dust.</p>
+          <p>
+            Every engagement closes with specific, prioritised actions your leadership
+            team can begin implementing within weeks — not a report that answers one
+            question and raises three more.
+          </p>
         </div>
       </div>
     </section>
 
     <!-- ── CTA ── -->
     <section class="netiq-cta">
-      <h2>Ready to map your organisation?</h2>
+      <h2>Ready to work with NetIQ?</h2>
       <p>
-        Whether you are beginning an AI transformation, facing unexplained knowledge-sharing
-        problems, or designing a change management initiative, an ONA diagnostic can illuminate
-        exactly what is happening beneath the surface. Let's talk.
+        If your organisation is navigating a change initiative — whether that is AI
+        adoption, a structural reorganisation, a cultural transformation, or something
+        else entirely — ONA can show you what is actually happening in the networks
+        that will determine your outcome. For service details, engagement formats, and
+        enquiries, head to the NetIQ website. If you'd like to reach Dr. Dang-Pham
+        directly about research collaboration or speaking, use the contact page on
+        this site.
       </p>
-      <a class="cta-btn" href="/contact">Contact NetIQ →</a>
+      <a
+        class="cta-btn"
+        href="https://netiq.vn"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Go to netiq.vn →
+      </a>
     </section>
 
   </div>
@@ -243,7 +267,7 @@ const methodology = [
 }
 
 .netiq-hero__body {
-  max-width: 54ch;
+  max-width: 57ch;
   margin-bottom: 1.5rem;
   color: rgb(255 255 255 / 0.82);
   font-size: 1rem;
@@ -257,7 +281,8 @@ const methodology = [
 }
 
 .netiq-hero__visual {
-  width: min(100%, 320px);
+  justify-self: end;
+  width: min(100%, 300px);
   padding: 1.2rem;
   border: 1px solid rgb(255 255 255 / 0.14);
   border-radius: 30px;
@@ -273,14 +298,27 @@ const methodology = [
 
 .section-block {
   padding-top: 0;
+  display: grid;
+  gap: var(--space-md);
+}
+
+.netiq-shell :is(.section-block, .netiq-cta) {
+  padding: clamp(1.5rem, 3vw, 2.35rem);
 }
 
 .section-block h2 {
+  margin-bottom: 0;
   font-size: 1.35rem;
 }
 
+.section-block + .section-block,
+.section-block + .netiq-cta {
+  margin-top: clamp(1.75rem, 3vw, 2.5rem);
+}
+
 .section-lead {
-  margin-bottom: var(--space-lg);
+  max-width: 58ch;
+  margin-bottom: 0;
   color: var(--color-text-secondary);
   line-height: 1.72;
 }
@@ -288,6 +326,7 @@ const methodology = [
 .services-grid {
   display: grid;
   gap: var(--space-lg);
+  margin-top: var(--space-xs);
 }
 
 .service-card {
@@ -306,72 +345,27 @@ const methodology = [
 }
 
 .service-card__summary {
-  margin-bottom: 0.75rem;
+  margin: 0;
   color: var(--color-primary);
   font-size: 0.88rem;
   font-style: italic;
   font-weight: 600;
 }
 
-.service-card__body {
-  margin: 0;
-  color: var(--color-text-secondary);
-  font-size: 0.94rem;
-  line-height: 1.7;
-}
-
-.methodology-steps {
-  display: grid;
-  gap: var(--space-md);
-  margin: 0;
-  padding: 0;
-  list-style: none;
-}
-
-.method-step {
-  display: flex;
-  gap: var(--space-lg);
-  align-items: flex-start;
-  padding: 1.15rem 1.25rem;
-}
-
-.method-step__number {
-  flex-shrink: 0;
-  width: 2.3rem;
-  height: 2.3rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 50%;
-  background: linear-gradient(135deg, var(--color-primary), #924355);
-  color: #fff;
-  font-family: var(--font-mono);
-  font-size: 0.75rem;
-  font-weight: 700;
-  box-shadow: 0 14px 28px rgb(116 43 57 / 0.18);
-}
-
-.method-step__label {
-  display: block;
-  margin-bottom: 0.25rem;
-  font-size: 0.98rem;
-}
-
-.method-step__desc {
-  margin: 0;
-  color: var(--color-text-secondary);
-  font-size: 0.9rem;
-  line-height: 1.65;
+.services-note {
+  margin-top: var(--space-lg);
+  margin-bottom: var(--space-md);
 }
 
 .why-grid {
   display: grid;
   gap: var(--space-md);
-  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  align-items: start;
+  grid-template-columns: 1fr;
 }
 
 .why-item {
-  padding: 1.2rem;
+  padding: clamp(1.1rem, 2vw, 1.35rem);
   border-top: 3px solid var(--color-primary);
 }
 
@@ -398,10 +392,16 @@ const methodology = [
 }
 
 .netiq-cta p {
-  max-width: 58ch;
+  max-width: 56ch;
   margin-bottom: var(--space-lg);
   color: var(--color-text-secondary);
   line-height: 1.72;
+}
+
+@media (min-width: 900px) {
+  .netiq-shell :is(.section-block, .netiq-cta) {
+    padding-inline: clamp(2.2rem, 4.4vw, 3.4rem);
+  }
 }
 
 @media (max-width: 767px) {
@@ -415,11 +415,17 @@ const methodology = [
   .services-grid {
     grid-template-columns: 1fr 1fr;
   }
+
+  .why-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-lg);
+  }
 }
 
 @media (min-width: 960px) {
   .netiq-hero__inner {
-    grid-template-columns: minmax(0, 1.2fr) minmax(280px, 0.8fr);
+    grid-template-columns: minmax(0, 1.32fr) minmax(240px, 0.68fr);
+    gap: clamp(1.6rem, 3vw, 2.35rem);
   }
 }
 </style>
