@@ -47,7 +47,7 @@ export function createConceptPageSchema(
     inDefinedTermSet: {
       '@type': 'DefinedTermSet',
       name: 'ONA and AI Strategy Concepts',
-      url: 'https://drduydangpham.com/concepts/',
+      url: 'https://drduydangpham.com/khai-niem/',
     },
     author: { '@id': 'https://drduydangpham.com/#person' },
   };

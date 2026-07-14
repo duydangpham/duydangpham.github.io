@@ -1,0 +1,1694 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+const canonicalUrl = '/khai-niem/phan-tich-mang-luoi-to-chuc';
+
+const title = 'Organisational Network Analysis';
+const description =
+  "Explore an interactive Organisational Network Analysis visualization and discover the questions ONA can answer for CEOs, CHROs, COOs, and transformation leaders. See what your org chart doesn't show.";
+
+const jsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'DefinedTerm',
+  name: 'Organisational Network Analysis',
+  description:
+    'Organisational Network Analysis maps the informal network of relationships, trust, and influence beneath an org chart to reveal how decisions, knowledge, and change actually move through an organisation.',
+  url: `https://drduydangpham.com${canonicalUrl}`,
+  sameAs: ['https://en.wikipedia.org/wiki/Organizational_network_analysis'],
+  inDefinedTermSet: {
+    '@type': 'DefinedTermSet',
+    name: 'ONA and AI Strategy Concepts',
+    url: 'https://drduydangpham.com/khai-niem/',
+  },
+  author: {
+    '@id': 'https://drduydangpham.com/#person',
+  },
+};
+
+const roleQuestionSets = [
+  {
+    id: 'ceo',
+    label: 'CEO / Managing Director',
+    questions: [
+      'Your last major initiative had executive sponsorship, a budget, and a detailed rollout plan. Why did adoption stall on the third floor?',
+      'The person you appointed to lead the AI programme is capable and enthusiastic. But are they trusted by their peers — or just by you?',
+      'If your three most influential informal leaders resigned tomorrow, which parts of your organisation would go quiet — and would you even know who they are?',
+      'Your strategy is sound. Is your network aligned enough to carry it?',
+    ],
+  },
+  {
+    id: 'chro',
+    label: 'CHRO / People & Culture',
+    questions: [
+      "Your engagement survey tells you how people feel. It doesn't tell you who shapes how they feel.",
+      'You know who your high performers are. Do you know whether they are connected — or quietly becoming isolated?',
+      'Your DEI programme has measurable goals. Does your actual collaboration network reflect them?',
+      'Who are the unofficial mentors in your organisation — the ones nobody appointed, but everyone turns to?',
+    ],
+  },
+  {
+    id: 'coo',
+    label: 'COO / Operations',
+    questions: [
+      'Your processes are documented. But where are decisions actually being made?',
+      'You have cross-functional teams. Are they genuinely exchanging knowledge — or sitting in the same meetings as parallel silos?',
+      'Where is information pooling instead of flowing? Who is the single bridge between two critical parts of your operation — and what happens if they leave?',
+      'If you mapped every decision that actually moved something this quarter, how many went through one person?',
+    ],
+  },
+  {
+    id: 'cio',
+    label: 'CIO / Digital Transformation Leader',
+    questions: [
+      "You have usage data for your AI tools. You don't have data on who influences whether colleagues try them, persist with them, or quietly abandon them.",
+      "Adoption is strong in some teams and stalling in others. Is that about the tools — or about who's in those teams?",
+      'You identified your change champions. Did you choose them from the org chart or from the network?',
+      'The informal AI experts in your organisation — do they know they are central? Does leadership?',
+    ],
+  },
+  {
+    id: 'change',
+    label: 'Change Manager / Transformation Lead',
+    questions: [
+      'You know what needs to change. Do you know who will carry the message — and who will quietly neutralise it?',
+      'Resistance to change is rarely loud. Where in your network is it spreading in silence?',
+      "Your communication plan reaches everyone on the distribution list. Your network doesn't. Who's falling through the gap?",
+      "You've mapped the stakeholders. Have you mapped the relationships between them?",
+    ],
+  },
+];
+
+const meridianNodes = [
+  {
+    id: 'ceo',
+    label: 'CEO',
+    x: 48,
+    y: 8,
+    mobile: true,
+    group: 'leadership',
+    labelPosition: 'right',
+    insight: 'Formal authority still depends on informal carriers.',
+  },
+  {
+    id: 'strategy',
+    label: 'Strategy Lead',
+    x: 49,
+    y: 24,
+    mobile: true,
+    group: 'leadership',
+    archetype: 'Broker',
+    labelPosition: 'top',
+    insight: 'Critical bridge between Sales and Operations.',
+  },
+  {
+    id: 'change',
+    label: 'Change Lead',
+    x: 67,
+    y: 24,
+    mobile: true,
+    group: 'leadership',
+    archetype: 'Peripheral',
+    labelPosition: 'top',
+    insight: 'Formally appointed, but weakly embedded.',
+  },
+  {
+    id: 'hr',
+    label: 'HR Director',
+    x: 18,
+    y: 28,
+    mobile: true,
+    group: 'enablement',
+    labelPosition: 'right',
+    insight: 'Widely trusted even without advice centrality.',
+  },
+  {
+    id: 'it',
+    label: 'IT Manager',
+    x: 77,
+    y: 29,
+    mobile: true,
+    group: 'technology',
+    archetype: 'Oracle',
+    labelPosition: 'bottom',
+    insight: 'Top connector across every layer.',
+  },
+  {
+    id: 'finance',
+    label: 'Finance Lead',
+    x: 8,
+    y: 48,
+    mobile: false,
+    group: 'enablement',
+    labelPosition: 'right',
+    insight: 'Close to the centre, but rarely across silos.',
+  },
+  {
+    id: 'people',
+    label: 'People Partner',
+    x: 24,
+    y: 47,
+    mobile: false,
+    group: 'enablement',
+    labelPosition: 'right',
+    insight: 'Often hears culture before leadership does.',
+  },
+  {
+    id: 'data',
+    label: 'Data Analyst',
+    x: 61,
+    y: 45,
+    mobile: true,
+    group: 'technology',
+    labelPosition: 'right',
+    insight: 'Supports the technical core around IT.',
+  },
+  {
+    id: 'legal',
+    label: 'Legal Counsel',
+    x: 88,
+    y: 48,
+    mobile: false,
+    group: 'enablement',
+    labelPosition: 'left',
+    insight: 'Trusted selectively, but outside the main flow.',
+  },
+  {
+    id: 'salesA',
+    label: 'Sales A',
+    x: 18,
+    y: 76,
+    mobile: true,
+    group: 'sales',
+    labelPosition: 'right',
+    insight: 'Embedded in the Sales silo.',
+  },
+  {
+    id: 'salesB',
+    label: 'Sales B',
+    x: 29,
+    y: 89,
+    mobile: true,
+    group: 'sales',
+    labelPosition: 'right',
+    insight: 'Relies on a small circle for movement.',
+  },
+  {
+    id: 'salesOps',
+    label: 'Sales Ops',
+    x: 43,
+    y: 74,
+    mobile: false,
+    group: 'sales',
+    archetype: 'Silo Buster',
+    labelPosition: 'right',
+    insight: 'One of the few routes out of Sales.',
+  },
+  {
+    id: 'marketing',
+    label: 'Marketing Lead',
+    x: 26,
+    y: 62,
+    mobile: false,
+    group: 'sales',
+    labelPosition: 'right',
+    insight: 'Near Sales, but not structurally decisive.',
+  },
+  {
+    id: 'customer',
+    label: 'Customer Success',
+    x: 47,
+    y: 90,
+    mobile: false,
+    group: 'sales',
+    labelPosition: 'right',
+    insight: 'Touches the edge of Sales without leading it.',
+  },
+  {
+    id: 'opsA',
+    label: 'Operations A',
+    x: 72,
+    y: 72,
+    mobile: true,
+    group: 'operations',
+    labelPosition: 'right',
+    insight: 'Operationally central inside the delivery cluster.',
+  },
+  {
+    id: 'opsB',
+    label: 'Operations B',
+    x: 85,
+    y: 87,
+    mobile: true,
+    group: 'operations',
+    archetype: 'Peripheral',
+    labelPosition: 'left',
+    insight: 'Becomes isolated when collaboration is mapped.',
+  },
+  {
+    id: 'opsC',
+    label: 'Operations C',
+    x: 93,
+    y: 64,
+    mobile: true,
+    group: 'operations',
+    labelPosition: 'left',
+    insight: 'Connected, but mostly within the silo.',
+  },
+  {
+    id: 'product',
+    label: 'Product Lead',
+    x: 57,
+    y: 90,
+    mobile: true,
+    group: 'operations',
+    labelPosition: 'right',
+    insight: 'Close enough to bridge if activated deliberately.',
+  },
+];
+
+const mobileNodeIds = meridianNodes.filter((node) => node.mobile).map((node) => node.id);
+
+const networkLayers = {
+  workAdvice: [
+    { source: 'ceo', target: 'strategy' },
+    { source: 'ceo', target: 'it' },
+    { source: 'change', target: 'strategy' },
+    { source: 'change', target: 'it' },
+    { source: 'hr', target: 'people' },
+    { source: 'finance', target: 'strategy' },
+    { source: 'people', target: 'hr' },
+    { source: 'people', target: 'strategy' },
+    { source: 'data', target: 'it' },
+    { source: 'legal', target: 'strategy' },
+    { source: 'salesA', target: 'salesOps' },
+    { source: 'salesA', target: 'it' },
+    { source: 'salesB', target: 'salesOps' },
+    { source: 'salesB', target: 'it' },
+    { source: 'salesOps', target: 'strategy' },
+    { source: 'salesOps', target: 'it' },
+    { source: 'marketing', target: 'salesOps' },
+    { source: 'customer', target: 'salesOps' },
+    { source: 'opsA', target: 'it' },
+    { source: 'opsA', target: 'product' },
+    { source: 'opsB', target: 'opsA' },
+    { source: 'opsB', target: 'it' },
+    { source: 'opsC', target: 'it' },
+    { source: 'opsC', target: 'product' },
+    { source: 'product', target: 'it' },
+    { source: 'product', target: 'strategy' },
+  ],
+  trust: [
+    { source: 'ceo', target: 'hr' },
+    { source: 'strategy', target: 'ceo' },
+    { source: 'change', target: 'hr' },
+    { source: 'finance', target: 'hr' },
+    { source: 'people', target: 'hr' },
+    { source: 'data', target: 'hr' },
+    { source: 'legal', target: 'hr' },
+    { source: 'salesA', target: 'hr' },
+    { source: 'salesB', target: 'hr' },
+    { source: 'salesOps', target: 'hr' },
+    { source: 'marketing', target: 'hr' },
+    { source: 'customer', target: 'salesOps' },
+    { source: 'opsA', target: 'hr' },
+    { source: 'opsB', target: 'opsA' },
+    { source: 'opsC', target: 'hr' },
+    { source: 'product', target: 'strategy' },
+    { source: 'it', target: 'strategy' },
+    { source: 'hr', target: 'ceo' },
+  ],
+  collaboration: [
+    { source: 'ceo', target: 'strategy' },
+    { source: 'strategy', target: 'ceo' },
+    { source: 'strategy', target: 'it' },
+    { source: 'it', target: 'strategy' },
+    { source: 'strategy', target: 'salesOps' },
+    { source: 'salesOps', target: 'strategy' },
+    { source: 'strategy', target: 'opsA' },
+    { source: 'opsA', target: 'strategy' },
+    { source: 'hr', target: 'people' },
+    { source: 'people', target: 'hr' },
+    { source: 'it', target: 'data' },
+    { source: 'data', target: 'it' },
+    { source: 'it', target: 'product' },
+    { source: 'product', target: 'it' },
+    { source: 'salesA', target: 'salesOps' },
+    { source: 'salesOps', target: 'salesA' },
+    { source: 'salesB', target: 'salesOps' },
+    { source: 'salesOps', target: 'salesB' },
+    { source: 'salesA', target: 'salesB' },
+    { source: 'salesB', target: 'salesA' },
+    { source: 'marketing', target: 'salesA' },
+    { source: 'salesA', target: 'marketing' },
+    { source: 'marketing', target: 'salesOps' },
+    { source: 'salesOps', target: 'marketing' },
+    { source: 'customer', target: 'salesA' },
+    { source: 'salesA', target: 'customer' },
+    { source: 'customer', target: 'salesOps' },
+    { source: 'salesOps', target: 'customer' },
+    { source: 'opsA', target: 'opsC' },
+    { source: 'opsC', target: 'opsA' },
+    { source: 'product', target: 'opsA' },
+    { source: 'opsA', target: 'product' },
+    { source: 'product', target: 'opsC' },
+    { source: 'opsC', target: 'product' },
+  ],
+};
+
+const layerMeta = {
+  workAdvice: {
+    label: 'Work Advice',
+    color: '#5b84d6',
+  },
+  trust: {
+    label: 'Trust',
+    color: '#b98944',
+  },
+  collaboration: {
+    label: 'Collaboration',
+    color: '#742b39',
+  },
+};
+---
+
+<BaseLayout
+  title={title}
+  description={description}
+  lang="vi"
+  canonicalUrl={canonicalUrl}
+  jsonLd={jsonLd}
+>
+  <div class="container ona-page">
+    <section class="ona-hook">
+      <div class="ona-hook__intro">
+        <h1>Every organisation has two structures. You're only managing one of them.</h1>
+        <p class="ona-hook__sub">
+          The org chart shows reporting lines. ONA shows what's really happening.
+        </p>
+      </div>
+
+      <div class="ona-lab">
+        <div class="ona-lab__toolbar">
+          <div class="ona-lab__layer-group">
+            <div class="ona-layer-switch" role="tablist" aria-label="Meridian network layers">
+              <button class="ona-layer-btn is-active" type="button" data-layer="workAdvice" aria-pressed="true">
+                Work Advice
+              </button>
+              <button class="ona-layer-btn" type="button" data-layer="trust" aria-pressed="false">
+                Trust
+              </button>
+              <button class="ona-layer-btn" type="button" data-layer="collaboration" aria-pressed="false">
+                Collaboration
+              </button>
+            </div>
+            <p class="ona-lab__caption">Meridian is a fictional organisation. Explore its informal network.</p>
+          </div>
+
+          <button id="ona-whatif-toggle" class="ona-whatif-btn" type="button" aria-pressed="false">
+            What if they left?
+          </button>
+        </div>
+
+        <p class="ona-lab__prompt">Click any node. Toggle the layers. Watch what changes.</p>
+
+        <div class="ona-lab__body">
+          <div class="ona-visual-shell">
+            <div id="ona-network" class="ona-network" aria-label="Interactive Meridian organisational network"></div>
+            <div id="ona-tooltip" class="ona-tooltip" hidden></div>
+          </div>
+
+          <aside id="ona-detail-panel" class="ona-detail-panel" aria-live="polite">
+            <p class="ona-detail-panel__eyebrow">Meridian snapshot</p>
+            <h2>Start exploring the informal organisation</h2>
+            <p>
+              Click a role to see what its position reveals. Toggle between Work Advice,
+              Trust, and Collaboration to watch the story change.
+            </p>
+            <p class="ona-detail-panel__note">
+              Then try <strong>What if they left?</strong> to see how fragile a network can be.
+            </p>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <section class="ona-pause">
+      <p class="ona-pause__question">
+        The org chart you drew last year — how much of it reflects how decisions are actually
+        made, how knowledge actually moves, and who people actually trust?
+      </p>
+      <p class="ona-pause__answer">
+        Most leaders would answer: not much. ONA gives you the map that does.
+      </p>
+    </section>
+
+    <section class="ona-role-section section-shell">
+      <div class="ona-section-intro">
+        <h2>What does your network tell you?</h2>
+        <p>Select your role. These are the questions ONA can answer.</p>
+      </div>
+
+      <div class="ona-role-tabs" role="tablist" aria-label="Organisation roles">
+        {roleQuestionSets.map((role, index) => (
+          <button
+            class:list={['ona-role-tab', index === 0 && 'is-active']}
+            id={`${role.id}-tab`}
+            type="button"
+            role="tab"
+            aria-selected={index === 0 ? 'true' : 'false'}
+            aria-controls={`${role.id}-panel`}
+            data-role-tab={role.id}
+          >
+            {role.label}
+          </button>
+        ))}
+      </div>
+
+      <div class="ona-role-panels">
+        {roleQuestionSets.map((role, index) => (
+          <section
+            class:list={['ona-role-panel', index === 0 && 'is-active']}
+            id={`${role.id}-panel`}
+            role="tabpanel"
+            aria-labelledby={`${role.id}-tab`}
+            hidden={index !== 0}
+          >
+            <div class="ona-question-grid">
+              {role.questions.map((question) => (
+                <article class="ona-question-card">
+                  <p>{question}</p>
+                </article>
+              ))}
+            </div>
+          </section>
+        ))}
+      </div>
+    </section>
+
+    <section class="ona-reveal section-shell">
+      <h2>This is what Organisational Network Analysis does.</h2>
+      <div class="ona-reveal__copy">
+        <p>
+          ONA maps the real, informal network of relationships, trust, and influence that sits
+          beneath every org chart — and determines whether your strategy actually works. Using
+          the same mathematical methods applied to internet infrastructure, disease transmission,
+          and financial systems, we survey employees on who they turn to for advice, who they
+          trust, who helps them with new tools, and who they collaborate with. Those responses
+          become a directed graph. That graph reveals your brokers, your silos, your informal
+          leaders, and your knowledge bottlenecks — with precision that no survey, no
+          performance review, and no management intuition can match.
+        </p>
+        <p class="ona-reveal__kicker">
+          The result is not a report. It is a map. And once you have the map, you can act.
+        </p>
+      </div>
+    </section>
+
+    <section class="ona-next section-shell">
+      <div class="ona-section-intro">
+        <h2>Where would you like to go next?</h2>
+      </div>
+
+      <div class="ona-next__grid">
+        <article class="ona-next-card">
+          <h3>Understand the methodology</h3>
+          <p>
+            Explore the full ONA framework, network metrics, and multiplex methods behind the
+            approach.
+          </p>
+          <a href="/nghien-cuu">Read the research →</a>
+        </article>
+
+        <article class="ona-next-card ona-next-card--primary">
+          <h3>Work with NetIQ</h3>
+          <p>
+            NetIQ applies ONA to real organisations across Vietnam and Southeast Asia. See how.
+          </p>
+          <a href="https://netiq.vn" target="_blank" rel="noopener noreferrer">Visit netiq.vn →</a>
+        </article>
+
+        <article class="ona-next-card">
+          <h3>Liên hệ trao đổi</h3>
+          <p>
+            Have a specific question about ONA or want to discuss a collaboration?
+          </p>
+          <a href="/lien-he">Contact →</a>
+        </article>
+      </div>
+    </section>
+  </div>
+
+  <script is:inline src="https://cdnjs.cloudflare.com/ajax/libs/d3/7.9.0/d3.min.js"></script>
+  <script
+    define:vars={{ meridianNodes, mobileNodeIds, networkLayers, layerMeta }}
+    is:inline
+  >
+    (() => {
+      const roleTabs = Array.from(document.querySelectorAll('[data-role-tab]'));
+      const rolePanels = Array.from(document.querySelectorAll('.ona-role-panel'));
+
+      roleTabs.forEach((tab) => {
+        tab.addEventListener('click', () => {
+          const target = tab.dataset.roleTab;
+
+          roleTabs.forEach((otherTab) => {
+            const active = otherTab === tab;
+            otherTab.classList.toggle('is-active', active);
+            otherTab.setAttribute('aria-selected', String(active));
+          });
+
+          rolePanels.forEach((panelEl) => {
+            const active = panelEl.id === target + '-panel';
+            panelEl.classList.toggle('is-active', active);
+            panelEl.hidden = !active;
+          });
+        });
+      });
+
+      if (!window.d3) {
+        return;
+      }
+
+      const d3 = window.d3;
+      const networkRoot = document.getElementById('ona-network');
+      const tooltip = document.getElementById('ona-tooltip');
+      const panel = document.getElementById('ona-detail-panel');
+      const layerButtons = Array.from(document.querySelectorAll('.ona-layer-btn'));
+      const whatIfButton = document.getElementById('ona-whatif-toggle');
+
+      if (!networkRoot || !tooltip || !panel || !whatIfButton) {
+        return;
+      }
+
+      const nodeLookup = new Map(meridianNodes.map((node) => [node.id, node]));
+      const mediaQuery = window.matchMedia('(max-width: 600px)');
+
+      const state = {
+        layer: 'workAdvice',
+        selectedNodeId: null,
+        removalMode: false,
+        compactMode: mediaQuery.matches,
+      };
+
+      function getVisibleNodes() {
+        if (!state.compactMode) {
+          return meridianNodes;
+        }
+
+        const visibleIds = new Set(mobileNodeIds);
+        return meridianNodes.filter((node) => visibleIds.has(node.id));
+      }
+
+      function getVisibleEdges(layerName) {
+        const visibleIds = new Set(getVisibleNodes().map((node) => node.id));
+        return networkLayers[layerName].filter((edge) => {
+          return visibleIds.has(edge.source) && visibleIds.has(edge.target);
+        });
+      }
+
+      function createAdjacency(nodes, edges) {
+        const adjacency = new Map(nodes.map((node) => [node.id, []]));
+
+        for (const edge of edges) {
+          if (adjacency.has(edge.source)) {
+            adjacency.get(edge.source).push(edge.target);
+          }
+        }
+
+        return adjacency;
+      }
+
+      function computeDirectedBetweenness(nodes, edges) {
+        const nodeIds = nodes.map((node) => node.id);
+        const adjacency = createAdjacency(nodes, edges);
+        const scores = Object.fromEntries(nodeIds.map((id) => [id, 0]));
+
+        for (const sourceId of nodeIds) {
+          const stack = [];
+          const predecessors = Object.fromEntries(nodeIds.map((id) => [id, []]));
+          const sigma = Object.fromEntries(nodeIds.map((id) => [id, 0]));
+          const distance = Object.fromEntries(nodeIds.map((id) => [id, -1]));
+          const queue = [sourceId];
+
+          sigma[sourceId] = 1;
+          distance[sourceId] = 0;
+
+          while (queue.length) {
+            const current = queue.shift();
+            stack.push(current);
+
+            for (const neighbor of adjacency.get(current)) {
+              if (distance[neighbor] < 0) {
+                queue.push(neighbor);
+                distance[neighbor] = distance[current] + 1;
+              }
+
+              if (distance[neighbor] === distance[current] + 1) {
+                sigma[neighbor] += sigma[current];
+                predecessors[neighbor].push(current);
+              }
+            }
+          }
+
+          const dependency = Object.fromEntries(nodeIds.map((id) => [id, 0]));
+
+          while (stack.length) {
+            const current = stack.pop();
+
+            for (const predecessor of predecessors[current]) {
+              if (sigma[current] === 0) {
+                continue;
+              }
+
+              dependency[predecessor] += (sigma[predecessor] / sigma[current]) * (1 + dependency[current]);
+            }
+
+            if (current !== sourceId) {
+              scores[current] += dependency[current];
+            }
+          }
+        }
+
+        return scores;
+      }
+
+      function computeIncidentCounts(nodes, edges) {
+        const counts = Object.fromEntries(nodes.map((node) => [node.id, { incoming: 0, outgoing: 0, total: 0 }]));
+
+        for (const edge of edges) {
+          if (counts[edge.source]) {
+            counts[edge.source].outgoing += 1;
+            counts[edge.source].total += 1;
+          }
+
+          if (counts[edge.target]) {
+            counts[edge.target].incoming += 1;
+            counts[edge.target].total += 1;
+          }
+        }
+
+        return counts;
+      }
+
+      function computeRanks(metricMap) {
+        const sorted = Object.entries(metricMap).sort((left, right) => {
+          if (right[1] === left[1]) {
+            return left[0].localeCompare(right[0]);
+          }
+
+          return right[1] - left[1];
+        });
+
+        const ranks = {};
+        sorted.forEach(([id], index) => {
+          ranks[id] = index + 1;
+        });
+        return ranks;
+      }
+
+      function getLayerContext() {
+        const nodes = getVisibleNodes();
+        const baseEdges = getVisibleEdges(state.layer);
+        const filteredEdges = state.removalMode && state.selectedNodeId
+          ? baseEdges.filter((edge) => edge.source !== state.selectedNodeId && edge.target !== state.selectedNodeId)
+          : baseEdges;
+        const centrality = computeDirectedBetweenness(nodes, baseEdges);
+        const ranks = computeRanks(centrality);
+        const counts = computeIncidentCounts(nodes, baseEdges);
+
+        return {
+          nodes,
+          baseEdges,
+          filteredEdges,
+          centrality,
+          ranks,
+          counts,
+        };
+      }
+
+      function getNodeArchetype(nodeId) {
+        const node = nodeLookup.get(nodeId);
+        return node?.archetype ?? null;
+      }
+
+      function getInsightLine(nodeId, layerName) {
+        const node = nodeLookup.get(nodeId);
+
+        if (nodeId === 'it' && layerName === 'workAdvice') {
+          return 'The technical oracle everyone routes questions through.';
+        }
+
+        if (nodeId === 'strategy') {
+          return 'Critical bridge between Sales and Operations.';
+        }
+
+        if (nodeId === 'change') {
+          return 'Formally appointed, informally peripheral.';
+        }
+
+        if (nodeId === 'hr' && layerName === 'trust') {
+          return 'Sensitive conversations converge here.';
+        }
+
+        if (nodeId === 'opsB' && layerName === 'collaboration') {
+          return 'Disconnected in Collaboration — a visible risk.';
+        }
+
+        if (nodeId === 'salesOps') {
+          return 'One of the few routes out of the Sales silo.';
+        }
+
+        return node?.insight ?? 'A small shift here changes more than the org chart suggests.';
+      }
+
+      function getArchetypeDescription(nodeId, layerName, ranks, counts) {
+        const archetype = getNodeArchetype(nodeId);
+
+        if (archetype === 'Oracle') {
+          return 'This role sits on the shortest path between many others, making it the informal point of gravity in the network.';
+        }
+
+        if (archetype === 'Broker') {
+          return 'This role links groups that otherwise would not exchange knowledge directly, so change has to pass through it.';
+        }
+
+        if (archetype === 'Silo Buster') {
+          return 'This role is not the loudest voice inside its home cluster, but it is one of the few people who can carry ideas across boundaries.';
+        }
+
+        if (archetype === 'Peripheral') {
+          return 'This role sits near the edge of the network, so formal authority or good intentions do not automatically translate into reach.';
+        }
+
+        if (nodeId === 'hr' && layerName === 'trust') {
+          return 'This role is not the main advice hub, but it is the emotional and reputational landing point for sensitive information.';
+        }
+
+        if (ranks[nodeId] <= 3) {
+          return 'This role is unusually central in the active layer, shaping who learns what and when.';
+        }
+
+        if (counts[nodeId].total <= 1) {
+          return 'This role is weakly connected in the active layer, which often means messages reach it late and influence rarely travels far from it.';
+        }
+
+        return 'This role is part of the network, but not one of the positions the structure depends on most.';
+      }
+
+      function getOrganisationalMeaning(nodeId, layerName) {
+        if (nodeId === 'it') {
+          return 'If a real organisation has an IT Manager like this, AI adoption, troubleshooting, and tool confidence will bottleneck through one person unless leadership designs around it.';
+        }
+
+        if (nodeId === 'strategy') {
+          return 'If this bridge is ignored, silos stay siloed and transformation dies between teams that technically all support the same initiative.';
+        }
+
+        if (nodeId === 'change') {
+          return 'If your formally appointed change lead looks like this, your programme may have authority on paper but very little traction in practice.';
+        }
+
+        if (nodeId === 'hr') {
+          return 'Trusted roles like this often shape what people feel safe saying long before the issue appears in a survey or steering committee meeting.';
+        }
+
+        if (nodeId === 'opsB') {
+          return 'A node like this is easy to miss until collaboration matters. Then the isolation suddenly becomes an operational risk.';
+        }
+
+        if (nodeId === 'salesOps') {
+          return 'A person in this position can quietly determine whether one whole department stays inward-looking or starts sharing what it knows.';
+        }
+
+        return 'This is the kind of position leadership rarely sees on the org chart, but it still influences whether change spreads cleanly or stalls.';
+      }
+
+      function formatRank(rank, layerName) {
+        if (rank <= 3) {
+          return 'Top ' + rank + ' in ' + layerMeta[layerName].label;
+        }
+
+        return 'Rank ' + rank + ' in ' + layerMeta[layerName].label;
+      }
+
+      function getIsolationSummary(nodeId, nodes, baselineEdges, edgesAfterRemoval) {
+        const visibleNodes = nodes.filter((node) => node.id !== nodeId);
+        const baselineCounts = Object.fromEntries(visibleNodes.map((node) => [node.id, 0]));
+        const removedCounts = Object.fromEntries(visibleNodes.map((node) => [node.id, 0]));
+
+        for (const edge of baselineEdges) {
+          if (baselineCounts[edge.source] !== undefined) {
+            baselineCounts[edge.source] += 1;
+          }
+
+          if (baselineCounts[edge.target] !== undefined) {
+            baselineCounts[edge.target] += 1;
+          }
+        }
+
+        for (const edge of edgesAfterRemoval) {
+          if (removedCounts[edge.source] !== undefined) {
+            removedCounts[edge.source] += 1;
+          }
+
+          if (removedCounts[edge.target] !== undefined) {
+            removedCounts[edge.target] += 1;
+          }
+        }
+
+        return visibleNodes
+          .filter((node) => baselineCounts[node.id] > 0 && removedCounts[node.id] === 0)
+          .map((node) => node.id);
+      }
+
+      function renderDetailPanel(context) {
+        if (!state.selectedNodeId) {
+          if (state.removalMode) {
+            panel.innerHTML = `
+              <p class="ona-detail-panel__eyebrow">Removal mode</p>
+              <h2>Now click any role to see what the network looks like without them.</h2>
+              <p>Choose one role in Meridian and the visual will recalculate around its absence.</p>
+            `;
+            return;
+          }
+
+          panel.innerHTML = `
+            <p class="ona-detail-panel__eyebrow">Meridian snapshot</p>
+            <h2>Start exploring the informal organisation</h2>
+            <p>Click a role to see what its position reveals. Toggle between Work Advice, Trust, and Collaboration to watch the story change.</p>
+            <p class="ona-detail-panel__note">Then try <strong>What if they left?</strong> to see how fragile a network can be.</p>
+          `;
+          return;
+        }
+
+        const node = nodeLookup.get(state.selectedNodeId);
+        const archetype = getNodeArchetype(node.id);
+        const counts = context.counts[node.id];
+        const isolatedNodes = state.removalMode
+          ? getIsolationSummary(node.id, context.nodes, context.baseEdges, context.filteredEdges)
+          : [];
+        const roleLine = archetype ? `<p class="ona-detail-panel__eyebrow">Archetype · ${archetype}</p>` : `<p class="ona-detail-panel__eyebrow">Layer · ${layerMeta[state.layer].label}</p>`;
+        const isolationLine = state.removalMode
+          ? `<div class="ona-impact-tag is-alert">${isolatedNodes.length} role${isolatedNodes.length === 1 ? '' : 's'} isolated without ${node.label}</div>`
+          : `<div class="ona-impact-tag">${counts.incoming} incoming · ${counts.outgoing} outgoing</div>`;
+
+        panel.innerHTML = `
+          ${roleLine}
+          <h2>${node.label}</h2>
+          ${isolationLine}
+          <p>${getArchetypeDescription(node.id, state.layer, context.ranks, context.counts)}</p>
+          <p class="ona-detail-panel__meaning"><strong>What this means for your organisation:</strong> ${getOrganisationalMeaning(node.id, state.layer)}</p>
+        `;
+      }
+
+      function showTooltip(event, context, node) {
+        if (state.compactMode) {
+          return;
+        }
+
+        tooltip.hidden = false;
+        tooltip.innerHTML = `
+          <strong>${node.label}</strong>
+          <span>${formatRank(context.ranks[node.id], state.layer)}</span>
+          <small>${getInsightLine(node.id, state.layer)}</small>
+        `;
+
+        const bounds = networkRoot.getBoundingClientRect();
+        const offsetX = event.clientX - bounds.left;
+        const offsetY = event.clientY - bounds.top;
+
+        tooltip.style.left = Math.min(offsetX + 18, bounds.width - 220) + 'px';
+        tooltip.style.top = Math.max(offsetY - 22, 12) + 'px';
+      }
+
+      function hideTooltip() {
+        tooltip.hidden = true;
+      }
+
+      function renderNetwork() {
+        const context = getLayerContext();
+        const nodes = context.nodes;
+        const edges = context.filteredEdges;
+        const width = networkRoot.clientWidth || 720;
+        const height = state.compactMode ? 420 : 520;
+        const xScale = d3.scaleLinear().domain([0, 100]).range([48, width - 48]);
+        const yScale = d3.scaleLinear().domain([0, 100]).range([40, height - 44]);
+        const centralityValues = Object.values(context.centrality);
+        const maxCentrality = Math.max(...centralityValues, 1);
+        const radiusScale = d3.scaleSqrt().domain([0, maxCentrality]).range(state.compactMode ? [8, 19] : [9, 22]);
+        const nodeRadius = (nodeId) => radiusScale(context.centrality[nodeId] ?? 0);
+        const labelOffset = state.compactMode ? 7 : 8;
+
+        function getNodeCenter(nodeId) {
+          const node = nodeLookup.get(nodeId);
+
+          return {
+            x: xScale(node.x),
+            y: yScale(node.y),
+          };
+        }
+
+        function getLabelCoordinates(node) {
+          const radius = nodeRadius(node.id);
+          const position = node.labelPosition ?? (node.x > 70 ? 'left' : 'right');
+
+          if (position === 'top') {
+            return {
+              x: 0,
+              y: -(radius + 11),
+              anchor: 'middle',
+            };
+          }
+
+          if (position === 'bottom') {
+            return {
+              x: 0,
+              y: radius + 15,
+              anchor: 'middle',
+            };
+          }
+
+          if (position === 'left') {
+            return {
+              x: -(radius + labelOffset),
+              y: 4,
+              anchor: 'end',
+            };
+          }
+
+          return {
+            x: radius + labelOffset,
+            y: 4,
+            anchor: 'start',
+          };
+        }
+
+        function getEdgeGeometry(edge) {
+          const sourceCenter = getNodeCenter(edge.source);
+          const targetCenter = getNodeCenter(edge.target);
+          const dx = targetCenter.x - sourceCenter.x;
+          const dy = targetCenter.y - sourceCenter.y;
+          const distance = Math.hypot(dx, dy) || 1;
+          const ux = dx / distance;
+          const uy = dy / distance;
+          const sourceInset = nodeRadius(edge.source) + 2;
+          const targetInset = nodeRadius(edge.target) + 3;
+
+          return {
+            x1: sourceCenter.x + ux * sourceInset,
+            y1: sourceCenter.y + uy * sourceInset,
+            x2: targetCenter.x - ux * targetInset,
+            y2: targetCenter.y - uy * targetInset,
+          };
+        }
+
+        const isolatedIds = new Set();
+        if (state.removalMode && state.selectedNodeId) {
+          for (const isolatedId of getIsolationSummary(state.selectedNodeId, nodes, context.baseEdges, edges)) {
+            isolatedIds.add(isolatedId);
+          }
+        }
+
+        const activeConnections = state.selectedNodeId && !state.removalMode
+          ? new Set(
+              context.baseEdges
+                .filter((edge) => edge.source === state.selectedNodeId || edge.target === state.selectedNodeId)
+                .flatMap((edge) => [edge.source + '→' + edge.target, edge.target + '→' + edge.source]),
+            )
+          : null;
+
+        const connectedNodeIds = state.selectedNodeId && !state.removalMode
+          ? new Set(
+              context.baseEdges
+                .filter((edge) => edge.source === state.selectedNodeId || edge.target === state.selectedNodeId)
+                .flatMap((edge) => [edge.source, edge.target]),
+            )
+          : null;
+
+        networkRoot.innerHTML = '';
+
+        const svg = d3
+          .select(networkRoot)
+          .append('svg')
+          .attr('viewBox', `0 0 ${width} ${height}`)
+          .attr('role', 'img')
+          .attr('aria-label', 'Interactive Meridian organisational network');
+
+        const defs = svg.append('defs');
+        defs
+          .append('marker')
+          .attr('id', 'ona-arrow')
+          .attr('viewBox', '0 0 12 12')
+          .attr('refX', 12)
+          .attr('refY', 6)
+          .attr('markerWidth', 5)
+          .attr('markerHeight', 5)
+          .attr('orient', 'auto-start-reverse')
+          .append('path')
+          .attr('d', 'M 0 0 L 12 6 L 0 12 z')
+          .attr('fill', layerMeta[state.layer].color);
+
+        svg
+          .append('rect')
+          .attr('x', 0)
+          .attr('y', 0)
+          .attr('width', width)
+          .attr('height', height)
+          .attr('rx', 30)
+          .attr('fill', 'url(#ona-bg)');
+
+        const backgroundGradient = defs
+          .append('linearGradient')
+          .attr('id', 'ona-bg')
+          .attr('x1', '0%')
+          .attr('y1', '0%')
+          .attr('x2', '100%')
+          .attr('y2', '100%');
+
+        backgroundGradient.append('stop').attr('offset', '0%').attr('stop-color', 'rgba(255,255,255,0.95)');
+        backgroundGradient.append('stop').attr('offset', '100%').attr('stop-color', 'rgba(247,241,236,0.9)');
+
+        svg
+          .append('g')
+          .selectAll('line')
+          .data(edges)
+          .join('line')
+          .attr('x1', (edge) => getEdgeGeometry(edge).x1)
+          .attr('y1', (edge) => getEdgeGeometry(edge).y1)
+          .attr('x2', (edge) => getEdgeGeometry(edge).x2)
+          .attr('y2', (edge) => getEdgeGeometry(edge).y2)
+          .attr('stroke', layerMeta[state.layer].color)
+          .attr('stroke-width', (edge) => (activeConnections && activeConnections.has(edge.source + '→' + edge.target) ? 3 : 1.6))
+          .attr('stroke-linecap', 'round')
+          .attr('stroke-opacity', (edge) => {
+            if (state.removalMode) {
+              return 0.34;
+            }
+
+            if (!activeConnections) {
+              return 0.42;
+            }
+
+            return activeConnections.has(edge.source + '→' + edge.target) ? 0.88 : 0.14;
+          })
+          .attr('marker-end', 'url(#ona-arrow)');
+
+        const nodeGroup = svg
+          .append('g')
+          .selectAll('g')
+          .data(nodes)
+          .join('g')
+          .attr('transform', (node) => `translate(${xScale(node.x)}, ${yScale(node.y)})`)
+          .style('cursor', 'pointer')
+          .attr('opacity', (node) => {
+            if (state.removalMode) {
+              return node.id === state.selectedNodeId ? 0.38 : 1;
+            }
+
+            if (!connectedNodeIds || !state.selectedNodeId) {
+              return 1;
+            }
+
+            return connectedNodeIds.has(node.id) ? 1 : 0.36;
+          })
+          .on('mouseenter', function(event, node) {
+            showTooltip(event, context, node);
+          })
+          .on('mousemove', function(event, node) {
+            showTooltip(event, context, node);
+          })
+          .on('mouseleave', hideTooltip)
+          .on('click', function(_event, node) {
+            state.selectedNodeId = state.selectedNodeId === node.id ? null : node.id;
+            hideTooltip();
+            renderNetwork();
+
+            if (state.compactMode && state.selectedNodeId) {
+              requestAnimationFrame(() => {
+                panel.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+              });
+            }
+          });
+
+        nodeGroup
+          .filter((node) => state.selectedNodeId === node.id)
+          .append('circle')
+          .attr('r', (node) => nodeRadius(node.id) + 5.5)
+          .attr('fill', 'rgb(185 137 68 / 0.14)')
+          .attr('stroke', '#b98944')
+          .attr('stroke-width', 2.4);
+
+        nodeGroup
+          .append('circle')
+          .attr('r', (node) => nodeRadius(node.id))
+          .attr('fill', (node) => {
+            if (isolatedIds.has(node.id)) {
+              return '#c55a66';
+            }
+
+            if (context.ranks[node.id] <= 3) {
+              return '#b98944';
+            }
+
+            if (node.archetype === 'Peripheral' || context.counts[node.id].total <= 1) {
+              return '#a29a9e';
+            }
+
+            return '#742b39';
+          })
+          .attr('stroke', (node) => {
+            if (state.selectedNodeId === node.id) {
+              return '#fff7eb';
+            }
+
+            if (isolatedIds.has(node.id)) {
+              return '#8d1f2f';
+            }
+
+            return 'rgba(255,255,255,0.7)';
+          })
+          .attr('stroke-width', (node) => (state.selectedNodeId === node.id ? 3 : 1.2))
+          .attr('stroke-dasharray', (node) => (state.removalMode && state.selectedNodeId === node.id ? '5 4' : null));
+
+        nodeGroup
+          .append('text')
+          .text((node) => node.label)
+          .attr('x', (node) => getLabelCoordinates(node).x)
+          .attr('y', (node) => getLabelCoordinates(node).y)
+          .attr('text-anchor', (node) => getLabelCoordinates(node).anchor)
+          .attr('font-size', state.compactMode ? 10 : 11.5)
+          .attr('font-weight', (node) => (state.selectedNodeId === node.id ? 700 : 600))
+          .attr('fill', '#2a2330')
+          .attr('paint-order', 'stroke')
+          .attr('stroke', 'rgba(255,255,255,0.82)')
+          .attr('stroke-width', 4)
+          .attr('stroke-linejoin', 'round');
+
+        renderDetailPanel(context);
+      }
+
+      function syncLayerButtons() {
+        for (const button of layerButtons) {
+          const active = button.dataset.layer === state.layer;
+          button.classList.toggle('is-active', active);
+          button.setAttribute('aria-pressed', String(active));
+        }
+      }
+
+      function syncWhatIfButton() {
+        whatIfButton.classList.toggle('is-active', state.removalMode);
+        whatIfButton.setAttribute('aria-pressed', String(state.removalMode));
+      }
+
+      layerButtons.forEach((button) => {
+        button.addEventListener('click', () => {
+          state.layer = button.dataset.layer;
+          syncLayerButtons();
+          renderNetwork();
+        });
+      });
+
+      whatIfButton.addEventListener('click', () => {
+        state.removalMode = !state.removalMode;
+        syncWhatIfButton();
+        renderNetwork();
+      });
+
+      const onViewportChange = () => {
+        const nextMode = mediaQuery.matches;
+
+        if (nextMode !== state.compactMode) {
+          state.compactMode = nextMode;
+          hideTooltip();
+          renderNetwork();
+        }
+      };
+
+      if (typeof mediaQuery.addEventListener === 'function') {
+        mediaQuery.addEventListener('change', onViewportChange);
+      } else {
+        mediaQuery.addListener(onViewportChange);
+      }
+
+      window.addEventListener('resize', () => {
+        hideTooltip();
+        renderNetwork();
+      });
+
+      syncLayerButtons();
+      syncWhatIfButton();
+      renderNetwork();
+    })();
+  </script>
+</BaseLayout>
+
+<style>
+.ona-page {
+  display: grid;
+  gap: clamp(2rem, 4vw, 3.3rem);
+}
+
+.ona-hook {
+  display: grid;
+  gap: var(--space-xl);
+}
+
+.ona-hook__intro {
+  max-width: 62rem;
+}
+
+.ona-hook__intro h1 {
+  max-width: 14ch;
+  margin-bottom: var(--space-md);
+  font-size: clamp(2.7rem, 6vw, 5rem);
+  line-height: 0.96;
+  letter-spacing: -0.04em;
+}
+
+.ona-hook__sub {
+  margin: 0;
+  max-width: 42rem;
+  color: var(--color-text-secondary);
+  font-size: clamp(1.05rem, 2vw, 1.32rem);
+  line-height: 1.55;
+}
+
+.ona-lab,
+.section-shell {
+  border: 1px solid rgb(255 255 255 / 0.7);
+  border-radius: 32px;
+  background:
+    radial-gradient(circle at top right, rgb(185 137 68 / 0.12), transparent 22%),
+    linear-gradient(180deg, rgb(255 255 255 / 0.84), rgb(255 255 255 / 0.72));
+  box-shadow: var(--shadow-card);
+  backdrop-filter: blur(var(--glass-blur)) saturate(140%);
+}
+
+.ona-lab {
+  padding: clamp(1.2rem, 3vw, 2rem);
+}
+
+.ona-lab__toolbar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 0.8rem 1rem;
+  margin-bottom: var(--space-lg);
+}
+
+.ona-lab__layer-group {
+  display: grid;
+  gap: 0.6rem;
+}
+
+.ona-layer-switch {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.72rem;
+}
+
+.ona-layer-btn,
+.ona-whatif-btn,
+.ona-role-tab {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 2.9rem;
+  padding: 0.72rem 1rem;
+  border: 1px solid rgb(116 43 57 / 0.16);
+  border-radius: 999px;
+  background: rgb(255 255 255 / 0.72);
+  color: var(--color-text-secondary);
+  font-size: 0.92rem;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  transition:
+    background-color var(--transition-base),
+    border-color var(--transition-base),
+    color var(--transition-base),
+    transform var(--transition-base);
+}
+
+.ona-layer-btn:hover,
+.ona-whatif-btn:hover,
+.ona-role-tab:hover {
+  border-color: rgb(116 43 57 / 0.28);
+  color: var(--color-text-primary);
+  transform: translateY(-1px);
+}
+
+.ona-layer-btn.is-active,
+.ona-role-tab.is-active {
+  border-color: transparent;
+  background: linear-gradient(135deg, var(--color-primary), color-mix(in srgb, var(--color-primary) 76%, var(--color-accent) 24%));
+  color: #fff;
+  box-shadow: 0 12px 26px rgb(116 43 57 / 0.16);
+}
+
+.ona-whatif-btn {
+  position: relative;
+  margin-left: auto;
+}
+
+.ona-whatif-btn::before {
+  position: absolute;
+  top: 0.45rem;
+  bottom: 0.45rem;
+  left: -0.78rem;
+  width: 1px;
+  background: rgb(116 43 57 / 0.16);
+  content: '';
+}
+
+.ona-whatif-btn.is-active {
+  border-color: transparent;
+  background: linear-gradient(135deg, #b64e5c, #742b39);
+  color: #fff;
+  box-shadow: 0 12px 24px rgb(116 43 57 / 0.2);
+}
+
+.ona-lab__body {
+  display: grid;
+  gap: var(--space-lg);
+  align-items: start;
+}
+
+.ona-visual-shell {
+  position: relative;
+  overflow: hidden;
+  padding: clamp(0.8rem, 2vw, 1rem);
+  border: 1px solid rgb(116 43 57 / 0.1);
+  border-radius: 28px;
+  background:
+    radial-gradient(circle at top left, rgb(255 255 255 / 0.92), rgb(248 242 239 / 0.88));
+  min-height: 460px;
+}
+
+.ona-network {
+  min-height: 440px;
+}
+
+.ona-tooltip {
+  position: absolute;
+  z-index: 10;
+  max-width: 210px;
+  padding: 0.8rem 0.9rem;
+  border: 1px solid rgb(116 43 57 / 0.16);
+  border-radius: 16px;
+  background: rgb(255 255 255 / 0.94);
+  box-shadow: 0 18px 30px rgb(44 33 40 / 0.12);
+  backdrop-filter: blur(12px);
+  pointer-events: none;
+}
+
+.ona-tooltip strong,
+.ona-tooltip span,
+.ona-tooltip small {
+  display: block;
+}
+
+.ona-tooltip strong {
+  margin-bottom: 0.18rem;
+  color: var(--color-text-primary);
+  font-size: 0.92rem;
+}
+
+.ona-tooltip span {
+  margin-bottom: 0.32rem;
+  color: var(--color-primary);
+  font-size: 0.8rem;
+  font-weight: 700;
+}
+
+.ona-tooltip small {
+  color: var(--color-text-secondary);
+  font-size: 0.78rem;
+  line-height: 1.45;
+}
+
+.ona-detail-panel {
+  display: grid;
+  gap: 0.9rem;
+  padding: clamp(1rem, 2vw, 1.3rem);
+  border: 1px solid rgb(116 43 57 / 0.1);
+  border-radius: 28px;
+  background:
+    radial-gradient(circle at top right, rgb(185 137 68 / 0.14), transparent 30%),
+    linear-gradient(180deg, rgb(255 255 255 / 0.92), rgb(247 241 236 / 0.84));
+}
+
+.ona-detail-panel h2 {
+  margin-bottom: 0;
+  font-size: clamp(1.35rem, 2.2vw, 1.75rem);
+}
+
+.ona-detail-panel p {
+  margin: 0;
+  color: var(--color-text-secondary);
+  line-height: 1.68;
+}
+
+.ona-detail-panel__eyebrow {
+  color: var(--color-text-muted);
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+
+.ona-detail-panel__note,
+.ona-detail-panel__meaning {
+  color: var(--color-text-primary);
+}
+
+.ona-impact-tag {
+  display: inline-flex;
+  width: fit-content;
+  align-items: center;
+  padding: 0.45rem 0.72rem;
+  border-radius: 999px;
+  background: rgb(116 43 57 / 0.08);
+  color: var(--color-primary);
+  font-size: 0.78rem;
+  font-weight: 700;
+}
+
+.ona-impact-tag.is-alert {
+  background: rgb(197 90 102 / 0.12);
+  color: #8d1f2f;
+}
+
+.ona-lab__caption,
+.ona-lab__prompt {
+  margin: var(--space-md) 0 0;
+  color: var(--color-text-muted);
+  font-size: 0.9rem;
+}
+
+.ona-lab__caption {
+  margin-top: 0;
+}
+
+.ona-pause {
+  padding: clamp(1rem, 5vw, 2rem) 0;
+  text-align: center;
+}
+
+.ona-pause__question {
+  margin: 0 auto var(--space-md);
+  max-width: 18ch;
+  color: var(--color-text-primary);
+  font-size: clamp(1.9rem, 4.6vw, 3.4rem);
+  line-height: 1.08;
+  letter-spacing: -0.04em;
+}
+
+.ona-pause__answer {
+  margin: 0 auto;
+  max-width: 36rem;
+  color: var(--color-text-secondary);
+  font-size: 1.02rem;
+  line-height: 1.65;
+}
+
+.section-shell {
+  padding: clamp(1.35rem, 3vw, 2.2rem);
+}
+
+.ona-section-intro {
+  display: grid;
+  gap: 0.35rem;
+  margin-bottom: var(--space-lg);
+}
+
+.ona-section-intro h2,
+.ona-reveal h2 {
+  margin-bottom: 0;
+  font-size: clamp(1.8rem, 3vw, 2.45rem);
+  letter-spacing: -0.03em;
+}
+
+.ona-reveal {
+  border-left: 4px solid var(--color-primary);
+}
+
+.ona-reveal h2 {
+  font-size: clamp(1.95rem, 3.2vw, 2.7rem);
+}
+
+.ona-section-intro p,
+.ona-reveal__copy p {
+  margin: 0;
+  color: var(--color-text-secondary);
+  line-height: 1.75;
+}
+
+.ona-role-tabs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.72rem;
+  margin-bottom: var(--space-lg);
+}
+
+.ona-question-grid {
+  display: grid;
+  gap: var(--space-md);
+}
+
+.ona-question-card {
+  padding: 1.2rem 1.15rem;
+  border: 1px solid rgb(116 43 57 / 0.08);
+  border-radius: 24px;
+  background: rgb(255 255 255 / 0.82);
+}
+
+.ona-question-card p {
+  margin: 0;
+  color: var(--color-text-primary);
+  font-size: 0.98rem;
+  line-height: 1.72;
+}
+
+.ona-question-card p::before {
+  margin-right: 0.35rem;
+  color: var(--color-primary);
+  content: '“';
+}
+
+.ona-question-card p::after {
+  color: var(--color-primary);
+  content: '”';
+}
+
+.ona-reveal__copy {
+  display: grid;
+  gap: var(--space-md);
+  max-width: 65rem;
+}
+
+.ona-reveal__kicker {
+  color: var(--color-text-primary);
+  font-size: 1.08rem;
+  font-weight: 700;
+}
+
+.ona-next__grid {
+  display: grid;
+  gap: var(--space-md);
+}
+
+.ona-next-card {
+  display: grid;
+  gap: 0.7rem;
+  padding: 1.25rem;
+  border: 1px solid rgb(116 43 57 / 0.08);
+  border-radius: 24px;
+  background: rgb(255 255 255 / 0.8);
+}
+
+.ona-next-card--primary {
+  border-left: 4px solid var(--color-primary);
+  background:
+    linear-gradient(180deg, rgb(255 255 255 / 0.88), rgb(255 247 244 / 0.86));
+}
+
+.ona-next-card h3 {
+  margin-bottom: 0;
+  font-size: 1.14rem;
+}
+
+.ona-next-card p {
+  margin: 0;
+  color: var(--color-text-secondary);
+  line-height: 1.68;
+}
+
+.ona-next-card a {
+  width: fit-content;
+  color: var(--color-primary);
+  font-weight: 700;
+  text-decoration: underline;
+  text-decoration-thickness: 0.08em;
+  text-underline-offset: 0.18em;
+}
+
+.ona-next-card a:hover {
+  color: var(--color-accent);
+}
+
+@media (min-width: 900px) {
+  .ona-lab__body {
+    grid-template-columns: minmax(0, 1.45fr) minmax(300px, 0.72fr);
+  }
+
+  .ona-question-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .ona-next__grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 600px) {
+  .ona-hook__intro h1 {
+    max-width: 11ch;
+  }
+
+  .ona-lab__toolbar {
+    align-items: stretch;
+  }
+
+  .ona-layer-switch {
+    flex-direction: column;
+  }
+
+  .ona-layer-btn,
+  .ona-whatif-btn,
+  .ona-role-tab {
+    width: 100%;
+    justify-content: flex-start;
+  }
+
+  .ona-whatif-btn {
+    margin-left: 0;
+  }
+
+  .ona-whatif-btn::before {
+    display: none;
+  }
+
+  .ona-visual-shell {
+    min-height: 360px;
+  }
+
+  .ona-network {
+    min-height: 340px;
+  }
+
+  .ona-pause__question {
+    max-width: 12ch;
+  }
+}
+</style>

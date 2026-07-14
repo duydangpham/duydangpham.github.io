@@ -1,20 +1,20 @@
 ---
+import EmailLink from './EmailLink.astro';
 import en from '../i18n/en';
 
 const ui = en;
 
 const quickLinks = [
-  { label: ui.nav.about, href: '/about' },
-  { label: ui.nav.research, href: '/research' },
-  { label: ui.nav.netiq, href: '/netiq' },
-  { label: ui.nav.projects, href: '/projects' },
-  { label: ui.nav.insights, href: '/insights/' },
-  { label: ui.nav.speaking, href: '/speaking' },
-  { label: ui.nav.publications, href: '/publications' },
-  { label: ui.nav.contact, href: '/contact' },
+  { label: ui.nav.training, href: '/dao-tao' },
+  { label: ui.nav.consulting, href: '/tu-van' },
+  { label: ui.nav.events, href: '/su-kien' },
+  { label: ui.nav.about, href: '/gioi-thieu' },
+  { label: ui.nav.research, href: '/nghien-cuu' },
+  { label: ui.nav.insights, href: '/goc-nhin/' },
+  { label: ui.nav.publications, href: '/cong-bo-khoa-hoc' },
+  { label: ui.nav.contact, href: '/lien-he' },
 ];
 
-const quickLinkColumns = [quickLinks.slice(0, 4), quickLinks.slice(4)];
 ---
 
 <footer class="site-footer">
@@ -28,19 +28,15 @@ const quickLinkColumns = [quickLinks.slice(0, 4), quickLinks.slice(4)];
 
     <div class="site-footer__nav">
       <h2 class="site-footer__heading">{ui.footer.quickLinks}</h2>
-      <div class="site-footer__nav-grid">
-        {quickLinkColumns.map((column) => (
-          <ul class="site-footer__links">
-            {column.map((item) => (
-              <li>
-                <a class="site-footer__link" href={item.href}>
-                  {item.label}
-                </a>
-              </li>
-            ))}
-          </ul>
+      <ul class="site-footer__links site-footer__links--quick">
+        {quickLinks.map((item) => (
+          <li>
+            <a class="site-footer__link" href={item.href}>
+              {item.label}
+            </a>
+          </li>
         ))}
-      </div>
+      </ul>
     </div>
 
     <div>
@@ -77,14 +73,7 @@ const quickLinkColumns = [quickLinks.slice(0, 4), quickLinks.slice(4)];
           </a>
         </li>
         <li>
-          <a
-            class="site-footer__link"
-            href="mailto:duy.dang@netiq.vn"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            {ui.footer.email}
-          </a>
+          <EmailLink class="site-footer__link" label={ui.footer.email} />
         </li>
       </ul>
     </div>

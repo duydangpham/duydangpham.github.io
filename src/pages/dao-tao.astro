@@ -1,0 +1,587 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { personSchema } from '../data/schema-person';
+
+const title = 'Đào tạo / Chia sẻ';
+const description =
+  'Đào tạo, giảng dạy đại học, chia sẻ học thuật và đào tạo AI cho doanh nghiệp của Tiến sĩ Duy Đặng.';
+const canonicalUrl = '/dao-tao';
+
+const heroImages = {
+  workshop: '/images/dao-tao/hero-workshop-720x900.jpg',
+  seminar: '/images/dao-tao/hero-seminar-720x430.jpg',
+  corporate: '/images/dao-tao/hero-corporate-training-720x430.jpg',
+};
+
+const academicHomes = [
+  {
+    name: 'RMIT Vietnam',
+    role: 'Senior Lecturer · Associate Head of Department',
+    text: 'Giảng dạy hệ thống thông tin, chuyển đổi số, và năng lực ra quyết định trong một tổ chức đang số hoá.',
+    meta: 'Đại học · Sau đại học · Nghiên cứu',
+    imageLabel: 'Ảnh lớp học / campus RMIT',
+    image: '/images/dao-tao/academic-rmit-720x480.jpg',
+  },
+  {
+    name: 'Western Sydney University Vietnam',
+    role: 'Visiting Lecturer · MBA',
+    text: 'Đồng hành cùng các nhà quản lý qua đổi mới công nghệ số, chiến lược AI, và cách tổ chức thích nghi với thay đổi.',
+    meta: 'MBA · Executive learning',
+    imageLabel: 'Ảnh lớp MBA / workshop',
+    image: '/images/dao-tao/academic-western-sydney-720x480.jpg',
+  },
+  {
+    name: 'FPT School of Business',
+    role: 'Giảng viên khách mời / chia sẻ chuyên đề',
+    text: 'Những buổi chia sẻ chuyên đề về AI, chuyển đổi số, và năng lực lãnh đạo trong một môi trường công nghệ thay đổi nhanh.',
+    meta: 'Business school · Seminar',
+    imageLabel: 'Ảnh seminar / panel',
+    image: '/images/dao-tao/academic-fpt-school-of-business-720x480.jpg',
+  },
+  {
+    name: 'Gonzaga University',
+    role: 'Fulbright Scholar-in-Residence 2024',
+    text: 'Một mùa học thuật tại Hoa Kỳ, kết nối sinh viên và giảng viên qua các chủ đề AI strategy, ONA, và chuyển đổi số.',
+    meta: 'Fulbright · Spokane, USA',
+    imageLabel: 'Ảnh Fulbright / Gonzaga',
+    image: '/images/dao-tao/academic-gonzaga-720x480.jpg',
+  },
+];
+
+const trainingTracks = [
+  {
+    title: 'AI cho lãnh đạo',
+    text: 'Giúp đội ngũ quản lý hiểu AI như một năng lực tổ chức, không chỉ là công cụ công nghệ.',
+    tag: 'Strategy',
+  },
+  {
+    title: 'Generative AI trong công việc',
+    text: 'Thiết kế workflow, prompt, chính sách sử dụng và các tình huống ứng dụng AI trong vận hành hằng ngày.',
+    tag: 'Applied AI',
+  },
+  {
+    title: 'AI champion & thay đổi tổ chức',
+    text: 'Xác định người dẫn dắt thay đổi, lan toả tri thức và đưa AI từ chủ trương vào thực hành.',
+    tag: 'Change',
+  },
+  {
+    title: 'An ninh thông tin & chuyển đổi số',
+    text: 'Kết nối tư duy bảo mật, quản trị rủi ro và năng lực số trong bối cảnh doanh nghiệp Việt Nam.',
+    tag: 'Security',
+  },
+];
+
+const gallerySlots = [
+  {
+    label: 'Khoảnh khắc lớp học',
+    image: '/images/dao-tao/gallery-classroom-720x540.jpg',
+  },
+  {
+    label: 'Panel / public seminar',
+    image: '/images/dao-tao/gallery-panel-public-seminar-720x540.jpg',
+  },
+  {
+    label: 'Executive workshop',
+    image: '/images/dao-tao/gallery-executive-workshop-720x540.jpg',
+  },
+  {
+    label: 'Đào tạo doanh nghiệp',
+    image: '/images/dao-tao/gallery-corporate-training-720x540.jpg',
+  },
+  {
+    label: 'Fulbright / Gonzaga',
+    image: '/images/dao-tao/gallery-fulbright-gonzaga-720x540.jpg',
+  },
+  {
+    label: 'Buổi thực hành AI',
+    image: '/images/dao-tao/gallery-ai-practice-720x540.jpg',
+  },
+];
+---
+
+<BaseLayout
+  title={title}
+  description={description}
+  lang="vi"
+  canonicalUrl={canonicalUrl}
+  jsonLd={personSchema}
+>
+  <div class="container training-page">
+    <header class="training-hero">
+      <div class="training-hero__copy">
+        <p class="training-eyebrow">Đào tạo / Chia sẻ</p>
+        <h1>Từ giảng đường đến phòng họp, tôi thiết kế những buổi học có thể mang ra dùng ngay.</h1>
+        <p class="training-hero__lead">
+          Tôi giảng dạy tại đại học, chia sẻ trong các diễn đàn công chúng, và đào tạo
+          doanh nghiệp về AI, chuyển đổi số, an ninh thông tin và cách con người ra quyết định
+          trong tổ chức.
+        </p>
+        <div class="training-hero__actions">
+          <a class="btn btn--primary" href="/lien-he">Trao đổi chương trình đào tạo</a>
+          <a class="btn btn--secondary" href="#academic">Xem các không gian giảng dạy</a>
+        </div>
+      </div>
+
+      <div class="hero-collage" aria-label="Khung ảnh cho giảng dạy và đào tạo">
+        <div class="photo-slot photo-slot--large">
+          <img src={heroImages.workshop} alt="Giảng dạy và workshop" loading="eager" />
+          <span>Ảnh chính</span>
+          <strong>Giảng dạy / workshop</strong>
+        </div>
+        <div class="photo-slot">
+          <img src={heroImages.seminar} alt="Seminar và chia sẻ công chúng" loading="lazy" />
+          <span>Ảnh phụ</span>
+          <strong>Seminar</strong>
+        </div>
+        <div class="photo-slot photo-slot--accent">
+          <img src={heroImages.corporate} alt="Đào tạo AI cho doanh nghiệp" loading="lazy" />
+          <span>Ảnh phụ</span>
+          <strong>Đào tạo doanh nghiệp</strong>
+        </div>
+      </div>
+    </header>
+
+    <section class="training-section training-section--intro">
+      <div>
+        <p class="training-eyebrow">Ba dạng thức</p>
+        <h2>Một năng lực cốt lõi: biến tri thức thành quyết định.</h2>
+      </div>
+      <div class="format-grid">
+        <article>
+          <span>01</span>
+          <h3>Giảng dạy đại học</h3>
+          <p>Các lớp học chính quy, MBA, nghiên cứu và học thuật ứng dụng.</p>
+        </article>
+        <article>
+          <span>02</span>
+          <h3>Chia sẻ công chúng</h3>
+          <p>Panel, seminar, keynote và các buổi trao đổi giúp ý tưởng đi xa hơn lớp học.</p>
+        </article>
+        <article>
+          <span>03</span>
+          <h3>Đào tạo doanh nghiệp</h3>
+          <p>Chương trình AI và năng lực số được thiết kế cho vấn đề thật của tổ chức.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="training-section" id="academic">
+      <div class="section-header">
+        <p class="training-eyebrow">Đã và đang giảng dạy tại</p>
+        <h2>Các không gian học thuật tôi thuộc về.</h2>
+      </div>
+
+      <div class="academic-carousel" aria-label="Academic teaching institutions">
+        {academicHomes.map((item) => (
+          <article class="academic-card">
+            <div class="academic-card__image">
+              <img src={item.image} alt={item.imageLabel} loading="lazy" />
+              <span>{item.imageLabel}</span>
+            </div>
+            <div class="academic-card__body">
+              <p class="academic-card__meta">{item.meta}</p>
+              <h3>{item.name}</h3>
+              <strong>{item.role}</strong>
+              <p>{item.text}</p>
+            </div>
+          </article>
+        ))}
+      </div>
+    </section>
+
+    <section class="training-section training-section--split">
+      <div>
+        <p class="training-eyebrow">Đào tạo AI cho doanh nghiệp</p>
+        <h2>Không chỉ học công cụ. Học cách tổ chức dùng AI có phán đoán.</h2>
+      </div>
+      <p class="split-copy">
+        Các chương trình đào tạo thường bắt đầu từ một câu hỏi cụ thể: lãnh đạo cần hiểu AI
+        đến đâu, đội ngũ cần làm gì khác đi, và tổ chức cần cấu trúc tri thức ra sao để
+        thay đổi thật sự diễn ra.
+      </p>
+    </section>
+
+    <section class="training-track-grid" aria-label="Enterprise AI training topics">
+      {trainingTracks.map((track) => (
+        <article class="training-track">
+          <span>{track.tag}</span>
+          <h3>{track.title}</h3>
+          <p>{track.text}</p>
+        </article>
+      ))}
+    </section>
+
+    <section class="training-section">
+      <div class="section-header section-header--inline">
+        <div>
+          <p class="training-eyebrow">Thư viện hình ảnh</p>
+          <h2>Chỗ dành cho những lớp học và buổi chia sẻ đáng nhớ.</h2>
+        </div>
+      </div>
+
+      <div class="gallery-strip" aria-label="Thư viện hình ảnh đào tạo">
+        {gallerySlots.map((slot, index) => (
+          <div class="gallery-slot">
+            <img src={slot.image} alt={slot.label} loading="lazy" />
+            <span>{String(index + 1).padStart(2, '0')}</span>
+            <strong>{slot.label}</strong>
+          </div>
+        ))}
+      </div>
+    </section>
+
+    <section class="training-cta">
+      <p class="training-eyebrow">Cùng thiết kế một buổi học</p>
+      <h2>Một chương trình tốt không bắt đầu từ slide. Nó bắt đầu từ câu hỏi đúng.</h2>
+      <a class="btn btn--primary" href="/lien-he">Bắt đầu trao đổi</a>
+    </section>
+  </div>
+</BaseLayout>
+
+<style>
+.training-page {
+  display: grid;
+  gap: 1rem;
+}
+
+.training-hero,
+.training-section,
+.training-cta {
+  overflow: hidden;
+  border: 1px solid rgb(255 255 255 / 0.72);
+  border-radius: 28px;
+  background:
+    radial-gradient(circle at top right, rgb(185 137 68 / 0.13), transparent 30%),
+    linear-gradient(180deg, rgb(255 255 255 / 0.88), rgb(255 255 255 / 0.7));
+  box-shadow: var(--shadow-soft);
+}
+
+.training-hero {
+  display: grid;
+  gap: clamp(1.2rem, 3vw, 2rem);
+  align-items: stretch;
+  min-height: min(760px, calc(100vh - 8rem));
+  padding: clamp(1.2rem, 3vw, 2rem);
+}
+
+.training-hero__copy {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-width: 0;
+}
+
+.training-eyebrow {
+  margin-bottom: 0.7rem;
+  color: var(--color-primary);
+  font-size: 0.76rem;
+  font-weight: 800;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+
+.training-hero h1 {
+  max-width: 15ch;
+  font-size: clamp(2.35rem, 5.6vw, 4.8rem);
+  line-height: 0.98;
+}
+
+.training-hero__lead {
+  max-width: 49rem;
+  color: var(--color-text-secondary);
+  font-size: clamp(1.02rem, 1.7vw, 1.22rem);
+  line-height: 1.68;
+}
+
+.training-hero__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.8rem;
+  margin-top: 0.45rem;
+}
+
+.hero-collage {
+  display: grid;
+  min-height: 410px;
+  gap: 0.75rem;
+  grid-template-columns: 1fr 0.72fr;
+  grid-template-rows: 1fr 1fr;
+}
+
+.photo-slot,
+.gallery-slot,
+.academic-card__image {
+  position: relative;
+  overflow: hidden;
+  display: grid;
+  align-content: end;
+  min-height: 12rem;
+  padding: 1rem;
+  border: 1px solid rgb(255 255 255 / 0.72);
+  border-radius: 22px;
+  background:
+    radial-gradient(circle at 24% 18%, rgb(116 43 57 / 0.2), transparent 30%),
+    radial-gradient(circle at 80% 12%, rgb(185 137 68 / 0.2), transparent 24%),
+    linear-gradient(135deg, rgb(20 24 33 / 0.06), rgb(255 255 255 / 0.68));
+  color: var(--color-text-primary);
+}
+
+.photo-slot img,
+.gallery-slot img,
+.academic-card__image img {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.photo-slot::after,
+.gallery-slot::after,
+.academic-card__image::after {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  background: linear-gradient(180deg, rgb(20 24 33 / 0.06), rgb(20 24 33 / 0.58));
+  content: '';
+  pointer-events: none;
+}
+
+.photo-slot::before,
+.gallery-slot::before,
+.academic-card__image::before {
+  position: absolute;
+  inset: 0.75rem;
+  border: 1px dashed rgb(20 24 33 / 0.16);
+  border-radius: 17px;
+  content: '';
+  pointer-events: none;
+  z-index: 2;
+}
+
+.photo-slot--large {
+  grid-row: 1 / -1;
+}
+
+.photo-slot--accent {
+  background:
+    radial-gradient(circle at 18% 20%, rgb(185 137 68 / 0.25), transparent 30%),
+    linear-gradient(145deg, rgb(116 43 57 / 0.09), rgb(255 255 255 / 0.7));
+}
+
+.photo-slot span,
+.gallery-slot span,
+.academic-card__image span {
+  position: relative;
+  z-index: 3;
+  width: fit-content;
+  margin-bottom: 0.35rem;
+  color: #fff;
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.photo-slot strong,
+.gallery-slot strong {
+  position: relative;
+  z-index: 3;
+  max-width: 12rem;
+  color: #fff;
+  font-size: clamp(1.15rem, 2vw, 1.45rem);
+  line-height: 1.1;
+}
+
+.training-section,
+.training-cta {
+  padding: clamp(1.15rem, 2.6vw, 1.8rem);
+}
+
+.training-section--intro,
+.training-section--split {
+  display: grid;
+  gap: 1rem;
+}
+
+.training-section h2,
+.training-cta h2 {
+  max-width: 17ch;
+  margin-bottom: 0;
+  font-size: clamp(1.65rem, 3.2vw, 2.65rem);
+}
+
+.section-header {
+  max-width: 52rem;
+  margin-bottom: 1rem;
+}
+
+.section-header--inline {
+  display: grid;
+  gap: 1rem;
+  max-width: none;
+  align-items: end;
+}
+
+.section-header--inline p:last-child,
+.split-copy {
+  max-width: 42rem;
+  margin-bottom: 0;
+  color: var(--color-text-secondary);
+  line-height: 1.7;
+}
+
+.format-grid,
+.training-track-grid {
+  display: grid;
+  gap: 0.8rem;
+}
+
+.format-grid article,
+.training-track,
+.academic-card {
+  border: 1px solid rgb(20 24 33 / 0.1);
+  border-radius: 20px;
+  background: rgb(255 255 255 / 0.62);
+  color: var(--color-text-primary);
+}
+
+.format-grid article,
+.training-track {
+  padding: 1rem;
+}
+
+.format-grid span,
+.training-track span,
+.academic-card__meta {
+  color: var(--color-primary);
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.format-grid h3,
+.training-track h3 {
+  margin: 0.5rem 0;
+  font-size: clamp(1.15rem, 1.8vw, 1.45rem);
+}
+
+.format-grid p,
+.training-track p,
+.academic-card p {
+  margin: 0;
+  color: var(--color-text-secondary);
+  line-height: 1.62;
+}
+
+.academic-carousel,
+.gallery-strip {
+  display: grid;
+  grid-auto-columns: minmax(280px, 35vw);
+  grid-auto-flow: column;
+  gap: 0.85rem;
+  overflow-x: auto;
+  padding: 0.1rem 0 0.75rem;
+  scroll-snap-type: x proximity;
+}
+
+.academic-card,
+.gallery-slot {
+  scroll-snap-align: start;
+}
+
+.academic-card {
+  overflow: hidden;
+  display: grid;
+  min-height: 100%;
+}
+
+.academic-card__image {
+  min-height: 14rem;
+  border: 0;
+  border-radius: 0;
+  box-shadow: none;
+}
+
+.academic-card__body {
+  padding: 1rem;
+}
+
+.academic-card h3 {
+  margin: 0.3rem 0 0.45rem;
+  font-size: clamp(1.45rem, 2.1vw, 1.8rem);
+}
+
+.academic-card strong {
+  display: block;
+  margin-bottom: 0.7rem;
+  color: var(--color-text-primary);
+  line-height: 1.35;
+}
+
+.training-track-grid {
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+}
+
+.gallery-strip {
+  grid-auto-columns: minmax(230px, 28vw);
+}
+
+.gallery-slot {
+  min-height: 15rem;
+}
+
+.training-cta {
+  display: grid;
+  gap: 0.9rem;
+  justify-items: start;
+  background:
+    radial-gradient(circle at top right, rgb(185 137 68 / 0.18), transparent 28%),
+    linear-gradient(135deg, rgb(116 43 57 / 0.1), rgb(255 255 255 / 0.78));
+}
+
+@media (min-width: 820px) {
+  .training-hero {
+    grid-template-columns: minmax(0, 1fr) minmax(360px, 0.76fr);
+  }
+
+  .training-section--intro,
+  .training-section--split {
+    grid-template-columns: minmax(0, 0.72fr) minmax(0, 1.28fr);
+    align-items: center;
+  }
+
+  .format-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .section-header--inline {
+    grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
+  }
+}
+
+@media (max-width: 620px) {
+  .training-hero {
+    min-height: auto;
+  }
+
+  .hero-collage {
+    min-height: auto;
+    grid-template-columns: 1fr;
+    grid-template-rows: none;
+  }
+
+  .photo-slot--large {
+    grid-row: auto;
+  }
+
+  .academic-carousel,
+  .gallery-strip {
+    grid-auto-columns: minmax(245px, 82vw);
+  }
+}
+</style>

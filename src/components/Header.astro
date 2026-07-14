@@ -9,14 +9,12 @@ const { currentPath } = Astro.props;
 const ui = en;
 
 const navItems = [
-  { label: ui.nav.about, href: '/about' },
-  { label: ui.nav.research, href: '/research' },
-  { label: ui.nav.netiq, href: '/netiq' },
-  { label: ui.nav.projects, href: '/projects' },
-  { label: ui.nav.insights, href: '/insights/' },
-  { label: ui.nav.speaking, href: '/speaking' },
-  { label: ui.nav.publications, href: '/publications' },
-  { label: ui.nav.contact, href: '/contact' },
+  { label: ui.navShort.training, href: '/dao-tao' },
+  { label: ui.navShort.consulting, href: '/tu-van' },
+  { label: ui.navShort.events, href: '/su-kien' },
+  { label: ui.navShort.research, href: '/nghien-cuu' },
+  { label: ui.navShort.about, href: '/gioi-thieu' },
+  { label: ui.navShort.contact, href: '/lien-he' },
 ];
 
 const homeHref = '/';
@@ -29,7 +27,7 @@ const normalizedCurrentPath = normalizePath(currentPath);
 const isActive = (href: string) => {
   const normalizedHref = normalizePath(href);
 
-  if (normalizedHref.endsWith('/insights')) {
+  if (normalizedHref.endsWith('/goc-nhin')) {
     return (
       normalizedCurrentPath === normalizedHref ||
       normalizedCurrentPath.startsWith(`${normalizedHref}/`)

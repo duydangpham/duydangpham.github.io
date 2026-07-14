@@ -10,7 +10,7 @@ interface HeadingLike {
 interface Props {
   title: string;
   description: string;
-  lang?: 'en';
+  lang?: 'en' | 'vi';
   canonicalUrl: string;
   publishedAt: Date;
   updatedAt?: Date;
@@ -39,7 +39,7 @@ const {
   ogImage,
 } = Astro.props;
 
-const locale = 'en-US';
+const locale = 'vi-VN';
 const formattedPublishedAt = new Intl.DateTimeFormat(locale, {
   year: 'numeric',
   month: 'long',
@@ -58,10 +58,18 @@ const formattedUpdatedAt = showUpdated
   : undefined;
 
 const ui = {
-  published: 'Published',
-  updated: 'Updated',
-  readingTime: 'min read',
-  toc: 'On this page',
+  eyebrow: 'Góc nhìn',
+  published: 'Xuất bản',
+  updated: 'Cập nhật',
+  readingTime: 'phút đọc',
+  toc: 'Trong bài này',
+  backToInsights: 'Quay lại Góc nhìn',
+  researchLabel: 'Nghiên cứu',
+  contactLabel: 'Trao đổi thêm',
+  closingEyebrow: 'Đọc tiếp',
+  closingTitle: 'Một góc nhìn tốt nên mở ra thêm câu hỏi.',
+  closingBody:
+    'Nếu bài viết này chạm vào một vấn đề bạn đang quan tâm trong tổ chức, lớp học, hay nghiên cứu, mình rất vui được tiếp tục cuộc trò chuyện.',
 };
 
 const tocHeadings = headings.filter((heading) => {
@@ -77,52 +85,60 @@ const tocHeadings = headings.filter((heading) => {
   jsonLd={jsonLd}
   ogImage={ogImage}
 >
-  <section class="post-page">
-    <div class="container--wide post-page__inner">
-      <article class="post-article">
-        <a class="post-back" href={backHref}>{backLabel}</a>
+  <section class="insight-post-page">
+    <div class="container insight-post-page__inner">
+      <a class="insight-post-back" href={backHref} aria-label={backLabel}>
+        <span aria-hidden="true">←</span>
+        {ui.backToInsights}
+      </a>
 
-        <header class="post-header">
-          <div class="post-meta" aria-label="Post metadata">
-            <span>{ui.published}: <time datetime={publishedAt.toISOString()}>{formattedPublishedAt}</time></span>
-            {formattedUpdatedAt && (
-              <span>{ui.updated}: <time datetime={updatedAt?.toISOString()}>{formattedUpdatedAt}</time></span>
-            )}
-            <span>{readingTime} {ui.readingTime}</span>
+      <article class="insight-post">
+        <header class="insight-post-hero">
+          <div class="insight-post-hero__copy">
+            <p class="insight-post-eyebrow">{ui.eyebrow}</p>
+            <h1>{title}</h1>
+            <p class="insight-post-lead">{description}</p>
           </div>
 
-          <h1>{title}</h1>
-          <p class="post-lead">{description}</p>
-
-          <div class="post-header__footer">
-            {tags.length > 0 && (
-              <div class="post-tags" aria-label="Post topics">
-                {tags.map((tag) => (
-                  <span class="post-tag">{tag}</span>
-                ))}
+          <aside class="insight-post-meta-card" aria-label="Thông tin bài viết">
+            <div class="insight-post-meta-card__item">
+              <span>{ui.published}</span>
+              <time datetime={publishedAt.toISOString()}>{formattedPublishedAt}</time>
+            </div>
+            {formattedUpdatedAt && (
+              <div class="insight-post-meta-card__item">
+                <span>{ui.updated}</span>
+                <time datetime={updatedAt?.toISOString()}>{formattedUpdatedAt}</time>
               </div>
             )}
-          </div>
+            <div class="insight-post-meta-card__item">
+              <span>Thời lượng</span>
+              <strong>{readingTime} {ui.readingTime}</strong>
+            </div>
+          </aside>
+
+          {tags.length > 0 && (
+            <div class="insight-post-tags" aria-label="Chủ đề bài viết">
+              {tags.map((tag) => (
+                <span>{tag}</span>
+              ))}
+            </div>
+          )}
         </header>
 
-        <div class="post-layout">
-          <div class="post-body">
+        <div class={`insight-post-layout ${tocHeadings.length <= 1 ? 'insight-post-layout--solo' : ''}`}>
+          <div class="insight-post-body">
             <slot />
           </div>
 
           {tocHeadings.length > 1 && (
-            <aside class="post-toc" aria-label={ui.toc}>
-              <div class="post-toc__card">
+            <aside class="insight-post-toc" aria-label={ui.toc}>
+              <div class="insight-post-toc__card">
                 <h2>{ui.toc}</h2>
                 <nav>
-                  <ul class="post-toc__list">
+                  <ul>
                     {tocHeadings.map((heading) => (
-                      <li
-                        class:list={[
-                          'post-toc__item',
-                          heading.depth === 3 && 'post-toc__item--nested',
-                        ]}
-                      >
+                      <li class:list={[heading.depth === 3 && 'is-nested']}>
                         <a href={`#${heading.slug}`}>{heading.text}</a>
                       </li>
                     ))}
@@ -132,221 +148,461 @@ const tocHeadings = headings.filter((heading) => {
             </aside>
           )}
         </div>
+
+        <footer class="insight-post-closing">
+          <p class="insight-post-eyebrow">{ui.closingEyebrow}</p>
+          <h2>{ui.closingTitle}</h2>
+          <p>{ui.closingBody}</p>
+          <div class="insight-post-closing__actions">
+            <a class="btn btn--primary" href={backHref}>{ui.backToInsights}</a>
+            <a class="btn btn--ghost" href="/nghien-cuu/">{ui.researchLabel}</a>
+            <a class="btn btn--ghost" href="/lien-he/">{ui.contactLabel}</a>
+          </div>
+        </footer>
       </article>
     </div>
   </section>
 </BaseLayout>
 
 <style>
-.post-page__inner {
-  width: min(100% - 2rem, var(--container-wide));
+.insight-post-page {
+  padding-block: clamp(1.1rem, 2.6vw, 2rem) 0;
 }
 
-.post-article {
-  max-width: 100%;
-}
-
-.post-back {
-  display: inline-flex;
-  margin-bottom: 1rem;
-  color: var(--color-primary-dark);
-  font-size: 0.92rem;
-  font-weight: 600;
-  text-decoration: underline;
-  text-underline-offset: 0.18em;
-}
-
-.post-header {
-  margin-bottom: 1.25rem;
-}
-
-.post-meta {
-  display: flex;
-  flex-wrap: wrap;
-  gap: var(--space-sm) var(--space-lg);
-  margin-bottom: var(--space-md);
-  color: var(--color-text-muted);
-  font-family: var(--font-mono);
-  font-size: 0.8rem;
-}
-
-.post-header h1 {
-  max-width: none;
-  margin-bottom: 0.75rem;
-  font-size: clamp(2.4rem, 5vw, 4rem);
-  line-height: 1.08;
-  letter-spacing: -0.02em;
-}
-
-.post-lead {
-  max-width: 60ch;
-  margin-bottom: 1rem;
-  color: var(--color-text-secondary);
-  line-height: 1.74;
-}
-
-.post-header__footer {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: space-between;
-  gap: var(--space-md);
-}
-
-.post-tags {
-  display: flex;
-  flex-wrap: wrap;
-  gap: var(--space-sm);
-}
-
-.post-tag {
-  display: inline-flex;
-  padding: 0.25rem 0.7rem;
-  border: 1px solid var(--color-border);
-  border-radius: 999px;
-  background: var(--color-background-secondary);
-  color: var(--color-text-secondary);
-  font-size: 0.8rem;
-  font-weight: 600;
-}
-
-.post-translation {
-  color: var(--color-accent);
-  font-size: 0.92rem;
-  font-weight: 600;
-  text-decoration: underline;
-  text-underline-offset: 0.18em;
-}
-
-.post-layout {
+.insight-post-page__inner {
   display: grid;
-  gap: 1.5rem;
+  gap: clamp(0.85rem, 2vw, 1.25rem);
 }
 
-.post-body {
+.insight-post-back {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  width: fit-content;
+  color: var(--color-primary-dark);
+  font-size: 0.94rem;
+  font-weight: 600;
+  text-decoration: underline;
+  text-underline-offset: 0.18em;
+}
+
+.insight-post {
+  display: grid;
+  gap: clamp(1rem, 2.3vw, 1.6rem);
+}
+
+.insight-post-hero,
+.insight-post-body,
+.insight-post-closing {
+  position: relative;
+  overflow: hidden;
+  border: 1px solid rgb(255 255 255 / 0.76);
+  border-radius: clamp(1.5rem, 3vw, 2.25rem);
+  background:
+    radial-gradient(circle at top right, rgb(185 137 68 / 0.14), transparent 25%),
+    radial-gradient(circle at bottom left, rgb(116 43 57 / 0.07), transparent 24%),
+    linear-gradient(180deg, rgb(255 255 255 / 0.86), rgb(255 255 255 / 0.72));
+  box-shadow: var(--shadow-soft);
+  backdrop-filter: blur(calc(var(--glass-blur) - 2px)) saturate(120%);
+}
+
+.insight-post-hero {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(16rem, 24rem);
+  gap: clamp(1rem, 3vw, 2rem);
+  align-items: end;
+  padding: clamp(1.4rem, 3.8vw, 3rem);
+}
+
+.insight-post-hero > * {
+  position: relative;
+  z-index: 1;
+}
+
+.insight-post-hero::after,
+.insight-post-closing::after {
+  position: absolute;
+  inset: auto -4rem -5rem auto;
+  width: 16rem;
+  height: 16rem;
+  border-radius: 999px;
+  background: radial-gradient(circle, rgb(116 43 57 / 0.1), transparent 70%);
+  content: '';
+}
+
+.insight-post-hero__copy {
+  max-width: 72rem;
+}
+
+.insight-post-eyebrow {
+  margin: 0 0 0.7rem;
+  color: var(--color-primary);
+  font-size: 0.82rem;
+  font-weight: 600;
+  letter-spacing: 0.28em;
+  line-height: 1.25;
+  text-transform: uppercase;
+}
+
+.insight-post-hero h1 {
+  max-width: 13ch;
+  margin-bottom: clamp(0.85rem, 1.6vw, 1.15rem);
+  font-size: clamp(3rem, 7.6vw, 7.2rem);
+  line-height: 0.94;
+  letter-spacing: -0.075em;
+}
+
+.insight-post-lead {
+  max-width: 70ch;
+  margin: 0;
+  color: var(--color-text-secondary);
+  font-size: clamp(1.05rem, 1.6vw, 1.22rem);
+  font-weight: 520;
+  line-height: 1.7;
+}
+
+.insight-post-meta-card {
+  display: grid;
+  gap: 0.85rem;
+  padding: clamp(1rem, 2vw, 1.25rem);
+  border: 1px solid rgb(20 24 33 / 0.08);
+  border-radius: var(--radius-md);
+  background: rgb(255 255 255 / 0.72);
+  box-shadow: 0 18px 42px rgb(15 23 42 / 0.07);
+}
+
+.insight-post-meta-card__item {
+  display: grid;
+  gap: 0.2rem;
+  padding-bottom: 0.85rem;
+  border-bottom: 1px solid rgb(20 24 33 / 0.08);
+}
+
+.insight-post-meta-card__item:last-child {
+  padding-bottom: 0;
+  border-bottom: 0;
+}
+
+.insight-post-meta-card__item span {
+  color: var(--color-text-muted);
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  line-height: 1.25;
+  text-transform: uppercase;
+}
+
+.insight-post-meta-card__item time,
+.insight-post-meta-card__item strong {
+  color: var(--color-text-primary);
+  font-size: 1rem;
+  font-weight: 650;
+  line-height: 1.35;
+}
+
+.insight-post-tags {
+  display: flex;
+  flex-wrap: wrap;
+  grid-column: 1 / -1;
+  gap: 0.55rem;
+}
+
+.insight-post-tags span {
+  display: inline-flex;
+  align-items: center;
+  min-height: 2rem;
+  padding: 0.32rem 0.82rem;
+  border: 1px solid rgb(116 43 57 / 0.13);
+  border-radius: var(--radius-pill);
+  background: rgb(255 255 255 / 0.68);
+  color: var(--color-primary-dark);
+  font-size: 0.8rem;
+  font-weight: 650;
+  line-height: 1.25;
+}
+
+.insight-post-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(15rem, 19rem);
+  gap: clamp(1rem, 2vw, 1.35rem);
+  align-items: start;
+}
+
+.insight-post-layout--solo {
+  grid-template-columns: minmax(0, 1fr);
+}
+
+.insight-post-body {
   min-width: 0;
+  padding: clamp(1.45rem, 3.3vw, 3rem);
 }
 
-.post-body :global(*) {
+.insight-post-body :global(*) {
   scroll-margin-top: 6.5rem;
 }
 
-.post-body :global(h2),
-.post-body :global(h3),
-.post-body :global(h4) {
-  margin-top: var(--space-2xl);
-  margin-bottom: var(--space-md);
+.insight-post-body :global(:first-child) {
+  margin-top: 0;
 }
 
-.post-body :global(p),
-.post-body :global(li) {
+.insight-post-body :global(:last-child) {
+  margin-bottom: 0;
+}
+
+.insight-post-body :global(h2),
+.insight-post-body :global(h3),
+.insight-post-body :global(h4) {
+  margin-top: clamp(2rem, 4vw, 3rem);
+  margin-bottom: 0.85rem;
+  max-width: 18ch;
+}
+
+.insight-post-body :global(h2) {
+  font-size: clamp(2rem, 4vw, 3.1rem);
+  line-height: 1;
+  letter-spacing: -0.055em;
+}
+
+.insight-post-body :global(h3) {
+  font-size: clamp(1.35rem, 2.4vw, 1.75rem);
+}
+
+.insight-post-body :global(p),
+.insight-post-body :global(li) {
+  max-width: 68ch;
   color: var(--color-text-secondary);
-  font-size: 1.02rem;
-  line-height: 1.78;
+  font-size: clamp(1.02rem, 1.3vw, 1.12rem);
+  line-height: 1.84;
 }
 
-.post-body :global(a) {
+.insight-post-body :global(p + p) {
+  margin-top: 1.05rem;
+}
+
+.insight-post-body :global(ul),
+.insight-post-body :global(ol) {
+  display: grid;
+  gap: 0.55rem;
+  max-width: 68ch;
+  margin-block: 1rem 1.35rem;
+  padding-left: 1.25rem;
+}
+
+.insight-post-body :global(a) {
   color: var(--color-primary-dark);
+  font-weight: 650;
   text-decoration: underline;
   text-decoration-thickness: 0.08em;
-  text-underline-offset: 0.2em;
+  text-underline-offset: 0.22em;
 }
 
-.post-body :global(strong) {
+.insight-post-body :global(strong) {
   color: var(--color-text-primary);
+  font-weight: 720;
 }
 
-.post-body :global(blockquote) {
+.insight-post-body :global(blockquote) {
   margin: var(--space-xl) 0;
-  padding: var(--space-md) var(--space-lg);
-  border-left: 4px solid var(--color-primary);
-  background: var(--color-background-secondary);
+  padding: clamp(1rem, 2vw, 1.35rem);
+  border: 1px solid rgb(116 43 57 / 0.12);
+  border-left: 5px solid var(--color-primary);
+  border-radius: var(--radius-md);
+  background: rgb(255 255 255 / 0.62);
   color: var(--color-text-secondary);
 }
 
-.post-body :global(pre) {
+.insight-post-body :global(pre) {
   margin: var(--space-xl) 0;
   padding: var(--space-lg);
-  border: 1px solid var(--color-border-subtle);
+  border: 1px solid rgb(20 24 33 / 0.1);
   border-radius: var(--radius-md);
+  background: #141821;
+  color: #fff;
   overflow-x: auto;
 }
 
-.post-body :global(code) {
+.insight-post-body :global(code) {
   font-family: var(--font-mono);
   font-size: 0.92em;
 }
 
-.post-body :global(:not(pre) > code) {
+.insight-post-body :global(:not(pre) > code) {
   padding: 0.12rem 0.35rem;
   border-radius: var(--radius-sm);
-  background: var(--color-background-secondary);
+  background: rgb(116 43 57 / 0.08);
+  color: var(--color-primary-dark);
 }
 
-.post-body :global(img) {
+.insight-post-body :global(img) {
   margin: var(--space-xl) 0;
   border-radius: var(--radius-md);
+  box-shadow: var(--shadow-soft);
 }
 
-.post-body :global(hr) {
+.insight-post-body :global(hr) {
   margin-block: var(--space-2xl);
 }
 
-.post-body :global(table) {
+.insight-post-body :global(table) {
   width: 100%;
   margin: var(--space-xl) 0;
   border-collapse: collapse;
   font-size: 0.95rem;
 }
 
-.post-body :global(th),
-.post-body :global(td) {
+.insight-post-body :global(th),
+.insight-post-body :global(td) {
   padding: 0.75rem;
-  border: 1px solid var(--color-border-subtle);
+  border: 1px solid rgb(20 24 33 / 0.1);
   text-align: left;
 }
 
-.post-toc {
-  display: none;
+.insight-post-toc {
+  position: sticky;
+  top: 6.5rem;
 }
 
-.post-toc__card {
-  padding: 1rem 1.1rem;
+.insight-post-toc__card {
+  padding: 1rem 1.05rem;
+  border: 1px solid rgb(255 255 255 / 0.78);
+  border-radius: var(--radius-md);
+  background:
+    radial-gradient(circle at top right, rgb(185 137 68 / 0.1), transparent 42%),
+    linear-gradient(180deg, rgb(255 255 255 / 0.82), rgb(255 255 255 / 0.68));
+  box-shadow: var(--shadow-soft);
+  backdrop-filter: blur(calc(var(--glass-blur) - 2px)) saturate(120%);
 }
 
-.post-toc__card h2 {
-  font-size: 0.95rem;
-  margin-bottom: var(--space-md);
+.insight-post-toc__card h2 {
+  margin: 0 0 0.85rem;
+  color: var(--color-primary);
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  line-height: 1.25;
+  text-transform: uppercase;
 }
 
-.post-toc__list {
+.insight-post-toc__card ul {
   list-style: none;
   padding: 0;
   margin: 0;
   display: grid;
-  gap: var(--space-sm);
+  gap: 0.25rem;
 }
 
-.post-toc__item a {
+.insight-post-toc__card li {
+  margin: 0;
+}
+
+.insight-post-toc__card a {
+  display: block;
+  padding: 0.42rem 0.55rem;
+  border-radius: 12px;
   color: var(--color-text-secondary);
-  font-size: 0.9rem;
+  font-size: 0.88rem;
+  font-weight: 600;
   line-height: 1.45;
 }
 
-.post-toc__item--nested {
-  padding-left: var(--space-md);
+.insight-post-toc__card a:hover {
+  background: rgb(116 43 57 / 0.07);
+  color: var(--color-primary-dark);
 }
 
-@media (min-width: 1025px) {
-  .post-layout {
-    grid-template-columns: minmax(0, 1fr) 260px;
-    align-items: start;
+.insight-post-toc__card .is-nested a {
+  padding-left: 1.15rem;
+  font-size: 0.84rem;
+}
+
+.insight-post-closing {
+  padding: clamp(1.35rem, 3vw, 2.2rem);
+}
+
+.insight-post-closing > * {
+  position: relative;
+  z-index: 1;
+}
+
+.insight-post-closing h2 {
+  max-width: 18ch;
+  margin-bottom: 0.7rem;
+  font-size: clamp(2rem, 4vw, 3.15rem);
+  line-height: 1;
+  letter-spacing: -0.06em;
+}
+
+.insight-post-closing p:not(.insight-post-eyebrow) {
+  max-width: 62ch;
+  color: var(--color-text-secondary);
+  font-size: 1.05rem;
+  line-height: 1.72;
+}
+
+.insight-post-closing__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-top: 1.2rem;
+}
+
+@media (max-width: 1024px) {
+  .insight-post-hero,
+  .insight-post-layout {
+    grid-template-columns: 1fr;
   }
 
-  .post-toc {
-    display: block;
-    position: sticky;
-    top: 6.5rem;
+  .insight-post-hero h1 {
+    max-width: 15ch;
+  }
+
+  .insight-post-toc {
+    position: static;
+    order: -1;
+  }
+}
+
+@media (max-width: 767px) {
+  .insight-post-page {
+    padding-block-start: 0.55rem;
+  }
+
+  .insight-post-page__inner {
+    width: min(100% - 1rem, var(--container-max));
+  }
+
+  .insight-post-hero,
+  .insight-post-body,
+  .insight-post-closing {
+    border-radius: 24px;
+  }
+
+  .insight-post-hero {
+    padding: 1.2rem;
+  }
+
+  .insight-post-hero h1 {
+    font-size: clamp(2.55rem, 14vw, 4rem);
+    letter-spacing: -0.065em;
+  }
+
+  .insight-post-meta-card {
+    grid-template-columns: 1fr;
+  }
+
+  .insight-post-body {
+    padding: 1.2rem;
+  }
+
+  .insight-post-body :global(h2),
+  .insight-post-body :global(h3),
+  .insight-post-body :global(h4) {
+    max-width: none;
+  }
+
+  .insight-post-closing__actions .btn {
+    width: 100%;
+    justify-content: center;
   }
 }
 </style>

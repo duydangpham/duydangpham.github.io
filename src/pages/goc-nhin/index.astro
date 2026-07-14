@@ -1,0 +1,449 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { getPostUrl, getPublishedPosts } from '../../utils/posts';
+
+const title = 'Góc nhìn';
+const description =
+  'Các bài viết và góc nhìn của Tiến sĩ Duy Đặng về ONA, chiến lược AI, an ninh thông tin và chuyển đổi số.';
+const canonicalUrl = '/goc-nhin/';
+
+const posts = await getPublishedPosts();
+const allTags = [...new Set(posts.flatMap((p) => p.data.tags))].sort();
+const hasContent = posts.length > 0;
+const featuredTopics = allTags.length > 0
+  ? allTags.slice(0, 5)
+  : ['ONA', 'AI champion', 'An ninh thông tin', 'Chuyển đổi số'];
+---
+
+<BaseLayout
+  title={title}
+  description={description}
+  lang="vi"
+  canonicalUrl={canonicalUrl}
+>
+  <div class="container insights-page">
+    <header class="insights-hero">
+      <div class="insights-hero__copy">
+        <p class="insights-eyebrow">Góc nhìn</p>
+        <h1>Những bài viết để nhìn tổ chức rõ hơn.</h1>
+        <p class="insights-hero__lead">
+          Các bài viết dài hơn về phân tích mạng lưới tổ chức, chiến lược AI,
+          AI champion, an ninh thông tin và chuyển đổi số, dựa trên nghiên cứu
+          và công việc thực tế tại Việt Nam và Đông Nam Á.
+        </p>
+        <div class="insights-actions">
+          <a class="btn btn--primary" href="/cong-bo-khoa-hoc">Xem công bố khoa học</a>
+          <a class="btn btn--secondary" href="/nghien-cuu">Hướng nghiên cứu</a>
+        </div>
+      </div>
+
+      <aside class="insights-card" aria-label="Tóm tắt Góc nhìn">
+        <span>Bài viết hiện có</span>
+        <strong>{posts.length.toString().padStart(2, '0')}</strong>
+        <p>
+          Một nơi cho các ghi chú có chiều sâu hơn: vừa đủ học thuật để chắc, vừa đủ gần thực tế
+          để dùng được.
+        </p>
+      </aside>
+    </header>
+
+    <section class="insights-section insights-section--topics">
+      <div>
+        <p class="insights-eyebrow">Chủ đề</p>
+        <h2>Những câu hỏi quay lại nhiều lần.</h2>
+      </div>
+      <div class="topic-strip" aria-label="Chủ đề Góc nhìn">
+        {featuredTopics.map((tag) => <span>{tag}</span>)}
+      </div>
+    </section>
+
+    {hasContent ? (
+      <section class="insights-section">
+        <div class="section-header section-header--inline">
+          <div>
+            <p class="insights-eyebrow">Bài viết mới</p>
+            <h2>Các ghi chú, phân tích và bài viết dài.</h2>
+          </div>
+          <p>
+            Mỗi bài viết là một cách thử trả lời câu hỏi: điều gì đang thật sự diễn ra
+            bên dưới chiến lược, công nghệ và cấu trúc chính thức?
+          </p>
+        </div>
+
+        <ol class={`post-grid ${posts.length === 1 ? 'post-grid--single' : ''}`}>
+          {posts.map((post, index) => (
+            <li class="post-card">
+              <article>
+                <div class="post-card__meta">
+                  <span>{String(index + 1).padStart(2, '0')}</span>
+                  <time datetime={post.data.date.toISOString()}>
+                    {post.data.date.toLocaleDateString('vi-VN', {
+                      year: 'numeric',
+                      month: 'long',
+                      day: 'numeric',
+                    })}
+                  </time>
+                </div>
+                <h3>
+                  <a href={getPostUrl(post)}>{post.data.title}</a>
+                </h3>
+                {post.data.description && (
+                  <p>{post.data.description}</p>
+                )}
+                {post.data.tags.length > 0 && (
+                  <div class="post-card__tags">
+                    {post.data.tags.map((tag) => <span>{tag}</span>)}
+                  </div>
+                )}
+                <a class="post-card__readmore" href={getPostUrl(post)}>
+                  Đọc tiếp
+                </a>
+              </article>
+            </li>
+          ))}
+        </ol>
+      </section>
+    ) : (
+      <section class="insights-empty">
+        <p class="insights-eyebrow">Sắp có bài viết</p>
+        <h2>Một vài ghi chú đang được viết tiếp.</h2>
+        <p>
+          Tôi đang chuẩn bị một loạt bài về ONA, thiết kế chương trình AI champion,
+          quản trị an ninh thông tin và chuyển đổi số trong doanh nghiệp Việt Nam.
+          Trong lúc chờ đợi, bạn có thể xem các công bố khoa học hoặc hướng nghiên cứu.
+        </p>
+        <div class="insights-actions">
+          <a class="btn btn--primary" href="/cong-bo-khoa-hoc">Xem công bố khoa học</a>
+          <a class="btn btn--secondary" href="/nghien-cuu">Hướng nghiên cứu</a>
+        </div>
+      </section>
+    )}
+  </div>
+</BaseLayout>
+
+<style>
+.insights-page {
+  display: grid;
+  gap: clamp(0.85rem, 1.8vw, 1.35rem);
+}
+
+.insights-hero,
+.insights-section,
+.insights-empty {
+  position: relative;
+  overflow: hidden;
+  border: 1px solid rgb(255 255 255 / 0.72);
+  border-radius: var(--radius-lg);
+  background:
+    radial-gradient(circle at 100% 0%, rgb(185 137 68 / 0.16), transparent 30%),
+    linear-gradient(135deg, rgb(255 255 255 / 0.94), rgb(255 255 255 / 0.72));
+  box-shadow: var(--shadow-soft);
+}
+
+.insights-hero::before,
+.insights-section::before,
+.insights-empty::before {
+  content: "";
+  position: absolute;
+  inset: 1px;
+  z-index: 0;
+  border-radius: calc(var(--radius-lg) - 1px);
+  background: linear-gradient(135deg, rgb(255 255 255 / 0.72), transparent 56%);
+  pointer-events: none;
+}
+
+.insights-hero > *,
+.insights-section > *,
+.insights-empty > * {
+  position: relative;
+  z-index: 1;
+}
+
+.insights-hero {
+  display: grid;
+  gap: clamp(1rem, 2.4vw, 2rem);
+  align-items: stretch;
+  padding: clamp(1.2rem, 3vw, 2.5rem);
+}
+
+.insights-hero__copy {
+  display: grid;
+  align-content: center;
+  gap: 1rem;
+}
+
+.insights-eyebrow {
+  margin: 0 0 0.25rem;
+  color: var(--color-primary);
+  font-size: 0.76rem;
+  font-weight: 800;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+
+.insights-hero h1,
+.insights-section h2,
+.insights-empty h2 {
+  margin: 0;
+  color: var(--color-text-primary);
+  line-height: 0.98;
+  letter-spacing: -0.055em;
+}
+
+.insights-hero h1 {
+  max-width: 15ch;
+  font-size: clamp(3rem, 6vw, 5.4rem);
+}
+
+.insights-hero__lead {
+  max-width: 58rem;
+  margin: 0;
+  color: var(--color-text-secondary);
+  font-size: clamp(1.05rem, 1.55vw, 1.22rem);
+  line-height: 1.65;
+}
+
+.insights-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-top: 0.2rem;
+}
+
+.insights-card {
+  display: grid;
+  align-content: end;
+  min-height: 22rem;
+  padding: clamp(1rem, 2.4vw, 1.5rem);
+  border: 1px solid var(--color-border-subtle);
+  border-radius: 28px;
+  background:
+    radial-gradient(circle at 20% 16%, rgb(116 43 57 / 0.16), transparent 30%),
+    radial-gradient(circle at 84% 12%, rgb(185 137 68 / 0.22), transparent 28%),
+    linear-gradient(145deg, rgb(255 255 255 / 0.72), rgb(255 255 255 / 0.38));
+}
+
+.insights-card span {
+  color: var(--color-primary);
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.insights-card strong {
+  margin: 0.5rem 0;
+  color: var(--color-text-primary);
+  font-size: clamp(4rem, 12vw, 7rem);
+  line-height: 0.86;
+  letter-spacing: -0.08em;
+}
+
+.insights-card p {
+  max-width: 30rem;
+  margin: 0;
+  color: var(--color-text-secondary);
+  line-height: 1.62;
+}
+
+.insights-section,
+.insights-empty {
+  display: grid;
+  gap: clamp(1rem, 2vw, 1.35rem);
+  padding: clamp(1.25rem, 3vw, 2.35rem);
+}
+
+.insights-section h2,
+.insights-empty h2 {
+  max-width: 17ch;
+  font-size: clamp(2rem, 4vw, 3.35rem);
+}
+
+.insights-section--topics {
+  align-items: center;
+}
+
+.topic-strip {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.65rem;
+}
+
+.topic-strip span,
+.post-card__tags span {
+  display: inline-flex;
+  align-items: center;
+  min-height: 2.25rem;
+  padding: 0.42rem 0.72rem;
+  border: 1px solid rgb(20 24 33 / 0.1);
+  border-radius: var(--radius-pill);
+  background: rgb(255 255 255 / 0.72);
+  color: var(--color-primary-dark);
+  font-size: 0.82rem;
+  font-weight: 800;
+}
+
+.section-header {
+  max-width: 54rem;
+  margin-bottom: 0.2rem;
+}
+
+.section-header--inline {
+  display: grid;
+  gap: 1rem;
+  max-width: none;
+  align-items: end;
+}
+
+.section-header--inline p:last-child {
+  max-width: 44rem;
+  margin: 0;
+  color: var(--color-text-secondary);
+  line-height: 1.7;
+}
+
+.post-grid {
+  display: grid;
+  gap: 0.85rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.post-card {
+  min-width: 0;
+}
+
+.post-card article {
+  position: relative;
+  display: grid;
+  min-height: 18rem;
+  padding: clamp(1rem, 2vw, 1.3rem);
+  border: 1px solid rgb(20 24 33 / 0.1);
+  border-radius: 24px;
+  background:
+    radial-gradient(circle at top right, rgb(185 137 68 / 0.14), transparent 32%),
+    rgb(255 255 255 / 0.62);
+}
+
+.post-card__meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.55rem 0.85rem;
+  align-items: center;
+  margin-bottom: 0.9rem;
+}
+
+.post-card__meta span,
+.post-card__meta time {
+  color: var(--color-primary);
+  font-family: var(--font-mono);
+  font-size: 0.74rem;
+  font-weight: 800;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.post-card__meta time {
+  color: var(--color-text-muted);
+}
+
+.post-card h3 {
+  max-width: 26ch;
+  margin: 0 0 0.75rem;
+  font-size: clamp(1.45rem, 2.5vw, 2.2rem);
+  line-height: 1.05;
+  letter-spacing: -0.04em;
+}
+
+.post-grid--single .post-card h3 {
+  max-width: 34ch;
+}
+
+.post-card h3 a {
+  color: var(--color-text-primary);
+  text-decoration: none;
+}
+
+.post-card h3 a:hover {
+  color: var(--color-primary-dark);
+}
+
+.post-card p {
+  max-width: 60rem;
+  margin: 0 0 1rem;
+  color: var(--color-text-secondary);
+  line-height: 1.68;
+}
+
+.post-card__tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.45rem;
+  margin-top: auto;
+}
+
+.post-card__readmore {
+  width: fit-content;
+  margin-top: 1rem;
+  color: var(--color-primary-dark);
+  font-weight: 850;
+  text-decoration: underline;
+  text-decoration-thickness: 0.08em;
+  text-underline-offset: 0.2em;
+}
+
+.insights-empty {
+  justify-items: start;
+  background:
+    radial-gradient(circle at 0% 0%, rgb(116 43 57 / 0.1), transparent 34%),
+    linear-gradient(135deg, rgb(255 255 255 / 0.94), rgb(255 255 255 / 0.72));
+}
+
+.insights-empty p {
+  max-width: 58rem;
+  margin: 0;
+  color: var(--color-text-secondary);
+  font-size: clamp(1rem, 1.2vw, 1.08rem);
+  line-height: 1.72;
+}
+
+@media (min-width: 760px) {
+  .insights-hero {
+    grid-template-columns: minmax(0, 1.1fr) minmax(20rem, 0.9fr);
+  }
+
+  .insights-section--topics {
+    grid-template-columns: minmax(0, 0.65fr) minmax(0, 1.35fr);
+  }
+}
+
+@media (min-width: 900px) {
+  .post-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .post-grid--single {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (min-width: 1080px) {
+  .section-header--inline {
+    grid-template-columns: minmax(0, 0.78fr) minmax(0, 1.22fr);
+  }
+}
+
+@media (max-width: 640px) {
+  .insights-hero h1,
+  .insights-section h2,
+  .insights-empty h2 {
+    max-width: 100%;
+  }
+
+  .insights-card {
+    min-height: 16rem;
+  }
+}
+</style>

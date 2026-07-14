@@ -1,0 +1,640 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+const title = 'Sự kiện / Ambrosia';
+const description =
+  'Ambrosia là không gian sự kiện và bistro cao cấp giữa trung tâm Sài Gòn, dành cho những buổi gặp trang nhã và quan trọng.';
+const canonicalUrl = '/su-kien';
+
+const ambrosiaUrl = 'https://ambrosia.vn/';
+const ambrosiaBookingUrl = 'https://ambrosia.vn/contact/#plan-an-event';
+const ambrosiaVenueUrl = 'https://ambrosia.vn/venue/';
+const ambrosiaCuisineUrl = 'https://ambrosia.vn/cuisine/';
+
+const heroImages = {
+  eventSpace: '/images/su-kien/hero-event-space-720x900.jpg',
+  table: '/images/su-kien/hero-banquet-table-720x430.jpg',
+  cuisine: '/images/su-kien/hero-cuisine-720x430.jpg',
+};
+
+const venueRooms = [
+  {
+    name: 'Amber',
+    capacity: '8-10 khách',
+    fit: 'Họp nhóm, hội nghị cấp cao, tri ân khách hàng',
+    image: '/images/su-kien/room-amber-720x480.jpg',
+  },
+  {
+    name: 'Ruby',
+    capacity: '20-25 khách',
+    fit: 'Toạ đàm, đào tạo, tiệc tối trang trọng, lễ kỷ niệm',
+    image: '/images/su-kien/room-ruby-720x480.jpg',
+  },
+  {
+    name: 'Sapphire',
+    capacity: '40-50 khách',
+    fit: 'Hội thảo chuyên đề, ra mắt sản phẩm, networking, cocktail',
+    image: '/images/su-kien/room-sapphire-720x480.jpg',
+  },
+  {
+    name: 'Diamond',
+    capacity: '80-100 khách',
+    fit: 'Sự kiện quy mô lớn, họp báo, hội thảo, tiệc riêng',
+    image: '/images/su-kien/room-diamond-720x480.jpg',
+  },
+];
+
+const eventUseCases = [
+  {
+    title: 'Họp kinh doanh',
+    text: 'Không gian đủ riêng tư để bàn chuyện quan trọng, nhưng vẫn đủ ấm để cuộc gặp không bị khô cứng.',
+  },
+  {
+    title: 'Tiếp đón khách hàng',
+    text: 'Một bữa tối, một ly rượu, một căn phòng đẹp: cách tiếp đón khách hàng có gu và có chủ ý.',
+  },
+  {
+    title: 'Sự kiện doanh nghiệp',
+    text: 'Từ workshop, toạ đàm đến networking, Ambrosia cho phép sự kiện doanh nghiệp có nhịp trang trọng hơn.',
+  },
+  {
+    title: 'Ẩm thực tuyển chọn',
+    text: 'Ẩm thực Việt-Âu hiện đại, teabreak tinh tế và thực đơn phù hợp với từng mục đích gặp gỡ.',
+  },
+];
+
+const tasteNotes = [
+  'High-dining bistro',
+  'Thực đơn theo mùa',
+  'Teabreak tinh tế',
+  'Cocktail & wine pairing',
+  'Không gian riêng tư',
+  'Phong cách đón tiếp có gu',
+];
+
+const galleryImages = [
+  {
+    label: 'Bố trí sự kiện doanh nghiệp',
+    image: '/images/su-kien/gallery-business-event-960x540.jpg',
+    className: 'gallery-tile--wide',
+  },
+  {
+    label: 'Chi tiết bàn ăn tinh tế',
+    image: '/images/su-kien/gallery-fine-dining-detail-720x540.jpg',
+    className: '',
+  },
+  {
+    label: 'Phòng họp riêng tư',
+    image: '/images/su-kien/gallery-private-meeting-room-720x540.jpg',
+    className: '',
+  },
+  {
+    label: 'Tiệc cocktail',
+    image: '/images/su-kien/gallery-cocktail-reception-720x1080.jpg',
+    className: 'gallery-tile--tall',
+  },
+];
+---
+
+<BaseLayout
+  title={title}
+  description={description}
+  lang="vi"
+  canonicalUrl={canonicalUrl}
+>
+  <div class="ambrosia-shell">
+    <section class="ambrosia-hero">
+      <div class="ambrosia-hero__copy">
+        <p class="ambrosia-eyebrow">Sự kiện / Ambrosia</p>
+        <h1>Không gian cho những cuộc gặp cần nhiều hơn một căn phòng đẹp.</h1>
+        <p class="ambrosia-hero__lead">
+          Ambrosia là một không gian sự kiện và bistro cao cấp giữa trung tâm Sài Gòn
+          — nơi cho những buổi tiệc doanh nghiệp, cuộc họp quan trọng, bữa tối cùng
+          khách hàng, và những buổi gặp mặt trang nhã của những người có gu.
+        </p>
+        <div class="ambrosia-actions">
+          <a class="btn btn--primary" href={ambrosiaBookingUrl} target="_blank" rel="noopener noreferrer">
+            Đặt lịch sự kiện
+          </a>
+          <a class="btn btn--secondary" href={ambrosiaUrl} target="_blank" rel="noopener noreferrer">
+            Vào trang Ambrosia
+          </a>
+        </div>
+      </div>
+
+      <div class="ambrosia-collage" aria-label="Hình ảnh không gian sự kiện Ambrosia">
+        <div class="ambrosia-photo ambrosia-photo--large">
+          <img src={heroImages.eventSpace} alt="Không gian sự kiện Ambrosia" loading="eager" />
+          <span>Ảnh chính</span>
+          <strong>Không gian sự kiện</strong>
+        </div>
+        <div class="ambrosia-photo">
+          <img src={heroImages.table} alt="Bàn tiệc tại Ambrosia" loading="lazy" />
+          <span>Ảnh phụ</span>
+          <strong>Bàn tiệc</strong>
+        </div>
+        <div class="ambrosia-photo ambrosia-photo--gold">
+          <img src={heroImages.cuisine} alt="Ẩm thực Ambrosia" loading="lazy" />
+          <span>Ảnh phụ</span>
+          <strong>Ẩm thực</strong>
+        </div>
+      </div>
+    </section>
+
+    <section class="ambrosia-section ambrosia-section--intro">
+      <div>
+        <p class="ambrosia-eyebrow">Tại sao Ambrosia</p>
+        <h2>Trang nhã, riêng tư, và đủ chỉn chu cho các cuộc gặp quan trọng.</h2>
+      </div>
+      <div class="event-grid">
+        {eventUseCases.map((item) => (
+          <article class="event-card">
+            <h3>{item.title}</h3>
+            <p>{item.text}</p>
+          </article>
+        ))}
+      </div>
+    </section>
+
+    <section class="ambrosia-section">
+      <div class="section-header section-header--inline">
+        <div>
+          <p class="ambrosia-eyebrow">Không gian sự kiện</p>
+          <h2>Bốn không gian, bốn quy mô gặp gỡ.</h2>
+        </div>
+        <p>
+          Từ phòng họp nhỏ cho lãnh đạo đến không gian lớn cho hội thảo và networking,
+          Ambrosia có nhiều cấu hình phù hợp cho sự kiện doanh nghiệp, gặp gỡ khách hàng
+          và các buổi tiệc riêng cần sự trang trọng.
+        </p>
+      </div>
+
+      <div class="room-carousel" aria-label="Ambrosia venue spaces">
+        {venueRooms.map((room) => (
+          <article class="room-card">
+            <div class="room-card__image">
+              <img src={room.image} alt={`Phòng ${room.name} tại Ambrosia`} loading="lazy" />
+              <span>Ảnh phòng {room.name}</span>
+            </div>
+            <div class="room-card__body">
+              <p>{room.capacity}</p>
+              <h3>{room.name}</h3>
+              <span>{room.fit}</span>
+            </div>
+          </article>
+        ))}
+      </div>
+    </section>
+
+    <section class="ambrosia-section ambrosia-section--split">
+      <div>
+        <p class="ambrosia-eyebrow">Ẩm thực / Thực đơn</p>
+        <h2>Một sự kiện tốt cũng cần một thực đơn biết kể chuyện.</h2>
+      </div>
+      <div>
+        <p class="ambrosia-copy">
+          Ambrosia kết hợp không gian hội họp với trải nghiệm ẩm thực được chăm chút:
+          món ăn Việt-Âu hiện đại, teabreak tinh tế, cocktail, rượu và các lựa chọn thực đơn
+          phù hợp với mục đích của từng buổi gặp.
+        </p>
+        <div class="taste-cloud" aria-label="Ambrosia dining highlights">
+          {tasteNotes.map((note) => <span>{note}</span>)}
+        </div>
+      </div>
+    </section>
+
+    <section class="ambrosia-gallery">
+      <div class="section-header">
+        <div>
+          <p class="ambrosia-eyebrow">Hình ảnh Ambrosia</p>
+          <h2>Nhịp ánh sáng, bàn tiệc và những chi tiết tạo nên gu.</h2>
+        </div>
+      </div>
+
+      <div class="gallery-grid">
+        {galleryImages.map((item) => (
+          <div class:list={['gallery-tile', item.className]}>
+            <img src={item.image} alt={item.label} loading="lazy" />
+            <strong>{item.label}</strong>
+          </div>
+        ))}
+      </div>
+    </section>
+
+    <section class="ambrosia-cta">
+      <p class="ambrosia-eyebrow">Dẫn về Ambrosia</p>
+      <h2>Nếu cuộc gặp cần một căn phòng đẹp, một thực đơn ngon, và một không khí đúng chất, hãy để Ambrosia chuẩn bị.</h2>
+      <div class="ambrosia-actions">
+        <a class="btn btn--primary" href={ambrosiaBookingUrl} target="_blank" rel="noopener noreferrer">
+          Đặt lịch sự kiện
+        </a>
+        <a class="btn btn--secondary" href={ambrosiaVenueUrl} target="_blank" rel="noopener noreferrer">
+          Xem không gian
+        </a>
+        <a class="btn btn--secondary" href={ambrosiaCuisineUrl} target="_blank" rel="noopener noreferrer">
+          Xem ẩm thực
+        </a>
+      </div>
+    </section>
+  </div>
+</BaseLayout>
+
+<style>
+.ambrosia-shell {
+  --ambrosia-ink: #071f20;
+  --ambrosia-deep: #004a59;
+  --ambrosia-green: #123d34;
+  --ambrosia-gold: #ffc941;
+  --ambrosia-soft-gold: #fdd79a;
+  --ambrosia-cream: #faf7ea;
+  --ambrosia-line: rgb(253 215 154 / 0.22);
+  display: grid;
+  width: min(100% - 2rem, var(--container-max));
+  margin-inline: auto;
+  gap: 1rem;
+}
+
+.ambrosia-hero,
+.ambrosia-section,
+.ambrosia-gallery,
+.ambrosia-cta {
+  overflow: hidden;
+  border: 1px solid var(--ambrosia-line);
+  border-radius: 28px;
+  background:
+    radial-gradient(circle at top right, rgb(255 201 65 / 0.12), transparent 30%),
+    linear-gradient(180deg, rgb(7 31 32 / 0.98), rgb(18 61 52 / 0.96));
+  box-shadow: 0 24px 70px rgb(7 31 32 / 0.18);
+  color: var(--ambrosia-cream);
+}
+
+.ambrosia-hero {
+  display: grid;
+  gap: clamp(1.2rem, 3vw, 2rem);
+  align-items: stretch;
+  min-height: min(760px, calc(100vh - 8rem));
+  padding: clamp(1.2rem, 3vw, 2rem);
+}
+
+.ambrosia-hero__copy {
+  display: flex;
+  min-width: 0;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.ambrosia-eyebrow {
+  margin-bottom: 0.7rem;
+  color: var(--ambrosia-gold);
+  font-size: 0.76rem;
+  font-weight: 800;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+
+.ambrosia-hero h1,
+.ambrosia-section h2,
+.ambrosia-gallery h2,
+.ambrosia-cta h2 {
+  color: var(--ambrosia-cream);
+}
+
+.ambrosia-hero h1 {
+  max-width: 14ch;
+  font-size: clamp(2.35rem, 5.6vw, 4.9rem);
+  line-height: 0.98;
+}
+
+.ambrosia-hero__lead {
+  max-width: 50rem;
+  color: rgb(250 247 234 / 0.78);
+  font-size: clamp(1.02rem, 1.7vw, 1.22rem);
+  line-height: 1.68;
+}
+
+.ambrosia-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.8rem;
+  margin-top: 0.45rem;
+}
+
+.ambrosia-actions .btn--primary {
+  border-color: transparent;
+  background: var(--ambrosia-gold);
+  color: var(--ambrosia-ink);
+}
+
+.ambrosia-actions .btn--primary:hover {
+  background: var(--ambrosia-soft-gold);
+  color: var(--ambrosia-ink);
+}
+
+.ambrosia-actions .btn--secondary {
+  border-color: rgb(253 215 154 / 0.3);
+  background: rgb(250 247 234 / 0.08);
+  color: var(--ambrosia-cream);
+}
+
+.ambrosia-actions .btn--secondary:hover {
+  border-color: rgb(255 201 65 / 0.55);
+  color: var(--ambrosia-gold);
+}
+
+.ambrosia-collage {
+  display: grid;
+  min-height: 410px;
+  gap: 0.75rem;
+  grid-template-columns: 1fr 0.72fr;
+  grid-template-rows: 1fr 1fr;
+}
+
+.ambrosia-photo,
+.room-card__image,
+.gallery-tile {
+  position: relative;
+  overflow: hidden;
+  display: grid;
+  align-content: end;
+  min-height: 12rem;
+  padding: 1rem;
+  border: 1px solid rgb(253 215 154 / 0.2);
+  border-radius: 22px;
+  background:
+    radial-gradient(circle at 22% 16%, rgb(255 201 65 / 0.24), transparent 28%),
+    radial-gradient(circle at 78% 12%, rgb(0 74 89 / 0.65), transparent 32%),
+    linear-gradient(145deg, rgb(250 247 234 / 0.14), rgb(7 31 32 / 0.38));
+}
+
+.ambrosia-photo img,
+.room-card__image img,
+.gallery-tile img {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.ambrosia-photo::after,
+.room-card__image::after,
+.gallery-tile::after {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  background:
+    radial-gradient(circle at top right, rgb(255 201 65 / 0.22), transparent 32%),
+    linear-gradient(180deg, rgb(7 31 32 / 0.08), rgb(7 31 32 / 0.78));
+  content: '';
+  pointer-events: none;
+}
+
+.ambrosia-photo::before,
+.room-card__image::before,
+.gallery-tile::before {
+  position: absolute;
+  inset: 0.75rem;
+  border: 1px dashed rgb(253 215 154 / 0.26);
+  border-radius: 17px;
+  content: '';
+  pointer-events: none;
+  z-index: 2;
+}
+
+.ambrosia-photo--large {
+  grid-row: 1 / -1;
+}
+
+.ambrosia-photo--gold {
+  background:
+    radial-gradient(circle at 22% 16%, rgb(255 201 65 / 0.34), transparent 32%),
+    linear-gradient(145deg, rgb(0 74 89 / 0.55), rgb(18 61 52 / 0.5));
+}
+
+.ambrosia-photo span,
+.room-card__image span {
+  position: relative;
+  z-index: 3;
+  width: fit-content;
+  margin-bottom: 0.35rem;
+  color: var(--ambrosia-gold);
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.ambrosia-photo strong,
+.gallery-tile strong {
+  position: relative;
+  z-index: 3;
+  max-width: 13rem;
+  color: var(--ambrosia-cream);
+  font-size: clamp(1.15rem, 2vw, 1.45rem);
+  line-height: 1.12;
+}
+
+.ambrosia-section,
+.ambrosia-gallery,
+.ambrosia-cta {
+  padding: clamp(1.15rem, 2.6vw, 1.8rem);
+}
+
+.ambrosia-section--intro,
+.ambrosia-section--split {
+  display: grid;
+  gap: 1rem;
+}
+
+.ambrosia-section h2,
+.ambrosia-gallery h2,
+.ambrosia-cta h2 {
+  max-width: 17ch;
+  margin-bottom: 0;
+  font-size: clamp(1.65rem, 3.2vw, 2.65rem);
+}
+
+.section-header {
+  max-width: 54rem;
+  margin-bottom: 1rem;
+}
+
+.section-header--inline {
+  display: grid;
+  gap: 1rem;
+  max-width: none;
+  align-items: end;
+}
+
+.section-header--inline p:last-child,
+.ambrosia-copy {
+  max-width: 44rem;
+  margin-bottom: 0;
+  color: rgb(250 247 234 / 0.74);
+  line-height: 1.7;
+}
+
+.event-grid {
+  display: grid;
+  gap: 0.8rem;
+}
+
+.event-card {
+  padding: 1rem;
+  border: 1px solid rgb(253 215 154 / 0.17);
+  border-radius: 20px;
+  background: rgb(250 247 234 / 0.06);
+}
+
+.event-card h3 {
+  margin-bottom: 0.55rem;
+  color: var(--ambrosia-gold);
+  font-size: clamp(1.16rem, 1.8vw, 1.45rem);
+}
+
+.event-card p {
+  margin: 0;
+  color: rgb(250 247 234 / 0.74);
+  line-height: 1.62;
+}
+
+.room-carousel {
+  display: grid;
+  grid-auto-columns: minmax(280px, 35vw);
+  grid-auto-flow: column;
+  gap: 0.85rem;
+  overflow-x: auto;
+  padding: 0.1rem 0 0.75rem;
+  scroll-snap-type: x proximity;
+}
+
+.room-card {
+  overflow: hidden;
+  display: grid;
+  border: 1px solid rgb(253 215 154 / 0.17);
+  border-radius: 20px;
+  background: rgb(250 247 234 / 0.06);
+  scroll-snap-align: start;
+}
+
+.room-card__image {
+  min-height: 13rem;
+  border: 0;
+  border-radius: 0;
+}
+
+.room-card__body {
+  padding: 1rem;
+}
+
+.room-card__body p {
+  margin-bottom: 0.35rem;
+  color: var(--ambrosia-gold);
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.room-card h3 {
+  margin-bottom: 0.6rem;
+  color: var(--ambrosia-cream);
+  font-size: clamp(1.45rem, 2.1vw, 1.8rem);
+  text-transform: uppercase;
+}
+
+.room-card__body span {
+  color: rgb(250 247 234 / 0.74);
+  line-height: 1.6;
+}
+
+.taste-cloud {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.65rem;
+  margin-top: 1rem;
+}
+
+.taste-cloud span {
+  padding: 0.62rem 0.8rem;
+  border: 1px solid rgb(253 215 154 / 0.2);
+  border-radius: var(--radius-pill);
+  background: rgb(250 247 234 / 0.08);
+  color: var(--ambrosia-cream);
+  font-size: 0.88rem;
+  font-weight: 700;
+}
+
+.gallery-grid {
+  display: grid;
+  gap: 0.8rem;
+}
+
+.gallery-tile {
+  min-height: 14rem;
+}
+
+.ambrosia-cta {
+  display: grid;
+  gap: 0.9rem;
+  justify-items: start;
+  background:
+    radial-gradient(circle at top right, rgb(255 201 65 / 0.18), transparent 28%),
+    linear-gradient(135deg, rgb(0 74 89 / 0.98), rgb(7 31 32 / 0.98));
+}
+
+@media (min-width: 820px) {
+  .ambrosia-hero {
+    grid-template-columns: minmax(0, 1fr) minmax(360px, 0.76fr);
+  }
+
+  .ambrosia-section--intro,
+  .ambrosia-section--split {
+    grid-template-columns: minmax(0, 0.72fr) minmax(0, 1.28fr);
+    align-items: center;
+  }
+
+  .event-grid {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+
+  .section-header--inline {
+    grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
+  }
+
+  .gallery-grid {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+
+  .gallery-tile--wide {
+    grid-column: span 2;
+  }
+
+  .gallery-tile--tall {
+    grid-row: span 2;
+  }
+}
+
+@media (max-width: 620px) {
+  .ambrosia-hero {
+    min-height: auto;
+  }
+
+  .ambrosia-collage {
+    min-height: auto;
+    grid-template-columns: 1fr;
+    grid-template-rows: none;
+  }
+
+  .ambrosia-photo--large {
+    grid-row: auto;
+  }
+
+  .room-carousel {
+    grid-auto-columns: minmax(245px, 82vw);
+  }
+}
+</style>

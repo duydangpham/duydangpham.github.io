@@ -10,7 +10,6 @@ export const personSchema: Record<string, unknown> = {
     'Senior Lecturer in Management Information Systems at RMIT University Vietnam and Co-founder & CEO of NetIQ, a consulting firm specializing in Organizational Network Analysis and AI strategy. Fulbright Scholar-in-Residence 2024. Author of 70+ peer-reviewed publications on information security, digital transformation, and social network analysis.',
   url: 'https://drduydangpham.com',
   image: 'https://drduydangpham.com/assets/img/duydangpham_2026.JPG',
-  email: 'duy.dang@netiq.vn',
   sameAs: [
     'https://scholar.google.com.vn/citations?user=lkYFFvAAAAAJ',
     'https://orcid.org/0000-0002-7798-6635',

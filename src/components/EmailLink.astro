@@ -1,0 +1,48 @@
+---
+interface Props {
+  user?: string;
+  domain?: string;
+  class?: string;
+  label?: string;
+  subject?: string;
+}
+
+const {
+  user = 'duy.dang',
+  domain = 'netiq.vn',
+  class: className = '',
+  label,
+  subject,
+} = Astro.props;
+---
+
+<a
+  class={`email-link ${className}`.trim()}
+  data-user={user}
+  data-domain={domain}
+  data-label={label ?? ''}
+  data-subject={subject ?? ''}
+  href="#"
+>
+  {label ?? `${user} [at] ${domain}`}
+</a>
+
+<script>
+  document.querySelectorAll<HTMLAnchorElement>('.email-link').forEach((el) => {
+    const user = el.dataset.user;
+    const domain = el.dataset.domain;
+    if (!user || !domain) return;
+
+    const email = `${user}@${domain}`;
+    const label = el.dataset.label;
+    const subject = el.dataset.subject;
+    const subjectQuery = subject ? `?subject=${encodeURIComponent(subject)}` : '';
+
+    el.setAttribute('href', `mailto:${email}${subjectQuery}`);
+    el.setAttribute('aria-label', label ? `${label} (${email})` : `Email ${email}`);
+
+    if (!label) {
+      el.textContent = email;
+    }
+  });
+</script>

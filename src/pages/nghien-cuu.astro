@@ -1,0 +1,577 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { personSchema } from '../data/schema-person';
+
+const title = 'Nghiên cứu';
+const description =
+  'Nghiên cứu của Tiến sĩ Duy Đặng về phân tích mạng lưới tổ chức, AI champion, quản trị an ninh thông tin và chuyển đổi số.';
+const canonicalUrl = '/nghien-cuu';
+const researchHeroImage = '/images/nghien-cuu/hero-research-map-900x900.jpg';
+
+const researchAreas = [
+  {
+    id: 'ona',
+    index: '01',
+    title: 'Phân tích mạng lưới tổ chức',
+    subtitle: 'Nhìn thấy cấu trúc vô hình bên trong tổ chức.',
+    text: 'ONA dùng phương pháp mạng lưới xã hội để nghiên cứu quan hệ, dòng thông tin, niềm tin và ảnh hưởng trong tổ chức. Thay vì chỉ nhìn sơ đồ tổ chức, hướng nghiên cứu này giúp nhận diện những lãnh đạo phi chính thức, các silo tri thức, điểm nghẽn và các cầu nối tri thức.',
+    href: '/khai-niem/phan-tich-mang-luoi-to-chuc',
+    cta: 'Tìm hiểu ONA',
+    tone: 'network',
+  },
+  {
+    id: 'ai-champions',
+    index: '02',
+    title: 'Chương trình AI champion',
+    subtitle: 'Đưa AI vào thực tế qua những người có ảnh hưởng.',
+    text: 'Tôi nghiên cứu cách xác định và thiết kế mạng lưới AI champions bằng ONA: những người có vị trí xã hội phù hợp để lan toả niềm tin, hỗ trợ đồng nghiệp và đưa AI từ chủ trương vào thực hành hằng ngày.',
+    href: '/khai-niem/nguoi-tien-phong-ai',
+    cta: 'Tìm hiểu AI champion',
+    tone: 'ai',
+  },
+  {
+    id: 'infosec',
+    index: '03',
+    title: 'Quản trị an ninh thông tin',
+    subtitle: 'Hiểu hành vi bảo mật như một hiện tượng tổ chức.',
+    text: 'Một nhánh nghiên cứu lớn của tôi tập trung vào lý do con người tuân thủ hoặc vi phạm chính sách bảo mật, cách văn hoá tổ chức định hình hành vi an ninh thông tin, và cách thiết kế can thiệp dựa trên bằng chứng.',
+    href: '/cong-bo-khoa-hoc',
+    cta: 'Xem công bố',
+    tone: 'security',
+  },
+  {
+    id: 'digital-transformation',
+    index: '04',
+    title: 'Chuyển đổi số',
+    subtitle: 'Công nghệ thay đổi tổ chức qua con người.',
+    text: 'Tôi quan tâm đến cách tổ chức trong thị trường mới nổi tiếp nhận công nghệ, học hỏi, chuyển giao tri thức và vượt qua các điểm nghẽn xã hội khi triển khai hệ thống số, dữ liệu và AI.',
+    href: '/lien-he',
+    cta: 'Trao đổi hợp tác',
+    tone: 'transformation',
+  },
+];
+
+const networkLayers = [
+  'Work Advice',
+  'AI Support',
+  'Trust',
+  'Information',
+  'Collaboration',
+];
+
+const championArchetypes = [
+  {
+    name: 'Oracle',
+    text: 'Người được tìm đến thường xuyên, có uy tín tri thức và ảnh hưởng rộng trong nhiều lớp quan hệ.',
+  },
+  {
+    name: 'Broker',
+    text: 'Người kết nối các nhóm, phòng ban hoặc cộng đồng khác nhau, giúp tri thức vượt qua ranh giới tổ chức.',
+  },
+  {
+    name: 'Silo Buster',
+    text: 'Người phá vỡ cô lập tri thức, giúp thực hành tốt lan ra ngoài các nhóm quen thuộc.',
+  },
+];
+
+const methods = [
+  {
+    title: 'Định lượng',
+    text: 'Khảo sát, mô hình cấu trúc, hồi quy, multi-group analysis và các kiểm định thống kê.',
+  },
+  {
+    title: 'Khoa học mạng lưới',
+    text: 'Social network analysis, multiplex ONA, betweenness centrality, community detection và network visualisation.',
+  },
+  {
+    title: 'Định tính',
+    text: 'Phỏng vấn bán cấu trúc, case study, thematic analysis và grounded theory.',
+  },
+  {
+    title: 'Phương pháp hỗn hợp',
+    text: 'Kết hợp dữ liệu khảo sát, phỏng vấn, dữ liệu mạng lưới và insight từ bối cảnh thực tế.',
+  },
+];
+---
+
+<BaseLayout
+  title={title}
+  description={description}
+  lang="vi"
+  canonicalUrl={canonicalUrl}
+  jsonLd={personSchema}
+>
+  <div class="container research-page">
+    <header class="research-hero">
+      <div class="research-hero__copy">
+        <p class="research-eyebrow">Nghiên cứu</p>
+        <h1>Tôi nghiên cứu những gì sơ đồ tổ chức không nói ra.</h1>
+        <p class="research-hero__lead">
+          Trọng tâm nghiên cứu của tôi nằm ở nơi con người, công nghệ và mạng lưới quan hệ
+          gặp nhau: ONA, AI adoption, quản trị tri thức, an ninh thông tin và chuyển đổi số
+          trong bối cảnh Việt Nam và Đông Nam Á.
+        </p>
+        <div class="research-actions">
+          <a class="btn btn--primary" href="/cong-bo-khoa-hoc">Xem công bố khoa học</a>
+          <a class="btn btn--secondary" href="/lien-he">Trao đổi hợp tác nghiên cứu</a>
+        </div>
+      </div>
+
+      <div class="research-map" aria-label="Bản đồ chủ đề nghiên cứu">
+        <img src={researchHeroImage} alt="" aria-hidden="true" loading="eager" />
+        <div class="research-map__core">
+          <span>Network</span>
+          <strong>Con người · Công nghệ · Quyết định</strong>
+        </div>
+        <div class="research-map__node research-map__node--one">ONA</div>
+        <div class="research-map__node research-map__node--two">AI</div>
+        <div class="research-map__node research-map__node--three">An ninh</div>
+        <div class="research-map__node research-map__node--four">Số hoá</div>
+      </div>
+    </header>
+
+    <section class="research-section">
+      <div class="section-header section-header--inline">
+        <div>
+          <p class="research-eyebrow">Bốn hướng nghiên cứu</p>
+          <h2>Từ mạng lưới vô hình đến quyết định có thể hành động.</h2>
+        </div>
+        <p>
+          Các hướng nghiên cứu này kết nối với nhau qua một câu hỏi chung: công nghệ chỉ
+          thật sự tạo tác động khi đi qua những con người, quan hệ và niềm tin cụ thể nào?
+        </p>
+      </div>
+
+      <div class="area-carousel" aria-label="Bốn hướng nghiên cứu">
+        {researchAreas.map((area) => (
+          <article class={`area-card area-card--${area.tone}`} id={area.id}>
+            <span>{area.index}</span>
+            <h3>{area.title}</h3>
+            <strong>{area.subtitle}</strong>
+            <p>{area.text}</p>
+            <a href={area.href}>{area.cta} →</a>
+          </article>
+        ))}
+      </div>
+    </section>
+
+    <section class="research-section research-section--split">
+      <div>
+        <p class="research-eyebrow">Multiplex ONA</p>
+        <h2>Nhiều lớp quan hệ cùng tồn tại trong một tổ chức.</h2>
+      </div>
+      <div>
+        <p class="research-copy">
+          Trong nghiên cứu ONA, tôi thường nhìn tổ chức qua nhiều lớp quan hệ cùng lúc:
+          ai xin lời khuyên công việc từ ai, ai hỗ trợ đồng nghiệp dùng AI, ai được tin tưởng,
+          ai chia sẻ thông tin kịp thời và ai thật sự cộng tác trong dự án.
+        </p>
+        <div class="layer-cloud" aria-label="ONA relationship layers">
+          {networkLayers.map((layer) => <span>{layer}</span>)}
+        </div>
+      </div>
+    </section>
+
+    <section class="research-section">
+      <div class="section-header">
+        <p class="research-eyebrow">Các hình mẫu AI champion</p>
+        <h2>Không phải ai cũng dẫn dắt AI theo cùng một cách.</h2>
+      </div>
+      <div class="archetype-grid">
+        {championArchetypes.map((item) => (
+          <article class="archetype-card">
+            <h3>{item.name}</h3>
+            <p>{item.text}</p>
+          </article>
+        ))}
+      </div>
+    </section>
+
+    <section class="research-section research-section--split">
+      <div>
+        <p class="research-eyebrow">Phương pháp</p>
+        <h2>Tôi chọn phương pháp theo câu hỏi, không theo thói quen.</h2>
+      </div>
+      <div class="methods-grid">
+        {methods.map((method) => (
+          <article class="method-card">
+            <h3>{method.title}</h3>
+            <p>{method.text}</p>
+          </article>
+        ))}
+      </div>
+    </section>
+
+    <section class="research-cta">
+      <p class="research-eyebrow">Từ học thuật đến ứng dụng</p>
+      <h2>Nghiên cứu tốt không chỉ để được trích dẫn. Nó nên giúp ta nhìn tổ chức rõ hơn.</h2>
+      <div class="research-actions">
+        <a class="btn btn--primary" href="/cong-bo-khoa-hoc">Xem công bố khoa học</a>
+        <a class="btn btn--secondary" href="/lien-he">Trao đổi hợp tác nghiên cứu</a>
+      </div>
+    </section>
+  </div>
+</BaseLayout>
+
+<style>
+.research-page {
+  display: grid;
+  gap: 1rem;
+}
+
+.research-hero,
+.research-section,
+.research-cta {
+  overflow: hidden;
+  border: 1px solid rgb(255 255 255 / 0.72);
+  border-radius: 28px;
+  background:
+    radial-gradient(circle at top right, rgb(185 137 68 / 0.13), transparent 30%),
+    linear-gradient(180deg, rgb(255 255 255 / 0.88), rgb(255 255 255 / 0.7));
+  box-shadow: var(--shadow-soft);
+}
+
+.research-hero {
+  display: grid;
+  gap: clamp(1.2rem, 3vw, 2rem);
+  align-items: stretch;
+  min-height: min(760px, calc(100vh - 8rem));
+  padding: clamp(1.2rem, 3vw, 2rem);
+}
+
+.research-hero__copy {
+  display: flex;
+  min-width: 0;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.research-eyebrow {
+  margin-bottom: 0.7rem;
+  color: var(--color-primary);
+  font-size: 0.76rem;
+  font-weight: 800;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+
+.research-hero h1 {
+  max-width: 14ch;
+  font-size: clamp(2.35rem, 5.6vw, 4.85rem);
+  line-height: 0.98;
+}
+
+.research-hero__lead {
+  max-width: 52rem;
+  color: var(--color-text-secondary);
+  font-size: clamp(1.02rem, 1.7vw, 1.22rem);
+  line-height: 1.68;
+}
+
+.research-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.8rem;
+  margin-top: 0.45rem;
+}
+
+.research-map {
+  position: relative;
+  overflow: hidden;
+  min-height: 410px;
+  border: 1px solid rgb(20 24 33 / 0.1);
+  border-radius: 24px;
+  background:
+    radial-gradient(circle at 50% 44%, rgb(116 43 57 / 0.2), transparent 18%),
+    radial-gradient(circle at 22% 18%, rgb(185 137 68 / 0.16), transparent 24%),
+    linear-gradient(145deg, rgb(255 255 255 / 0.74), rgb(255 255 255 / 0.42));
+}
+
+.research-map img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.24;
+  filter: saturate(0.85);
+}
+
+.research-map::before,
+.research-map::after,
+.research-map__core,
+.research-map__node {
+  position: absolute;
+}
+
+.research-map::before,
+.research-map::after {
+  inset: 18%;
+  border: 1px solid rgb(20 24 33 / 0.1);
+  border-radius: 50%;
+  content: '';
+}
+
+.research-map::after {
+  inset: 31%;
+}
+
+.research-map__core,
+.research-map__node {
+  z-index: 1;
+  display: grid;
+  place-items: center;
+  text-align: center;
+}
+
+.research-map__core {
+  top: 50%;
+  left: 50%;
+  width: 11.5rem;
+  min-height: 7rem;
+  transform: translate(-50%, -50%);
+  padding: 1rem;
+  border-radius: 24px;
+  background: rgb(255 255 255 / 0.76);
+  box-shadow: var(--shadow-soft);
+}
+
+.research-map__core span {
+  color: var(--color-primary);
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.research-map__core strong {
+  color: var(--color-text-primary);
+  line-height: 1.2;
+}
+
+.research-map__node {
+  width: 5.4rem;
+  height: 5.4rem;
+  border-radius: 50%;
+  background: rgb(255 255 255 / 0.82);
+  color: var(--color-primary-dark);
+  font-size: 0.82rem;
+  font-weight: 800;
+  box-shadow: var(--shadow-soft);
+}
+
+.research-map__node--one { top: 12%; left: 16%; }
+.research-map__node--two { top: 14%; right: 14%; }
+.research-map__node--three { right: 18%; bottom: 12%; }
+.research-map__node--four { bottom: 14%; left: 14%; }
+
+.research-section,
+.research-cta {
+  padding: clamp(1.15rem, 2.6vw, 1.8rem);
+}
+
+.research-section--split {
+  display: grid;
+  gap: 1rem;
+}
+
+.research-section h2,
+.research-cta h2 {
+  max-width: 18ch;
+  margin-bottom: 0;
+  font-size: clamp(1.65rem, 3.2vw, 2.65rem);
+}
+
+.section-header {
+  max-width: 54rem;
+  margin-bottom: 1rem;
+}
+
+.section-header--inline {
+  display: grid;
+  gap: 1rem;
+  max-width: none;
+  align-items: end;
+}
+
+.section-header--inline p:last-child,
+.research-copy {
+  max-width: 44rem;
+  margin-bottom: 0;
+  color: var(--color-text-secondary);
+  line-height: 1.7;
+}
+
+.area-carousel {
+  display: grid;
+  grid-auto-columns: minmax(280px, 35vw);
+  grid-auto-flow: column;
+  gap: 0.85rem;
+  overflow-x: auto;
+  padding: 0.1rem 0 0.75rem;
+  scroll-snap-type: x proximity;
+}
+
+.area-card,
+.archetype-card,
+.method-card {
+  border: 1px solid rgb(20 24 33 / 0.1);
+  border-radius: 20px;
+  background:
+    radial-gradient(circle at top right, var(--area-glow, rgb(185 137 68 / 0.12)), transparent 32%),
+    rgb(255 255 255 / 0.62);
+  color: var(--color-text-primary);
+}
+
+.area-card {
+  display: grid;
+  min-height: 25rem;
+  align-content: start;
+  padding: 1rem;
+  scroll-snap-align: start;
+}
+
+.area-card--network { --area-glow: rgb(62 86 119 / 0.13); }
+.area-card--ai { --area-glow: rgb(185 137 68 / 0.2); }
+.area-card--security { --area-glow: rgb(116 43 57 / 0.14); }
+.area-card--transformation { --area-glow: rgb(93 120 90 / 0.16); }
+
+.area-card span,
+.method-card h3 {
+  color: var(--color-primary);
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.area-card h3 {
+  margin: 0.65rem 0 0.45rem;
+  font-size: clamp(1.42rem, 2.2vw, 1.8rem);
+}
+
+.area-card strong {
+  display: block;
+  margin-bottom: 0.75rem;
+  line-height: 1.35;
+}
+
+.area-card p,
+.archetype-card p,
+.method-card p {
+  color: var(--color-text-secondary);
+  line-height: 1.62;
+}
+
+.area-card a {
+  align-self: end;
+  width: fit-content;
+  color: var(--color-primary-dark);
+  font-weight: 800;
+  text-decoration: underline;
+  text-decoration-thickness: 0.08em;
+  text-underline-offset: 0.2em;
+}
+
+.layer-cloud {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.65rem;
+  margin-top: 1rem;
+}
+
+.layer-cloud span {
+  padding: 0.62rem 0.8rem;
+  border: 1px solid rgb(20 24 33 / 0.1);
+  border-radius: var(--radius-pill);
+  background: rgb(255 255 255 / 0.72);
+  color: var(--color-primary-dark);
+  font-size: 0.88rem;
+  font-weight: 800;
+}
+
+.archetype-grid,
+.methods-grid {
+  display: grid;
+  gap: 0.8rem;
+}
+
+.archetype-card,
+.method-card {
+  padding: 1rem;
+}
+
+.archetype-card h3 {
+  margin-bottom: 0.55rem;
+  color: var(--color-primary);
+  font-size: clamp(1.25rem, 2vw, 1.6rem);
+}
+
+.method-card h3 {
+  margin-bottom: 0.55rem;
+}
+
+.archetype-card p,
+.method-card p {
+  margin: 0;
+}
+
+.research-cta {
+  display: grid;
+  gap: 0.9rem;
+  justify-items: start;
+  background:
+    radial-gradient(circle at top right, rgb(185 137 68 / 0.18), transparent 28%),
+    linear-gradient(135deg, rgb(116 43 57 / 0.1), rgb(255 255 255 / 0.78));
+}
+
+@media (min-width: 820px) {
+  .research-hero {
+    grid-template-columns: minmax(0, 1fr) minmax(360px, 0.76fr);
+  }
+
+  .research-section--split {
+    grid-template-columns: minmax(0, 0.72fr) minmax(0, 1.28fr);
+    align-items: center;
+  }
+
+  .section-header--inline {
+    grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
+  }
+
+  .archetype-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .methods-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (min-width: 1080px) {
+  .methods-grid {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 620px) {
+  .research-hero {
+    min-height: auto;
+  }
+
+  .research-map {
+    min-height: 320px;
+  }
+
+  .research-map__node {
+    width: 4.8rem;
+    height: 4.8rem;
+  }
+
+  .area-carousel {
+    grid-auto-columns: minmax(245px, 82vw);
+  }
+}
+</style>

@@ -1,0 +1,422 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import EmailLink from '../components/EmailLink.astro';
+import { personSchema } from '../data/schema-person';
+
+const title = 'Liên hệ';
+const description =
+  'Liên hệ với Tiến sĩ Duy Đặng về hợp tác nghiên cứu, diễn thuyết, hướng dẫn học thuật, truyền thông hoặc tư vấn NetIQ.';
+const canonicalUrl = '/lien-he';
+
+const netiqUrl = 'https://netiq.vn';
+
+const reasons = [
+  {
+    tag: 'Nghiên cứu',
+    label: 'Hợp tác nghiên cứu',
+    desc: 'Dự án nghiên cứu chung, đồng tác giả, chia sẻ dữ liệu hoặc trao đổi học thuật.',
+  },
+  {
+    tag: 'Chia sẻ',
+    label: 'Diễn thuyết và hội thảo',
+    desc: 'Keynote, workshop, đào tạo lãnh đạo, hội nghị và sự kiện doanh nghiệp.',
+  },
+  {
+    tag: 'NetIQ',
+    label: 'Tư vấn NetIQ',
+    desc: 'Chẩn đoán ONA cho AI adoption, chuyển đổi số, lãnh đạo và thay đổi tổ chức.',
+  },
+  {
+    tag: 'Báo chí',
+    label: 'Truyền thông',
+    desc: 'Trao đổi chuyên môn về ONA, AI adoption, chuyển đổi số, an ninh thông tin và thay đổi tổ chức.',
+  },
+  {
+    tag: 'Học thuật',
+    label: 'Hướng dẫn học thuật',
+    desc: 'Trao đổi về hướng dẫn nghiên cứu trong hệ thống thông tin, ONA, AI adoption, an ninh thông tin và chuyển đổi số.',
+  },
+  {
+    tag: 'Khác',
+    label: 'Liên hệ chung',
+    desc: 'Các trao đổi khác. Tôi luôn vui khi được nghe từ bạn.',
+  },
+];
+
+const profileLinks = [
+  {
+    label: 'Google Scholar',
+    href: 'https://scholar.google.com.vn/citations?user=lkYFFvAAAAAJ',
+  },
+  {
+    label: 'ORCID',
+    href: 'https://orcid.org/0000-0002-7798-6635',
+  },
+  {
+    label: 'LinkedIn',
+    href: 'https://www.linkedin.com/in/duydangpham/',
+  },
+];
+---
+
+<BaseLayout
+  title={title}
+  description={description}
+  lang="vi"
+  canonicalUrl={canonicalUrl}
+  jsonLd={personSchema}
+>
+  <div class="container contact-page">
+    <header class="contact-hero">
+      <div class="contact-hero__copy">
+        <p class="contact-eyebrow">Liên hệ</p>
+        <h1>Bắt đầu bằng một cuộc trao đổi rõ ràng.</h1>
+        <p class="contact-hero__lead">
+          Tôi nhận trao đổi về hợp tác nghiên cứu, diễn thuyết, hướng dẫn học thuật,
+          truyền thông và các cuộc gặp phù hợp. Với tư vấn NetIQ, vui lòng ghé netiq.vn
+          để được phản hồi nhanh hơn.
+        </p>
+        <div class="contact-actions">
+          <EmailLink class="btn btn--primary" label="Gửi email" />
+          <a class="btn btn--secondary" href={netiqUrl} target="_blank" rel="noopener noreferrer">
+            Làm việc cùng NetIQ
+          </a>
+        </div>
+      </div>
+
+      <aside class="contact-card" aria-label="Thông tin liên hệ chính">
+        <p class="contact-card__label">Kênh liên hệ chính</p>
+        <EmailLink class="contact-card__email" />
+        <p>
+          Tôi thường phản hồi trong 3-5 ngày làm việc. Với yêu cầu tư vấn NetIQ,
+          vui lòng ghé <a href={netiqUrl} target="_blank" rel="noopener noreferrer">netiq.vn</a>
+          để được xử lý nhanh hơn.
+        </p>
+      </aside>
+    </header>
+
+    <section class="contact-section">
+      <div class="section-header">
+        <p class="contact-eyebrow">Lý do liên hệ</p>
+        <h2>Bạn muốn trao đổi điều gì?</h2>
+      </div>
+
+      <div class="reasons-grid">
+        {reasons.map((reason) => (
+          <article class="reason-card">
+            <span>{reason.tag}</span>
+            <h3>{reason.label}</h3>
+            <p>{reason.desc}</p>
+          </article>
+        ))}
+      </div>
+    </section>
+
+    <section class="contact-section contact-section--split">
+      <div>
+        <p class="contact-eyebrow">Hồ sơ chuyên môn</p>
+        <h2>Kết nối qua các kênh học thuật và nghề nghiệp.</h2>
+      </div>
+
+      <div class="profile-grid">
+        {profileLinks.map((link) => (
+          <a class="profile-link" href={link.href} target="_blank" rel="noopener noreferrer">
+            <span>{link.label}</span>
+            <strong>Truy cập hồ sơ</strong>
+          </a>
+        ))}
+      </div>
+    </section>
+
+    <section class="contact-section contact-section--location">
+      <div>
+        <p class="contact-eyebrow">Địa điểm</p>
+        <h2>TP. Hồ Chí Minh, Hà Nội, và các cuộc gặp phù hợp.</h2>
+      </div>
+      <div class="location-copy">
+        <p>
+          Tôi hiện ở TP. Hồ Chí Minh, thường xuyên làm việc tại Hà Nội và đôi khi có các
+          hoạt động quốc tế. Với các cuộc gặp trực tiếp tại TP. Hồ Chí Minh, vui lòng liên hệ
+          để sắp xếp thời gian phù hợp.
+        </p>
+        <p>
+          NetIQ phục vụ khách hàng tại Việt Nam và Đông Nam Á qua các hình thức trực tiếp
+          và từ xa. Ghé <a href={netiqUrl} target="_blank" rel="noopener noreferrer">netiq.vn</a>
+          để tìm hiểu dịch vụ tư vấn.
+        </p>
+      </div>
+    </section>
+  </div>
+</BaseLayout>
+
+<style>
+.contact-page {
+  display: grid;
+  gap: clamp(0.85rem, 1.8vw, 1.35rem);
+}
+
+.contact-hero,
+.contact-section {
+  position: relative;
+  overflow: hidden;
+  border: 1px solid rgb(255 255 255 / 0.72);
+  border-radius: var(--radius-lg);
+  background:
+    radial-gradient(circle at 100% 0%, rgb(185 137 68 / 0.16), transparent 30%),
+    linear-gradient(135deg, rgb(255 255 255 / 0.94), rgb(255 255 255 / 0.72));
+  box-shadow: var(--shadow-soft);
+}
+
+.contact-hero::before,
+.contact-section::before {
+  content: "";
+  position: absolute;
+  inset: 1px;
+  z-index: 0;
+  border-radius: calc(var(--radius-lg) - 1px);
+  background: linear-gradient(135deg, rgb(255 255 255 / 0.72), transparent 56%);
+  pointer-events: none;
+}
+
+.contact-hero > *,
+.contact-section > * {
+  position: relative;
+  z-index: 1;
+}
+
+.contact-hero {
+  display: grid;
+  gap: clamp(1rem, 2.4vw, 2rem);
+  align-items: stretch;
+  padding: clamp(1.2rem, 3vw, 2.5rem);
+}
+
+.contact-hero__copy {
+  display: grid;
+  align-content: center;
+  gap: 1rem;
+}
+
+.contact-eyebrow {
+  margin: 0 0 0.25rem;
+  color: var(--color-primary);
+  font-size: 0.76rem;
+  font-weight: 800;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+
+.contact-hero h1,
+.contact-section h2 {
+  margin: 0;
+  color: var(--color-text-primary);
+  line-height: 0.98;
+  letter-spacing: -0.055em;
+}
+
+.contact-hero h1 {
+  max-width: 16ch;
+  font-size: clamp(3rem, 6vw, 5.4rem);
+}
+
+.contact-hero__lead {
+  max-width: 58rem;
+  margin: 0;
+  color: var(--color-text-secondary);
+  font-size: clamp(1.05rem, 1.55vw, 1.22rem);
+  line-height: 1.65;
+}
+
+.contact-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-top: 0.2rem;
+}
+
+.contact-card {
+  display: grid;
+  align-content: end;
+  min-height: 24rem;
+  padding: clamp(1rem, 2.4vw, 1.5rem);
+  border: 1px solid var(--color-border-subtle);
+  border-radius: 28px;
+  background:
+    radial-gradient(circle at 20% 16%, rgb(116 43 57 / 0.16), transparent 30%),
+    radial-gradient(circle at 84% 12%, rgb(185 137 68 / 0.2), transparent 28%),
+    linear-gradient(145deg, rgb(255 255 255 / 0.7), rgb(255 255 255 / 0.38));
+}
+
+.contact-card__label {
+  margin: 0 0 0.45rem;
+  color: var(--color-primary);
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.contact-card__email {
+  width: fit-content;
+  color: var(--color-text-primary);
+  font-size: clamp(1.35rem, 2.4vw, 2rem);
+  font-weight: 850;
+  line-height: 1.1;
+  text-decoration-color: rgb(116 43 57 / 0.28);
+  text-underline-offset: 0.16em;
+}
+
+.contact-card p:last-child {
+  max-width: 30rem;
+  margin: 1rem 0 0;
+  color: var(--color-text-secondary);
+  line-height: 1.65;
+}
+
+.contact-card a,
+.location-copy a {
+  color: var(--color-primary-dark);
+  font-weight: 800;
+}
+
+.contact-section {
+  display: grid;
+  gap: clamp(1rem, 2vw, 1.35rem);
+  padding: clamp(1.25rem, 3vw, 2.35rem);
+}
+
+.section-header {
+  max-width: 48rem;
+}
+
+.contact-section h2 {
+  max-width: 15ch;
+  font-size: clamp(2rem, 4vw, 3.35rem);
+}
+
+.reasons-grid,
+.profile-grid {
+  display: grid;
+  gap: 0.8rem;
+}
+
+.reason-card,
+.profile-link {
+  display: grid;
+  align-content: start;
+  min-height: 13rem;
+  padding: 1rem;
+  border: 1px solid rgb(20 24 33 / 0.1);
+  border-radius: 22px;
+  background: rgb(255 255 255 / 0.62);
+}
+
+.reason-card span,
+.profile-link strong {
+  width: fit-content;
+  color: var(--color-primary);
+  font-family: var(--font-mono);
+  font-size: 0.74rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.reason-card h3 {
+  margin: 0.55rem 0;
+  color: var(--color-text-primary);
+  font-size: clamp(1.16rem, 1.8vw, 1.45rem);
+  line-height: 1.14;
+}
+
+.reason-card p {
+  margin: 0;
+  color: var(--color-text-secondary);
+  line-height: 1.62;
+}
+
+.profile-link {
+  min-height: 9.5rem;
+  color: inherit;
+  text-decoration: none;
+  transition:
+    transform var(--transition-base),
+    border-color var(--transition-base),
+    box-shadow var(--transition-base);
+}
+
+.profile-link:hover {
+  transform: translateY(-2px);
+  border-color: rgb(116 43 57 / 0.24);
+  box-shadow: var(--shadow-soft);
+}
+
+.profile-link span {
+  align-self: end;
+  color: var(--color-text-primary);
+  font-size: clamp(1.45rem, 2.4vw, 2rem);
+  font-weight: 850;
+  line-height: 1.05;
+}
+
+.profile-link strong {
+  margin-top: 0.7rem;
+}
+
+.contact-section--location {
+  background:
+    radial-gradient(circle at 0% 0%, rgb(116 43 57 / 0.1), transparent 34%),
+    linear-gradient(135deg, rgb(255 255 255 / 0.94), rgb(255 255 255 / 0.72));
+}
+
+.location-copy {
+  display: grid;
+  gap: 0.85rem;
+  max-width: 62rem;
+}
+
+.location-copy p {
+  margin: 0;
+  color: var(--color-text-secondary);
+  font-size: clamp(1rem, 1.2vw, 1.08rem);
+  line-height: 1.72;
+}
+
+@media (min-width: 760px) {
+  .contact-hero {
+    grid-template-columns: minmax(0, 1.1fr) minmax(20rem, 0.9fr);
+  }
+
+  .reasons-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .profile-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+@media (min-width: 1080px) {
+  .reasons-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .contact-section--split,
+  .contact-section--location {
+    grid-template-columns: minmax(0, 0.72fr) minmax(0, 1.28fr);
+    align-items: center;
+  }
+}
+
+@media (max-width: 640px) {
+  .contact-hero h1,
+  .contact-section h2 {
+    max-width: 100%;
+  }
+
+  .contact-card {
+    min-height: 18rem;
+  }
+}
+</style>

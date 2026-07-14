@@ -1,7 +1,7 @@
 import { getCollection, type CollectionEntry } from 'astro:content';
 
 export type PostEntry = CollectionEntry<'posts'>;
-const insightsIndexUrl = '/insights/';
+const insightsIndexUrl = '/goc-nhin/';
 
 export function isPublishedPost(post: PostEntry): boolean {
   return !post.data.draft;

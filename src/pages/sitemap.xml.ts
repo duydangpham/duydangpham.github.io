@@ -6,17 +6,16 @@ const SITE_URL = 'https://drduydangpham.com';
 
 const staticRoutes = [
   '/',
-  '/about/',
-  '/research/',
+  '/gioi-thieu/',
+  '/nghien-cuu/',
   '/netiq/',
-  '/projects/',
-  '/insights/',
-  '/speaking/',
-  '/publications/',
-  '/contact/',
-  '/concepts/organizational-network-analysis/',
-  '/concepts/ai-champions/',
-  '/concepts/betweenness-centrality/',
+  '/goc-nhin/',
+  '/dien-thuyet/',
+  '/cong-bo-khoa-hoc/',
+  '/lien-he/',
+  '/khai-niem/phan-tich-mang-luoi-to-chuc/',
+  '/khai-niem/nguoi-tien-phong-ai/',
+  '/khai-niem/do-trung-tam-trung-gian/',
 ];
 
 function escapeXml(value: string): string {
