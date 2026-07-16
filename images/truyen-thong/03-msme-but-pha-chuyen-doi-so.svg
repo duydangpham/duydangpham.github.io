@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800" role="img" aria-labelledby="title desc">
+  <title id="title">Placeholder — MSME bứt phá chuyển đổi số</title>
+  <desc id="desc">Thay file này bằng ảnh truyền thông tương ứng.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#f7f1ee"/>
+      <stop offset="1" stop-color="#e7d7d2"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="82%" cy="18%" r="55%">
+      <stop offset="0" stop-color="#b98944" stop-opacity=".34"/>
+      <stop offset="1" stop-color="#b98944" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="1200" height="800" fill="url(#bg)"/>
+  <rect width="1200" height="800" fill="url(#glow)"/>
+  <circle cx="940" cy="160" r="210" fill="none" stroke="#742b39" stroke-opacity=".12" stroke-width="2"/>
+  <circle cx="940" cy="160" r="140" fill="none" stroke="#b98944" stroke-opacity=".2" stroke-width="2"/>
+  <path d="M90 108h170" stroke="#742b39" stroke-width="8" stroke-linecap="round"/>
+  <text x="90" y="610" fill="#742b39" font-family="Arial, sans-serif" font-size="24" font-weight="700" letter-spacing="5">TRUYỀN THÔNG · PLACEHOLDER</text>
+  <text x="90" y="672" fill="#141821" font-family="Arial, sans-serif" font-size="42" font-weight="700">MSME bứt phá chuyển đổi số</text>
+  <text x="90" y="724" fill="#4d5868" font-family="Arial, sans-serif" font-size="22">1200 × 800 · Replace this file when the final image is ready</text>
+</svg>
