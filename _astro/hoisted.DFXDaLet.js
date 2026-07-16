@@ -1,0 +1,1 @@
+document.querySelectorAll(".email-link").forEach(t=>{const s=t.dataset.user,n=t.dataset.domain;if(!s||!n)return;const e=`${s}@${n}`,a=t.dataset.label,o=t.dataset.subject,c=o?`?subject=${encodeURIComponent(o)}`:"";t.setAttribute("href",`mailto:${e}${c}`),t.setAttribute("aria-label",a?`${a} (${e})`:`Email ${e}`),a||(t.textContent=e)});
