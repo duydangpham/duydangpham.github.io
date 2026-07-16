@@ -21,11 +21,15 @@ const advisoryCards = [
     title: 'Tư vấn ONA',
     tag: 'Network intelligence',
     text: 'Phân tích mạng lưới tổ chức để nhìn thấy ảnh hưởng, niềm tin, dòng tri thức, điểm nghẽn và những người có thể dẫn dắt thay đổi.',
+    href: '/khai-niem/phan-tich-mang-luoi-to-chuc',
+    linkLabel: 'Tìm hiểu ONA',
   },
   {
     title: 'Tư vấn AI & chuyển đổi số',
     tag: 'Strategy',
     text: 'Giúp lãnh đạo thiết kế lộ trình AI, chương trình AI champion, năng lực dữ liệu và cách tổ chức triển khai thay đổi có căn cứ.',
+    href: '/khai-niem/nguoi-tien-phong-ai',
+    linkLabel: 'Tìm hiểu AI Champion',
   },
   {
     title: 'Phát triển phần mềm theo yêu cầu',
@@ -140,6 +144,7 @@ const deliverySteps = [
             <span>{card.tag}</span>
             <h3>{card.title}</h3>
             <p>{card.text}</p>
+            {card.href && <a class="advisory-card__link" href={card.href}>{card.linkLabel} →</a>}
           </article>
         ))}
       </div>
@@ -434,6 +439,12 @@ const deliverySteps = [
   padding: 1rem;
 }
 
+.advisory-card {
+  display: flex;
+  min-height: 100%;
+  flex-direction: column;
+}
+
 .advisory-card span,
 .delivery-step span {
   color: var(--color-primary);
@@ -458,6 +469,18 @@ const deliverySteps = [
   line-height: 1.62;
 }
 
+.advisory-card__link {
+  width: fit-content;
+  margin-top: auto;
+  padding-top: 1rem;
+  color: var(--color-primary-dark);
+  font-size: 0.9rem;
+  font-weight: 750;
+  text-decoration: underline;
+  text-decoration-thickness: 0.08em;
+  text-underline-offset: 0.2em;
+}
+
 .question-card {
   min-height: 8.5rem;
   display: grid;
@@ -478,6 +501,7 @@ const deliverySteps = [
   display: grid;
   grid-auto-columns: minmax(280px, 35vw);
   grid-auto-flow: column;
+  align-items: stretch;
   gap: 0.85rem;
   overflow-x: auto;
   padding: 0.1rem 0 0.75rem;
@@ -487,6 +511,8 @@ const deliverySteps = [
 .software-card {
   overflow: hidden;
   display: grid;
+  height: 29rem;
+  grid-template-rows: 13rem minmax(0, 1fr);
   border: 1px solid rgb(20 24 33 / 0.1);
   border-radius: 20px;
   background: rgb(255 255 255 / 0.62);
@@ -526,6 +552,9 @@ const deliverySteps = [
 }
 
 .software-card__body {
+  display: flex;
+  min-height: 0;
+  flex-direction: column;
   padding: 1rem;
 }
 

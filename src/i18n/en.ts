@@ -13,7 +13,7 @@ const en = {
     research: 'Nghiên cứu',
     netiq: 'NetIQ',
     insights: 'Góc nhìn',
-    speaking: 'Diễn thuyết',
+    media: 'Truyền thông',
     publications: 'Công bố khoa học',
     contact: 'Liên hệ',
   },
@@ -23,6 +23,7 @@ const en = {
     consulting: 'Tư vấn',
     events: 'Sự kiện',
     research: 'Nghiên cứu',
+    media: 'Truyền thông',
     contact: 'Liên hệ',
   },
   footer: {

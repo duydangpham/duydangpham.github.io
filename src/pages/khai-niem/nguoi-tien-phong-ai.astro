@@ -4,43 +4,103 @@ import { createConceptPageSchema } from '../../data/schema-concept-page';
 
 const canonicalUrl = '/khai-niem/nguoi-tien-phong-ai';
 
-const jsonLd = createConceptPageSchema({
-  name: 'AI Champions',
-  description:
-    'AI Champions are individuals identified through Organisational Network Analysis as having the network position, influence, and credibility to drive grass-roots AI adoption within their organisations. Three archetypes exist: Oracle (high betweenness centrality across all network layers), Broker (high inter-community betweenness), and Silo Buster (peripheral but cross-community connector).',
-  url: `https://drduydangpham.com${canonicalUrl}`,
-  faqs: [
-    {
-      question: 'What is an AI Champion?',
-      answer:
-        'An AI Champion is an employee identified through ONA as having the network position and social capital to credibly advocate for AI adoption among peers. Unlike top-down executive mandates, AI Champions influence adoption organically through trusted relationships.',
-    },
-    {
-      question: 'What are the three AI Champion archetypes?',
-      answer:
-        'Oracle: high betweenness centrality across all network layers — the expert everyone trusts. Broker: high betweenness between community clusters — the cross-boundary connector. Silo Buster: low internal centrality but high inter-community ties — prevents knowledge hoarding and spreads AI practices beyond isolated teams.',
-    },
-    {
-      question: 'How are AI Champions identified using ONA?',
-      answer:
-        'We administer a multiplex ONA survey to map five network layers. Betweenness centrality is computed per layer and aggregated. Infomap community detection identifies cluster boundaries. Individuals are then classified as Oracle, Broker, or Silo Buster based on their structural position across these measures.',
-    },
-    {
-      question: 'Why are AI Champions more effective than top-down AI mandates?',
-      answer:
-        'Change research consistently shows that peer influence is more persuasive than authority. AI Champions are already trusted within their social networks — making their AI endorsements far more credible and behaviour-changing than directives from senior leadership.',
-    },
-    {
-      question: 'How is an AI Champion Program designed?',
-      answer:
-        'After ONA-based identification, Champions receive specialised training in AI tools relevant to their role, a mandate to share learnings with their network, structured "champion hours" to assist colleagues, and periodic recognition and feedback. ONA is re-administered after 6–12 months to measure network change.',
-    },
-  ],
-});
-
-const title = 'AI Champions';
+const title = 'AI Champion — Người tiên phong AI';
 const description =
-  'AI Champions are ONA-identified individuals who drive grass-roots AI adoption through their network position and social capital. Learn about the three archetypes — Oracle, Broker, and Silo Buster — and how to design an AI Champion Program.';
+  'AI Champion là những cá nhân có vị trí mạng lưới, uy tín và sức ảnh hưởng phù hợp để thúc đẩy việc ứng dụng AI từ cấp cơ sở trong tổ chức.';
+
+const archetypes = [
+  {
+    index: '01',
+    name: 'Oracle',
+    label: 'Điểm quy tụ tri thức',
+    metric: 'Độ trung tâm trung gian cao trên nhiều lớp',
+    description:
+      'Người được nhiều đồng nghiệp tìm đến để xin lời khuyên, thông tin và sự xác nhận. Khi Oracle chia sẻ một cách dùng AI hiệu quả, thông điệp có độ tin cậy cao và lan nhanh.',
+    role:
+      'Đại sứ cốt lõi, người thử nghiệm sớm và điểm tham chiếu chuyên môn cho cộng đồng AI nội bộ.',
+    tone: 'oracle',
+  },
+  {
+    index: '02',
+    name: 'Broker',
+    label: 'Cầu nối xuyên biên giới',
+    metric: 'Độ trung gian cao giữa các cộng đồng',
+    description:
+      'Người đứng giữa các phòng ban hoặc cộng đồng vốn ít trao đổi trực tiếp. Broker dịch chuyển use case, ngôn ngữ và kinh nghiệm AI qua ranh giới chuyên môn.',
+    role:
+      'Tác nhân chuyển giao tri thức liên chức năng, kết nối các nhóm và điều phối học tập xuyên phòng ban.',
+    tone: 'broker',
+  },
+  {
+    index: '03',
+    name: 'Silo Buster',
+    label: 'Người phá vỡ cô lập',
+    metric: 'Ít trung tâm nội bộ, nhiều liên kết liên cộng đồng',
+    description:
+      'Không nhất thiết nổi bật trong nhóm của mình, nhưng duy trì những liên kết có ý nghĩa với nhiều cộng đồng. Họ giúp thực hành AI không dừng lại trong các nhóm tiên phong.',
+    role:
+      'Kết nối chặng cuối, đưa chương trình đến những vùng khó tiếp cận và bảo đảm không nhóm nào bị bỏ lại.',
+    tone: 'silo',
+  },
+];
+
+const programSteps = [
+  {
+    title: 'Chẩn đoán mạng lưới',
+    text: 'Khảo sát multiplex ONA để lập bản đồ các lớp quan hệ có liên quan đến việc ứng dụng AI.',
+  },
+  {
+    title: 'Nhận diện hình mẫu',
+    text: 'Kết hợp độ trung tâm trung gian và cấu trúc cộng đồng để xác định Oracle, Broker và Silo Buster.',
+  },
+  {
+    title: 'Thiết kế chương trình',
+    text: 'Định nghĩa trách nhiệm, nội dung đào tạo, champion hours, cơ chế ghi nhận và chỉ số thành công.',
+  },
+  {
+    title: 'Kích hoạt mạng lưới',
+    text: 'Trang bị công cụ, tình huống ứng dụng, tài nguyên truyền thông và một cộng đồng thực hành nội bộ.',
+  },
+  {
+    title: 'Đo lường thay đổi',
+    text: 'Đo lại ONA sau 6–12 tháng để theo dõi độ phủ hỗ trợ AI, sự suy giảm silo và mức độ áp dụng.',
+  },
+];
+
+const faqs = [
+  {
+    question: 'AI Champion là ai?',
+    answer:
+      'AI Champion là nhân viên có vị trí mạng lưới và vốn xã hội phù hợp để thúc đẩy đồng nghiệp ứng dụng AI một cách đáng tin cậy. Ảnh hưởng của họ đến từ quan hệ đã tồn tại, không chỉ từ chức danh.',
+  },
+  {
+    question: 'Ba hình mẫu AI Champion khác nhau như thế nào?',
+    answer:
+      'Oracle là điểm quy tụ tri thức và niềm tin; Broker kết nối các cộng đồng khác nhau; Silo Buster đưa thực hành mới đến những nhóm dễ bị cô lập. Một chương trình hiệu quả cần phối hợp cả ba vai trò.',
+  },
+  {
+    question: 'ONA nhận diện AI Champion bằng cách nào?',
+    answer:
+      'Dữ liệu khảo sát nhiều lớp được chuyển thành mạng lưới có hướng. Các chỉ số như độ trung tâm trung gian và phát hiện cộng đồng giúp chỉ ra ai đang kết nối tri thức, niềm tin và hỗ trợ AI trong cấu trúc thực tế.',
+  },
+  {
+    question: 'Vì sao AI Champion hiệu quả hơn chỉ đạo từ trên xuống?',
+    answer:
+      'Con người thường thử và duy trì một hành vi mới khi thấy đồng nghiệp họ tin tưởng làm được và sẵn sàng hỗ trợ. AI Champion bổ sung lực kéo ngang hàng cho chiến lược và nguồn lực từ lãnh đạo.',
+  },
+  {
+    question: 'Chương trình AI Champion được đo lường ra sao?',
+    answer:
+      'Ngoài chỉ số sử dụng công cụ, chương trình nên đo độ phủ của mạng lưới hỗ trợ, số nhóm được kết nối, sự phụ thuộc vào một vài cá nhân và thay đổi về niềm tin hoặc cộng tác sau 6–12 tháng.',
+  },
+];
+
+const jsonLd = createConceptPageSchema({
+  name: 'AI Champion — Người tiên phong AI',
+  description,
+  url: `https://drduydangpham.com${canonicalUrl}`,
+  faqs,
+});
 ---
 
 <BaseLayout
@@ -50,234 +110,584 @@ const description =
   canonicalUrl={canonicalUrl}
   jsonLd={jsonLd}
 >
-  <div class="container--content">
-
-    <header class="concept-header">
-      <div class="concept-header__eyebrow">
-        <a href="/nghien-cuu">Research</a> / Concepts
+  <div class="container champion-page">
+    <header class="champion-hero">
+      <div class="champion-hero__copy">
+        <p class="champion-eyebrow">Khái niệm · AI adoption</p>
+        <h1>AI không tự lan toả. Con người mới làm điều đó.</h1>
+        <p class="champion-hero__lead">
+          AI Champion là những cá nhân có vị trí mạng lưới, uy tín và sức ảnh hưởng phù hợp
+          để đưa AI từ một chủ trương của lãnh đạo thành thực hành hằng ngày của đồng nghiệp.
+        </p>
+        <div class="champion-actions">
+          <a class="btn btn--primary" href="#archetypes">Khám phá ba hình mẫu</a>
+          <a class="btn btn--secondary" href="#program">Xem cách thiết kế chương trình</a>
+        </div>
       </div>
-      <h1>AI Champions</h1>
-      <p class="lead">
-        AI Champions are network-identified individuals whose structural position within the
-        organisation gives them the social capital to drive organic, peer-to-peer AI adoption
-        — far more effectively than top-down mandates alone.
-      </p>
+
+      <div class="champion-signal" aria-label="Mô hình ảnh hưởng của AI Champion">
+        <div class="champion-signal__orbit" aria-hidden="true">
+          <span class="signal-node signal-node--core">AI</span>
+          <span class="signal-node signal-node--one"></span>
+          <span class="signal-node signal-node--two"></span>
+          <span class="signal-node signal-node--three"></span>
+          <span class="signal-node signal-node--four"></span>
+          <span class="signal-node signal-node--five"></span>
+        </div>
+        <div class="champion-signal__legend">
+          <span><i class="legend-dot legend-dot--primary"></i>Ảnh hưởng</span>
+          <span><i class="legend-dot legend-dot--accent"></i>Niềm tin</span>
+          <span><i class="legend-dot"></i>Hỗ trợ AI</span>
+        </div>
+        <p>Một champion đúng vị trí có thể kích hoạt cả một vùng mạng lưới.</p>
+      </div>
     </header>
 
-    <section class="concept-section">
-      <h2>The problem with top-down AI adoption</h2>
-      <p>
-        Most organisations attempt AI adoption through executive mandates: a leadership
-        decision is made, a strategy is announced, training programmes are rolled out, and
-        employees are expected to change their behaviour. The results are predictably mixed.
-        Survey after survey shows that AI adoption rates stagnate not because tools are
-        unavailable, but because <em>social trust</em> is missing.
-      </p>
-      <p>
-        Employees adopt new technologies when people <em>they already trust</em> model and
-        advocate for those technologies. The challenge is identifying who those trusted
-        individuals are — because they rarely appear on the org chart. This is precisely the
-        problem that ONA and AI Champion programs are designed to solve.
-      </p>
-    </section>
-
-    <!-- Archetypes -->
-    <section class="concept-section">
-      <h2>The three AI Champion archetypes</h2>
-      <p>
-        Using betweenness centrality and Infomap community detection applied to multiplex ONA
-        data, my research has identified three distinct archetypes that every effective AI
-        champion program needs:
-      </p>
-
-      <div class="archetype-cards">
-        <div class="archetype-card archetype-card--oracle">
-          <div class="archetype-card__header">
-            <span class="archetype-card__icon" aria-hidden="true">◎</span>
-            <div>
-              <h3 class="archetype-card__name">Oracle</h3>
-              <p class="archetype-card__tag">High cross-layer betweenness centrality</p>
-            </div>
-          </div>
-          <p class="archetype-card__body">
-            Oracles are the most central individuals across multiple network layers — the
-            people everyone turns to for advice, information, and trust. Their AI endorsement
-            carries maximum credibility and propagates rapidly through the network. When an
-            Oracle says "this AI tool changed how I work," the message is heard and believed.
-          </p>
-          <p class="archetype-card__body">
-            <strong>Program role:</strong> Core advocates and visible sponsors of the AI
-            champion program. Prioritise for early AI tool access, deep training, and
-            public recognition.
-          </p>
-        </div>
-
-        <div class="archetype-card archetype-card--broker">
-          <div class="archetype-card__header">
-            <span class="archetype-card__icon" aria-hidden="true">◇</span>
-            <div>
-              <h3 class="archetype-card__name">Broker</h3>
-              <p class="archetype-card__tag">High inter-community betweenness</p>
-            </div>
-          </div>
-          <p class="archetype-card__body">
-            Brokers sit at the boundary between organisational communities (departments,
-            divisions, or informal groups identified by Infomap). They are the translators
-            and connectors who relay knowledge across silos. A Broker in Sales who is also
-            connected to Engineering can transfer AI use-cases between otherwise disconnected
-            teams.
-          </p>
-          <p class="archetype-card__body">
-            <strong>Program role:</strong> Cross-functional AI knowledge transfer agents.
-            Equip Brokers with AI case studies from multiple domains and empower them to
-            facilitate cross-departmental AI learning sessions.
-          </p>
-        </div>
-
-        <div class="archetype-card archetype-card--silo">
-          <div class="archetype-card__header">
-            <span class="archetype-card__icon" aria-hidden="true">◈</span>
-            <div>
-              <h3 class="archetype-card__name">Silo Buster</h3>
-              <p class="archetype-card__tag">Low internal centrality, high inter-community ties</p>
-            </div>
-          </div>
-          <p class="archetype-card__body">
-            Silo Busters are not the most prominent figures within their own teams, but they
-            maintain meaningful connections across multiple organisational communities.
-            Without deliberate program design, isolated teams risk developing divergent AI
-            practices or — worse — remaining entirely un-reached by AI adoption efforts.
-            Silo Busters prevent this by acting as the last-mile connectors.
-          </p>
-          <p class="archetype-card__body">
-            <strong>Program role:</strong> Outreach specialists for hard-to-reach pockets
-            of the organisation. Identify which isolated communities they bridge and
-            task them with ensuring no team is left behind.
-          </p>
-        </div>
+    <section class="champion-section champion-problem">
+      <div>
+        <p class="champion-eyebrow">Khoảng trống triển khai</p>
+        <h2>Chỉ đạo tạo ra hướng đi. Niềm tin tạo ra chuyển động.</h2>
+      </div>
+      <div class="champion-problem__copy">
+        <p>
+          Nhiều tổ chức bắt đầu bằng chiến lược, công cụ và các khoá đào tạo. Nhưng tỷ lệ áp
+          dụng vẫn chững lại vì nhân viên chưa thấy một người họ tin tưởng sử dụng AI hiệu quả
+          trong đúng bối cảnh công việc của mình.
+        </p>
+        <p>
+          ONA giúp tìm ra những người đã có sẵn quan hệ và uy tín để tạo ảnh hưởng ngang hàng.
+          Chương trình AI Champion biến vốn xã hội đó thành một năng lực thay đổi có chủ đích.
+        </p>
       </div>
     </section>
 
-    <!-- Program design -->
-    <section class="concept-section">
-      <h2>Designing an AI Champion Program</h2>
-      <p>
-        An effective AI Champion Program built on ONA data follows five phases:
-      </p>
-      <ol class="program-steps">
-        <li>
-          <strong>ONA diagnostic</strong> — administer a multiplex ONA survey to map all five network layers across the target population.
-        </li>
-        <li>
-          <strong>Archetype classification</strong> — compute betweenness centrality per layer, run Infomap community detection, classify each individual as Oracle, Broker, or Silo Buster.
-        </li>
-        <li>
-          <strong>Program design</strong> — define role-specific Champion responsibilities, training content, time allocations ("champion hours"), recognition mechanisms, and success metrics.
-        </li>
-        <li>
-          <strong>Activation</strong> — onboard Champions with dedicated AI training, communication templates, and access to an internal Champion community of practice.
-        </li>
-        <li>
-          <strong>Measurement</strong> — re-administer the ONA after 6–12 months to track whether the AI Support network has expanded, silos have dissolved, and adoption rates have improved.
-        </li>
+    <section id="archetypes" class="champion-section archetype-section">
+      <div class="champion-section__heading">
+        <div>
+          <p class="champion-eyebrow">Ba hình mẫu bổ trợ nhau</p>
+          <h2>Không phải ai cũng dẫn dắt AI theo cùng một cách.</h2>
+        </div>
+        <p>Mỗi hình mẫu giải quyết một điểm nghẽn khác nhau trong mạng lưới áp dụng AI.</p>
+      </div>
+
+      <div class="archetype-grid">
+        {archetypes.map((item) => (
+          <article class={`archetype-card archetype-card--${item.tone}`}>
+            <div class="archetype-card__topline">
+              <span>{item.index}</span>
+              <span>{item.label}</span>
+            </div>
+            <h3>{item.name}</h3>
+            <p class="archetype-card__metric">{item.metric}</p>
+            <p>{item.description}</p>
+            <div class="archetype-card__role">
+              <strong>Vai trò trong chương trình</strong>
+              <p>{item.role}</p>
+            </div>
+          </article>
+        ))}
+      </div>
+    </section>
+
+    <section id="program" class="champion-section program-section">
+      <div class="champion-section__heading">
+        <div>
+          <p class="champion-eyebrow">Từ insight đến can thiệp</p>
+          <h2>Thiết kế chương trình AI Champion trong năm bước.</h2>
+        </div>
+        <p>Không chọn champion theo cảm tính; bắt đầu từ mạng lưới và kết thúc bằng đo lường.</p>
+      </div>
+
+      <ol class="program-roadmap">
+        {programSteps.map((step, index) => (
+          <li>
+            <span>{String(index + 1).padStart(2, '0')}</span>
+            <div>
+              <h3>{step.title}</h3>
+              <p>{step.text}</p>
+            </div>
+          </li>
+        ))}
       </ol>
     </section>
 
-    <!-- FAQ -->
-    <section class="concept-section faq-section">
-      <h2>Frequently asked questions</h2>
+    <section class="champion-section faq-section">
+      <div class="champion-section__heading">
+        <div>
+          <p class="champion-eyebrow">Câu hỏi thường gặp</p>
+          <h2>Hiểu đúng trước khi kích hoạt mạng lưới.</h2>
+        </div>
+      </div>
       <div class="faq-list">
-        <details class="faq-item">
-          <summary>What is an AI Champion?</summary>
-          <p>An AI Champion is an employee identified through ONA as having the network position and social capital to credibly advocate for AI adoption among peers. Unlike top-down executive mandates, AI Champions influence adoption organically through trusted relationships.</p>
-        </details>
-        <details class="faq-item">
-          <summary>What are the three AI Champion archetypes?</summary>
-          <p>Oracle: high betweenness centrality across all network layers — the expert everyone trusts. Broker: high betweenness between community clusters — the cross-boundary connector. Silo Buster: low internal centrality but high inter-community ties — prevents knowledge hoarding and spreads AI practices beyond isolated teams.</p>
-        </details>
-        <details class="faq-item">
-          <summary>How are AI Champions identified using ONA?</summary>
-          <p>We administer a multiplex ONA survey to map five network layers. Betweenness centrality is computed per layer and aggregated. Infomap community detection identifies cluster boundaries. Individuals are then classified as Oracle, Broker, or Silo Buster based on their structural position.</p>
-        </details>
-        <details class="faq-item">
-          <summary>Why are AI Champions more effective than top-down AI mandates?</summary>
-          <p>Change research consistently shows that peer influence is more persuasive than authority. AI Champions are already trusted within their social networks — making their AI endorsements far more credible and behaviour-changing than directives from senior leadership.</p>
-        </details>
-        <details class="faq-item">
-          <summary>How is an AI Champion Program designed?</summary>
-          <p>After ONA-based identification, Champions receive specialised training, a mandate to share learnings, structured "champion hours" to assist colleagues, and periodic recognition. ONA is re-administered after 6–12 months to measure network change.</p>
-        </details>
+        {faqs.map((faq) => (
+          <details class="faq-item">
+            <summary>{faq.question}</summary>
+            <p>{faq.answer}</p>
+          </details>
+        ))}
       </div>
     </section>
 
-    <nav class="related-concepts" aria-label="Related concepts">
-      <h2>Related concepts</h2>
-      <div class="related-grid">
+    <nav class="champion-related" aria-label="Khái niệm liên quan">
+      <div>
+        <p class="champion-eyebrow">Đọc tiếp</p>
+        <h2>Đặt AI Champion vào đúng bản đồ.</h2>
+      </div>
+      <div class="champion-related__grid">
         <a class="related-card" href="/khai-niem/phan-tich-mang-luoi-to-chuc">
-          <strong>Organisational Network Analysis</strong>
-          <p>The multiplex ONA framework that underpins AI Champion identification.</p>
+          <span>Khái niệm nền tảng</span>
+          <strong>Phân tích mạng lưới tổ chức</strong>
+          <p>Cách ONA làm rõ ảnh hưởng, niềm tin, silo và các cầu nối trong tổ chức.</p>
         </a>
         <a class="related-card" href="/khai-niem/do-trung-tam-trung-gian">
-          <strong>Betweenness Centrality</strong>
-          <p>The key metric for classifying Oracle and Broker archetypes.</p>
+          <span>Chỉ số mạng lưới</span>
+          <strong>Độ trung tâm trung gian</strong>
+          <p>Chỉ số giúp nhận diện những người kết nối các phần khác nhau của mạng lưới.</p>
         </a>
       </div>
     </nav>
-
   </div>
 </BaseLayout>
 
 <style>
-.concept-header { gap: var(--space-sm); }
-.concept-header__eyebrow { font-size: 0.85rem; color: var(--color-text-muted); margin-bottom: var(--space-sm); }
-.concept-header__eyebrow a { color: var(--color-primary-dark); text-decoration: underline; }
-.concept-header h1 { max-width: none; margin-bottom: 0; font-size: clamp(2.35rem, 5vw, 3.8rem); }
-.concept-header .lead { margin: 0; max-width: 60ch; }
+.champion-page {
+  display: grid;
+  gap: 1rem;
+}
 
-.concept-section { gap: 1rem; }
-.concept-section h2 { margin-bottom: 0; }
-.concept-section p, .concept-section li { color: var(--color-text-secondary); line-height: 1.75; }
-.concept-section p { margin-bottom: 0; }
-.concept-section a { color: var(--color-primary-dark); text-decoration: underline; }
+.champion-hero,
+.champion-section,
+.champion-related {
+  overflow: hidden;
+  border: 1px solid rgb(255 255 255 / 0.74);
+  border-radius: var(--radius-lg);
+  background:
+    radial-gradient(circle at top right, rgb(185 137 68 / 0.13), transparent 28%),
+    linear-gradient(180deg, rgb(255 255 255 / 0.9), rgb(255 255 255 / 0.7));
+  box-shadow: var(--shadow-soft);
+}
 
-/* Archetype cards */
-.archetype-cards { display: grid; gap: var(--space-lg); margin-top: var(--space-lg); }
+.champion-hero {
+  position: relative;
+  display: grid;
+  gap: clamp(1.5rem, 4vw, 3rem);
+  min-height: min(700px, calc(100vh - 8rem));
+  align-items: stretch;
+  padding: clamp(1.3rem, 3.5vw, 3rem);
+}
 
-.archetype-card { border-top: 4px solid var(--color-border); }
-.archetype-card--oracle { border-top-color: var(--color-primary); }
+.champion-hero__copy {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  min-width: 0;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.champion-eyebrow {
+  margin: 0 0 0.7rem;
+  color: var(--color-primary);
+  font-size: 0.76rem;
+  font-weight: 800;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+
+.champion-hero h1 {
+  max-width: 13ch;
+  margin-bottom: 1.2rem;
+  font-size: clamp(3rem, 6.6vw, 5.8rem);
+  line-height: 0.94;
+  letter-spacing: -0.055em;
+}
+
+.champion-hero__lead {
+  max-width: 48rem;
+  color: var(--color-text-secondary);
+  font-size: clamp(1.06rem, 1.9vw, 1.32rem);
+  line-height: 1.64;
+}
+
+.champion-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-top: 0.6rem;
+}
+
+.champion-signal {
+  position: relative;
+  overflow: hidden;
+  display: grid;
+  min-height: 390px;
+  align-content: end;
+  padding: clamp(1rem, 2.5vw, 1.5rem);
+  border: 1px solid rgb(116 43 57 / 0.12);
+  border-radius: 28px;
+  background:
+    radial-gradient(circle at 50% 42%, rgb(185 137 68 / 0.18), transparent 18%),
+    linear-gradient(145deg, rgb(255 255 255 / 0.94), rgb(244 235 232 / 0.86));
+}
+
+.champion-signal__orbit {
+  position: absolute;
+  top: 45%;
+  left: 50%;
+  width: min(78%, 340px);
+  aspect-ratio: 1;
+  transform: translate(-50%, -58%);
+  border: 1px solid rgb(116 43 57 / 0.14);
+  border-radius: 50%;
+  box-shadow:
+    0 0 0 2.8rem rgb(116 43 57 / 0.035),
+    0 0 0 5.6rem rgb(185 137 68 / 0.035);
+}
+
+.champion-signal__orbit::before,
+.champion-signal__orbit::after {
+  position: absolute;
+  background: rgb(116 43 57 / 0.16);
+  content: '';
+}
+
+.champion-signal__orbit::before {
+  top: 50%;
+  right: 7%;
+  left: 7%;
+  height: 1px;
+}
+
+.champion-signal__orbit::after {
+  top: 7%;
+  bottom: 7%;
+  left: 50%;
+  width: 1px;
+}
+
+.signal-node {
+  position: absolute;
+  z-index: 2;
+  width: 1rem;
+  height: 1rem;
+  border: 3px solid rgb(255 255 255 / 0.86);
+  border-radius: 50%;
+  background: var(--color-primary);
+  box-shadow: 0 8px 20px rgb(116 43 57 / 0.28);
+}
+
+.signal-node--core {
+  top: 50%;
+  left: 50%;
+  display: grid;
+  width: 4.7rem;
+  height: 4.7rem;
+  transform: translate(-50%, -50%);
+  place-items: center;
+  background: linear-gradient(135deg, var(--color-primary), #93475a);
+  color: #fff;
+  font-weight: 800;
+}
+
+.signal-node--one { top: 2%; left: 47%; background: var(--color-accent); }
+.signal-node--two { top: 24%; right: 4%; }
+.signal-node--three { right: 14%; bottom: 8%; background: var(--color-accent); }
+.signal-node--four { bottom: 2%; left: 32%; }
+.signal-node--five { top: 30%; left: 2%; background: #83909f; }
+
+.champion-signal__legend {
+  position: relative;
+  z-index: 3;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem 0.9rem;
+  margin-bottom: 0.55rem;
+}
+
+.champion-signal__legend span {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  color: var(--color-text-muted);
+  font-size: 0.74rem;
+  font-weight: 700;
+}
+
+.legend-dot {
+  width: 0.48rem;
+  height: 0.48rem;
+  border-radius: 50%;
+  background: #83909f;
+}
+
+.legend-dot--primary { background: var(--color-primary); }
+.legend-dot--accent { background: var(--color-accent); }
+
+.champion-signal > p {
+  position: relative;
+  z-index: 3;
+  max-width: 30ch;
+  margin: 0;
+  color: var(--color-text-secondary);
+  font-size: 0.9rem;
+  font-weight: 650;
+}
+
+.champion-section,
+.champion-related {
+  padding: clamp(1.3rem, 3vw, 2.3rem);
+}
+
+.champion-problem,
+.champion-section__heading,
+.champion-related {
+  display: grid;
+  gap: 1rem clamp(2rem, 5vw, 5rem);
+}
+
+.champion-section h2,
+.champion-related h2 {
+  max-width: 18ch;
+  margin: 0;
+  font-size: clamp(1.8rem, 3.5vw, 3rem);
+}
+
+.champion-problem__copy,
+.champion-section__heading > p {
+  max-width: 45rem;
+  color: var(--color-text-secondary);
+  line-height: 1.75;
+}
+
+.champion-problem__copy p:last-child,
+.champion-section__heading > p {
+  margin-bottom: 0;
+}
+
+.champion-section__heading {
+  align-items: end;
+  margin-bottom: clamp(1.2rem, 3vw, 2rem);
+}
+
+.archetype-grid {
+  display: grid;
+  gap: 0.9rem;
+}
+
+.archetype-card {
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  min-height: 100%;
+  flex-direction: column;
+  padding: clamp(1.15rem, 2.3vw, 1.6rem);
+  border: 1px solid var(--color-border);
+  border-top: 4px solid var(--color-primary);
+  border-radius: var(--radius-md);
+  background: rgb(255 255 255 / 0.82);
+  box-shadow: var(--shadow-soft);
+}
+
 .archetype-card--broker { border-top-color: var(--color-accent); }
-.archetype-card--silo   { border-top-color: #c07000; }
+.archetype-card--silo { border-top-color: #83909f; }
 
-.archetype-card__header { display: flex; align-items: flex-start; gap: var(--space-md); margin-bottom: var(--space-lg); }
-.archetype-card__icon { font-size: 1.75rem; line-height: 1; flex-shrink: 0; }
-.archetype-card--oracle .archetype-card__icon { color: var(--color-primary); }
-.archetype-card--broker .archetype-card__icon { color: var(--color-accent); }
-.archetype-card--silo   .archetype-card__icon { color: #c07000; }
+.archetype-card__topline {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: clamp(1.5rem, 4vw, 3rem);
+  color: var(--color-text-muted);
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
 
-.archetype-card__name { font-size: 1.25rem; margin-bottom: 0.2rem; }
-.archetype-card__tag { font-size: 0.8rem; color: var(--color-text-muted); font-style: italic; margin: 0; }
-.archetype-card__body { margin-bottom: var(--space-md); font-size: 0.95rem; }
-.archetype-card__body:last-child { margin-bottom: 0; }
+.archetype-card h3 {
+  margin-bottom: 0.3rem;
+  font-size: clamp(2rem, 4vw, 3rem);
+}
 
-/* Program steps */
-.program-steps { counter-reset: none; padding-left: 0; list-style: none; display: grid; gap: var(--space-md); }
-.program-steps li { display: flex; gap: var(--space-md); padding: var(--space-md) var(--space-lg); background: var(--color-background-secondary); border-radius: var(--radius-md); font-size: 0.95rem; color: var(--color-text-secondary); line-height: 1.65; counter-increment: steps; }
-.program-steps li::before { content: counter(steps, decimal-leading-zero); font-family: var(--font-mono); font-size: 0.75rem; font-weight: 700; color: var(--color-accent); flex-shrink: 0; padding-top: 0.15rem; }
+.archetype-card__metric {
+  min-height: 3rem;
+  color: var(--color-primary) !important;
+  font-family: var(--font-serif);
+  font-style: italic;
+}
 
-/* FAQ */
-.faq-list { display: grid; gap: var(--space-sm); }
-.faq-item summary { padding: var(--space-md) var(--space-lg); font-weight: 600; cursor: pointer; list-style: none; display: flex; justify-content: space-between; align-items: center; font-size: 0.975rem; }
+.archetype-card > p,
+.archetype-card__role p {
+  color: var(--color-text-secondary);
+  line-height: 1.7;
+}
+
+.archetype-card__role {
+  margin-top: auto;
+  padding-top: 1rem;
+  border-top: 1px solid var(--color-border);
+}
+
+.archetype-card__role strong {
+  display: block;
+  margin-bottom: 0.35rem;
+  color: var(--color-text-primary);
+  font-size: 0.78rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.archetype-card__role p { margin: 0; font-size: 0.92rem; }
+
+.program-roadmap {
+  display: grid;
+  gap: 0;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.program-roadmap li {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: 2.5rem minmax(0, 1fr);
+  padding: 1.2rem 0;
+  border-top: 1px solid var(--color-border);
+}
+
+.program-roadmap li > span {
+  color: var(--color-accent-dark);
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  font-weight: 800;
+}
+
+.program-roadmap h3 {
+  margin-bottom: 0.35rem;
+  font-size: clamp(1.15rem, 2vw, 1.4rem);
+}
+
+.program-roadmap p {
+  max-width: 52rem;
+  margin: 0;
+  color: var(--color-text-secondary);
+  line-height: 1.7;
+}
+
+.faq-list {
+  display: grid;
+  gap: 0.65rem;
+}
+
+.faq-item {
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  background: rgb(255 255 255 / 0.76);
+}
+
+.faq-item summary {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 1rem 1.2rem;
+  color: var(--color-text-primary);
+  font-weight: 700;
+  cursor: pointer;
+  list-style: none;
+}
+
 .faq-item summary::-webkit-details-marker { display: none; }
-.faq-item summary::after { content: '+'; font-size: 1.25rem; color: var(--color-accent); transition: transform var(--transition-base); }
+.faq-item summary::after { color: var(--color-primary); font-size: 1.35rem; content: '+'; }
 .faq-item[open] summary::after { content: '−'; }
-.faq-item p { padding: 0 var(--space-lg) var(--space-lg); margin: 0; color: var(--color-text-secondary); font-size: 0.9rem; line-height: 1.7; }
 
-/* Related */
-.related-concepts { margin-top: var(--space-xl); }
-.related-concepts h2 { margin-bottom: var(--space-lg); }
-.related-grid { display: grid; gap: var(--space-md); grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); }
-.related-card { display: block; text-decoration: none; transition: border-color var(--transition-base), box-shadow var(--transition-base); }
-.related-card:hover { border-color: var(--color-border); box-shadow: 0 4px 12px rgb(0 0 0 / 0.06); }
-.related-card strong { display: block; font-size: 1rem; color: var(--color-text-primary); margin-bottom: var(--space-xs); }
-.related-card p { margin: 0; font-size: 0.875rem; color: var(--color-text-secondary); line-height: 1.5; }
+.faq-item p {
+  max-width: 65rem;
+  margin: 0;
+  padding: 0 1.2rem 1.2rem;
+  color: var(--color-text-secondary);
+  line-height: 1.7;
+}
+
+.champion-related {
+  align-items: end;
+}
+
+.champion-related__grid {
+  display: grid;
+  gap: 0.8rem;
+}
+
+.related-card {
+  display: block;
+  padding: 1.15rem;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  background: rgb(255 255 255 / 0.78);
+  box-shadow: var(--shadow-soft);
+}
+
+.related-card > span {
+  display: block;
+  margin-bottom: 0.55rem;
+  color: var(--color-primary);
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.related-card strong {
+  display: block;
+  margin-bottom: 0.35rem;
+  color: var(--color-text-primary);
+  font-size: 1.1rem;
+}
+
+.related-card p {
+  margin: 0;
+  color: var(--color-text-secondary);
+  line-height: 1.6;
+}
+
+.related-card:hover {
+  transform: translateY(-2px);
+  border-color: var(--color-border-strong);
+  box-shadow: var(--shadow-lift);
+}
+
+@media (min-width: 780px) {
+  .champion-problem,
+  .champion-section__heading,
+  .champion-related {
+    grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
+  }
+
+  .archetype-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .program-roadmap li {
+    grid-template-columns: 3.5rem minmax(0, 1fr);
+    padding: 1.5rem 0;
+  }
+
+  .champion-related__grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (min-width: 900px) {
+  .champion-hero {
+    grid-template-columns: minmax(0, 1.35fr) minmax(320px, 0.65fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .champion-hero h1 { max-width: 11ch; }
+  .champion-actions .btn { width: 100%; }
+  .champion-signal { min-height: 340px; }
+  .archetype-card__topline { margin-bottom: 1.5rem; }
+}
 </style>

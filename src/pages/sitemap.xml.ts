@@ -10,7 +10,7 @@ const staticRoutes = [
   '/nghien-cuu/',
   '/netiq/',
   '/goc-nhin/',
-  '/dien-thuyet/',
+  '/truyen-thong/',
   '/cong-bo-khoa-hoc/',
   '/lien-he/',
   '/khai-niem/phan-tich-mang-luoi-to-chuc/',

@@ -51,29 +51,6 @@ const researchAreas = [
   },
 ];
 
-const networkLayers = [
-  'Work Advice',
-  'AI Support',
-  'Trust',
-  'Information',
-  'Collaboration',
-];
-
-const championArchetypes = [
-  {
-    name: 'Oracle',
-    text: 'Người được tìm đến thường xuyên, có uy tín tri thức và ảnh hưởng rộng trong nhiều lớp quan hệ.',
-  },
-  {
-    name: 'Broker',
-    text: 'Người kết nối các nhóm, phòng ban hoặc cộng đồng khác nhau, giúp tri thức vượt qua ranh giới tổ chức.',
-  },
-  {
-    name: 'Silo Buster',
-    text: 'Người phá vỡ cô lập tri thức, giúp thực hành tốt lan ra ngoài các nhóm quen thuộc.',
-  },
-];
-
 const methods = [
   {
     title: 'Định lượng',
@@ -150,38 +127,6 @@ const methods = [
             <strong>{area.subtitle}</strong>
             <p>{area.text}</p>
             <a href={area.href}>{area.cta} →</a>
-          </article>
-        ))}
-      </div>
-    </section>
-
-    <section class="research-section research-section--split">
-      <div>
-        <p class="research-eyebrow">Multiplex ONA</p>
-        <h2>Nhiều lớp quan hệ cùng tồn tại trong một tổ chức.</h2>
-      </div>
-      <div>
-        <p class="research-copy">
-          Trong nghiên cứu ONA, tôi thường nhìn tổ chức qua nhiều lớp quan hệ cùng lúc:
-          ai xin lời khuyên công việc từ ai, ai hỗ trợ đồng nghiệp dùng AI, ai được tin tưởng,
-          ai chia sẻ thông tin kịp thời và ai thật sự cộng tác trong dự án.
-        </p>
-        <div class="layer-cloud" aria-label="ONA relationship layers">
-          {networkLayers.map((layer) => <span>{layer}</span>)}
-        </div>
-      </div>
-    </section>
-
-    <section class="research-section">
-      <div class="section-header">
-        <p class="research-eyebrow">Các hình mẫu AI champion</p>
-        <h2>Không phải ai cũng dẫn dắt AI theo cùng một cách.</h2>
-      </div>
-      <div class="archetype-grid">
-        {championArchetypes.map((item) => (
-          <article class="archetype-card">
-            <h3>{item.name}</h3>
-            <p>{item.text}</p>
           </article>
         ))}
       </div>

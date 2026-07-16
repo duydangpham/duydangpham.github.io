@@ -3,7 +3,12 @@ export const personSchema: Record<string, unknown> = {
   '@type': 'Person',
   '@id': 'https://drduydangpham.com/#person',
   name: 'Duy Dang-Pham',
-  alternateName: ['Dr. Duy Dang-Pham', 'Duy Đặng Phạm'],
+  alternateName: [
+    'Dr. Duy Dang-Pham',
+    'Dr. Đặng Phạm Thiên Duy',
+    'Đặng Phạm Thiên Duy',
+    'Duy Đặng Phạm',
+  ],
   honorificPrefix: 'Dr.',
   jobTitle: 'Associate Head of Department (Research & Innovation)',
   description:

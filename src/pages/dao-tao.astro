@@ -63,6 +63,16 @@ const trainingTracks = [
     title: 'AI champion & thay đổi tổ chức',
     text: 'Xác định người dẫn dắt thay đổi, lan toả tri thức và đưa AI từ chủ trương vào thực hành.',
     tag: 'Change',
+    links: [
+      {
+        label: 'AI Champion',
+        href: '/khai-niem/nguoi-tien-phong-ai',
+      },
+      {
+        label: 'Phân tích mạng lưới tổ chức',
+        href: '/khai-niem/phan-tich-mang-luoi-to-chuc',
+      },
+    ],
   },
   {
     title: 'An ninh thông tin & chuyển đổi số',
@@ -207,8 +217,46 @@ const gallerySlots = [
           <span>{track.tag}</span>
           <h3>{track.title}</h3>
           <p>{track.text}</p>
+          {track.links && (
+            <div class="training-track__links">
+              {track.links.map((link) => <a href={link.href}>{link.label} →</a>)}
+            </div>
+          )}
         </article>
       ))}
+    </section>
+
+    <section class="training-section teaching-section">
+      <div class="section-header section-header--inline">
+        <div>
+          <p class="training-eyebrow">Giảng dạy &amp; hướng dẫn nghiên cứu</p>
+          <h2>Từ nền tảng kỹ thuật đến tư duy tổ chức.</h2>
+        </div>
+        <p>
+          Việc giảng dạy của tôi trải rộng từ bậc đại học đến sau đại học, qua ba trường thuộc
+          RMIT University, với định hướng ứng dụng và lấy con người làm trung tâm.
+        </p>
+      </div>
+      <div class="teaching-copy">
+        <p>
+          Tại The Business School (2021–hiện tại), tôi giảng dạy <strong>Technology Futures</strong>
+          (MBA), <strong>Business Information Systems</strong> và <strong>Organisational Analysis</strong>
+          — trang bị cho sinh viên các khung lý thuyết để định hướng chuyển đổi số, đánh giá công nghệ
+          mới và ra quyết định dựa trên dữ liệu.
+        </p>
+        <p>
+          Trước đó, tại School of Science, Engineering &amp; Technology (2018–2021), tôi giảng dạy
+          <strong>Machine Learning</strong>, <strong>Data Structures &amp; Algorithms</strong>,
+          <strong>User-centred Design</strong> và <strong>Technology Leadership</strong>. Sự nghiệp
+          giảng dạy bắt đầu tại School of Business IT &amp; Logistics, RMIT Melbourne (2014–2017),
+          với các học phần logistics và quản trị chuỗi cung ứng.
+        </p>
+        <p>
+          Tôi đã hướng dẫn <strong>mười một nghiên cứu sinh tiến sĩ</strong> thuộc các chương trình
+          Management, Business và Computer Science — trong đó năm người hoàn thành giai đoạn
+          2022–2026 — cùng nhiều dự án capstone hợp tác với doanh nghiệp và tổ chức nghiên cứu.
+        </p>
+      </div>
     </section>
 
     <section class="training-section">
@@ -453,6 +501,12 @@ const gallerySlots = [
   padding: 1rem;
 }
 
+.training-track {
+  display: flex;
+  min-height: 100%;
+  flex-direction: column;
+}
+
 .format-grid span,
 .training-track span,
 .academic-card__meta {
@@ -478,11 +532,53 @@ const gallerySlots = [
   line-height: 1.62;
 }
 
+.training-track__links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.45rem 0.8rem;
+  margin-top: auto;
+  padding-top: 1rem;
+}
+
+.training-track__links a {
+  color: var(--color-primary-dark);
+  font-size: 0.86rem;
+  font-weight: 750;
+  text-decoration: underline;
+  text-decoration-thickness: 0.08em;
+  text-underline-offset: 0.2em;
+}
+
+.teaching-section {
+  background:
+    radial-gradient(circle at bottom right, rgb(116 43 57 / 0.11), transparent 30%),
+    linear-gradient(180deg, rgb(255 255 255 / 0.9), rgb(255 255 255 / 0.72));
+}
+
+.teaching-copy {
+  display: grid;
+  gap: 0.9rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--color-border);
+}
+
+.teaching-copy p {
+  margin: 0;
+  color: var(--color-text-secondary);
+  line-height: 1.74;
+}
+
+.teaching-copy strong {
+  color: var(--color-text-primary);
+  font-weight: 700;
+}
+
 .academic-carousel,
 .gallery-strip {
   display: grid;
   grid-auto-columns: minmax(280px, 35vw);
   grid-auto-flow: column;
+  align-items: stretch;
   gap: 0.85rem;
   overflow-x: auto;
   padding: 0.1rem 0 0.75rem;
@@ -497,7 +593,8 @@ const gallerySlots = [
 .academic-card {
   overflow: hidden;
   display: grid;
-  min-height: 100%;
+  height: 31rem;
+  grid-template-rows: 14rem minmax(0, 1fr);
 }
 
 .academic-card__image {
@@ -508,6 +605,9 @@ const gallerySlots = [
 }
 
 .academic-card__body {
+  display: flex;
+  min-height: 0;
+  flex-direction: column;
   padding: 1rem;
 }
 
@@ -582,6 +682,10 @@ const gallerySlots = [
   .academic-carousel,
   .gallery-strip {
     grid-auto-columns: minmax(245px, 82vw);
+  }
+
+  .academic-card {
+    height: 32rem;
   }
 }
 </style>

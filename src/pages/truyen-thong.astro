@@ -1,0 +1,433 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+const title = 'Truyền thông';
+const description =
+  'Tuyển tập bài báo, chân dung, phỏng vấn và nội dung truyền thông về Dr. Duy Dang-Pham trong các lĩnh vực AI, chuyển đổi số, giáo dục và an ninh thông tin.';
+const canonicalUrl = '/truyen-thong';
+
+const mediaItems = [
+  {
+    title: 'TS. Đặng Phạm Thiên Duy: “Đừng chỉ gắn thêm công cụ nếu không thay đổi năng lực tổ chức”',
+    source: 'Tatler Asia',
+    date: '31.12.2025',
+    category: 'AI & tổ chức',
+    description: 'AI kết hợp phân tích mạng lưới tổ chức giúp nhìn thấy các nút kết nối, điểm nghẽn và năng lực vận hành còn ẩn khuất.',
+    url: 'https://www.tatlerasia.com/power-purpose/innovation/hr-management-in-the-ai-era-vn',
+    image: '/images/truyen-thong/01-nang-luc-to-chuc-ky-nguyen-ai.svg',
+    className: 'media-card--hero',
+  },
+  {
+    title: 'Chuyển đổi số không phải cuộc đua công nghệ',
+    source: 'TheLEADER',
+    date: '06.03.2026',
+    category: 'Chuyển đổi số',
+    description: 'Doanh nghiệp nhỏ và vừa cần bắt đầu từ bài toán doanh thu, chi phí và năng lực tổ chức thay vì chạy theo công nghệ.',
+    url: 'https://theleader.vn/chuyen-doi-so-khong-phai-cuoc-dua-cong-nghe-d44475.html',
+    image: '/images/truyen-thong/02-chuyen-doi-so-khong-phai-cuoc-dua-cong-nghe.svg',
+    className: 'media-card--wide',
+  },
+  {
+    title: 'Doanh nghiệp siêu nhỏ, nhỏ và vừa cần chuẩn bị gì để bứt phá về chuyển đổi số?',
+    source: 'VnEconomy',
+    date: '09.10.2023',
+    category: 'Doanh nghiệp',
+    description: 'Một lộ trình thực tế để MSME phát triển tư duy số, đánh giá năng lực và từng bước chuyển đổi phù hợp với nguồn lực.',
+    url: 'https://vneconomy.vn/techconnect/doanh-nghiep-sieu-nho-nho-va-vua-can-chuan-bi-gi-de-but-pha-ve-chuyen-doi-so.htm',
+    image: '/images/truyen-thong/03-msme-but-pha-chuyen-doi-so.svg',
+    className: 'media-card--standard',
+  },
+  {
+    title: 'Để TP.HCM tái cấu trúc tăng trưởng thành công với trí tuệ nhân tạo',
+    source: 'Pháp Luật TP.HCM',
+    date: '28.04.2026',
+    category: 'AI & đô thị',
+    description: 'AI chỉ tạo ra bước nhảy khi được dùng để tái thiết kế các hệ thống lớn, từ hành chính công đến giao thông, y tế và giáo dục.',
+    url: 'https://tuoitre.vn/plo/de-tphcm-tai-cau-truc-tang-truong-thanh-cong-voi-tri-tue-nhan-tao-post905917.html',
+    image: '/images/truyen-thong/04-tphcm-tai-cau-truc-tang-truong-ai.svg',
+    className: 'media-card--tall',
+  },
+  {
+    title: 'Sa vào “bẫy” chuyển đổi số, doanh nghiệp trắc trở tìm đường ra',
+    source: 'Kinh tế Sài Gòn',
+    date: '24.10.2025',
+    category: 'Quản trị',
+    description: 'Chuyển đổi số bền vững cần bắt đầu từ mục tiêu vận hành và giá trị khách hàng, với tầm nhìn dài hạn từ bên trong doanh nghiệp.',
+    url: 'https://thesaigontimes.vn/saigontimes/sa-vao-bay-chuyen-doi-so-doanh-nghiep-trac-tro-tim-duong-ra/',
+    image: '/images/truyen-thong/05-bay-chuyen-doi-so.svg',
+    className: 'media-card--standard',
+  },
+  {
+    title: 'AI và nỗi sợ vô hình đang níu chân doanh nghiệp nhỏ Việt Nam',
+    source: 'Dân trí',
+    date: '26.09.2025',
+    category: 'AI adoption',
+    description: 'Rào cản lớn của SME không chỉ nằm ở công nghệ hay ngân sách, mà còn ở tâm lý ngần ngại và những định kiến cố hữu.',
+    url: 'https://dantri.com.vn/kinh-doanh/ai-va-noi-so-vo-hinh-dang-niu-chan-doanh-nghiep-nho-viet-nam-20250926151755661.htm',
+    image: '/images/truyen-thong/06-noi-so-ai-doanh-nghiep-nho.svg',
+    className: 'media-card--wide',
+  },
+  {
+    title: 'Vào ngành Marketing #5: AI không thể thay thế 100% marketer',
+    source: 'Brands Vietnam',
+    date: '24.06.2024',
+    category: 'Giáo dục & nghề nghiệp',
+    description: 'AI nâng cao năng suất, nhưng sáng tạo, chiến lược, tư duy dữ liệu và sự thấu hiểu con người vẫn là lợi thế của marketer.',
+    url: 'https://www.brandsvietnam.com/congdong/topic/341606-vao-nganh-marketing-5-ai-khong-the-thay-the-100-marketer',
+    image: '/images/truyen-thong/07-ai-khong-thay-the-marketer.svg',
+    className: 'media-card--standard',
+  },
+  {
+    title: 'Nghiên cứu chuyển đổi số của RMIT nhận giải thưởng quốc tế',
+    source: 'Diễn đàn Doanh nghiệp',
+    date: '13.01.2021',
+    category: 'Nghiên cứu',
+    description: 'Digital Kaizen chia các chương trình chuyển đổi quy mô lớn thành những sáng kiến nhỏ, nhanh và có thể tạo hiệu quả rõ ràng.',
+    url: 'https://diendandoanhnghiep.vn/nghien-cuu-chuyen-doi-so-cua-rmit-nhan-giai-thuong-quoc-te-10090280.html',
+    image: '/images/truyen-thong/08-nghien-cuu-rmit-giai-thuong-quoc-te.svg',
+    className: 'media-card--tall',
+  },
+  {
+    title: 'Thầy giáo trẻ với đam mê đưa nghiên cứu khoa học vào thực tiễn',
+    source: 'Doanh Nhân Plus',
+    date: '26.11.2018',
+    category: 'Chân dung',
+    description: 'Câu chuyện về lựa chọn nghề giáo, kết nối đại học với doanh nghiệp và khát vọng đưa tri thức nghiên cứu phục vụ đời sống.',
+    url: 'https://doanhnhanplus.vn/thay-giao-tre-voi-dam-me-dua-nghien-cuu-khoa-hoc-vao-thuc-tien-386234.html',
+    image: '/images/truyen-thong/09-dua-nghien-cuu-vao-thuc-tien.svg',
+    className: 'media-card--standard',
+  },
+  {
+    title: 'Chàng trai công nghệ',
+    source: 'Tiền Phong',
+    date: '30.01.2020',
+    category: 'Chân dung',
+    description: 'Hành trình từ nghiên cứu sinh đến giảng viên trẻ, lan tỏa tri thức khoa học dữ liệu, AI và an toàn thông tin cho cộng đồng.',
+    url: 'https://tienphong.vn/chang-trai-cong-nghe-post1165554.tpo',
+    image: '/images/truyen-thong/10-chang-trai-cong-nghe.svg',
+    className: 'media-card--wide',
+  },
+  {
+    title: 'Từ đầu tàu kinh tế đến trung tâm trí tuệ nhân tạo',
+    source: 'Pháp Luật TP.HCM',
+    date: '23.04.2026',
+    category: 'AI & đô thị',
+    description: 'TP.HCM xây nền tảng cho một AI Hub từ hạ tầng dữ liệu, năng lực điện toán, quản trị số và kỹ năng của người dân.',
+    url: 'https://tuoitre.vn/plo/tu-dau-tau-kinh-te-den-trung-tam-tri-tue-nhan-tao-post905336.html',
+    image: '/images/truyen-thong/11-tphcm-trung-tam-tri-tue-nhan-tao.svg',
+    className: 'media-card--standard',
+  },
+];
+---
+
+<BaseLayout
+  title={title}
+  description={description}
+  lang="vi"
+  canonicalUrl={canonicalUrl}
+>
+  <div class="container media-page">
+    <header class="media-hero">
+      <div class="media-hero__copy">
+        <p class="media-eyebrow">Press · Media · Conversations</p>
+        <h1>Những câu chuyện đã đi xa hơn một căn phòng.</h1>
+        <p class="media-hero__lead">
+          Tuyển tập bài báo, chân dung và những lần nghiên cứu bước vào cuộc trò chuyện công chúng
+          — từ AI, chuyển đổi số đến giáo dục và an ninh thông tin.
+        </p>
+      </div>
+    </header>
+
+    <section class="media-intro">
+      <div>
+        <p class="media-eyebrow">Media canvas</p>
+        <h2>Mỗi hình ảnh là một điểm vào câu chuyện.</h2>
+      </div>
+    </section>
+
+    <section class="media-canvas" aria-label="Các bài báo và nội dung truyền thông">
+      {mediaItems.map((item, index) => (
+        <a
+          class={`media-card ${item.className}`}
+          href={item.url}
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label={`${item.title} — ${item.source}`}
+        >
+          <img src={item.image} alt="" loading={index < 3 ? 'eager' : 'lazy'} />
+          <div class="media-card__overlay"></div>
+          <div class="media-card__content">
+            <div class="media-card__meta">
+              <span>{item.category}</span>
+              <span>{item.date}</span>
+            </div>
+            <div>
+              <p>{item.source}</p>
+              <h2>{item.title}</h2>
+              <div class="media-card__description">{item.description}</div>
+            </div>
+            <span class="media-card__cta">Đọc bài gốc ↗</span>
+          </div>
+        </a>
+      ))}
+    </section>
+
+    <section class="media-contact">
+      <div>
+        <p class="media-eyebrow">Media enquiries</p>
+        <h2>Cần một góc nhìn chuyên gia?</h2>
+        <p>
+          Tôi sẵn sàng trao đổi về AI adoption, chuyển đổi số, mạng lưới tổ chức,
+          quản trị an ninh thông tin và giáo dục công nghệ.
+        </p>
+      </div>
+      <a class="btn btn--primary" href="/lien-he">Liên hệ truyền thông</a>
+    </section>
+  </div>
+</BaseLayout>
+
+<style>
+.media-page {
+  display: grid;
+  gap: 1rem;
+}
+
+.media-hero,
+.media-intro,
+.media-contact {
+  overflow: hidden;
+  border: 1px solid rgb(255 255 255 / 0.74);
+  border-radius: var(--radius-lg);
+  background:
+    radial-gradient(circle at top right, rgb(185 137 68 / 0.14), transparent 28%),
+    linear-gradient(180deg, rgb(255 255 255 / 0.9), rgb(255 255 255 / 0.7));
+  box-shadow: var(--shadow-soft);
+}
+
+.media-hero {
+  position: relative;
+  display: grid;
+  gap: clamp(2rem, 5vw, 5rem);
+  min-height: min(650px, calc(100vh - 8rem));
+  align-items: end;
+  padding: clamp(1.4rem, 4vw, 3.5rem);
+  background:
+    radial-gradient(circle at 82% 20%, rgb(185 137 68 / 0.2), transparent 23%),
+    radial-gradient(circle at 12% 90%, rgb(116 43 57 / 0.15), transparent 28%),
+    linear-gradient(145deg, rgb(255 255 255 / 0.95), rgb(247 241 238 / 0.74));
+}
+
+.media-hero::after {
+  position: absolute;
+  top: -7rem;
+  right: -5rem;
+  width: 25rem;
+  height: 25rem;
+  border: 1px solid rgb(116 43 57 / 0.1);
+  border-radius: 50%;
+  box-shadow:
+    0 0 0 3.5rem rgb(116 43 57 / 0.035),
+    0 0 0 7rem rgb(185 137 68 / 0.035);
+  content: '';
+}
+
+.media-hero__copy {
+  position: relative;
+  z-index: 2;
+}
+
+.media-eyebrow {
+  margin: 0 0 0.7rem;
+  color: var(--color-primary);
+  font-size: 0.76rem;
+  font-weight: 800;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+
+.media-hero h1 {
+  max-width: 14ch;
+  margin-bottom: 1.2rem;
+  font-size: clamp(3rem, 7vw, 6rem);
+  line-height: 0.94;
+  letter-spacing: -0.055em;
+}
+
+.media-hero__lead {
+  max-width: 48rem;
+  margin: 0;
+  color: var(--color-text-secondary);
+  font-size: clamp(1.06rem, 1.9vw, 1.3rem);
+  line-height: 1.65;
+}
+
+.media-intro,
+.media-contact {
+  display: grid;
+  gap: 1rem clamp(2rem, 5vw, 5rem);
+  align-items: end;
+  padding: clamp(1.3rem, 3vw, 2.2rem);
+}
+
+.media-intro h2,
+.media-contact h2 {
+  max-width: 18ch;
+  margin: 0;
+  font-size: clamp(1.8rem, 3.4vw, 2.9rem);
+}
+
+.media-contact p {
+  max-width: 45rem;
+  margin: 0;
+  color: var(--color-text-secondary);
+  line-height: 1.72;
+}
+
+.media-canvas {
+  display: grid;
+  grid-auto-flow: dense;
+  grid-auto-rows: 30rem;
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+  gap: 0.85rem;
+}
+
+.media-card {
+  position: relative;
+  overflow: hidden;
+  min-height: 22rem;
+  border: 1px solid rgb(255 255 255 / 0.7);
+  border-radius: 28px;
+  background: var(--color-primary-dark);
+  box-shadow: var(--shadow-soft);
+  color: #fff;
+  grid-column: span 4;
+  grid-row: span 1;
+}
+
+.media-card--hero { grid-column: span 8; grid-row: span 1; }
+.media-card--wide,
+.media-card--tall { grid-column: span 4; grid-row: span 1; }
+
+.media-card img,
+.media-card__overlay {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.media-card img {
+  object-fit: cover;
+  transition: transform 600ms ease;
+}
+
+.media-card__overlay {
+  background:
+    linear-gradient(180deg, rgb(12 15 22 / 0.05) 8%, rgb(12 15 22 / 0.34) 42%, rgb(12 15 22 / 0.94) 100%),
+    radial-gradient(circle at top right, rgb(185 137 68 / 0.2), transparent 38%);
+}
+
+.media-card__content {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: clamp(1rem, 2.2vw, 1.5rem);
+}
+
+.media-card__meta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.8rem;
+  color: rgb(255 255 255 / 0.82);
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.media-card__content > div:nth-child(2) {
+  margin-top: auto;
+}
+
+.media-card__content p {
+  margin: 0 0 0.45rem;
+  color: var(--color-accent-light);
+  font-size: 0.76rem;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.media-card h2 {
+  margin: 0;
+  color: #fff;
+  font-size: clamp(1.35rem, 2.6vw, 2.3rem);
+  line-height: 1.04;
+  letter-spacing: -0.04em;
+}
+
+.media-card__description {
+  overflow: hidden;
+  max-width: 46rem;
+  max-height: 0;
+  margin-top: 0;
+  color: rgb(255 255 255 / 0.78);
+  font-size: 0.9rem;
+  line-height: 1.55;
+  opacity: 0;
+  transition: max-height 420ms ease, margin-top 420ms ease, opacity 280ms ease;
+}
+
+.media-card__cta {
+  width: fit-content;
+  color: rgb(255 255 255 / 0.86);
+  font-size: 0.8rem;
+  font-weight: 750;
+}
+
+.media-card:hover {
+  color: #fff;
+  box-shadow: var(--shadow-lift);
+  transform: translateY(-2px);
+}
+
+.media-card:hover img { transform: scale(1.035); }
+.media-card:hover .media-card__description { max-height: 8rem; margin-top: 0.75rem; opacity: 1; }
+
+.media-contact {
+  justify-items: start;
+  background:
+    radial-gradient(circle at top right, rgb(185 137 68 / 0.16), transparent 28%),
+    linear-gradient(135deg, rgb(255 255 255 / 0.92), rgb(247 239 236 / 0.8));
+}
+
+@media (min-width: 820px) {
+  .media-contact { grid-template-columns: minmax(0, 1fr) auto; }
+}
+
+@media (max-width: 900px) {
+  .media-canvas { grid-auto-rows: 29rem; grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .media-card,
+  .media-card--wide,
+  .media-card--tall { min-height: 0; grid-column: span 1; grid-row: span 1; }
+  .media-card--hero { min-height: 0; grid-column: span 2; grid-row: span 1; }
+}
+
+@media (max-width: 600px) {
+  .media-hero { min-height: auto; }
+  .media-hero h1 { max-width: 11ch; }
+  .media-canvas { display: grid; grid-auto-rows: auto; grid-template-columns: 1fr; }
+  .media-card,
+  .media-card--hero,
+  .media-card--wide,
+  .media-card--tall { min-height: 27rem; grid-column: auto; grid-row: auto; }
+  .media-card__description { max-height: 8rem; margin-top: 0.75rem; opacity: 1; }
+  .media-contact .btn { width: 100%; }
+}
+</style>

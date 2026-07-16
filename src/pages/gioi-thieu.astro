@@ -108,7 +108,6 @@ const canonicalUrl = '/gioi-thieu';
         <ul>
           <li><strong>Xem nghiên cứu</strong> — <a href="/nghien-cuu">Nghiên cứu và công bố</a></li>
           <li><strong>Làm việc cùng NetIQ</strong> — <a href="/tu-van">Tư vấn / Giải pháp</a></li>
-          <li><strong>Mời chia sẻ</strong> — <a href="/dien-thuyet">Diễn thuyết</a></li>
         </ul>
       </div>
     </section>
@@ -470,38 +469,6 @@ const canonicalUrl = '/gioi-thieu';
       </div>
     </section>
 
-    <!-- ── Teaching ── -->
-    <section class="prose-section">
-      <h2>Giảng dạy</h2>
-      <p>
-        Việc giảng dạy của tôi trải rộng từ bậc đại học đến sau đại học, qua ba trường thuộc
-        RMIT University Vietnam, và phản ánh đúng định hướng ứng dụng, lấy con người làm trung tâm
-        — cùng tinh thần dẫn dắt công việc nghiên cứu của tôi.
-      </p>
-      <p>  
-        Tại The Business School (2021–hiện tại), tôi giảng dạy các học phần bao gồm
-        <strong>Technology Futures</strong> (MBA), <strong>Business Information Systems</strong>,
-        và <strong>Organisational Analysis</strong> — trang bị cho sinh viên những khung lý thuyết
-        để định hướng chuyển đổi số, đánh giá công nghệ mới, và ra quyết định dựa trên dữ liệu.
-        Trước đó, tại School of Science, Engineering &amp; Technology (2018–2021), tôi giảng dạy
-        các học phần thiên về kỹ thuật hơn như <strong>Machine Learning</strong>,
-        <strong>Data Structures &amp; Algorithms</strong>, <strong>User-centred Design</strong>,
-        và <strong>Technology Leadership</strong> — kết nối nền tảng khoa học máy tính với khía
-        cạnh tổ chức và con người của công nghệ. Sự nghiệp giảng dạy của tôi bắt đầu tại
-        School of Business IT &amp; Logistics thuộc RMIT Melbourne (2014–2017), nơi tôi giảng dạy
-        logistics và quản trị chuỗi cung ứng trong khi hoàn thành chương trình tiến sĩ.
-      </p>
-      <p>
-        Tôi đã hướng dẫn <strong>mười một nghiên cứu sinh tiến sĩ</strong> thuộc các chương trình
-        tiến sĩ ngành Management, Business, và Computer Science — trong đó năm người đã hoàn thành
-        chương trình trong giai đoạn 2022–2026 — với các đề tài nghiên cứu đang triển khai trải rộng
-        từ chuyển đổi số trong y tế, trải nghiệm khách hàng ứng dụng AI, học tập tại nơi làm việc,
-        đến giáo dục trực tuyến. Tôi cũng hướng dẫn các dự án capstone bậc đại học thông qua hợp tác
-        doanh nghiệp với các tổ chức như Navigos Group và Oxford University Clinical Research Unit
-        (OUCRU), kết nối sinh viên với những bài toán nghiên cứu và phát triển trong thực tế.
-      </p>
-    </section>
-
     <!-- ── Connect ── -->
     <section class="prose-section connect-section">
       <h2>Kết nối</h2>
@@ -776,8 +743,15 @@ const canonicalUrl = '/gioi-thieu';
 .edu-item__degree,
 .award__title {
   color: var(--color-text-primary);
-  font-weight: 800;
   line-height: 1.28;
+}
+
+.edu-item__degree {
+  font-weight: 800;
+}
+
+.award__title {
+  font-weight: 500;
 }
 
 .edu-item__institution {

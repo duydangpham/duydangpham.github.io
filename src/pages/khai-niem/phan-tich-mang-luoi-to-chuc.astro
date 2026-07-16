@@ -3,9 +3,9 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
 
 const canonicalUrl = '/khai-niem/phan-tich-mang-luoi-to-chuc';
 
-const title = 'Organisational Network Analysis';
+const title = 'Phân tích mạng lưới tổ chức (ONA)';
 const description =
-  "Explore an interactive Organisational Network Analysis visualization and discover the questions ONA can answer for CEOs, CHROs, COOs, and transformation leaders. See what your org chart doesn't show.";
+  'Khám phá bản đồ Phân tích mạng lưới tổ chức tương tác và những câu hỏi ONA có thể trả lời cho lãnh đạo, nhân sự, vận hành và chuyển đổi số.';
 
 const jsonLd = {
   '@context': 'https://schema.org',
@@ -28,52 +28,52 @@ const jsonLd = {
 const roleQuestionSets = [
   {
     id: 'ceo',
-    label: 'CEO / Managing Director',
+    label: 'CEO / Tổng giám đốc',
     questions: [
-      'Your last major initiative had executive sponsorship, a budget, and a detailed rollout plan. Why did adoption stall on the third floor?',
-      'The person you appointed to lead the AI programme is capable and enthusiastic. But are they trusted by their peers — or just by you?',
-      'If your three most influential informal leaders resigned tomorrow, which parts of your organisation would go quiet — and would you even know who they are?',
-      'Your strategy is sound. Is your network aligned enough to carry it?',
+      'Sáng kiến gần nhất có bảo trợ, ngân sách và kế hoạch chi tiết. Vì sao việc áp dụng vẫn chững lại ở một vài bộ phận?',
+      'Người bạn giao dẫn dắt chương trình AI có năng lực và nhiệt huyết. Nhưng đồng nghiệp có thật sự tin họ không?',
+      'Nếu ba lãnh đạo phi chính thức có ảnh hưởng nhất rời đi ngày mai, phần nào của tổ chức sẽ mất kết nối?',
+      'Chiến lược đã đúng. Mạng lưới con người có đủ đồng thuận để đưa nó đi tới cùng không?',
     ],
   },
   {
     id: 'chro',
-    label: 'CHRO / People & Culture',
+    label: 'CHRO / Nhân sự',
     questions: [
-      "Your engagement survey tells you how people feel. It doesn't tell you who shapes how they feel.",
-      'You know who your high performers are. Do you know whether they are connected — or quietly becoming isolated?',
-      'Your DEI programme has measurable goals. Does your actual collaboration network reflect them?',
-      'Who are the unofficial mentors in your organisation — the ones nobody appointed, but everyone turns to?',
+      'Khảo sát gắn kết cho biết mọi người cảm thấy thế nào, nhưng không cho biết ai đang định hình cảm nhận đó.',
+      'Bạn biết ai có hiệu suất cao. Bạn có biết họ đang được kết nối hay âm thầm trở nên cô lập?',
+      'Chương trình đa dạng và hoà nhập có mục tiêu đo lường được. Mạng lưới cộng tác thực tế có phản ánh điều đó?',
+      'Ai là những người cố vấn không chính thức — không được bổ nhiệm nhưng luôn được đồng nghiệp tìm đến?',
     ],
   },
   {
     id: 'coo',
-    label: 'COO / Operations',
+    label: 'COO / Vận hành',
     questions: [
-      'Your processes are documented. But where are decisions actually being made?',
-      'You have cross-functional teams. Are they genuinely exchanging knowledge — or sitting in the same meetings as parallel silos?',
-      'Where is information pooling instead of flowing? Who is the single bridge between two critical parts of your operation — and what happens if they leave?',
-      'If you mapped every decision that actually moved something this quarter, how many went through one person?',
+      'Quy trình đã được tài liệu hoá. Nhưng quyết định thực sự đang được đưa ra ở đâu?',
+      'Các nhóm liên chức năng có thật sự trao đổi tri thức, hay chỉ cùng họp trong những silo song song?',
+      'Thông tin đang dồn ứ ở đâu? Ai là cây cầu duy nhất giữa hai mắt xích vận hành quan trọng?',
+      'Nếu lập bản đồ mọi quyết định tạo ra chuyển động trong quý này, có bao nhiêu quyết định đi qua một người?',
     ],
   },
   {
     id: 'cio',
-    label: 'CIO / Digital Transformation Leader',
+    label: 'CIO / Chuyển đổi số',
     questions: [
-      "You have usage data for your AI tools. You don't have data on who influences whether colleagues try them, persist with them, or quietly abandon them.",
-      "Adoption is strong in some teams and stalling in others. Is that about the tools — or about who's in those teams?",
-      'You identified your change champions. Did you choose them from the org chart or from the network?',
-      'The informal AI experts in your organisation — do they know they are central? Does leadership?',
+      'Bạn có dữ liệu sử dụng công cụ AI, nhưng có biết ai ảnh hưởng đến việc đồng nghiệp thử, tiếp tục hay âm thầm từ bỏ chúng?',
+      'Mức độ áp dụng cao ở nhóm này nhưng chững lại ở nhóm khác. Vấn đề nằm ở công cụ hay ở mạng lưới con người?',
+      'Bạn đã chọn change champion từ sơ đồ tổ chức hay từ mạng lưới ảnh hưởng thực tế?',
+      'Các chuyên gia AI không chính thức có biết họ đang giữ vị trí trung tâm? Ban lãnh đạo có biết không?',
     ],
   },
   {
     id: 'change',
-    label: 'Change Manager / Transformation Lead',
+    label: 'Quản lý thay đổi',
     questions: [
-      'You know what needs to change. Do you know who will carry the message — and who will quietly neutralise it?',
-      'Resistance to change is rarely loud. Where in your network is it spreading in silence?',
-      "Your communication plan reaches everyone on the distribution list. Your network doesn't. Who's falling through the gap?",
-      "You've mapped the stakeholders. Have you mapped the relationships between them?",
+      'Bạn biết điều gì cần thay đổi. Bạn có biết ai sẽ mang thông điệp đi tiếp và ai sẽ âm thầm vô hiệu hoá nó?',
+      'Kháng cự thay đổi hiếm khi ồn ào. Nó đang lan truyền âm thầm ở đâu trong mạng lưới?',
+      'Kế hoạch truyền thông đến được mọi người trong danh sách. Nhưng mạng lưới thực tế đang bỏ sót ai?',
+      'Bạn đã lập bản đồ các bên liên quan. Còn quan hệ giữa họ thì sao?',
     ],
   },
 ];
@@ -357,15 +357,15 @@ const networkLayers = {
 
 const layerMeta = {
   workAdvice: {
-    label: 'Work Advice',
+    label: 'Tư vấn công việc',
     color: '#5b84d6',
   },
   trust: {
-    label: 'Trust',
+    label: 'Niềm tin',
     color: '#b98944',
   },
   collaboration: {
-    label: 'Collaboration',
+    label: 'Cộng tác',
     color: '#742b39',
   },
 };
@@ -381,35 +381,55 @@ const layerMeta = {
   <div class="container ona-page">
     <section class="ona-hook">
       <div class="ona-hook__intro">
-        <h1>Every organisation has two structures. You're only managing one of them.</h1>
-        <p class="ona-hook__sub">
-          The org chart shows reporting lines. ONA shows what's really happening.
-        </p>
+        <div class="ona-hook__copy">
+          <p class="ona-eyebrow">Khái niệm · Network intelligence</p>
+          <h1>Mỗi tổ chức có hai cấu trúc. Bạn mới chỉ đang quản lý một.</h1>
+          <p class="ona-hook__sub">
+            Sơ đồ tổ chức cho thấy tuyến báo cáo. Phân tích mạng lưới tổ chức cho thấy
+            công việc, niềm tin và ảnh hưởng thực sự đang dịch chuyển như thế nào.
+          </p>
+          <div class="ona-hook__actions">
+            <a class="btn btn--primary" href="#ona-lab">Khám phá mạng lưới</a>
+            <a class="btn btn--secondary" href="#ona-questions">ONA trả lời điều gì?</a>
+          </div>
+        </div>
+        <div class="ona-hook__signal" aria-label="Ba lớp thông tin ONA">
+          <span><strong>01</strong> Ai được tìm đến?</span>
+          <span><strong>02</strong> Ai được tin tưởng?</span>
+          <span><strong>03</strong> Ai kết nối các silo?</span>
+        </div>
       </div>
 
-      <div class="ona-lab">
+      <div id="ona-lab" class="ona-lab">
+        <div class="ona-lab__heading">
+          <div>
+            <p class="ona-eyebrow">Phòng thí nghiệm tương tác</p>
+            <h2>Nhìn tổ chức qua từng lớp quan hệ.</h2>
+          </div>
+          <p>Chọn một lớp, chạm vào một vai trò và quan sát cấu trúc thay đổi.</p>
+        </div>
         <div class="ona-lab__toolbar">
           <div class="ona-lab__layer-group">
-            <div class="ona-layer-switch" role="tablist" aria-label="Meridian network layers">
+            <div class="ona-layer-switch" role="tablist" aria-label="Các lớp mạng lưới Meridian">
               <button class="ona-layer-btn is-active" type="button" data-layer="workAdvice" aria-pressed="true">
-                Work Advice
+                Tư vấn công việc
               </button>
               <button class="ona-layer-btn" type="button" data-layer="trust" aria-pressed="false">
-                Trust
+                Niềm tin
               </button>
               <button class="ona-layer-btn" type="button" data-layer="collaboration" aria-pressed="false">
-                Collaboration
+                Cộng tác
               </button>
             </div>
-            <p class="ona-lab__caption">Meridian is a fictional organisation. Explore its informal network.</p>
+            <p class="ona-lab__caption">Meridian là một tổ chức giả lập để bạn khám phá mạng lưới phi chính thức.</p>
           </div>
 
           <button id="ona-whatif-toggle" class="ona-whatif-btn" type="button" aria-pressed="false">
-            What if they left?
+            Nếu người này rời đi?
           </button>
         </div>
 
-        <p class="ona-lab__prompt">Click any node. Toggle the layers. Watch what changes.</p>
+        <p class="ona-lab__prompt">Mẹo: chọn một node, sau đó bật chế độ mô phỏng rời mạng lưới.</p>
 
         <div class="ona-lab__body">
           <div class="ona-visual-shell">
@@ -418,14 +438,14 @@ const layerMeta = {
           </div>
 
           <aside id="ona-detail-panel" class="ona-detail-panel" aria-live="polite">
-            <p class="ona-detail-panel__eyebrow">Meridian snapshot</p>
-            <h2>Start exploring the informal organisation</h2>
+            <p class="ona-detail-panel__eyebrow">Ảnh chụp Meridian</p>
+            <h2>Bắt đầu khám phá tổ chức phi chính thức</h2>
             <p>
-              Click a role to see what its position reveals. Toggle between Work Advice,
-              Trust, and Collaboration to watch the story change.
+              Chọn một vai trò để xem vị trí của họ tiết lộ điều gì. Chuyển giữa Tư vấn công việc,
+              Niềm tin và Cộng tác để thấy câu chuyện thay đổi.
             </p>
             <p class="ona-detail-panel__note">
-              Then try <strong>What if they left?</strong> to see how fragile a network can be.
+              Sau đó thử <strong>Nếu người này rời đi?</strong> để thấy mạng lưới có thể mong manh đến đâu.
             </p>
           </aside>
         </div>
@@ -434,18 +454,19 @@ const layerMeta = {
 
     <section class="ona-pause">
       <p class="ona-pause__question">
-        The org chart you drew last year — how much of it reflects how decisions are actually
-        made, how knowledge actually moves, and who people actually trust?
+        Sơ đồ tổ chức cho bạn biết ai báo cáo cho ai. Nhưng nó có cho biết quyết định thật sự
+        được đưa ra ở đâu, tri thức đi theo đường nào và mọi người tin ai không?
       </p>
       <p class="ona-pause__answer">
-        Most leaders would answer: not much. ONA gives you the map that does.
+        ONA biến những quan hệ vô hình đó thành một bản đồ có thể đọc, đo lường và hành động.
       </p>
     </section>
 
-    <section class="ona-role-section section-shell">
+    <section id="ona-questions" class="ona-role-section section-shell">
       <div class="ona-section-intro">
-        <h2>What does your network tell you?</h2>
-        <p>Select your role. These are the questions ONA can answer.</p>
+        <p class="ona-eyebrow">Góc nhìn lãnh đạo</p>
+        <h2>Mạng lưới của bạn đang nói điều gì?</h2>
+        <p>Chọn vai trò của bạn để xem những câu hỏi ONA có thể trả lời.</p>
       </div>
 
       <div class="ona-role-tabs" role="tablist" aria-label="Organisation roles">
@@ -486,53 +507,50 @@ const layerMeta = {
     </section>
 
     <section class="ona-reveal section-shell">
-      <h2>This is what Organisational Network Analysis does.</h2>
+      <p class="ona-eyebrow">ONA hoạt động như thế nào?</p>
+      <h2>Biến cấu trúc phi chính thức thành bằng chứng có thể hành động.</h2>
       <div class="ona-reveal__copy">
         <p>
-          ONA maps the real, informal network of relationships, trust, and influence that sits
-          beneath every org chart — and determines whether your strategy actually works. Using
-          the same mathematical methods applied to internet infrastructure, disease transmission,
-          and financial systems, we survey employees on who they turn to for advice, who they
-          trust, who helps them with new tools, and who they collaborate with. Those responses
-          become a directed graph. That graph reveals your brokers, your silos, your informal
-          leaders, and your knowledge bottlenecks — with precision that no survey, no
-          performance review, and no management intuition can match.
+          ONA lập bản đồ mạng lưới quan hệ, niềm tin và ảnh hưởng nằm phía sau sơ đồ tổ chức.
+          Nhân viên được hỏi họ tìm đến ai để xin lời khuyên, tin tưởng ai, cộng tác với ai và
+          ai hỗ trợ họ tiếp cận công cụ mới. Những câu trả lời trở thành một đồ thị có hướng,
+          làm lộ rõ các cầu nối, silo, lãnh đạo phi chính thức và điểm nghẽn tri thức.
         </p>
         <p class="ona-reveal__kicker">
-          The result is not a report. It is a map. And once you have the map, you can act.
+          Kết quả không chỉ là một báo cáo. Đó là một bản đồ — và khi có bản đồ, bạn có thể hành động.
         </p>
       </div>
     </section>
 
     <section class="ona-next section-shell">
       <div class="ona-section-intro">
-        <h2>Where would you like to go next?</h2>
+        <p class="ona-eyebrow">Bước tiếp theo</p>
+        <h2>Tiếp tục từ góc nhìn nào?</h2>
       </div>
 
       <div class="ona-next__grid">
         <article class="ona-next-card">
-          <h3>Understand the methodology</h3>
+          <h3>Tìm hiểu phương pháp</h3>
           <p>
-            Explore the full ONA framework, network metrics, and multiplex methods behind the
-            approach.
+            Khám phá khung ONA, các chỉ số mạng lưới và phương pháp multiplex phía sau cách tiếp cận.
           </p>
-          <a href="/nghien-cuu">Read the research →</a>
+          <a href="/nghien-cuu">Xem hướng nghiên cứu →</a>
         </article>
 
         <article class="ona-next-card ona-next-card--primary">
-          <h3>Work with NetIQ</h3>
+          <h3>Ứng dụng cùng NetIQ</h3>
           <p>
-            NetIQ applies ONA to real organisations across Vietnam and Southeast Asia. See how.
+            NetIQ ứng dụng ONA cho các tổ chức tại Việt Nam và Đông Nam Á.
           </p>
-          <a href="https://netiq.vn" target="_blank" rel="noopener noreferrer">Visit netiq.vn →</a>
+          <a href="https://netiq.vn" target="_blank" rel="noopener noreferrer">Khám phá netiq.vn →</a>
         </article>
 
         <article class="ona-next-card">
-          <h3>Liên hệ trao đổi</h3>
+          <h3>Trao đổi một bài toán cụ thể</h3>
           <p>
-            Have a specific question about ONA or want to discuss a collaboration?
+            Bạn có câu hỏi về ONA hoặc muốn trao đổi một cơ hội hợp tác?
           </p>
-          <a href="/lien-he">Contact →</a>
+          <a href="/lien-he">Liên hệ →</a>
         </article>
       </div>
     </section>
@@ -735,100 +753,100 @@ const layerMeta = {
         const node = nodeLookup.get(nodeId);
 
         if (nodeId === 'it' && layerName === 'workAdvice') {
-          return 'The technical oracle everyone routes questions through.';
+          return 'Điểm quy tụ các câu hỏi kỹ thuật trong tổ chức.';
         }
 
         if (nodeId === 'strategy') {
-          return 'Critical bridge between Sales and Operations.';
+          return 'Cầu nối quan trọng giữa Kinh doanh và Vận hành.';
         }
 
         if (nodeId === 'change') {
-          return 'Formally appointed, informally peripheral.';
+          return 'Được bổ nhiệm chính thức nhưng nằm ngoài rìa mạng lưới.';
         }
 
         if (nodeId === 'hr' && layerName === 'trust') {
-          return 'Sensitive conversations converge here.';
+          return 'Những trao đổi nhạy cảm thường hội tụ tại đây.';
         }
 
         if (nodeId === 'opsB' && layerName === 'collaboration') {
-          return 'Disconnected in Collaboration — a visible risk.';
+          return 'Bị cô lập trong lớp Cộng tác — một rủi ro nhìn thấy được.';
         }
 
         if (nodeId === 'salesOps') {
-          return 'One of the few routes out of the Sales silo.';
+          return 'Một trong số ít đường kết nối ra ngoài silo Kinh doanh.';
         }
 
-        return node?.insight ?? 'A small shift here changes more than the org chart suggests.';
+        return node?.insight ?? 'Một thay đổi nhỏ tại đây có thể tạo hiệu ứng lớn hơn sơ đồ tổ chức gợi ý.';
       }
 
       function getArchetypeDescription(nodeId, layerName, ranks, counts) {
         const archetype = getNodeArchetype(nodeId);
 
         if (archetype === 'Oracle') {
-          return 'This role sits on the shortest path between many others, making it the informal point of gravity in the network.';
+          return 'Vai trò này nằm trên nhiều đường đi ngắn nhất, trở thành một trọng tâm phi chính thức của mạng lưới.';
         }
 
         if (archetype === 'Broker') {
-          return 'This role links groups that otherwise would not exchange knowledge directly, so change has to pass through it.';
+          return 'Vai trò này kết nối các nhóm vốn không trực tiếp trao đổi tri thức, vì vậy thay đổi thường phải đi qua họ.';
         }
 
         if (archetype === 'Silo Buster') {
-          return 'This role is not the loudest voice inside its home cluster, but it is one of the few people who can carry ideas across boundaries.';
+          return 'Không phải tiếng nói lớn nhất trong nhóm, nhưng đây là một trong số ít người có thể đưa ý tưởng vượt qua ranh giới.';
         }
 
         if (archetype === 'Peripheral') {
-          return 'This role sits near the edge of the network, so formal authority or good intentions do not automatically translate into reach.';
+          return 'Vai trò này nằm gần rìa mạng lưới; quyền hạn chính thức hay ý định tốt không tự động chuyển thành sức lan toả.';
         }
 
         if (nodeId === 'hr' && layerName === 'trust') {
-          return 'This role is not the main advice hub, but it is the emotional and reputational landing point for sensitive information.';
+          return 'Không phải trung tâm tư vấn chính, nhưng đây là điểm đến về cảm xúc và uy tín cho những thông tin nhạy cảm.';
         }
 
         if (ranks[nodeId] <= 3) {
-          return 'This role is unusually central in the active layer, shaping who learns what and when.';
+          return 'Vai trò này đặc biệt trung tâm trong lớp đang chọn, định hình ai biết điều gì và vào lúc nào.';
         }
 
         if (counts[nodeId].total <= 1) {
-          return 'This role is weakly connected in the active layer, which often means messages reach it late and influence rarely travels far from it.';
+          return 'Vai trò này kết nối yếu trong lớp đang chọn; thông điệp thường đến muộn và ảnh hưởng khó lan xa.';
         }
 
-        return 'This role is part of the network, but not one of the positions the structure depends on most.';
+        return 'Vai trò này thuộc mạng lưới nhưng chưa phải một trong những vị trí mà cấu trúc phụ thuộc nhiều nhất.';
       }
 
       function getOrganisationalMeaning(nodeId, layerName) {
         if (nodeId === 'it') {
-          return 'If a real organisation has an IT Manager like this, AI adoption, troubleshooting, and tool confidence will bottleneck through one person unless leadership designs around it.';
+          return 'Nếu tổ chức có một quản lý IT như thế này, việc áp dụng AI và xử lý sự cố sẽ dồn qua một người nếu lãnh đạo không chủ động phân tán năng lực.';
         }
 
         if (nodeId === 'strategy') {
-          return 'If this bridge is ignored, silos stay siloed and transformation dies between teams that technically all support the same initiative.';
+          return 'Nếu bỏ qua cây cầu này, các silo vẫn tách biệt và chuyển đổi dễ mắc kẹt giữa những nhóm vốn cùng ủng hộ một sáng kiến.';
         }
 
         if (nodeId === 'change') {
-          return 'If your formally appointed change lead looks like this, your programme may have authority on paper but very little traction in practice.';
+          return 'Nếu người dẫn dắt thay đổi nằm ở vị trí này, chương trình có thể có thẩm quyền trên giấy nhưng ít lực kéo trong thực tế.';
         }
 
         if (nodeId === 'hr') {
-          return 'Trusted roles like this often shape what people feel safe saying long before the issue appears in a survey or steering committee meeting.';
+          return 'Một vai trò được tin cậy như thế này định hình điều mọi người dám nói từ lâu trước khi vấn đề xuất hiện trong khảo sát hay cuộc họp.';
         }
 
         if (nodeId === 'opsB') {
-          return 'A node like this is easy to miss until collaboration matters. Then the isolation suddenly becomes an operational risk.';
+          return 'Node này dễ bị bỏ qua cho đến khi cộng tác trở nên thiết yếu; lúc đó sự cô lập lập tức biến thành rủi ro vận hành.';
         }
 
         if (nodeId === 'salesOps') {
-          return 'A person in this position can quietly determine whether one whole department stays inward-looking or starts sharing what it knows.';
+          return 'Người ở vị trí này có thể âm thầm quyết định cả một phòng ban tiếp tục khép kín hay bắt đầu chia sẻ tri thức.';
         }
 
-        return 'This is the kind of position leadership rarely sees on the org chart, but it still influences whether change spreads cleanly or stalls.';
+        return 'Đây là kiểu vị trí lãnh đạo hiếm khi thấy trên sơ đồ tổ chức nhưng vẫn ảnh hưởng đến việc thay đổi lan toả hay chững lại.';
       }
 
       function formatRank(rank, layerName) {
         if (rank <= 3) {
-          return 'Top ' + rank + ' in ' + layerMeta[layerName].label;
+          return 'Top ' + rank + ' trong lớp ' + layerMeta[layerName].label;
         }
 
-        return 'Rank ' + rank + ' in ' + layerMeta[layerName].label;
+        return 'Hạng ' + rank + ' trong lớp ' + layerMeta[layerName].label;
       }
 
       function getIsolationSummary(nodeId, nodes, baselineEdges, edgesAfterRemoval) {
@@ -865,18 +883,18 @@ const layerMeta = {
         if (!state.selectedNodeId) {
           if (state.removalMode) {
             panel.innerHTML = `
-              <p class="ona-detail-panel__eyebrow">Removal mode</p>
-              <h2>Now click any role to see what the network looks like without them.</h2>
-              <p>Choose one role in Meridian and the visual will recalculate around its absence.</p>
+              <p class="ona-detail-panel__eyebrow">Chế độ mô phỏng</p>
+              <h2>Chọn một vai trò để xem mạng lưới khi thiếu họ.</h2>
+              <p>Bản đồ Meridian sẽ tính toán lại cấu trúc sau khi vai trò đó rời đi.</p>
             `;
             return;
           }
 
           panel.innerHTML = `
-            <p class="ona-detail-panel__eyebrow">Meridian snapshot</p>
-            <h2>Start exploring the informal organisation</h2>
-            <p>Click a role to see what its position reveals. Toggle between Work Advice, Trust, and Collaboration to watch the story change.</p>
-            <p class="ona-detail-panel__note">Then try <strong>What if they left?</strong> to see how fragile a network can be.</p>
+            <p class="ona-detail-panel__eyebrow">Ảnh chụp Meridian</p>
+            <h2>Bắt đầu khám phá tổ chức phi chính thức</h2>
+            <p>Chọn một vai trò và chuyển giữa Tư vấn công việc, Niềm tin, Cộng tác để xem câu chuyện thay đổi.</p>
+            <p class="ona-detail-panel__note">Sau đó thử <strong>Nếu người này rời đi?</strong> để kiểm tra độ mong manh của mạng lưới.</p>
           `;
           return;
         }
@@ -887,17 +905,17 @@ const layerMeta = {
         const isolatedNodes = state.removalMode
           ? getIsolationSummary(node.id, context.nodes, context.baseEdges, context.filteredEdges)
           : [];
-        const roleLine = archetype ? `<p class="ona-detail-panel__eyebrow">Archetype · ${archetype}</p>` : `<p class="ona-detail-panel__eyebrow">Layer · ${layerMeta[state.layer].label}</p>`;
+        const roleLine = archetype ? `<p class="ona-detail-panel__eyebrow">Hình mẫu · ${archetype}</p>` : `<p class="ona-detail-panel__eyebrow">Lớp · ${layerMeta[state.layer].label}</p>`;
         const isolationLine = state.removalMode
-          ? `<div class="ona-impact-tag is-alert">${isolatedNodes.length} role${isolatedNodes.length === 1 ? '' : 's'} isolated without ${node.label}</div>`
-          : `<div class="ona-impact-tag">${counts.incoming} incoming · ${counts.outgoing} outgoing</div>`;
+          ? `<div class="ona-impact-tag is-alert">${isolatedNodes.length} vai trò bị cô lập khi thiếu ${node.label}</div>`
+          : `<div class="ona-impact-tag">${counts.incoming} liên kết vào · ${counts.outgoing} liên kết ra</div>`;
 
         panel.innerHTML = `
           ${roleLine}
           <h2>${node.label}</h2>
           ${isolationLine}
           <p>${getArchetypeDescription(node.id, state.layer, context.ranks, context.counts)}</p>
-          <p class="ona-detail-panel__meaning"><strong>What this means for your organisation:</strong> ${getOrganisationalMeaning(node.id, state.layer)}</p>
+          <p class="ona-detail-panel__meaning"><strong>Điều này có ý nghĩa gì với tổ chức:</strong> ${getOrganisationalMeaning(node.id, state.layer)}</p>
         `;
       }
 
@@ -1245,32 +1263,107 @@ const layerMeta = {
 <style>
 .ona-page {
   display: grid;
-  gap: clamp(2rem, 4vw, 3.3rem);
+  gap: 1rem;
 }
 
 .ona-hook {
   display: grid;
-  gap: var(--space-xl);
+  gap: 1rem;
 }
 
 .ona-hook__intro {
-  max-width: 62rem;
+  position: relative;
+  overflow: hidden;
+  display: grid;
+  gap: clamp(1.5rem, 4vw, 3rem);
+  min-height: min(680px, calc(100vh - 8rem));
+  align-items: end;
+  padding: clamp(1.4rem, 4vw, 3.5rem);
+  border: 1px solid rgb(255 255 255 / 0.76);
+  border-radius: var(--radius-lg);
+  background:
+    radial-gradient(circle at 82% 16%, rgb(185 137 68 / 0.2), transparent 24%),
+    radial-gradient(circle at 14% 84%, rgb(116 43 57 / 0.16), transparent 30%),
+    linear-gradient(145deg, rgb(255 255 255 / 0.94), rgb(247 241 238 / 0.76));
+  box-shadow: var(--shadow-card);
+}
+
+.ona-hook__intro::after {
+  position: absolute;
+  top: -8rem;
+  right: -6rem;
+  width: 24rem;
+  height: 24rem;
+  border: 1px solid rgb(116 43 57 / 0.1);
+  border-radius: 50%;
+  box-shadow:
+    0 0 0 3.5rem rgb(116 43 57 / 0.035),
+    0 0 0 7rem rgb(185 137 68 / 0.035);
+  content: '';
+}
+
+.ona-hook__copy,
+.ona-hook__signal {
+  position: relative;
+  z-index: 1;
+}
+
+.ona-hook__copy {
+  max-width: 64rem;
 }
 
 .ona-hook__intro h1 {
-  max-width: 14ch;
-  margin-bottom: var(--space-md);
-  font-size: clamp(2.7rem, 6vw, 5rem);
-  line-height: 0.96;
-  letter-spacing: -0.04em;
+  max-width: 15ch;
+  margin-bottom: 1.2rem;
+  font-size: clamp(3rem, 7vw, 6.2rem);
+  line-height: 0.94;
+  letter-spacing: -0.055em;
 }
 
 .ona-hook__sub {
   margin: 0;
-  max-width: 42rem;
+  max-width: 48rem;
   color: var(--color-text-secondary);
-  font-size: clamp(1.05rem, 2vw, 1.32rem);
-  line-height: 1.55;
+  font-size: clamp(1.08rem, 2vw, 1.35rem);
+  line-height: 1.62;
+}
+
+.ona-eyebrow {
+  margin: 0 0 0.75rem;
+  color: var(--color-primary);
+  font-size: 0.76rem;
+  font-weight: 800;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+
+.ona-hook__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-top: 1.6rem;
+}
+
+.ona-hook__signal {
+  display: grid;
+  gap: 0.65rem;
+}
+
+.ona-hook__signal span {
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+  padding: 0.8rem 1rem;
+  border-top: 1px solid rgb(20 24 33 / 0.1);
+  color: var(--color-text-secondary);
+  font-size: 0.93rem;
+  font-weight: 650;
+}
+
+.ona-hook__signal strong {
+  color: var(--color-accent-dark);
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
 }
 
 .ona-lab,
@@ -1286,6 +1379,27 @@ const layerMeta = {
 
 .ona-lab {
   padding: clamp(1.2rem, 3vw, 2rem);
+}
+
+.ona-lab__heading {
+  display: grid;
+  gap: 0.8rem 2rem;
+  align-items: end;
+  margin-bottom: clamp(1.2rem, 3vw, 2rem);
+  padding-bottom: clamp(1rem, 2vw, 1.5rem);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.ona-lab__heading h2 {
+  max-width: 18ch;
+  margin: 0;
+  font-size: clamp(1.8rem, 4vw, 3rem);
+}
+
+.ona-lab__heading > p {
+  max-width: 37rem;
+  margin: 0;
+  color: var(--color-text-secondary);
 }
 
 .ona-lab__toolbar {
@@ -1491,7 +1605,7 @@ const layerMeta = {
 }
 
 .ona-pause {
-  padding: clamp(1rem, 5vw, 2rem) 0;
+  padding: clamp(3.5rem, 9vw, 7rem) clamp(1rem, 5vw, 4rem);
   text-align: center;
 }
 
@@ -1530,7 +1644,11 @@ const layerMeta = {
 }
 
 .ona-reveal {
+  padding-block: clamp(2rem, 5vw, 4rem);
   border-left: 4px solid var(--color-primary);
+  background:
+    radial-gradient(circle at bottom right, rgb(116 43 57 / 0.12), transparent 28%),
+    linear-gradient(180deg, rgb(255 255 255 / 0.9), rgb(255 255 255 / 0.72));
 }
 
 .ona-reveal h2 {
@@ -1638,6 +1756,18 @@ const layerMeta = {
 }
 
 @media (min-width: 900px) {
+  .ona-hook__intro {
+    grid-template-columns: minmax(0, 1.55fr) minmax(15rem, 0.55fr);
+  }
+
+  .ona-hook__signal {
+    align-self: end;
+  }
+
+  .ona-lab__heading {
+    grid-template-columns: minmax(0, 1fr) minmax(18rem, 0.72fr);
+  }
+
   .ona-lab__body {
     grid-template-columns: minmax(0, 1.45fr) minmax(300px, 0.72fr);
   }
@@ -1653,7 +1783,11 @@ const layerMeta = {
 
 @media (max-width: 600px) {
   .ona-hook__intro h1 {
-    max-width: 11ch;
+    max-width: 12ch;
+  }
+
+  .ona-hook__actions .btn {
+    width: 100%;
   }
 
   .ona-lab__toolbar {

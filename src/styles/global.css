@@ -746,15 +746,6 @@ body :is(.post-back, .area-link, .card__link, .post-item__readmore):hover {
 }
 
 @media (min-width: 768px) {
-  .site-nav--desktop {
-    display: flex;
-    align-items: center;
-  }
-
-  .site-nav__mobile {
-    display: none;
-  }
-
   .site-footer__grid {
     grid-template-columns: minmax(14rem, 0.95fr) minmax(0, 1.55fr) minmax(11rem, 0.7fr);
   }
@@ -763,6 +754,17 @@ body :is(.post-back, .area-link, .card__link, .post-item__readmore):hover {
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
+  }
+}
+
+@media (min-width: 1100px) {
+  .site-nav--desktop {
+    display: flex;
+    align-items: center;
+  }
+
+  .site-nav__mobile {
+    display: none;
   }
 }
 
