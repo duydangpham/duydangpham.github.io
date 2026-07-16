@@ -133,17 +133,17 @@ const gallerySlots = [
       </div>
 
       <div class="hero-collage" aria-label="Khung ảnh cho giảng dạy và đào tạo">
-        <div class="photo-slot photo-slot--large">
+        <div class="photo-slot photo-slot--large photo-slot--portrait">
           <img src={heroImages.workshop} alt="Giảng dạy và workshop" loading="eager" />
           <span>Ảnh chính</span>
           <strong>Giảng dạy / workshop</strong>
         </div>
-        <div class="photo-slot">
+        <div class="photo-slot photo-slot--portrait">
           <img src={heroImages.seminar} alt="Seminar và chia sẻ công chúng" loading="lazy" />
           <span>Ảnh phụ</span>
           <strong>Seminar</strong>
         </div>
-        <div class="photo-slot photo-slot--accent">
+        <div class="photo-slot photo-slot--accent photo-slot--portrait">
           <img src={heroImages.corporate} alt="Đào tạo AI cho doanh nghiệp" loading="lazy" />
           <span>Ảnh phụ</span>
           <strong>Đào tạo doanh nghiệp</strong>
@@ -677,6 +677,10 @@ const gallerySlots = [
 
   .photo-slot--large {
     grid-row: auto;
+  }
+
+  .photo-slot--portrait img {
+    object-position: center 18%;
   }
 
   .academic-carousel,

@@ -7,7 +7,7 @@ const description =
 const canonicalUrl = '/su-kien';
 
 const ambrosiaUrl = 'https://ambrosia.vn/';
-const ambrosiaBookingUrl = 'https://ambrosia.vn/contact/#plan-an-event';
+const eventFormEndpoint = 'https://formspree.io/f/mzdndygb';
 const ambrosiaVenueUrl = 'https://ambrosia.vn/venue/';
 const ambrosiaCuisineUrl = 'https://ambrosia.vn/cuisine/';
 
@@ -113,9 +113,9 @@ const galleryImages = [
           khách hàng, và những buổi gặp mặt trang nhã của những người có gu.
         </p>
         <div class="ambrosia-actions">
-          <a class="btn btn--primary" href={ambrosiaBookingUrl} target="_blank" rel="noopener noreferrer">
+          <button class="btn btn--primary" type="button" data-event-booking-open>
             Đặt lịch sự kiện
-          </a>
+          </button>
           <a class="btn btn--secondary" href={ambrosiaUrl} target="_blank" rel="noopener noreferrer">
             Vào trang Ambrosia
           </a>
@@ -225,9 +225,9 @@ const galleryImages = [
       <p class="ambrosia-eyebrow">Dẫn về Ambrosia</p>
       <h2>Nếu cuộc gặp cần một căn phòng đẹp, một thực đơn ngon, và một không khí đúng chất, hãy để Ambrosia chuẩn bị.</h2>
       <div class="ambrosia-actions">
-        <a class="btn btn--primary" href={ambrosiaBookingUrl} target="_blank" rel="noopener noreferrer">
+        <button class="btn btn--primary" type="button" data-event-booking-open>
           Đặt lịch sự kiện
-        </a>
+        </button>
         <a class="btn btn--secondary" href={ambrosiaVenueUrl} target="_blank" rel="noopener noreferrer">
           Xem không gian
         </a>
@@ -237,6 +237,64 @@ const galleryImages = [
       </div>
     </section>
   </div>
+
+  <dialog class="booking-dialog" data-booking-dialog aria-labelledby="booking-dialog-title">
+    <div class="booking-dialog__panel">
+      <button class="booking-dialog__close" type="button" data-booking-close aria-label="Đóng form đặt lịch">
+        <span aria-hidden="true">×</span>
+      </button>
+
+      <div class="booking-dialog__intro">
+        <p class="ambrosia-eyebrow">Đặt lịch sự kiện</p>
+        <h2 id="booking-dialog-title">Hãy kể Ambrosia biết bạn đang chuẩn bị điều gì.</h2>
+        <p>Để lại thông tin liên hệ, đội ngũ Ambrosia sẽ phản hồi để cùng bạn lên kế hoạch phù hợp.</p>
+      </div>
+
+      <form class="booking-form" action={eventFormEndpoint} method="POST" data-booking-form novalidate>
+        <input type="hidden" name="_subject" value="Yêu cầu đặt lịch sự kiện từ website Dr. Duy Dang-Pham" />
+        <input class="booking-form__honeypot" type="text" name="_gotcha" tabindex="-1" autocomplete="off" aria-hidden="true" />
+
+        <label class="booking-field">
+          <span>Bạn muốn được gọi là gì? <em aria-hidden="true">*</em></span>
+          <input type="text" name="preferred_name" autocomplete="name" required placeholder="Tên hoặc cách xưng hô" />
+        </label>
+
+        <div class="booking-form__contact">
+          <label class="booking-field">
+            <span>Số điện thoại</span>
+            <input type="tel" name="phone" autocomplete="tel" inputmode="tel" placeholder="Ví dụ: 090 123 4567" />
+          </label>
+
+          <label class="booking-field">
+            <span>Email</span>
+            <input type="email" name="email" autocomplete="email" placeholder="name@example.com" />
+          </label>
+        </div>
+        <p class="booking-form__hint">Vui lòng cung cấp ít nhất số điện thoại hoặc email.</p>
+        <p class="booking-form__error" data-contact-error hidden>Hãy nhập số điện thoại hoặc email để Ambrosia có thể liên hệ với bạn.</p>
+
+        <label class="booking-field">
+          <span>Yêu cầu <small>(không bắt buộc)</small></span>
+          <textarea name="request" rows="4" placeholder="Loại sự kiện, số lượng khách, thời gian dự kiến hoặc điều bạn đang cần…"></textarea>
+        </label>
+
+        <p class="booking-form__privacy">Thông tin này chỉ được dùng để phản hồi yêu cầu đặt lịch của bạn.</p>
+        <p class="booking-form__status" data-booking-status role="status" aria-live="polite"></p>
+
+        <div class="booking-form__actions">
+          <button class="btn btn--primary" type="submit" data-booking-submit>Gửi yêu cầu</button>
+          <button class="btn btn--secondary" type="button" data-booking-close>Để sau</button>
+        </div>
+      </form>
+
+      <div class="booking-success" data-booking-success hidden>
+        <span aria-hidden="true">✓</span>
+        <h3>Cảm ơn bạn.</h3>
+        <p>Yêu cầu đã được gửi đến đội ngũ Ambrosia. Chúng tôi sẽ liên hệ lại qua thông tin bạn vừa cung cấp.</p>
+        <button class="btn btn--primary" type="button" data-booking-close>Hoàn tất</button>
+      </div>
+    </div>
+  </dialog>
 </BaseLayout>
 
 <style>
@@ -339,6 +397,225 @@ const galleryImages = [
 .ambrosia-actions .btn--secondary:hover {
   border-color: rgb(255 201 65 / 0.55);
   color: var(--ambrosia-gold);
+}
+
+.booking-dialog {
+  --ambrosia-ink: #071f20;
+  --ambrosia-deep: #004a59;
+  --ambrosia-green: #123d34;
+  --ambrosia-gold: #ffc941;
+  --ambrosia-soft-gold: #fdd79a;
+  --ambrosia-cream: #faf7ea;
+  overflow: hidden;
+  width: min(92vw, 660px);
+  max-height: none;
+  padding: 0;
+  border: 1px solid rgb(253 215 154 / 0.34);
+  border-radius: 26px;
+  background: transparent;
+  box-shadow: 0 30px 100px rgb(7 31 32 / 0.42);
+  color: var(--ambrosia-cream);
+}
+
+.booking-dialog[open] {
+  animation: booking-dialog-in 180ms ease-out;
+}
+
+.booking-dialog::backdrop {
+  background: rgb(7 31 32 / 0.72);
+  backdrop-filter: blur(8px);
+}
+
+.booking-dialog__panel {
+  position: relative;
+  overflow-y: auto;
+  max-height: min(90vh, 820px);
+  padding: clamp(1.25rem, 4vw, 2rem);
+  background:
+    radial-gradient(circle at top right, rgb(255 201 65 / 0.16), transparent 30%),
+    linear-gradient(155deg, #123d34, #071f20 72%);
+}
+
+.booking-dialog__close {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  z-index: 2;
+  display: grid;
+  width: 2.45rem;
+  height: 2.45rem;
+  padding: 0;
+  border: 1px solid rgb(253 215 154 / 0.28);
+  border-radius: 50%;
+  background: rgb(250 247 234 / 0.08);
+  color: var(--ambrosia-cream);
+  cursor: pointer;
+  font-size: 1.6rem;
+  line-height: 1;
+  place-items: center;
+}
+
+.booking-dialog__close:hover {
+  border-color: var(--ambrosia-gold);
+  color: var(--ambrosia-gold);
+}
+
+.booking-dialog__intro {
+  padding-right: 2.8rem;
+}
+
+.booking-dialog__intro h2 {
+  max-width: 15ch;
+  margin-bottom: 0.75rem;
+  color: var(--ambrosia-cream);
+  font-size: clamp(1.75rem, 4vw, 2.55rem);
+}
+
+.booking-dialog__intro > p:last-child,
+.booking-form__hint,
+.booking-form__privacy {
+  color: rgb(250 247 234 / 0.7);
+  line-height: 1.55;
+}
+
+.booking-form {
+  display: grid;
+  gap: 1rem;
+  margin-top: 1.4rem;
+}
+
+.booking-form__contact {
+  display: grid;
+  gap: 0.85rem;
+}
+
+.booking-field {
+  display: grid;
+  gap: 0.45rem;
+}
+
+.booking-field > span {
+  color: var(--ambrosia-cream);
+  font-size: 0.88rem;
+  font-weight: 750;
+}
+
+.booking-field em {
+  color: var(--ambrosia-gold);
+  font-style: normal;
+}
+
+.booking-field small {
+  color: rgb(250 247 234 / 0.58);
+  font-weight: 500;
+}
+
+.booking-field input,
+.booking-field textarea {
+  width: 100%;
+  padding: 0.82rem 0.9rem;
+  border: 1px solid rgb(253 215 154 / 0.24);
+  border-radius: 13px;
+  outline: none;
+  background: rgb(250 247 234 / 0.08);
+  color: var(--ambrosia-cream);
+  font: inherit;
+  transition: border-color 150ms ease, background 150ms ease, box-shadow 150ms ease;
+}
+
+.booking-field textarea {
+  min-height: 7rem;
+  resize: vertical;
+}
+
+.booking-field input::placeholder,
+.booking-field textarea::placeholder {
+  color: rgb(250 247 234 / 0.42);
+}
+
+.booking-field input:focus,
+.booking-field textarea:focus {
+  border-color: var(--ambrosia-gold);
+  background: rgb(250 247 234 / 0.12);
+  box-shadow: 0 0 0 3px rgb(255 201 65 / 0.12);
+}
+
+.booking-form__hint,
+.booking-form__error,
+.booking-form__privacy,
+.booking-form__status {
+  margin: -0.45rem 0 0;
+  font-size: 0.8rem;
+}
+
+.booking-form__error,
+.booking-form__status[data-state='error'] {
+  color: #ffcabf;
+}
+
+.booking-form__status {
+  min-height: 1.2em;
+}
+
+.booking-form__honeypot {
+  position: absolute;
+  left: -9999px;
+}
+
+.booking-form__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.booking-form__actions .btn--primary,
+.booking-success .btn--primary {
+  border-color: transparent;
+  background: var(--ambrosia-gold);
+  color: var(--ambrosia-ink);
+}
+
+.booking-form__actions .btn--secondary {
+  border-color: rgb(253 215 154 / 0.28);
+  background: transparent;
+  color: var(--ambrosia-cream);
+}
+
+.booking-success {
+  padding: clamp(2rem, 8vw, 4rem) 0;
+  text-align: center;
+}
+
+.booking-success > span {
+  display: grid;
+  width: 3.5rem;
+  height: 3.5rem;
+  margin: 0 auto 1rem;
+  border: 1px solid rgb(255 201 65 / 0.42);
+  border-radius: 50%;
+  background: rgb(255 201 65 / 0.12);
+  color: var(--ambrosia-gold);
+  font-size: 1.6rem;
+  place-items: center;
+}
+
+.booking-success h3 {
+  color: var(--ambrosia-cream);
+  font-size: 2rem;
+}
+
+.booking-success p {
+  max-width: 34rem;
+  margin: 0 auto 1.4rem;
+  color: rgb(250 247 234 / 0.74);
+  line-height: 1.65;
+}
+
+@keyframes booking-dialog-in {
+  from {
+    opacity: 0;
+    transform: translateY(12px) scale(0.98);
+  }
 }
 
 .ambrosia-collage {
@@ -619,6 +896,10 @@ const galleryImages = [
   .gallery-tile--tall {
     grid-row: auto;
   }
+
+  .booking-form__contact {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
 }
 
 @media (max-width: 620px) {
@@ -649,3 +930,88 @@ const galleryImages = [
   }
 }
 </style>
+
+<script>
+  const dialog = document.querySelector<HTMLDialogElement>('[data-booking-dialog]');
+  const form = document.querySelector<HTMLFormElement>('[data-booking-form]');
+  const success = document.querySelector<HTMLElement>('[data-booking-success]');
+  const status = document.querySelector<HTMLElement>('[data-booking-status]');
+  const contactError = document.querySelector<HTMLElement>('[data-contact-error]');
+  const submitButton = document.querySelector<HTMLButtonElement>('[data-booking-submit]');
+
+  if (dialog && form && success && status && contactError && submitButton) {
+    const phone = form.elements.namedItem('phone') as HTMLInputElement;
+    const email = form.elements.namedItem('email') as HTMLInputElement;
+
+    const resetDialog = () => {
+      form.reset();
+      form.hidden = false;
+      success.hidden = true;
+      contactError.hidden = true;
+      status.textContent = '';
+      delete status.dataset.state;
+      submitButton.disabled = false;
+      submitButton.textContent = 'Gửi yêu cầu';
+    };
+
+    document.querySelectorAll<HTMLButtonElement>('[data-event-booking-open]').forEach((button) => {
+      button.addEventListener('click', () => {
+        resetDialog();
+        dialog.showModal();
+        window.setTimeout(() => {
+          form.querySelector<HTMLInputElement>('input[name="preferred_name"]')?.focus();
+        }, 50);
+      });
+    });
+
+    document.querySelectorAll<HTMLButtonElement>('[data-booking-close]').forEach((button) => {
+      button.addEventListener('click', () => dialog.close());
+    });
+
+    dialog.addEventListener('click', (event) => {
+      if (event.target === dialog) dialog.close();
+    });
+
+    const validateContact = () => {
+      const hasContact = Boolean(phone.value.trim() || email.value.trim());
+      contactError.hidden = hasContact;
+      return hasContact;
+    };
+
+    phone.addEventListener('input', validateContact);
+    email.addEventListener('input', validateContact);
+
+    form.addEventListener('submit', async (event) => {
+      event.preventDefault();
+      status.textContent = '';
+      delete status.dataset.state;
+
+      if (!form.checkValidity() || !validateContact()) {
+        form.reportValidity();
+        return;
+      }
+
+      submitButton.disabled = true;
+      submitButton.textContent = 'Đang gửi…';
+
+      try {
+        const response = await fetch(form.action, {
+          method: 'POST',
+          body: new FormData(form),
+          headers: { Accept: 'application/json' },
+        });
+
+        if (!response.ok) throw new Error('Form submission failed');
+
+        form.hidden = true;
+        success.hidden = false;
+        success.querySelector<HTMLButtonElement>('button')?.focus();
+      } catch {
+        status.dataset.state = 'error';
+        status.textContent = 'Chưa thể gửi yêu cầu. Vui lòng thử lại sau ít phút.';
+        submitButton.disabled = false;
+        submitButton.textContent = 'Gửi yêu cầu';
+      }
+    });
+  }
+</script>

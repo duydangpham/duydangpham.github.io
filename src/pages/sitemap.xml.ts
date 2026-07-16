@@ -6,6 +6,10 @@ const SITE_URL = 'https://drduydangpham.com';
 
 const staticRoutes = [
   '/',
+  '/dao-tao/',
+  '/tu-van/',
+  '/su-kien/',
+  '/thuong-thuc/',
   '/gioi-thieu/',
   '/nghien-cuu/',
   '/netiq/',
