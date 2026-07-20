@@ -87,6 +87,66 @@ const deliverySteps = [
   },
 ];
 
+const caseChallenges = [
+  {
+    title: 'Ai thực sự có ảnh hưởng?',
+    text: 'Chức danh cao không đồng nghĩa với khả năng thay đổi hành vi người khác — người có ảnh hưởng thật thường không xuất hiện trên sơ đồ tổ chức.',
+  },
+  {
+    title: 'Thông tin di chuyển theo đường nào?',
+    text: 'Hành vi lan truyền qua mạng lưới quan hệ thật, không theo đường báo cáo chính thức.',
+  },
+  {
+    title: 'Điểm nghẽn nằm ở đâu?',
+    text: 'Một số phòng ban gần như biệt lập — thông tin không chảy tới, cơ hội phối hợp bị bỏ lỡ.',
+  },
+  {
+    title: 'Nên can thiệp ở đâu để tác động lớn nhất?',
+    text: 'Thay vì triển khai đại trà, tổ chức cần tìm đúng điểm kích hoạt trong mạng lưới.',
+  },
+];
+
+const caseApproach = [
+  {
+    label: 'Lập bản đồ mạng lưới thật',
+    text: 'Khảo sát toàn bộ 300+ nhân viên văn phòng để đo hai luồng quan hệ cốt lõi: ai được hỏi xin lời khuyên về an ninh mạng, và ai được tin tưởng đủ để thay đổi hành vi.',
+  },
+  {
+    label: 'Xác định Champion bằng thuật toán',
+    text: 'Phân tích dữ liệu mạng lưới để tìm nhân viên hội tụ 3 đặc điểm: mật độ kết nối cao, thường xuyên được tìm đến, và kết nối với người có ảnh hưởng khác. Kết quả: 50 Champion được xác định trong hơn 300 người.',
+  },
+  {
+    label: 'Triển khai và đo lường kết quả',
+    text: 'Dẫn dắt sự thay đổi thông qua các Champion đã xác định, sau đó đo lại toàn bộ mạng lưới để xác nhận tác động bằng dữ liệu — không phải cảm nhận chủ quan.',
+  },
+];
+
+const caseStats = [
+  { label: 'Trao đổi 2 chiều — mạng lưới tư vấn an ninh mạng', value: '+256%' },
+  { label: 'Trao đổi 2 chiều — mạng lưới hỗ trợ kỹ thuật', value: '+1.067%' },
+  { label: 'Trao đổi 2 chiều — mạng lưới ảnh hưởng hành vi', value: '+100%' },
+  { label: 'Phụ thuộc vào nhóm nhỏ cá nhân — tư vấn', value: '−44,5%' },
+  { label: 'Phụ thuộc vào nhóm nhỏ cá nhân — hỗ trợ kỹ thuật', value: '−42,2%' },
+  { label: 'Phụ thuộc vào nhóm nhỏ cá nhân — ảnh hưởng hành vi', value: '−31,6%' },
+];
+
+const influenceFactors = [
+  ['Cùng phòng ban với người bị ảnh hưởng', 'Sự gần gũi trong công việc hằng ngày quan trọng hơn vị trí trên sơ đồ tổ chức.'],
+  ['Trẻ tuổi hơn người bị ảnh hưởng', 'Tuổi trẻ không làm giảm ảnh hưởng — nằm ngoài kỳ vọng của chính ban lãnh đạo.'],
+  ['Cấp bậc cao hơn người bị ảnh hưởng', 'Một khoảng cách vừa phải tạo uy tín; không cần vị trí lãnh đạo cấp cao.'],
+  ['Thâm niên lâu hơn với tổ chức', 'Thâm niên tạo uy tín ngầm trong mắt đồng nghiệp.'],
+  ['Được chủ động tìm đến xin lời khuyên (yếu tố mạnh nhất)', 'Không đo được qua KPI hay chức danh — nhưng là yếu tố dự đoán mạnh nhất.'],
+];
+
+const championArchetypes = [
+  ['Expert (Chuyên gia)', 'Nguồn kiến thức đáng tin cậy nhất. Đồng nghiệp tìm đến không phải vì thân thiện hay tiện lợi — mà vì họ đúng.', heroImages.ai],
+  ['Connector (Người kết nối)', 'Kết nối các nhóm vốn không tương tác với nhau. Đứng ở đường ranh của tổ chức, di chuyển thông tin và cơ hội qua các ranh giới.', heroImages.ona],
+  ['Silo Buster (Người phá vỡ cô lập)', 'Phiên bản mạnh và chủ động hơn của Connector — chủ động phá vỡ một ranh giới cấu trúc cụ thể, thay vì tình cờ đứng giữa nó.', heroImages.software],
+  ['Amplifier (Người lan toả)', 'Một khi họ áp dụng một hành vi hay tư duy mới, nó lan ra rõ rệt trong cả nhóm — nhờ nằm sâu trong một cụm kết nối dày đặc.', softwareCapabilities[2].image],
+  ['Local Expert (Chuyên gia cục bộ)', 'Expert của riêng một nhóm hay lĩnh vực, không phải toàn tổ chức — được tin tưởng sâu sắc trong nhóm mình.', softwareCapabilities[1].image],
+  ['Mentor (Người dẫn dắt)', 'Được định nghĩa bởi sự cho đi bất đối xứng — hỗ trợ, tư vấn nhiều hơn nhận lại, thường không giữ vai trò quản lý chính thức.', softwareCapabilities[3].image],
+];
+
 ---
 
 <BaseLayout
@@ -182,7 +242,6 @@ const deliverySteps = [
           <article class="software-card">
             <div class="software-card__visual">
               <img src={item.image} alt={item.title} loading="lazy" />
-              <span>Ảnh minh hoạ</span>
             </div>
             <div class="software-card__body">
               <h3>{item.title}</h3>
@@ -207,6 +266,317 @@ const deliverySteps = [
           </article>
         ))}
       </div>
+    </section>
+
+    <section
+      class="consulting-section case-study"
+      aria-label="Case study: Từ mạng lưới vô hình đến kết quả đo được bằng con số"
+      data-case-story
+      tabindex="0"
+    >
+      <header class="case-study__toolbar">
+        <p class="consulting-eyebrow">Case study</p>
+        <p class="case-study__progress" aria-live="polite"><span data-case-current>01</span> / <span data-case-total>09</span></p>
+      </header>
+
+      <div class="case-study__viewport">
+        <div class="case-study__panel active" data-case-panel data-label="Tổng quan">
+          <header class="case-study__header">
+            <h2 id="case-study-title">Từ mạng lưới vô hình đến kết quả đo được bằng con số.</h2>
+            <p class="case-study__lead">
+              Một nhà thầu xây dựng &amp; nội thất hàng đầu Việt Nam — hơn 300 nhân viên văn phòng, hơn 1.000
+              công nhân kỹ thuật, 2 văn phòng, 3 nhà máy. Mục tiêu của ban lãnh đạo rất rõ: nâng nhận thức
+              an ninh mạng trong toàn tổ chức. Vấn đề không phải ngân sách hay cam kết — mà là không ai biết
+              nên nhắm vào ai, qua ai, hay bắt đầu từ đâu để tạo hiệu ứng lan toả rộng nhất.
+            </p>
+          </header>
+        </div>
+
+        <div class="case-study__panel case-study__block" data-case-panel data-label="Bài toán" hidden>
+        <div class="section-header">
+          <p class="consulting-eyebrow">Bài toán</p>
+          <h3>Muốn thay đổi hành vi, trước hết phải nhìn thấy mạng lưới thật.</h3>
+        </div>
+        <div class="question-grid">
+          {caseChallenges.map((item) => (
+            <article class="question-card case-question-card">
+              <h3>{item.title}</h3>
+              <p>{item.text}</p>
+            </article>
+          ))}
+        </div>
+      </div>
+
+        <div class="case-study__panel case-study__block" data-case-panel data-label="Cách tiếp cận" hidden>
+        <div class="section-header">
+          <p class="consulting-eyebrow">Cách tiếp cận</p>
+          <h3>Ba bước từ dữ liệu quan hệ đến can thiệp có thể kiểm chứng.</h3>
+        </div>
+        <div class="delivery-grid case-approach-grid">
+          {caseApproach.map((step, index) => (
+            <article class="delivery-step">
+              <span>{String(index + 1).padStart(2, '0')}</span>
+              <h3>{step.label}</h3>
+              <p>{step.text}</p>
+            </article>
+          ))}
+        </div>
+      </div>
+
+        <div class="case-study__panel case-study__block" data-case-panel data-label="Kết quả" hidden>
+        <div class="section-header">
+          <p class="consulting-eyebrow">Kết quả đo lường</p>
+          <h3>Mạng lưới trao đổi dày hơn, mức phụ thuộc vào một nhóm nhỏ giảm xuống.</h3>
+        </div>
+        <div class="case-stats" aria-label="Sáu kết quả định lượng của case study">
+          {caseStats.map((stat) => (
+            <article class="advisory-card case-stat">
+              <strong>{stat.value}</strong>
+              <p>{stat.label}</p>
+            </article>
+          ))}
+        </div>
+      </div>
+
+        <div class="case-study__panel case-study__block case-network" data-case-panel data-label="Before / After" data-ba hidden>
+        <div class="section-header">
+          <p class="consulting-eyebrow">Mạng lưới thay đổi</p>
+          <h3>So sánh cấu trúc quan hệ trước và sau can thiệp.</h3>
+        </div>
+        <div class="ba-toggle" role="group" aria-label="Chọn trạng thái mạng lưới">
+          <button class="btn btn--primary ba-btn active" type="button" data-state="before" aria-pressed="true">
+            Trước can thiệp
+          </button>
+          <button class="btn btn--secondary ba-btn" type="button" data-state="after" aria-pressed="false">
+            Sau can thiệp
+          </button>
+        </div>
+        <div class="ba-comparison-grid">
+          <section class="ba-visual" aria-labelledby="network-column-label">
+            <p class="ba-column-label" id="network-column-label">Network</p>
+            <div class="ba-frame">
+              <div class="ba-placeholder active" data-state="before" aria-hidden="true">
+                <span>Network before</span>
+                <strong>Thay bằng network-before.jpg</strong>
+              </div>
+              <div class="ba-placeholder" data-state="after" aria-hidden="true">
+                <span>Network after</span>
+                <strong>Thay bằng network-after.jpg</strong>
+              </div>
+              <img
+                src="/images/tu-van/case-study/network-before.jpg"
+                alt="Sơ đồ mạng lưới trước can thiệp"
+                class="ba-img active"
+                data-state="before"
+                loading="lazy"
+              />
+              <img
+                src="/images/tu-van/case-study/network-after.jpg"
+                alt="Sơ đồ mạng lưới sau can thiệp"
+                class="ba-img"
+                data-state="after"
+                loading="lazy"
+              />
+            </div>
+          </section>
+
+          <aside class="ba-interpretation" aria-labelledby="interpretation-column-label" aria-live="polite">
+            <p class="ba-column-label" id="interpretation-column-label">Diễn giải</p>
+
+            <div class="ba-reading active" data-state="before">
+              <span class="ba-reading__state">Trước can thiệp</span>
+              <h4>Thông tin tập trung — và dễ mắc kẹt.</h4>
+              <p>
+                Mạng lưới phụ thuộc nặng vào hai đầu mối IT. Những gì tổ chức biết về an ninh mạng phải đi qua
+                một số rất ít người trước khi chạm tới phần còn lại.
+              </p>
+              <ul>
+                <li><strong>Hai điểm nghẽn:</strong> khối lượng trao đổi dồn vào một nhóm nhỏ.</li>
+                <li><strong>Các cụm biệt lập:</strong> nhiều phòng ban gần như không có cầu nối trực tiếp.</li>
+                <li><strong>Rủi ro lan toả thấp:</strong> thông điệp dễ dừng lại trước khi trở thành hành vi.</li>
+              </ul>
+              <div class="ba-reading__takeaway">
+                <span>Hàm ý</span>
+                <p>Đào tạo đại trà chưa đủ; tổ chức cần kích hoạt đúng người ở đúng vị trí mạng lưới.</p>
+              </div>
+            </div>
+
+            <div class="ba-reading" data-state="after" hidden>
+              <span class="ba-reading__state">Sau can thiệp</span>
+              <h4>Ảnh hưởng được phân phối rộng hơn.</h4>
+              <p>
+                Sau khi các Champion được kích hoạt, trao đổi không còn chỉ xoay quanh IT. Mỗi phòng ban bắt
+                đầu hình thành năng lực hỗ trợ và ảnh hưởng ngay trong cụm của mình.
+              </p>
+              <ul>
+                <li><strong>Nhiều trung tâm cục bộ:</strong> kiến thức hiện diện gần nơi công việc diễn ra.</li>
+                <li><strong>Cầu nối rõ hơn:</strong> thông tin có thêm đường đi qua ranh giới phòng ban.</li>
+                <li><strong>Ít phụ thuộc cá nhân:</strong> mạng lưới vẫn vận hành khi một đầu mối vắng mặt.</li>
+              </ul>
+              <div class="ba-reading__takeaway">
+                <span>Hàm ý</span>
+                <p>Champion biến thay đổi từ một chiến dịch tập trung thành năng lực phân tán của tổ chức.</p>
+              </div>
+            </div>
+          </aside>
+        </div>
+      </div>
+
+        <div class="case-study__panel" data-case-panel data-label="Kiểm chứng" hidden>
+          <div class="verification-panel">
+            <header class="verification-panel__header">
+              <div>
+                <p class="consulting-eyebrow">Kiểm chứng tác động</p>
+                <h3>Sao biết chắc là do Champion?</h3>
+              </div>
+              <p>Không dừng ở tương quan. Phân tích chuỗi thời gian kiểm tra cơ chế thay đổi qua từng chu kỳ đo lường.</p>
+            </header>
+
+            <div class="verification-panel__body">
+              <div class="verification-hypotheses">
+                <p class="verification-label">Hai khả năng cần tách biệt</p>
+                <article>
+                  <span>A</span>
+                  <div>
+                    <h4>Champion chỉ kết nối với người vốn đã tốt.</h4>
+                    <p>Nếu đúng, mạng lưới chỉ phản ánh quan hệ có sẵn — không tạo ra giá trị mới.</p>
+                  </div>
+                </article>
+                <article class="is-supported">
+                  <span>B</span>
+                  <div>
+                    <h4>Champion chủ động tạo ra thay đổi.</h4>
+                    <p>Kiến thức và hành vi của người xung quanh tiến bộ dần theo thời gian.</p>
+                  </div>
+                </article>
+              </div>
+
+              <div class="verification-evidence">
+                <p class="verification-label">Dữ liệu trả lời</p>
+                <article>
+                  <span>01</span>
+                  <div><h4>Loại trừ selection bias</h4><p>Champion không ưu tiên kết nối với người vốn đã có nhận thức cao.</p></div>
+                </article>
+                <article>
+                  <span>02</span>
+                  <div><h4>Tác động vượt trội</h4><p>Khả năng chia sẻ kiến thức và tạo ảnh hưởng cao hơn rõ rệt so với nhân viên thông thường.</p></div>
+                </article>
+                <article>
+                  <span>03</span>
+                  <div><h4>Thay đổi có thể đo được</h4><p>Nhận thức quanh Champion tăng tích cực qua nhiều chu kỳ liên tiếp.</p></div>
+                </article>
+              </div>
+            </div>
+
+            <footer class="verification-verdict">
+              <span>Kết luận</span>
+              <strong>Tác động được chứng minh bằng dữ liệu định lượng — không phải đánh giá chủ quan.</strong>
+            </footer>
+          </div>
+        </div>
+
+        <div class="case-study__panel" data-case-panel data-label="Phương pháp" hidden>
+          <div class="section-header">
+            <p class="consulting-eyebrow">Phương pháp</p>
+            <h3>Cách NetIQ lập bản đồ và xác định Champion.</h3>
+          </div>
+          <div class="method-content method-content--visible">
+            <div class="method-story-grid">
+              <article>
+                <span>01 · Map</span>
+                <h4>Công việc thực sự diễn ra thế nào?</h4>
+                <p>ONA lập bản đồ ai được hỏi xin lời khuyên, ai hợp tác với ai và ai hỗ trợ ai — thay vì dựa vào sơ đồ tổ chức hay tự đánh giá năng lực.</p>
+              </article>
+              <article>
+                <span>02 · Multiplex</span>
+                <h4>Mỗi quan hệ là một lớp dữ liệu riêng.</h4>
+                <p>Các lớp quan hệ được lập bản đồ và đối chiếu cùng lúc, không bị gộp thành một biểu đồ “ai biết ai” duy nhất.</p>
+              </article>
+              <article>
+                <span>03 · Score</span>
+                <h4>Champion được xác định từ hai nguồn bằng chứng.</h4>
+                <p>Điều kiện hành vi được kết hợp với vị trí mạng lưới tính bằng thuật toán độc quyền của NetIQ.</p>
+              </article>
+            </div>
+            <div class="method-table-wrap">
+              <table class="method-table">
+                <caption>Điều gì dự đoán khả năng ảnh hưởng?</caption>
+                <thead>
+                  <tr><th>Yếu tố</th><th>Vì sao quan trọng</th></tr>
+                </thead>
+                <tbody>
+                  {influenceFactors.map(([factor, reason]) => (
+                    <tr><th scope="row">{factor}</th><td>{reason}</td></tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+
+        <div class="case-study__panel" data-case-panel data-label="Archetypes" hidden>
+          <div class="section-header">
+            <p class="consulting-eyebrow">Champion archetypes</p>
+            <h3 id="archetype-title">Sáu vai trò tạo nên một mạng lưới thay đổi.</h3>
+          </div>
+          <div class="archetype-grid">
+            {championArchetypes.map(([name, text, image]) => (
+              <article class="advisory-card archetype-card">
+                <img src={image} alt="" loading="lazy" aria-hidden="true" />
+                <div class="archetype-card__body">
+                  <h4>{name}</h4>
+                  <p>{text}</p>
+                </div>
+              </article>
+            ))}
+          </div>
+          <p class="archetype-note">
+            Một chương trình Champion hiếm khi chỉ cần một kiểu người. Hai người có thể có số lượng kết nối
+            giống hệt nhau nhưng đóng vai trò hoàn toàn khác nhau, tuỳ vào việc những kết nối đó nằm ở đâu và
+            chảy theo hướng nào.
+          </p>
+        </div>
+
+        <div class="case-study__panel case-summary" data-case-panel data-label="Summary" hidden>
+          <div class="section-header">
+            <p class="consulting-eyebrow">Summary</p>
+            <h3>ONA biến một chương trình thay đổi đại trà thành can thiệp đúng người, đúng mạng lưới.</h3>
+          </div>
+          <div class="advisory-grid case-summary__grid">
+            <article class="advisory-card">
+              <span>01 · Nhìn thấy</span>
+              <h4>Ảnh hưởng thật không nằm trên sơ đồ tổ chức.</h4>
+              <p>ONA làm lộ ra đường đi của lời khuyên, niềm tin và khả năng thay đổi hành vi trong hơn 300 nhân viên văn phòng.</p>
+            </article>
+            <article class="advisory-card">
+              <span>02 · Kích hoạt</span>
+              <h4>50 Champion tạo thành hạ tầng lan toả.</h4>
+              <p>Thuật toán chọn đúng những người vừa được tìm đến, vừa có kết nối dày và có khả năng nối tới các cụm ảnh hưởng khác.</p>
+            </article>
+            <article class="advisory-card">
+              <span>03 · Đo lường</span>
+              <h4>Trao đổi hai chiều tăng tới +1.067%.</h4>
+              <p>Ba mạng lưới tư vấn, hỗ trợ kỹ thuật và ảnh hưởng hành vi đều trở nên dày hơn sau can thiệp.</p>
+            </article>
+            <article class="advisory-card">
+              <span>04 · Bền vững</span>
+              <h4>Mức phụ thuộc vào nhóm nhỏ giảm tới 44,5%.</h4>
+              <p>Tri thức và hỗ trợ được phân tán rộng hơn, giúp tổ chức ít lệ thuộc vào một vài đầu mối trung tâm.</p>
+            </article>
+          </div>
+          <aside class="case-callout case-summary__closing">
+            <p class="consulting-eyebrow">Kết luận</p>
+            <h3>Champion không chỉ được tìm thấy — tác động của họ được chứng minh.</h3>
+            <p>Phân tích chuỗi thời gian xác nhận thay đổi nhận thức diễn ra quanh Champion qua nhiều chu kỳ đo lường, thay vì chỉ phản ánh những quan hệ vốn đã tồn tại từ trước.</p>
+          </aside>
+        </div>
+      </div>
+
+      <nav class="case-study__nav" aria-label="Điều hướng case study">
+        <button class="btn btn--secondary case-nav-btn" type="button" data-case-prev disabled>← Quay lại</button>
+        <span class="case-study__step-label" data-case-label>Tổng quan</span>
+        <button class="btn btn--primary case-nav-btn" type="button" data-case-next>Tiếp theo →</button>
+      </nav>
     </section>
 
     <section class="consulting-cta">
@@ -540,17 +910,6 @@ const deliverySteps = [
   z-index: 2;
 }
 
-.software-card__visual span {
-  position: relative;
-  z-index: 3;
-  color: #fff;
-  font-family: var(--font-mono);
-  font-size: 0.72rem;
-  font-weight: 800;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-}
-
 .software-card__body {
   display: flex;
   min-height: 0;
@@ -569,6 +928,739 @@ const deliverySteps = [
   line-height: 1.62;
 }
 
+.case-study {
+  display: grid;
+  gap: 1rem;
+  scroll-margin-top: 7rem;
+  background:
+    radial-gradient(circle at top right, rgb(185 137 68 / 0.18), transparent 28%),
+    linear-gradient(135deg, rgb(116 43 57 / 0.08), rgb(255 255 255 / 0.8));
+}
+
+.case-study:focus {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 3px;
+}
+
+.case-study__toolbar,
+.case-study__nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.8rem;
+}
+
+.case-study__toolbar .consulting-eyebrow {
+  margin: 0;
+}
+
+.case-study__progress {
+  margin: 0;
+  color: var(--color-primary);
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+}
+
+.case-study__viewport {
+  display: grid;
+  align-items: center;
+  min-width: 0;
+  min-height: clamp(28rem, 56vh, 40rem);
+}
+
+.case-study__panel {
+  min-width: 0;
+  animation: case-panel-enter 280ms ease both;
+}
+
+.case-study__panel[hidden] {
+  display: none;
+}
+
+@keyframes case-panel-enter {
+  from {
+    opacity: 0;
+    transform: translateY(0.45rem);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.case-study__nav {
+  grid-row: 2;
+  padding: 0.7rem;
+  border: 1px solid rgb(20 24 33 / 0.1);
+  border-radius: 999px;
+  background: rgb(255 255 255 / 0.72);
+}
+
+.case-study__viewport {
+  grid-row: 3;
+}
+
+.case-nav-btn {
+  padding: 0.72rem 1rem;
+  font-size: 0.86rem;
+}
+
+.case-nav-btn:disabled {
+  cursor: not-allowed;
+  opacity: 0.38;
+}
+
+.case-study__step-label {
+  overflow: hidden;
+  color: var(--color-text-secondary);
+  font-size: 0.86rem;
+  font-weight: 700;
+  text-align: center;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.case-study__header {
+  display: grid;
+  gap: 0.85rem;
+  max-width: 62rem;
+}
+
+.case-study__header .consulting-eyebrow,
+.case-study__block .consulting-eyebrow,
+.case-callout .consulting-eyebrow {
+  margin-bottom: 0;
+}
+
+.case-study__header h2 {
+  max-width: 22ch;
+}
+
+.case-study__lead {
+  max-width: 72ch;
+  margin: 0;
+  color: var(--color-text-secondary);
+  font-size: clamp(1rem, 1.7vw, 1.16rem);
+  line-height: 1.72;
+}
+
+.case-study__block {
+  min-width: 0;
+}
+
+.case-study__block > .section-header h3 {
+  max-width: 28ch;
+  margin: 0;
+  font-size: clamp(1.4rem, 2.6vw, 2.05rem);
+}
+
+.case-question-card {
+  align-content: start;
+}
+
+.case-question-card h3 {
+  margin: 0 0 0.65rem;
+  font-size: clamp(1.08rem, 1.6vw, 1.26rem);
+  line-height: 1.3;
+}
+
+.case-question-card p {
+  color: var(--color-text-secondary);
+  font-size: 0.95rem;
+  font-weight: 400;
+  line-height: 1.62;
+}
+
+.case-stats {
+  display: grid;
+  gap: 0.8rem;
+}
+
+.case-stat {
+  justify-content: space-between;
+  min-height: 10rem;
+}
+
+.case-stat strong {
+  color: var(--color-primary);
+  font-size: clamp(2rem, 4vw, 3.4rem);
+  line-height: 1;
+}
+
+.case-stat p {
+  max-width: 27ch;
+  font-size: 0.9rem;
+  line-height: 1.45;
+}
+
+.case-network {
+  display: grid;
+  justify-items: stretch;
+  gap: 1rem;
+}
+
+.case-network .section-header {
+  width: 100%;
+}
+
+.ba-toggle {
+  display: grid;
+  width: min(100%, 27rem);
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  justify-self: start;
+}
+
+.ba-btn {
+  min-width: 0;
+  padding: 0.72rem 0.9rem;
+  border-radius: 0;
+  font-size: 0.88rem;
+  white-space: nowrap;
+}
+
+.ba-btn:first-child {
+  border-radius: 999px 0 0 999px;
+}
+
+.ba-btn:last-child {
+  border-radius: 0 999px 999px 0;
+}
+
+.ba-comparison-grid {
+  display: grid;
+  width: 100%;
+  gap: clamp(1rem, 2.4vw, 1.6rem);
+  align-items: stretch;
+}
+
+.ba-visual,
+.ba-interpretation {
+  min-width: 0;
+  padding: clamp(1rem, 2vw, 1.35rem);
+  border: 1px solid rgb(20 24 33 / 0.08);
+  border-radius: 20px;
+  background: rgb(255 255 255 / 0.72);
+}
+
+.ba-visual {
+  display: grid;
+  gap: 0.8rem;
+  align-content: start;
+}
+
+.ba-column-label {
+  margin: 0;
+  color: var(--color-primary);
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  font-weight: 800;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.ba-frame {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  border: 0;
+  border-radius: 16px;
+  background: #fff;
+  box-shadow: 0 16px 40px rgb(74 22 33 / 0.08);
+}
+
+.ba-img,
+.ba-placeholder {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 350ms ease;
+}
+
+.ba-img {
+  z-index: 2;
+  object-fit: contain;
+}
+
+.ba-img[hidden] {
+  display: none;
+}
+
+.ba-placeholder {
+  display: grid;
+  align-content: center;
+  justify-items: center;
+  padding: 1rem;
+  background:
+    radial-gradient(circle at 28% 35%, rgb(116 43 57 / 0.18), transparent 18%),
+    radial-gradient(circle at 68% 58%, rgb(185 137 68 / 0.18), transparent 20%),
+    linear-gradient(135deg, rgb(116 43 57 / 0.06), rgb(255 255 255 / 0.76));
+  color: var(--color-text-secondary);
+  text-align: center;
+}
+
+.ba-placeholder::before {
+  width: min(55%, 26rem);
+  aspect-ratio: 2 / 1;
+  border: 1px dashed rgb(116 43 57 / 0.36);
+  border-radius: 50%;
+  content: '';
+}
+
+.ba-placeholder span {
+  margin-top: -1.2rem;
+  color: var(--color-primary);
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.ba-placeholder strong {
+  margin-top: 0.35rem;
+  font-size: 0.9rem;
+}
+
+.ba-img.active,
+.ba-placeholder.active {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.ba-placeholder.has-image {
+  opacity: 0;
+}
+
+.ba-interpretation {
+  display: grid;
+  gap: 0.8rem;
+  align-content: start;
+  background:
+    radial-gradient(circle at 100% 0%, rgb(185 137 68 / 0.13), transparent 35%),
+    rgb(255 255 255 / 0.9);
+}
+
+.ba-reading {
+  display: grid;
+  gap: 0.85rem;
+}
+
+.ba-reading[hidden] {
+  display: none;
+}
+
+.ba-reading__state {
+  width: fit-content;
+  padding: 0.38rem 0.65rem;
+  border-radius: 999px;
+  background: rgb(116 43 57 / 0.1);
+  color: var(--color-primary);
+  font-size: 0.72rem;
+  font-weight: 800;
+}
+
+.ba-reading h4 {
+  margin: 0;
+  font-size: clamp(1.35rem, 2.3vw, 1.85rem);
+  line-height: 1.12;
+}
+
+.ba-reading > p {
+  margin: 0;
+  color: var(--color-text-secondary);
+  line-height: 1.65;
+}
+
+.ba-reading ul {
+  display: grid;
+  gap: 0.65rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.ba-reading li {
+  position: relative;
+  padding-left: 1.1rem;
+  color: var(--color-text-secondary);
+  font-size: 0.9rem;
+  line-height: 1.5;
+}
+
+.ba-reading li::before {
+  position: absolute;
+  top: 0.55em;
+  left: 0;
+  width: 0.38rem;
+  height: 0.38rem;
+  border-radius: 50%;
+  background: var(--color-accent);
+  content: '';
+}
+
+.ba-reading li strong {
+  color: var(--color-text);
+}
+
+.ba-reading__takeaway {
+  display: grid;
+  gap: 0.3rem;
+  margin-top: 0.15rem;
+  padding: 0.9rem 1rem;
+  border-left: 3px solid var(--color-primary);
+  border-radius: 0 14px 14px 0;
+  background: rgb(116 43 57 / 0.06);
+}
+
+.ba-reading__takeaway span {
+  color: var(--color-primary);
+  font-family: var(--font-mono);
+  font-size: 0.65rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.ba-reading__takeaway p {
+  margin: 0;
+  font-weight: 700;
+  line-height: 1.45;
+}
+
+.case-callout {
+  padding: clamp(1.2rem, 3vw, 1.8rem);
+  border-left: 4px solid var(--color-primary);
+  border-radius: 0 20px 20px 0;
+  background: rgb(185 137 68 / 0.1);
+}
+
+.case-callout h3 {
+  margin: 0.45rem 0 0.7rem;
+  font-size: clamp(1.5rem, 2.8vw, 2.2rem);
+}
+
+.case-callout p:last-child {
+  max-width: 78ch;
+  margin: 0;
+  color: var(--color-text-secondary);
+  line-height: 1.72;
+}
+
+.verification-panel {
+  overflow: hidden;
+  display: grid;
+  gap: clamp(1.2rem, 3vw, 2rem);
+  padding: clamp(1.2rem, 3vw, 2rem);
+  border-radius: 24px;
+  background:
+    radial-gradient(circle at 88% 8%, rgb(185 137 68 / 0.28), transparent 28%),
+    linear-gradient(135deg, rgb(74 22 33 / 0.98), rgb(116 43 57 / 0.94));
+  color: #fff;
+}
+
+.verification-panel__header {
+  display: grid;
+  gap: 1rem;
+  align-items: end;
+}
+
+.verification-panel__header .consulting-eyebrow {
+  color: var(--color-accent-light);
+}
+
+.verification-panel__header h3 {
+  max-width: 17ch;
+  margin: 0;
+  color: #fff;
+  font-size: clamp(1.8rem, 4vw, 3.4rem);
+  line-height: 1.02;
+}
+
+.verification-panel__header > p {
+  max-width: 34rem;
+  margin: 0;
+  color: rgb(255 255 255 / 0.72);
+  line-height: 1.65;
+}
+
+.verification-panel__body {
+  display: grid;
+  gap: 1rem;
+}
+
+.verification-label {
+  margin: 0 0 0.7rem;
+  color: var(--color-accent-light);
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.verification-hypotheses,
+.verification-evidence {
+  padding: 1rem;
+  border: 1px solid rgb(255 255 255 / 0.14);
+  border-radius: 20px;
+  background: rgb(255 255 255 / 0.06);
+}
+
+.verification-hypotheses article,
+.verification-evidence article {
+  display: grid;
+  gap: 0.8rem;
+  grid-template-columns: auto minmax(0, 1fr);
+}
+
+.verification-hypotheses article {
+  padding: 0.9rem;
+  border-radius: 15px;
+  background: rgb(255 255 255 / 0.08);
+}
+
+.verification-hypotheses article + article {
+  margin-top: 0.7rem;
+}
+
+.verification-hypotheses article.is-supported {
+  background: rgb(185 137 68 / 0.22);
+  box-shadow: inset 0 0 0 1px rgb(235 204 148 / 0.24);
+}
+
+.verification-hypotheses article > span,
+.verification-evidence article > span {
+  color: var(--color-accent-light);
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  font-weight: 800;
+}
+
+.verification-panel h4 {
+  margin: 0 0 0.35rem;
+  color: #fff;
+  font-size: 1rem;
+  line-height: 1.35;
+}
+
+.verification-panel article p {
+  margin: 0;
+  color: rgb(255 255 255 / 0.68);
+  font-size: 0.88rem;
+  line-height: 1.55;
+}
+
+.verification-evidence article {
+  padding: 0.8rem 0;
+  border-bottom: 1px solid rgb(255 255 255 / 0.12);
+}
+
+.verification-evidence article:last-child {
+  padding-bottom: 0;
+  border-bottom: 0;
+}
+
+.verification-verdict {
+  display: grid;
+  gap: 0.55rem;
+  padding: 1rem 1.1rem;
+  border-radius: 18px;
+  background: #fff;
+  color: var(--color-text-primary);
+}
+
+.verification-verdict span {
+  color: var(--color-primary);
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.verification-verdict strong {
+  max-width: 54rem;
+  font-size: clamp(1rem, 2vw, 1.3rem);
+  line-height: 1.4;
+}
+
+.method-content {
+  color: var(--color-text-secondary);
+}
+
+.method-content--visible {
+  padding: clamp(1rem, 2.4vw, 1.5rem);
+  border: 1px solid rgb(20 24 33 / 0.1);
+  border-radius: 20px;
+  background: rgb(255 255 255 / 0.62);
+}
+
+.method-story-grid {
+  display: grid;
+  gap: 0.8rem;
+}
+
+.method-story-grid article {
+  position: relative;
+  min-height: 12rem;
+  padding: 1rem;
+  border: 1px solid rgb(20 24 33 / 0.1);
+  border-radius: 18px;
+  background:
+    radial-gradient(circle at top right, rgb(185 137 68 / 0.13), transparent 34%),
+    rgb(255 255 255 / 0.74);
+}
+
+.method-story-grid span {
+  color: var(--color-primary);
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.method-story-grid h4 {
+  margin: 1.6rem 0 0.55rem;
+  color: var(--color-text-primary);
+  font-size: clamp(1.05rem, 1.7vw, 1.32rem);
+  line-height: 1.3;
+}
+
+.method-story-grid p {
+  margin: 0;
+  color: var(--color-text-secondary);
+  font-size: 0.9rem;
+  line-height: 1.58;
+}
+
+.method-content > p {
+  max-width: 78ch;
+  line-height: 1.72;
+}
+
+.method-table-wrap {
+  overflow-x: auto;
+  margin-top: 1.3rem;
+}
+
+.method-table {
+  width: 100%;
+  min-width: 42rem;
+  border-collapse: collapse;
+  color: var(--color-text-secondary);
+  font-size: 0.9rem;
+  line-height: 1.5;
+}
+
+.method-table caption {
+  padding-bottom: 0.75rem;
+  color: var(--color-text-primary);
+  font-size: 1.08rem;
+  font-weight: 750;
+  text-align: left;
+}
+
+.method-table th,
+.method-table td {
+  padding: 0.8rem;
+  border: 1px solid rgb(20 24 33 / 0.1);
+  text-align: left;
+  vertical-align: top;
+}
+
+.method-table thead th,
+.method-table tbody th {
+  color: var(--color-text-primary);
+}
+
+.archetype-grid {
+  display: grid;
+  gap: 0.8rem;
+}
+
+.archetype-card {
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  min-height: 15rem;
+  align-items: end;
+  padding: 0;
+  background: var(--color-primary-dark);
+  color: #fff;
+}
+
+.archetype-card::after {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  background: linear-gradient(180deg, rgb(30 13 20 / 0.26), rgb(48 17 26 / 0.92));
+  content: '';
+}
+
+.archetype-card > img {
+  position: absolute;
+  inset: -0.5rem;
+  width: calc(100% + 1rem);
+  height: calc(100% + 1rem);
+  object-fit: cover;
+  filter: blur(4px) saturate(0.72);
+  opacity: 0.62;
+  transform: scale(1.04);
+}
+
+.archetype-card__body {
+  position: relative;
+  z-index: 2;
+  padding: 1.1rem;
+}
+
+.archetype-card h4 {
+  margin: 0 0 0.6rem;
+  color: #fff;
+  font-size: clamp(1.12rem, 1.7vw, 1.35rem);
+  line-height: 1.25;
+}
+
+.archetype-card p {
+  margin: 0;
+  color: rgb(255 255 255 / 0.82);
+  line-height: 1.62;
+}
+
+.archetype-note {
+  max-width: 82ch;
+  margin: 0.5rem 0 0;
+  color: var(--color-text-secondary);
+  line-height: 1.7;
+}
+
+.case-summary {
+  display: grid;
+  gap: 1rem;
+}
+
+.case-summary__grid {
+  align-items: stretch;
+}
+
+.case-summary__grid .advisory-card h4 {
+  margin: 0.55rem 0;
+  font-size: clamp(1.1rem, 1.7vw, 1.35rem);
+  line-height: 1.3;
+}
+
+.case-summary__closing {
+  margin-top: 0.25rem;
+}
+
 .consulting-cta {
   display: grid;
   gap: 0.9rem;
@@ -579,6 +1671,10 @@ const deliverySteps = [
 }
 
 @media (min-width: 820px) {
+  .ba-comparison-grid {
+    grid-template-columns: minmax(0, 1.08fr) minmax(18rem, 0.92fr);
+  }
+
   .consulting-hero {
     grid-template-columns: minmax(0, 1fr) minmax(360px, 0.76fr);
   }
@@ -601,11 +1697,40 @@ const deliverySteps = [
   .section-header--inline {
     grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
   }
+
+  .case-approach-grid,
+  .archetype-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .case-stats {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .case-summary__grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .verification-panel__header {
+    grid-template-columns: minmax(0, 1fr) minmax(18rem, 0.7fr);
+  }
+
+  .verification-panel__body {
+    grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
+  }
+
+  .method-story-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
 }
 
 @media (min-width: 1080px) {
   .delivery-grid {
     grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+
+  .case-approach-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 }
 
@@ -627,5 +1752,134 @@ const deliverySteps = [
   .software-carousel {
     grid-auto-columns: minmax(245px, 82vw);
   }
+
+  .ba-btn {
+    padding-inline: 0.55rem;
+    font-size: 0.78rem;
+  }
+
+  .ba-frame {
+    aspect-ratio: 4 / 3;
+  }
+
+  .case-study__nav {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .case-study__step-label {
+    display: none;
+  }
+
+  .case-nav-btn {
+    width: 100%;
+  }
+}
+
+@media (min-width: 560px) and (max-width: 819px) {
+  .case-stats,
+  .archetype-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
 }
 </style>
+
+<script>
+  const caseStates = ['before', 'after'] as const;
+  type CaseState = (typeof caseStates)[number];
+
+  document.querySelectorAll<HTMLElement>('[data-ba]').forEach((component) => {
+    const buttons = component.querySelectorAll<HTMLButtonElement>('.ba-btn');
+    const images = component.querySelectorAll<HTMLImageElement>('.ba-img');
+    const placeholders = component.querySelectorAll<HTMLElement>('.ba-placeholder');
+    const readings = component.querySelectorAll<HTMLElement>('.ba-reading');
+
+    const setState = (state: CaseState) => {
+      buttons.forEach((button) => {
+        const isActive = button.dataset.state === state;
+        button.classList.toggle('active', isActive);
+        button.classList.toggle('btn--primary', isActive);
+        button.classList.toggle('btn--secondary', !isActive);
+        button.setAttribute('aria-pressed', String(isActive));
+      });
+      images.forEach((image) => image.classList.toggle('active', image.dataset.state === state));
+      placeholders.forEach((placeholder) =>
+        placeholder.classList.toggle('active', placeholder.dataset.state === state),
+      );
+      readings.forEach((reading) => {
+        const isActive = reading.dataset.state === state;
+        reading.classList.toggle('active', isActive);
+        reading.hidden = !isActive;
+      });
+    };
+
+    images.forEach((image) => {
+      const placeholder = component.querySelector<HTMLElement>(
+        `.ba-placeholder[data-state="${image.dataset.state}"]`,
+      );
+      const showImage = () => placeholder?.classList.add('has-image');
+      const hideImage = () => {
+        image.hidden = true;
+        placeholder?.classList.remove('has-image');
+      };
+
+      image.addEventListener('load', showImage);
+      image.addEventListener('error', hideImage);
+      if (image.complete) image.naturalWidth > 0 ? showImage() : hideImage();
+    });
+
+    buttons.forEach((button) =>
+      button.addEventListener('click', () => setState(button.dataset.state as CaseState)),
+    );
+  });
+
+  document.querySelectorAll<HTMLElement>('[data-case-story]').forEach((story) => {
+    const panels = Array.from(story.querySelectorAll<HTMLElement>('[data-case-panel]'));
+    const previousButton = story.querySelector<HTMLButtonElement>('[data-case-prev]');
+    const nextButton = story.querySelector<HTMLButtonElement>('[data-case-next]');
+    const currentStep = story.querySelector<HTMLElement>('[data-case-current]');
+    const totalSteps = story.querySelector<HTMLElement>('[data-case-total]');
+    const stepLabel = story.querySelector<HTMLElement>('[data-case-label]');
+    let activeIndex = 0;
+
+    const showPanel = (nextIndex: number, shouldScroll = true) => {
+      activeIndex = Math.max(0, Math.min(nextIndex, panels.length - 1));
+
+      panels.forEach((panel, index) => {
+        const isActive = index === activeIndex;
+        panel.hidden = !isActive;
+        panel.classList.toggle('active', isActive);
+        panel.setAttribute('aria-hidden', String(!isActive));
+      });
+
+      if (currentStep) currentStep.textContent = String(activeIndex + 1).padStart(2, '0');
+      if (stepLabel) stepLabel.textContent = panels[activeIndex]?.dataset.label ?? '';
+      if (previousButton) previousButton.disabled = activeIndex === 0;
+      if (nextButton) nextButton.disabled = activeIndex === panels.length - 1;
+
+      if (shouldScroll) {
+        story.scrollIntoView({ behavior: 'auto', block: 'start' });
+      }
+    };
+
+    previousButton?.addEventListener('click', () => showPanel(activeIndex - 1));
+    nextButton?.addEventListener('click', () => showPanel(activeIndex + 1));
+
+    story.addEventListener('keydown', (event) => {
+      const target = event.target as HTMLElement;
+      if (target.closest('button, summary, a, input, select, textarea')) return;
+
+      if (event.key === 'ArrowLeft') {
+        event.preventDefault();
+        showPanel(activeIndex - 1);
+      }
+      if (event.key === 'ArrowRight') {
+        event.preventDefault();
+        showPanel(activeIndex + 1);
+      }
+    });
+
+    if (totalSteps) totalSteps.textContent = String(panels.length).padStart(2, '0');
+    showPanel(0, false);
+  });
+</script>

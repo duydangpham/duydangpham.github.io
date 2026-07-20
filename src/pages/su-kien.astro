@@ -125,17 +125,14 @@ const galleryImages = [
       <div class="ambrosia-collage" aria-label="Hình ảnh không gian sự kiện Ambrosia">
         <div class="ambrosia-photo ambrosia-photo--large">
           <img src={heroImages.eventSpace} alt="Không gian sự kiện Ambrosia" loading="eager" />
-          <span>Ảnh chính</span>
           <strong>Không gian sự kiện</strong>
         </div>
         <div class="ambrosia-photo">
           <img src={heroImages.table} alt="Bàn tiệc tại Ambrosia" loading="lazy" />
-          <span>Ảnh phụ</span>
           <strong>Bàn tiệc</strong>
         </div>
         <div class="ambrosia-photo ambrosia-photo--gold">
           <img src={heroImages.cuisine} alt="Ẩm thực Ambrosia" loading="lazy" />
-          <span>Ảnh phụ</span>
           <strong>Ẩm thực</strong>
         </div>
       </div>
@@ -174,7 +171,6 @@ const galleryImages = [
           <article class="room-card">
             <div class="room-card__image">
               <img src={room.image} alt={`Phòng ${room.name} tại Ambrosia`} loading="lazy" />
-              <span>Ảnh phòng {room.name}</span>
             </div>
             <div class="room-card__body">
               <p>{room.capacity}</p>
@@ -687,20 +683,6 @@ const galleryImages = [
   background:
     radial-gradient(circle at 22% 16%, rgb(255 201 65 / 0.34), transparent 32%),
     linear-gradient(145deg, rgb(0 74 89 / 0.55), rgb(18 61 52 / 0.5));
-}
-
-.ambrosia-photo span,
-.room-card__image span {
-  position: relative;
-  z-index: 3;
-  width: fit-content;
-  margin-bottom: 0.35rem;
-  color: var(--ambrosia-gold);
-  font-family: var(--font-mono);
-  font-size: 0.72rem;
-  font-weight: 800;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
 }
 
 .ambrosia-photo strong,
