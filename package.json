@@ -11,7 +11,7 @@
     "import:publications": "node ./scripts/import-publications.mjs"
   },
   "dependencies": {
-    "@astrojs/rss": "latest",
-    "astro": "^4.0.0"
+    "@astrojs/rss": "^4.0.19",
+    "astro": "^7.1.6"
   }
 }

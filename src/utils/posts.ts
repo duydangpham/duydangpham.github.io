@@ -12,7 +12,7 @@ export function getPostRouteSlug(post: PostEntry): string {
     return post.data.routeSlug;
   }
 
-  return post.slug.replace(/^\d{4}-\d{2}-\d{2}-/, '');
+  return post.id.replace(/^\d{4}-\d{2}-\d{2}-/, '');
 }
 
 export function sortPosts<T extends PostEntry>(posts: T[]): T[] {
