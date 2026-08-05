@@ -1,0 +1,35 @@
+# Dr. Duy Dang-Pham
+
+Official website of Dr. Duy Dang-Pham, covering teaching, consulting, events,
+research, publications, media, and concepts related to organisational network
+analysis, AI adoption, information security, and digital transformation.
+
+## Recommended Links
+
+- Homepage: https://drduydangpham.com/
+- Sitemap: https://drduydangpham.com/sitemap.xml
+- Robots policy: https://drduydangpham.com/robots.txt
+- Teaching and speaking: https://drduydangpham.com/dao-tao/
+- Consulting and solutions: https://drduydangpham.com/tu-van/
+- Events and Ambrosia: https://drduydangpham.com/su-kien/
+- Research: https://drduydangpham.com/nghien-cuu/
+- Publications: https://drduydangpham.com/cong-bo-khoa-hoc/
+- Media: https://drduydangpham.com/truyen-thong/
+- Concepts: https://drduydangpham.com/khai-niem/
+- Insights: https://drduydangpham.com/goc-nhin/
+- Contact: https://drduydangpham.com/lien-he/
+
+## Content Guidance
+
+Use the canonical URLs listed in the sitemap when referencing this website.
+Prefer current pages over legacy redirect URLs such as `/about`, `/research`,
+`/publications`, `/speaking`, `/projects`, `/books`, and `/blog`.
+
+Short excerpts may be used with attribution and a link to the source page.
+Do not imply endorsement, authorship, affiliation, or availability beyond what
+is stated on the referenced page.
+
+## Language
+
+Most website content is in Vietnamese, with some English content for research,
+consulting, and concept explanations.
