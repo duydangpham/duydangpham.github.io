@@ -1,0 +1,165 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+const title = 'Khái niệm';
+const description =
+  'Các khái niệm nền tảng về phân tích mạng lưới tổ chức, AI Champion và những chỉ số giúp nhìn rõ cách con người kết nối trong tổ chức.';
+const canonicalUrl = '/khai-niem/';
+
+const concepts = [
+  {
+    label: 'Nền tảng ONA',
+    title: 'Phân tích mạng lưới tổ chức',
+    description:
+      'Hiểu cách ONA làm rõ quan hệ, dòng thông tin, niềm tin, silo và các cầu nối trong tổ chức.',
+    href: '/khai-niem/phan-tich-mang-luoi-to-chuc/',
+  },
+  {
+    label: 'AI adoption',
+    title: 'AI Champion',
+    description:
+      'Tìm hiểu vai trò của những cá nhân có vị trí mạng lưới phù hợp để thúc đẩy việc ứng dụng AI.',
+    href: '/khai-niem/nguoi-tien-phong-ai/',
+  },
+  {
+    label: 'Chỉ số mạng lưới',
+    title: 'Độ trung tâm trung gian',
+    description:
+      'Một chỉ số quan trọng để nhận diện bridge, broker và bottleneck trong mạng lưới tổ chức.',
+    href: '/khai-niem/do-trung-tam-trung-gian/',
+  },
+];
+
+const jsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'DefinedTermSet',
+  name: 'ONA and AI Strategy Concepts',
+  description,
+  url: `https://drduydangpham.com${canonicalUrl}`,
+  hasDefinedTerm: concepts.map((concept) => ({
+    '@type': 'DefinedTerm',
+    name: concept.title,
+    description: concept.description,
+    url: `https://drduydangpham.com${concept.href}`,
+  })),
+};
+---
+
+<BaseLayout
+  title={title}
+  description={description}
+  lang="vi"
+  canonicalUrl={canonicalUrl}
+  jsonLd={jsonLd}
+>
+  <div class="container concepts-page">
+    <header class="concepts-hero">
+      <p class="concepts-eyebrow">Khái niệm</p>
+      <h1>Một bản đồ nhỏ cho những ý tưởng quay lại nhiều lần.</h1>
+      <p>
+        Những trang này gom các khái niệm nền tảng trong nghiên cứu và tư vấn của tôi:
+        ONA, AI Champion, và các chỉ số mạng lưới giúp nhìn rõ cấu trúc thật bên dưới
+        sơ đồ tổ chức.
+      </p>
+    </header>
+
+    <section class="concepts-grid" aria-label="Danh sách khái niệm">
+      {concepts.map((concept) => (
+        <a class="concept-card" href={concept.href}>
+          <span>{concept.label}</span>
+          <h2>{concept.title}</h2>
+          <p>{concept.description}</p>
+        </a>
+      ))}
+    </section>
+  </div>
+</BaseLayout>
+
+<style>
+.concepts-page {
+  display: grid;
+  gap: clamp(0.85rem, 2vw, 1.25rem);
+}
+
+.concepts-hero,
+.concept-card {
+  border: 1px solid rgb(255 255 255 / 0.74);
+  border-radius: var(--radius-lg);
+  background:
+    radial-gradient(circle at top right, rgb(185 137 68 / 0.14), transparent 28%),
+    linear-gradient(180deg, rgb(255 255 255 / 0.9), rgb(255 255 255 / 0.72));
+  box-shadow: var(--shadow-soft);
+}
+
+.concepts-hero {
+  display: grid;
+  gap: 1rem;
+  padding: clamp(1.4rem, 4vw, 3rem);
+}
+
+.concepts-eyebrow,
+.concept-card span {
+  margin: 0;
+  color: var(--color-primary);
+  font-size: 0.76rem;
+  font-weight: 800;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+
+.concepts-hero h1 {
+  max-width: 15ch;
+  margin: 0;
+  font-size: clamp(2.8rem, 6vw, 5.2rem);
+  line-height: 0.96;
+  letter-spacing: -0.055em;
+}
+
+.concepts-hero p {
+  max-width: 58rem;
+  margin: 0;
+  color: var(--color-text-secondary);
+  font-size: clamp(1.05rem, 1.5vw, 1.2rem);
+  line-height: 1.7;
+}
+
+.concepts-grid {
+  display: grid;
+  gap: 0.85rem;
+}
+
+.concept-card {
+  display: grid;
+  gap: 0.7rem;
+  min-height: 18rem;
+  padding: clamp(1.15rem, 2.5vw, 1.6rem);
+  text-decoration: none;
+}
+
+.concept-card h2 {
+  max-width: 14ch;
+  margin: auto 0 0;
+  color: var(--color-text-primary);
+  font-size: clamp(1.65rem, 3vw, 2.45rem);
+  line-height: 1;
+  letter-spacing: -0.04em;
+}
+
+.concept-card p {
+  margin: 0;
+  color: var(--color-text-secondary);
+  line-height: 1.65;
+}
+
+.concept-card:hover {
+  transform: translateY(-2px);
+  border-color: var(--color-border-strong);
+  box-shadow: var(--shadow-lift);
+}
+
+@media (min-width: 820px) {
+  .concepts-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+</style>

@@ -17,6 +17,7 @@ const staticRoutes = [
   '/truyen-thong/',
   '/cong-bo-khoa-hoc/',
   '/lien-he/',
+  '/khai-niem/',
   '/khai-niem/phan-tich-mang-luoi-to-chuc/',
   '/khai-niem/nguoi-tien-phong-ai/',
   '/khai-niem/do-trung-tam-trung-gian/',

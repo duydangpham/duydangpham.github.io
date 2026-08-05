@@ -9,12 +9,4 @@ export const websiteSchema: Record<string, unknown> = {
     'Personal website of Dr. Duy Dang-Pham — Senior Lecturer at RMIT University Vietnam and Co-founder & CEO of NetIQ.',
   inLanguage: ['vi'],
   author: { '@id': 'https://drduydangpham.com/#person' },
-  potentialAction: {
-    '@type': 'SearchAction',
-    target: {
-      '@type': 'EntryPoint',
-      urlTemplate: 'https://drduydangpham.com/goc-nhin/?q={search_term_string}',
-    },
-    'query-input': 'required name=search_term_string',
-  },
 };
