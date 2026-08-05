@@ -2,7 +2,7 @@
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import { createConceptPageSchema } from '../../data/schema-concept-page';
 
-const canonicalUrl = '/khai-niem/do-trung-tam-trung-gian';
+const canonicalUrl = '/khai-niem/do-trung-tam-trung-gian/';
 
 const jsonLd = createConceptPageSchema({
   name: 'Betweenness Centrality',
@@ -79,7 +79,7 @@ const faqs = jsonLd[1].mainEntity;
   <div class="container--content">
     <header class="concept-header">
       <div class="concept-header__eyebrow">
-        <a href="/nghien-cuu">Research</a> / Concepts
+        <a href="/nghien-cuu/">Research</a> / Concepts
       </div>
       <h1>Betweenness Centrality</h1>
       <p class="concept-header__abbr">Bridge metric</p>
@@ -202,11 +202,11 @@ const faqs = jsonLd[1].mainEntity;
     <nav class="related-concepts" aria-label="Related concepts">
       <h2>Related concepts</h2>
       <div class="related-grid">
-        <a class="related-card" href="/khai-niem/phan-tich-mang-luoi-to-chuc">
+          <a class="related-card" href="/khai-niem/phan-tich-mang-luoi-to-chuc/">
           <strong>Organisational Network Analysis</strong>
           <p>The broader method that uses betweenness to reveal informal bridges and bottlenecks.</p>
         </a>
-        <a class="related-card" href="/khai-niem/nguoi-tien-phong-ai">
+          <a class="related-card" href="/khai-niem/nguoi-tien-phong-ai/">
           <strong>AI Champions</strong>
           <p>How betweenness helps identify Oracle and Broker archetypes for AI adoption programs.</p>
         </a>

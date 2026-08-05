@@ -48,7 +48,7 @@ export const GET: APIRoute = async () => {
     const lastModified = post.data.updatedDate ?? post.data.date;
 
     return {
-      loc: toAbsoluteUrl(`${getPostUrl(post)}/`),
+      loc: toAbsoluteUrl(getPostUrl(post)),
       lastmod: lastModified.toISOString(),
     };
   });

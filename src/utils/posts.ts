@@ -34,7 +34,7 @@ export function getInsightsIndexUrl(): string {
 }
 
 export function getPostUrl(post: PostEntry): string {
-  return `${insightsIndexUrl}${getPostRouteSlug(post)}`;
+  return `${insightsIndexUrl}${getPostRouteSlug(post)}/`;
 }
 
 export function estimateReadingTimeMinutes(body: string): number {

@@ -26,8 +26,16 @@ const {
 
 const ui = en;
 const siteOrigin = Astro.site ?? new URL('https://drduydangpham.com');
-const toAbsoluteUrl = (url: string) => new URL(url, siteOrigin).toString();
-const canonicalAbsolute = toAbsoluteUrl(canonicalUrl);
+const toCanonicalUrl = (url: string) => {
+  const absoluteUrl = new URL(url, siteOrigin);
+
+  if (!absoluteUrl.pathname.includes('.') && !absoluteUrl.pathname.endsWith('/')) {
+    absoluteUrl.pathname = `${absoluteUrl.pathname}/`;
+  }
+
+  return absoluteUrl.toString();
+};
+const canonicalAbsolute = toCanonicalUrl(canonicalUrl);
 const currentPath = new URL(canonicalAbsolute).pathname;
 ---
 
