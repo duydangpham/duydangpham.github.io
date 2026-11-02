@@ -13,11 +13,13 @@ const en = {
     research: 'Nghiên cứu',
     netiq: 'NetIQ',
     insights: 'Góc nhìn',
+    resources: 'Tài nguyên',
     media: 'Truyền thông',
     publications: 'Công bố khoa học',
     contact: 'Liên hệ',
   },
   navShort: {
+    resources: 'Tài nguyên',
     about: 'Giới thiệu',
     training: 'Đào tạo',
     consulting: 'Tư vấn',

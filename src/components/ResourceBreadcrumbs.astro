@@ -1,0 +1,25 @@
+---
+interface Props { currentPath: string; title: string; }
+const { currentPath, title } = Astro.props;
+const groups = [
+  { href: '/khai-niem/', label: 'Khái niệm' },
+  { href: '/goc-nhin/', label: 'Góc nhìn' },
+  { href: '/cong-bo-khoa-hoc/', label: 'Công bố khoa học' },
+];
+const group = groups.find((item) => currentPath.startsWith(item.href));
+---
+{group && (
+  <nav class="container resource-breadcrumbs" aria-label="Đường dẫn tài nguyên">
+    <ol>
+      <li><a href="/tai-nguyen/">Tài nguyên</a></li>
+      {currentPath !== group.href && <li><a href={group.href}>{group.label}</a></li>}
+      <li aria-current="page">{title}</li>
+    </ol>
+  </nav>
+)}
+<style>
+  .resource-breadcrumbs { margin-bottom: 1rem; }
+  ol { display: flex; flex-wrap: wrap; gap: .4rem .65rem; list-style: none; padding: 0; margin: 0; font-size: .85rem; color: var(--color-text-secondary); }
+  li + li::before { content: '/'; margin-right: .65rem; color: var(--color-text-muted); }
+  a { color: var(--color-primary); text-decoration: underline; text-underline-offset: .2em; }
+</style>

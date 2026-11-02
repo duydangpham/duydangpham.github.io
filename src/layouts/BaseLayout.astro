@@ -3,6 +3,7 @@ import '../styles/global.css';
 import Head from '../components/Head.astro';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
+import ResourceBreadcrumbs from '../components/ResourceBreadcrumbs.astro';
 import en from '../i18n/en';
 
 interface Props {
@@ -64,6 +65,7 @@ const currentPath = new URL(canonicalAbsolute).pathname;
     <div class="site-shell">
       <Header currentPath={currentPath} />
       <main id="main-content" class="site-main">
+        <ResourceBreadcrumbs currentPath={currentPath} title={title} />
         <slot />
       </main>
       <Footer />

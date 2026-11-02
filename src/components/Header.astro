@@ -13,6 +13,7 @@ const navItems = [
   { label: ui.navShort.consulting, href: '/tu-van/' },
   { label: ui.navShort.events, href: '/su-kien/' },
   { label: ui.navShort.research, href: '/nghien-cuu/' },
+  { label: ui.navShort.resources, href: '/tai-nguyen/' },
   { label: ui.navShort.media, href: '/truyen-thong/' },
   { label: ui.navShort.about, href: '/gioi-thieu/' },
   { label: ui.navShort.contact, href: '/lien-he/' },
@@ -28,10 +29,9 @@ const normalizedCurrentPath = normalizePath(currentPath);
 const isActive = (href: string) => {
   const normalizedHref = normalizePath(href);
 
-  if (normalizedHref.endsWith('/goc-nhin')) {
-    return (
-      normalizedCurrentPath === normalizedHref ||
-      normalizedCurrentPath.startsWith(`${normalizedHref}/`)
+  if (normalizedHref === '/tai-nguyen') {
+    return ['/tai-nguyen', '/khai-niem', '/goc-nhin', '/cong-bo-khoa-hoc'].some(
+      (path) => normalizedCurrentPath === path || normalizedCurrentPath.startsWith(`${path}/`),
     );
   }
 
@@ -52,7 +52,7 @@ const isActive = (href: string) => {
             <a
               class="site-nav__link"
               href={item.href}
-              aria-current={isActive(item.href) ? 'page' : undefined}
+              aria-current={isActive(item.href) ? (normalizePath(item.href) === normalizedCurrentPath ? 'page' : 'location') : undefined}
             >
               {item.label}
             </a>
@@ -73,7 +73,7 @@ const isActive = (href: string) => {
               <a
                 class="site-nav__link"
                 href={item.href}
-                aria-current={isActive(item.href) ? 'page' : undefined}
+                aria-current={isActive(item.href) ? (normalizePath(item.href) === normalizedCurrentPath ? 'page' : 'location') : undefined}
               >
                 {item.label}
               </a>
