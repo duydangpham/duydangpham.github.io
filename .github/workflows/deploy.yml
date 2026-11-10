@@ -24,7 +24,10 @@ jobs:
           cache: npm
 
       - name: Install dependencies
-        run: npm install --cache .npm-cache
+        run: npm ci --cache .npm-cache
+
+      - name: Audit dependencies
+        run: npm audit
 
       - name: Build site
         run: npm run build
