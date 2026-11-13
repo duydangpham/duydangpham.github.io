@@ -47,6 +47,7 @@ const resolvedOgImage = new URL(ogImage, siteOrigin).toString();
 
 {shouldLoadAnalytics && (
   <>
+    <script is:inline async src="https://www.googletagmanager.com/gtm.js?id=GTM-KDZGNZFZ"></script>
     <script
       async
       src={`https://www.googletagmanager.com/gtag/js?id=${GA_MEASUREMENT_ID}`}
